@@ -164,7 +164,7 @@ htmlHead = """
 <h1 class="grhead1">Main Table of Contents</h1>
 <div id="tableOfContents" class="grid-toc">
     <div class="toc1">
-    <p>No TOC yet</p>
+    <p>Only the main page for now. See pages contents below.</p>
     </div>
     <div class="toc2">
     </div>

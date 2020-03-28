@@ -16,7 +16,7 @@ To play and be in the guild or do anything you don't need anything but the base 
 
 [[ https://en.uesp.net/wiki/Online:Chapters | Chapters]]
 
-## Now let's talk Zone and Dungeon DLC.
+== Let's talk Zone and Dungeon DLC.
 
 [[ https://en.uesp.net/wiki/Online:DLC | DLC]]
 
@@ -46,7 +46,7 @@ Once you have that to have access to all content except dungeons you have two ch
 
 == ESO Plus
 
-https://account.elderscrollsonline.com/store/product/eso_plus | ESO Plus ]]
+[[ https://account.elderscrollsonline.com/store/product/eso_plus | ESO Plus ]]
 
 So you can obviously read all that but from a players perspective what it gives you that is noticeably useful is bank space and bag space. Your bank is doubled in size and all crafting materials go into a virtual bag that is limitless in size. Meaning you loot like crazy and as long as they are crafting mats you will never run out of bag space. Other then that you have to sell it to a vender or break it down into materials for crafting. The other thing that is different is your small house has double the capacity for decorations.
 

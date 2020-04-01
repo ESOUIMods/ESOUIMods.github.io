@@ -6,9 +6,18 @@
 This will have mods and guides for mods for Elder Scrolls online once I make more updates. For now all you get is a link to some downloads you can manually install. They do not require LibStub except Custom Titles because I feel it should not be removed at this time. However, there is a way to load it as a normal library and have it working while you are playing.
 
 == All my updated mods
+
 [[https://github.com/ESOUIMods | ESOUI Mods]]
 
-== Chapters, Zone DLC, Duengeon DLC
+I have removed the LibStub requirements so they run without it. There is no need for LibStub because the functionality is now built into the game and some authors are simply to stubborn to remove it. Not having embedded libraries and removing LibStub really does help the mods run properly. I had one mod using Custom Compass Pins as an embedded library and when I updated it to the author's latest version it caused an error. Authors for ESO UI mods make the same kinds of mistakes that Nexus mod authors make in regards to optimization of the mods.
+
+== Useful beginner and returning player video
+
+{% include youtube.html id="cYcfm1Na5so" %}
+
+This is a good walkthrough of the game changes if you are a returning player. It is also a walkthrough of all the different aspects of the game. It is long but if you just bring it up on your phone and listen while you play you can think to yourself, "Yeah I know that, yeah I knew that, wait what was that?" and rewind it a bit for things you may not have known. It really is a good refresher of returning players.
+
+== Chapters, Zone DLC, Dungeon DLC
 
 This is up to date as of __03/28/2020__
 
@@ -22,7 +31,7 @@ To play and be in the guild or do anything you don't need anything but the base 
 
 Zone DLC would get you quests, content, story and skill lines. Dungeon DLC provides only Dungeon content which usually has a story and a quest.
 
-== What I recomened for DLC
+== What I recommended for DLC
 
 Guilds and Glory
 - Dark Brotherhood - Zone DLC (Skill line, Quests, and Story)
@@ -42,7 +51,7 @@ I don't know that they offer Morrowind, Summerset, and Elsweyr chapters ALL sepa
 
 Once you have that to have access to all content except dungeons you have two choices.
 
-1) Get ESO Plus. It comes with 1500 Crowns (Currency for in game micro purchases) and access to all the Zone and Dungeon DLC. There is another benefit but in a moment. 2) Get the Greymoor CE and Guilds and Glory, Dragonhold, Dragonhold, and Clockwork City. This means you have all the content with no ESO Plus subscription. You can play any time off and on and never spend money on a subscription you are not using.
+1) Get ESO Plus. It comes with 1500 Crowns (Currency for in game micro purchases) and access to all the Zone and Dungeon DLC. There is another benefit but in a moment. 2) Get the Greymoor CE to be up to date with all the chapters then for DLC Guilds and Glory, Dragonhold, Murkmire, and Clockwork City. This means you have all the content with no ESO Plus subscription. You can play any time off and on and never spend money on a subscription you are not using.
 
 == ESO Plus
 

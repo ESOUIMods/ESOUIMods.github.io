@@ -15,7 +15,7 @@ I have removed the LibStub requirements so they run without it. There is no need
 
 {% include youtube.html id="cYcfm1Na5so" %}
 
-This is a good walkthrough of the game changes if you are a returning player. It is also a walkthrough of all the different aspects of the game. It is long but if you just bring it up on your phone and listen while you play you can think to yourself, "Yeah I know that, yeah I knew that, wait what was that?" and rewind it a bit for things you may not have known. It really is a good refresher of returning players.
+This is a good walkthrough of the game changes if you are a returning player. It is also a walkthrough of all the different aspects of the game. It is long but if you just bring it up on your phone and listen while you play you can think to yourself, "Yeah I know that, yeah I knew that, wait what was that?" and rewind it a bit for things you may not have known. It really is a good refresher for returning players.
 
 == Chapters, Zone DLC, Dungeon DLC
 

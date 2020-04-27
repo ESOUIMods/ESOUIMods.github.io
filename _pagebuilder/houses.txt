@@ -34,10 +34,10 @@ This list is of the houses that I see in the UI from in game. It is not complete
             <td>Gold Only</td>
         </tr>
         <tr>
-            <td>The Ebony Flask Inn</td>
+            <td>[[https://en.uesp.net/wiki/Online:Golden_Gryphon_Garret | Golden Gryphon Garret]]</td>
             <td>Inn Room</td>
-            <td>Dark Elf</td>
-            <td>Stonefalls</td>
+            <td>High Elf</td>
+            <td>Alinor</td>
             <td>No</td>
             <td>3000</td>
             <td>Gold Only</td>
@@ -76,7 +76,7 @@ This list is of the houses that I see in the UI from in game. It is not complete
         <tr>
             <td>[[https://en.uesp.net/wiki/Online:The_Ebony_Flask_Inn_Room | The Ebony Flask Inn Room]]</td>
             <td>Inn Room</td>
-            <td>Dunmer</td>
+            <td>Dark Elf</td>
             <td>Ebonheart</td>
             <td>No</td>
             <td>3000</td>

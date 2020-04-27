@@ -424,6 +424,16 @@ This list is of the houses that I see in the UI from in game. It is not complete
             <td>7000</td>
         </tr>
         <tr>
+            <td>[[https://en.uesp.net/wiki/Online:Hall_of_the_Lunar_Champion | Hall of the Lunar Champion]]</td>
+            <td>Manor</td>
+            <td>Elsweyr</td>
+            <td>Northern Elsweyr</td>
+            <td>Yes</td>
+            <td>Quest Reward from: [[https://en.uesp.net/wiki/Online:Two_Queens | Two Queens]]</td>
+            <td>Unknown</td>
+            <td>Unknown</td>
+        </tr>
+        <tr>
             <td>Daggerfall Overlook</td>
             <td>Manor</td>
             <td>Breton</td>

@@ -164,7 +164,7 @@ htmlHead = """
 <h1 class="grhead1">Main Table of Contents</h1>
 <div id="tableOfContents" class="grid-toc">
     <div class="toc1">
-    <p>Only the main page for now. See pages contents below.</p>
+        <h2 class="grhead2"><a href="houses.html">Housing</a></h3>
     </div>
     <div class="toc2">
     </div>
@@ -307,7 +307,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     reImageCaptionUrl = re.compile(r'{{image-cap-url:(.+?)}}')
     # --Exclude from Paragraphs
     # reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)|(^\<a\s{1,3}href.+?\>)|(^\<a\s{1,3}(class=".+?)?href.+?\>)|(^\<img\s{1,3}src.+?\>)|^\u00A9|^\<strong|^\<[bB]\>|(^{% include image)')
-    reHtmlNotPar = re.compile(r'\<h\d[>]?|<hr>|{{CONTENTS|class="drkbtn"|<[\/]?div>|<div id=|<div class=|<[\/]?iframe|<[\/]?table|<[\/]?tr')
+    reHtmlNotPar = re.compile(r'\<h\d[>]?|<hr>|{{CONTENTS|class="drkbtn"|<[\/]?div>|<div id=|<div class=|<[\/]?iframe|<[\/]?table|<[\/]?tr|<[\/]?td|<[\/]?thead|<[\/]?tbody|<[\/]?th')
     reLiquidOnly = re.compile(r'{% raw %}|{% endraw %}')
 
     def imageInline(maObject):

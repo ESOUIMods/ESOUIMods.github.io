@@ -1,9 +1,15 @@
 {{PAGETITLE="ESOUI Code Collection"}}
 == Contents
 {{CONTENTS=3}}
-== Welcome to my space! But it's not MySpace, or is it?
+== Current must have addon!
 
-This will have mods and guides for mods for Elder Scrolls online once I make more updates. For now all you get is a link to some downloads you can manually install. They do not require LibStub except Custom Titles because I feel it should not be removed at this time. However, there is a way to load it as a normal library and have it working while you are playing.
+Do you need to know how many Potatoes you have? Does your guild have potato auctions? If so this mod is a Must have!
+
+{{image:TaterTotal.jpg | Download}}
+
+[[ https://www.esoui.com/downloads/info2617-TaterTotal.html#info | TaterTotal]]
+
+OMG how can you not have this!
 
 == All my updated mods
 

@@ -1,0 +1,60 @@
+---
+layout: default
+title: Installing LuaRocks
+---
+<h1 class="header1">{{ page.title }}</h1>
+<hr>
+<h1 class="grhead1">Main Table of Contents</h1>
+<div id="tableOfContents" class="grid-toc">
+    <div class="toc1">
+        <h2 class="grhead2"><a href="houses.html">Housing</a></h3>
+    </div>
+    <div class="toc2">
+    </div>
+</div>
+<p class="empty">&nbsp;</p>
+<div>
+<!-- Needed, sets the top of the page just before the H1 Title -->
+<h2 class="header2" id="Contents">Contents</h2>
+<p class="list-1">&bull;&nbsp; <a href="#Preface">0.1 Preface</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#Intent">0.2 Intent</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#DownloadthelegacyWindowspackage">0.3 Download the legacy Windows package</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#InstallingthelegacyWindowspackage">0.4 Installing the legacy Windows package</a></p>
+<h2 class="header2" id="Preface">0.1 - Preface</h2>
+<p class="empty">&nbsp;</p>
+<p>While attempting to use IntelliJ for running Lua files it was recomended by the kind ESOUI community that I use LuaRocks as an intrepetur. Installing it not having written the .bat file was an experence.</p>
+<p class="empty">&nbsp;</p>
+<p>They do offer detailed <a  href="https://github.com/luarocks/luarocks/wiki/Installation-instructions-for-Windows" >install instructions for Windows</a> however, I noticed it was more for intermediate to advanced users. It covers where to install, configuring the destinations, configuring the Lua interpreter, and compiler configuration. Under the heading `Making a system-wide repository` which was misleading to me because I thought I would be making a Git repository that was system wide.</p>
+<p class="empty">&nbsp;</p>
+<p>Further down the page there is information for making a self-contained installation, Picking the Lua interpreter and link to <a  href="https://github.com/luarocks/luarocks/wiki/Using-LuaRocks" >using LuaRocks</a></p>
+<p class="empty">&nbsp;</p>
+<p>However, nothing to get the software installed so that you can follow along step by step and read each section to configure the software for use. Nor was there a section on how to use Lua if you wanted to read <a  href="https://www.lua.org/docs.html" >Lua documentation</a> to understand the basics of the Lua language.</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="Intent">0.2 - Intent</h2>
+<p class="empty">&nbsp;</p>
+<p>I will explain how to install LuaRocks below. Setting up IntelliJ to use LuaRock will be explained once I figure out how to do that.</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="DownloadthelegacyWindowspackage">0.3 - Download the legacy Windows package</h2>
+<p class="empty">&nbsp;</p>
+<p>You are going to want the <B>legacy Windows package, includes Lua 5.1</B> file from the link below.</p>
+<p class="empty">&nbsp;</p>
+<p><a  href="https://github.com/luarocks/luarocks/wiki/Installation-instructions-for-Windows" >luarocks</a></p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/download_luarocks.jpg" alt="Download" %}</p>
+<p class="empty">&nbsp;</p>
+<p>This will have all you need including Lua exe files.</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="InstallingthelegacyWindowspackage">0.4 - Installing the legacy Windows package</h2>
+<p class="empty">&nbsp;</p>
+<p>To install the legacy windows packadge you need unzip the download to a folder and navagate to that first in order to run the install.bat file. I exctracted my file in the downloads folder.</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/download_loc_luarocks.jpg" alt="location" %}</p>
+<p class="empty">&nbsp;</p>
+<p>Once there type <code>install /P C:\Lua51 /L</code> which will install luarocks and Lua to the <code>C:\Lua51</code></p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/install_cmd_luarocks.jpg" alt="location" %}</p>
+<p class="empty">&nbsp;</p>
+<p>If you navagte to <code>C:\Lua51</code> from the windwos explorer you should now have Lua installed.</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/installed_luarocks.jpg" alt="location" %}</p>
+</div>

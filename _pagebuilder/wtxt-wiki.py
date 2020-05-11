@@ -167,6 +167,7 @@ htmlHead = """
         <h2 class="grhead2"><a href="houses.html">Housing</a></h3>
     </div>
     <div class="toc2">
+        <h2 class="grhead2"><a href="1-install_luarocks.html">Installing LuaRocks</a></h3>
     </div>
 </div>
 <p class="empty">&nbsp;</p>

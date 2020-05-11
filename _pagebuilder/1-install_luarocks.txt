@@ -27,6 +27,8 @@ This will have all you need including Lua exe files.
 
 == Installing the legacy Windows package
 
+{{note: You will be installing this from a command prompt.}}
+
 To install the legacy windows packadge you need unzip the download to a folder and navagate to that first in order to run the install.bat file. I exctracted my file in the downloads folder.
 
 {{image:download_loc_luarocks.jpg | location}}

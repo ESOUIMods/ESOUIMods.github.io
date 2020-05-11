@@ -3,7 +3,7 @@
 {{CONTENTS=3}}
 == Preface
 
-While attempting to use IntelliJ for running Lua files it was recommended by the kind ESOUI community that I install LuaRocks. They did mention it was a packadge manager but my intention was to have a stand alone Interpreter for Lua that I could add the the Lua plugin for use with IntelliJ. Installing it not having written the .bat file was an experience.
+While attempting to use IntelliJ for running Lua files it was recommended by the kind ESOUI community that I install LuaRocks. They did mention it was a packadge manager but my intention was to have a stand alone Interpreter for Lua to be used with the Lua plugin I installed for IntelliJ. Installing it not having written the .bat file was an experience.
 
 They do offer detailed [[https://github.com/luarocks/luarocks/wiki/Installation-instructions-for-Windows | install instructions for Windows]] however, I noticed it was more for intermediate to advanced users. It covers where to install, configuring the destinations, configuring the Lua interpreter, and compiler configuration. Under the heading `Making a system-wide repository` which was misleading to me because I thought I would be making a Git repository that was system wide.
 

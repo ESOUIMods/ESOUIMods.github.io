@@ -19,7 +19,7 @@ I will explain how to install LuaRocks below. Setting up IntelliJ to use LuaRock
 
 You are going to want the __legacy Windows package, includes Lua 5.1__ file from the link below.
 
-[[https://github.com/luarocks/luarocks/wiki/Installation-instructions-for-Windows | luarocks]]
+[[http://luarocks.github.io/luarocks/releases/ | luarocks]]
 
 {{image:download_luarocks.jpg | Download}}
 

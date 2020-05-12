@@ -17,14 +17,14 @@ And you can use this forum thread with my last post to include the auto completi
 
 Autocompletion files for IntelliJ IDEA, [[https://www.dropbox.com/s/asi9b6um9t1i26r/eso-api-lua-intellij-baertram_API100031.zip?dl=0 | API100031 Greymoor]]
 
-You need to start IntelliJ, then click in the menu "File" -> Project structure
+You need to start IntelliJ, and then click in the menu "File" -> Project structure
 
 {{image:step-1-image.png | step-1}}
 
 * Click on Platform settings -> SDK (1)
 * Then on the + (2) and add something like ESOUI lua as description (3)
 * Click on the + (4) to add a folder where you have extracted the zip archive I've linked you above (the dropbox link with the IntelliJ IDEA ESOUI autocompletion files)
-* It wil lshow in the lines at (5) then
+* It will show in the lines at (5) then
 
 Save the project structure and you are able to open your AddOns with IntelliJ and use this project structure on them. There is a setting to always use this project with lua files I think, somewhere in the settings
 
@@ -45,11 +45,11 @@ At top the lua files and xml and txt of your project and at the bottom the "Exte
 
 And with the emmylua plugin you should be able to use simply code completions for standard lua like for ... do end loops and so on.
 
-It wil lshow you at the right scroll bar the ellow points (warnings about global leaking variables, unused variables etc.) and red points where there are errors.
+It will show you at the right scroll bar the yellow points (warnings about global leaking variables, unused variables etc.) and red points where there are errors.
 
 {{image:step-4-image.png | step-4}}
 
-Mouse over them to see what is the problem.
+Mouse over them to see what the problem is.
 
 If you want to run lua code within IntelliJ you need lua.exe installed in your windows path somewhere. I do not use it though as I only test esoui related stuff, ingame.
 
@@ -69,7 +69,7 @@ And in the menu "Run" you can configure how and where the lua.exe file is locate
 
 {{image:step-8-image.png | step-8}}
 
-Not quite sure how to setup this to be reused for ALL lua files though. Currently it looks like it only uses the current chosen file as config base.
+Not quite sure how to setup this to be reused for ALL lua files though. Currently it looks like it only uses the current chosen file for its default configuration.
 
 Seems the wrench icon at the top line is able to preset the templates:
 
@@ -79,4 +79,4 @@ Works this way then
 
 {{image:step-10-image.png | step-10}}
 
-Just preset the template for lua and delete any "per file created configuration" as you try to run it. It wil use the template config then and just use the lua 5.1 exe file to compile it.
+Just preset the template for lua and delete any "per file created configuration" as you try to run it. It will use the template configuration then and just use the lua 5.1 exe file to compile it.

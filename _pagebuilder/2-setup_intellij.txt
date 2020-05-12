@@ -1,4 +1,4 @@
-{{PAGETITLE="Installing LuaRocks"}}
+{{PAGETITLE="Installing IntelliJ and EmmyLua"}}
 == Contents
 {{CONTENTS=3}}
 == Authors

@@ -1,0 +1,103 @@
+---
+layout: default
+title: Installing LuaRocks
+---
+<h1 class="header1">{{ page.title }}</h1>
+<hr>
+<h1 class="grhead1">Main Table of Contents</h1>
+<div id="tableOfContents" class="grid-toc">
+    <div class="toc1">
+        <h2 class="grhead2"><a href="houses.html">Housing</a></h3>
+    </div>
+    <div class="toc2">
+        <h2 class="grhead2"><a href="1-install_luarocks.html">Installing LuaRocks</a></h3>
+        <h2 class="grhead2"><a href="2-setup-intellij.html">Setup IntelliJ</a></h3>
+    </div>
+</div>
+<p class="empty">&nbsp;</p>
+<div>
+<!-- Needed, sets the top of the page just before the H1 Title -->
+<h2 class="header2" id="Contents">Contents</h2>
+<p class="list-1">&bull;&nbsp; <a href="#Authors">2.1 Authors</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#Intent">2.2 Intent</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#Installsteps">2.3 Install steps</a></p>
+<h2 class="header2" id="Authors">2.1 - Authors</h2>
+<p class="empty">&nbsp;</p>
+<p>Baertram wrote this and the conversion for the site was done by Sharlikran.</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="Intent">2.2 - Intent</h2>
+<p class="empty">&nbsp;</p>
+<p>This will help you set up IntelliJ to work with Lua and ESO mods.</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="Installsteps">2.3 - Install steps</h2>
+<p class="empty">&nbsp;</p>
+<p>You need to install the plugin EmmyLUA. It provides lua support for CTRL+<click> variable declaration jumping etc.</p>
+<p class="empty">&nbsp;</p>
+<p>And you can use this forum thread with my last post to include the auto completion of <a  href="https://www.esoui.com/forums/showthread.php?t=776&page=3" >esoui variables and functions</a>.</p>
+<p class="empty">&nbsp;</p>
+<p>Autocompletion files for IntelliJ IDEA, <a  href="https://www.dropbox.com/s/asi9b6um9t1i26r/eso-api-lua-intellij-baertram_API100031.zip?dl=0" >API100031 Greymoor</a></p>
+<p class="empty">&nbsp;</p>
+<p>You need to start IntelliJ, then click in the menu "File" -> Project structure</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/step-1-image.png" alt="step-1" %}</p>
+<p class="empty">&nbsp;</p>
+<p class="list-1">&bull;&nbsp; Click on Platform settings -> SDK (1)</p>
+<p class="list-1">&bull;&nbsp; Then on the + (2) and add something like ESOUI lua as description (3)</p>
+<p class="list-1">&bull;&nbsp; Click on the + (4) to add a folder where you have extracted the zip archive I've linked you above (the dropbox link with the IntelliJ IDEA ESOUI autocompletion files)</p>
+<p class="list-1">&bull;&nbsp; It wil lshow in the lines at (5) then</p>
+<p class="empty">&nbsp;</p>
+<p>Save the project structure and you are able to open your AddOns with IntelliJ and use this project structure on them. There is a setting to always use this project with lua files I think, somewhere in the settings</p>
+<p class="empty">&nbsp;</p>
+<p>Open the menu "File"->"Settings" and click on plugins</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/step-2-image.png" alt="step-2" %}</p>
+<p class="empty">&nbsp;</p>
+<p>Search for Emmy and install EmmyLua</p>
+<p class="empty">&nbsp;</p>
+<p>After you have installed the plugin and the project stuff above open the menu "File" and click on "Invalidate caches and restart"</p>
+<p>This will make the auto completion work in 99% of the cases within .lua files</p>
+<p class="empty">&nbsp;</p>
+<p>If you create a new project choose the "esoui lua" project you have added as project structure and your project will look like this:</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/step-3-image.png" alt="step-3" %}</p>
+<p class="empty">&nbsp;</p>
+<p>At top the lua files and xml and txt of your project and at the bottom the "External libraries" with the autocompletion etc.</p>
+<p class="empty">&nbsp;</p>
+<p>And with the emmylua plugin you should be able to use simply code completions for standard lua like for ... do end loops and so on.</p>
+<p class="empty">&nbsp;</p>
+<p>It wil lshow you at the right scroll bar the ellow points (warnings about global leaking variables, unused variables etc.) and red points where there are errors.</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/step-4-image.png" alt="step-4" %}</p>
+<p class="empty">&nbsp;</p>
+<p>Mouse over them to see what is the problem.</p>
+<p class="empty">&nbsp;</p>
+<p>If you want to run lua code within IntelliJ you need lua.exe installed in your windows path somewhere. I do not use it though as I only test esoui related stuff, ingame.</p>
+<p class="empty">&nbsp;</p>
+<p>The autocompletion for standard lua functions like print() works as well:</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/step-5-image.png" alt="step-5" %}</p>
+<p class="empty">&nbsp;</p>
+<p>It uses lua 5.3 though as it seems</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/step-6-image.png" alt="step-6" %}</p>
+<p class="empty">&nbsp;</p>
+<p>You are able to change this in the menu file -> settings -> Languages and frameworks -> EmmyLUA:</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/step-7-image.png" alt="step-7" %}</p>
+<p class="empty">&nbsp;</p>
+<p>And in the menu "Run" you can configure how and where the lua.exe file is located that should be used to run your scripts</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/step-8-image.png" alt="step-8" %}</p>
+<p class="empty">&nbsp;</p>
+<p>Not quite sure how to setup this to be reused for ALL lua files though. Currently it looks like it only uses the current chosen file as config base.</p>
+<p class="empty">&nbsp;</p>
+<p>Seems the wrench icon at the top line is able to preset the templates:</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/step-9-image.png" alt="step-9" %}</p>
+<p class="empty">&nbsp;</p>
+<p>Works this way then</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/step-10-image.png" alt="step-10" %}</p>
+<p class="empty">&nbsp;</p>
+<p>Just preset the template for lua and delete any "per file created configuration" as you try to run it. It wil use the template config then and just use the lua 5.1 exe file to compile it.</p>
+</div>

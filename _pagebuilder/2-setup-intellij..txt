@@ -1,0 +1,82 @@
+{{PAGETITLE="Installing LuaRocks"}}
+== Contents
+{{CONTENTS=3}}
+== Authors
+
+Baertram wrote this and the conversion for the site was done by Sharlikran.
+
+== Intent
+
+This will help you set up IntelliJ to work with Lua and ESO mods.
+
+== Install steps
+
+You need to install the plugin EmmyLUA. It provides lua support for CTRL+<click> variable declaration jumping etc.
+
+And you can use this forum thread with my last post to include the auto completion of [[https://www.esoui.com/forums/showthread.php?t=776&page=3 | esoui variables and functions]].
+
+Autocompletion files for IntelliJ IDEA, [[https://www.dropbox.com/s/asi9b6um9t1i26r/eso-api-lua-intellij-baertram_API100031.zip?dl=0 | API100031 Greymoor]]
+
+You need to start IntelliJ, then click in the menu "File" -> Project structure
+
+{{image:step-1-image.png | step-1}}
+
+* Click on Platform settings -> SDK (1)
+* Then on the + (2) and add something like ESOUI lua as description (3)
+* Click on the + (4) to add a folder where you have extracted the zip archive I've linked you above (the dropbox link with the IntelliJ IDEA ESOUI autocompletion files)
+* It wil lshow in the lines at (5) then
+
+Save the project structure and you are able to open your AddOns with IntelliJ and use this project structure on them. There is a setting to always use this project with lua files I think, somewhere in the settings
+
+Open the menu "File"->"Settings" and click on plugins
+
+{{image:step-2-image.png | step-2}}
+
+Search for Emmy and install EmmyLua
+
+After you have installed the plugin and the project stuff above open the menu "File" and click on "Invalidate caches and restart"
+This will make the auto completion work in 99% of the cases within .lua files
+
+If you create a new project choose the "esoui lua" project you have added as project structure and your project will look like this:
+
+{{image:step-3-image.png | step-3}}
+
+At top the lua files and xml and txt of your project and at the bottom the "External libraries" with the autocompletion etc.
+
+And with the emmylua plugin you should be able to use simply code completions for standard lua like for ... do end loops and so on.
+
+It wil lshow you at the right scroll bar the ellow points (warnings about global leaking variables, unused variables etc.) and red points where there are errors.
+
+{{image:step-4-image.png | step-4}}
+
+Mouse over them to see what is the problem.
+
+If you want to run lua code within IntelliJ you need lua.exe installed in your windows path somewhere. I do not use it though as I only test esoui related stuff, ingame.
+
+The autocompletion for standard lua functions like print() works as well:
+
+{{image:step-5-image.png | step-5}}
+
+It uses lua 5.3 though as it seems
+
+{{image:step-6-image.png | step-6}}
+
+You are able to change this in the menu file -> settings -> Languages and frameworks -> EmmyLUA:
+
+{{image:step-7-image.png | step-7}}
+
+And in the menu "Run" you can configure how and where the lua.exe file is located that should be used to run your scripts
+
+{{image:step-8-image.png | step-8}}
+
+Not quite sure how to setup this to be reused for ALL lua files though. Currently it looks like it only uses the current chosen file as config base.
+
+Seems the wrench icon at the top line is able to preset the templates:
+
+{{image:step-9-image.png | step-9}}
+
+Works this way then
+
+{{image:step-10-image.png | step-10}}
+
+Just preset the template for lua and delete any "per file created configuration" as you try to run it. It wil use the template config then and just use the lua 5.1 exe file to compile it.

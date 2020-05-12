@@ -1,7 +1,7 @@
 C:\Python38-32\python.exe wtxt-wiki.py genHtml index.txt
 C:\Python38-32\python.exe wtxt-wiki.py genHtml houses.txt
 C:\Python38-32\python.exe wtxt-wiki.py genHtml 1-install_luarocks.txt
-C:\Python38-32\python.exe wtxt-wiki.py genHtml 2-setup-intellij..txt
+C:\Python38-32\python.exe wtxt-wiki.py genHtml 2-setup-intellij.txt
 REM C:\Python38-32\python.exe wtxt-wiki.py genHtml 3-wryemashusage.txt
 REM C:\Python38-32\python.exe wtxt-wiki.py genHtml 4-generalusage.txt
 REM C:\Python38-32\python.exe wtxt-wiki.py genHtml 5-advancedusage.txt

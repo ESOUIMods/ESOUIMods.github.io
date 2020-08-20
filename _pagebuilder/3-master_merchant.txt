@@ -1,0 +1,72 @@
+{{PAGETITLE="Master Merchant"}}
+== Contents
+{{CONTENTS=3}}
+== Authors
+
+Philgo68, khaibit, Sharlikran
+
+== Myths
+
+=== Displaying a percentage of time
+
+{{image:certain_amount_history.jpg | certain_amount_history}}
+
+[[bb:Quote]]
+Would it be possible to add back the scan % messages back to the verbose modes?
+[[be:]]
+ It has not been removed. It only happens durring the background scan.
+[[bb:Quote]]
+The method I used in the past for loading sales data for the period between my last login and my current login was to set verbosity to 4 so I could see the % of each guild scan. I would then run through each guild history sales (by pressing E) until MM showed 100% for that guild (I am never offline for more than 3 days so I always had full data). Once it hit 100% for a guild I would do the next guild. The entire process took less than a minute (despite being in several major trade guilds) and it always gave me full data each day. 
+[[be:]]
+The current message is not any indication that there is a certain ammount of time being scaned.
+
+=== It takes too long to scan
+
+{{image:every_three_seconds.jpg | every_three_seconds}}
+
+You can not request data faster.
+
+=== New API 2021
+
+{{image:new_api_2021.jpg | new_api_2021}}
+
+[[bb:Quote]]
+The method I used in the past for loading sales data for the period between my last login and my current login was to set verbosity to 4 so I could see the % of each guild scan. I would then run through each guild history sales (by pressing E) until MM showed 100% for that guild (I am never offline for more than 3 days so I always had full data). Once it hit 100% for a guild I would do the next guild. The entire process took less than a minute (despite being in several major trade guilds) and it always gave me full data each day. 
+[[be:]]
+
+There has never been any way to scan a range of data. You get the initial 100 most recent sales, and then you can request more older sales. To do so press E on the guild history tab.
+
+=== older data unchanged
+
+{{image:older_data-unchanged.jpg | older_data-unchanged}}
+
+[[bb:Quote]]
+I can scan days of history once a week.
+[[be:]]
+
+There is no point in doing this as you have already seen the data unless you didn't log in enough to keep your data up to date.
+
+=== older in time
+
+{{image:older_in_time.jpg | older_in_time}}
+
+The server gives you older data when you request it by pressing E on the guild history tab. New sales are received when the server provides them. 
+
+=== Reload UI
+
+{{image:reloading.jpg | reloading}}
+
+Reloading the UI does not reset the history.
+
+=== Streaming Data
+
+{{image:steaming_data.jpg | steaming_data}}
+
+[[bb:Quote]]
+It worked fine this morning, but when I log in now, it tells me for 4 of my 5 guilds "Guild XY has no sales" (verbose 4) even though they are all trading guilds. Is there way to fix this? There should be several hundred new sales to scan.
+[[be:]]
+[[bb:Quote]]
+I have no idea how else am I supposed to get any sales when MM got to about five hours worth of history in several hours of the game sitting idle. 
+[[be:]]
+MM can not request data like a streaming video server. If you do not have several hundred sales to scan in your guild history then you will not see the updates you expect.
+

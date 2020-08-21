@@ -7,7 +7,7 @@ Philgo68, khaibit, Sharlikran
 
 == What is being scanned
 
-From what I can tell people feel that there is a cache or the server sends guild history to the user like a streaming video service. This is not the case. If you have 100 sales showing that covers a few minutes of sales, if you have 8000 sales that might cover 4 days of sales, or if you have 800 sales that covers 10 days of sales it doesn't matter. What you have loaded into memory is what is going to be scanned.
+When MM is telling you that it is scanning it is obtaining the number of sales in your guild history that you have loaded into memory and obtaining the data from the game for each entry.
 
 ### A few days of sales from 109 entries
 
@@ -25,11 +25,13 @@ However, as shown in the above screen shot there are 8031 entries which covers 4
 
 == Manually updating Guild History
 
+From what I can tell people feel that there is a cache or the server sends guild history to the user like a streaming video service. This is not the case. If you have 100 sales showing that covers a few minutes of sales, if you have 8000 sales that might cover 4 days of sales, or if you have 800 sales that covers 10 days of sales it doesn't matter. What you have loaded into memory is what is going to be scanned.
+
 ### When you first log in
 
-{{image:long_list.jpg | no_sales_history}}
+{{image:no_sales_history.jpg | no_sales_history}}
 
-When you first log in there might be 0 sales in your guild history until you open the guild history. As shown in the above screen shot with some extra debug messages this was the case when I first logged in. What is shown for the current version is "no new sales" and it would probably be more informative to update the message as I have shown.
+When you first log in there might be 0 sales in your guild history until you open the guild history. As shown in the above screen shot with some extra debug messages this was the case when I first logged in. What is shown for the current version is "no new sales" and it would probably be more informative to update the message as I have shown. It might even be helpfull to show a reminder when you first log in that there is nothning in the guild history to scan yet. Maybe that would help people so they don't think something wrong when they expect there to be hundreds of sales already pre loaded in momory waiting for them the second they log in.
 
 ### Select A Guild
 

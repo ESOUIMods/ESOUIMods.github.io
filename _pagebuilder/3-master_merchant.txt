@@ -5,6 +5,22 @@
 
 Philgo68, khaibit, Sharlikran
 
+== What is being scanned
+
+### A few days of sales from 109 entries
+
+{{image:shot_history.jpg | shot_history}}
+
+MM and other guild related tools simply scan entries from the guild history. With another mod installed called Shissu's Guild Tools a count of the amount of entries is showing. As shown there are 109 entries which only covers a few minutes of sales.
+
+### 4 days of sales from 8031 entries
+
+{{image:long_list.jpg | shot_history}}
+
+However, as shown in the above screen shot there are 8031 entries which covers 4 days of sales. If you feel you are missing sales from 7 days ago then you will need more sales showing on the guild history tab.
+
+{{note:A specific range of sales can not be requested at this time and the ability to do so might not become available until 2021 as shown in this [[#New API 2021 | response from ZOS]].}}
+
 == Myths
 
 === Displaying a percentage of time
@@ -14,11 +30,11 @@ Philgo68, khaibit, Sharlikran
 [[bb:Quote]]
 Would it be possible to add back the scan % messages back to the verbose modes?
 [[be:]]
- It has not been removed. It only happens durring the background scan.
+ It has not been removed. It only happens during the background scan.
 [[bb:Quote]]
 The method I used in the past for loading sales data for the period between my last login and my current login was to set verbosity to 4 so I could see the % of each guild scan. I would then run through each guild history sales (by pressing E) until MM showed 100% for that guild (I am never offline for more than 3 days so I always had full data). Once it hit 100% for a guild I would do the next guild. The entire process took less than a minute (despite being in several major trade guilds) and it always gave me full data each day. 
 [[be:]]
-The current message is not any indication that there is a certain ammount of time being scaned.
+The current message is not any indication that there is a certain amount of time being scanned.
 
 === It takes too long to scan
 
@@ -69,4 +85,3 @@ It worked fine this morning, but when I log in now, it tells me for 4 of my 5 gu
 I have no idea how else am I supposed to get any sales when MM got to about five hours worth of history in several hours of the game sitting idle. 
 [[be:]]
 MM can not request data like a streaming video server. If you do not have several hundred sales to scan in your guild history then you will not see the updates you expect.
-

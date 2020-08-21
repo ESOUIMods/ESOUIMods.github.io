@@ -31,7 +31,7 @@ From what I can tell people feel that there is a cache or the server sends guild
 
 {{image:no_sales_history.jpg | no_sales_history}}
 
-When you first log in there might be 0 sales in your guild history until you open the guild history. As shown in the above screen shot with some extra debug messages this was the case when I first logged in. What is shown for the current version is "no new sales" and it would probably be more informative to update the message as I have shown. It might even be helpfull to show a reminder when you first log in that there is nothning in the guild history to scan yet. Maybe that would help people so they don't think something wrong when they expect there to be hundreds of sales already pre loaded in momory waiting for them the second they log in.
+When you first log in there might be 0 sales in your guild history until you open the guild history. As shown in the above screen shot with some extra debug messages this was the case when I first logged in. What is shown for the current version is "no new sales" and it would probably be more informative to update the message as I have shown. It might even be helpfull to show a reminder when you first log in that there is nothning in the guild history to scan yet. Maybe that would help people so they don't think something is wrong when they expect there to be hundreds of sales already pre loaded in momory waiting for them the second they log in.
 
 ### Select A Guild
 

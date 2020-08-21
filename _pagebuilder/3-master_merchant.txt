@@ -13,7 +13,7 @@ When MM is telling you that it is scanning it is obtaining the number of sales i
 
 {{image:shot_history.jpg | shot_history}}
 
-MM and other guild related tools simply scan entries from the guild history. With another mod installed called Shissu's Guild Tools a count of the amount of entries is showing. As shown there are 109 entries which only covers a few minutes of sales.
+MM and other guild related tools simply scan entries from the guild history. With another mod installed called <font class="purple">Shissu's Guild Tools</font> a count of the amount of entries is showing. As shown there are 109 entries which only covers a few minutes of sales.
 
 ### 4 days of sales from 8031 entries
 

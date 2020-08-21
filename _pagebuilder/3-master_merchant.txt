@@ -37,7 +37,7 @@ When you first log in there might be 0 sales in your guild history until you ope
 
 {{image:show_more.jpg | show_more}}
 
-In order to manually request more sales data you have to choose a guild and select All, not perchance. Then press E about every 3 seconds.
+In order to manually request more sales data you have to choose a guild and select All, not perchases. Then press E about every 3 seconds.
 
 {{note:Pressing E more frequently is pointless and the server can impose more restrictions as it sees fit as mentioned [[#It takes too long to scan | here]].}}
 

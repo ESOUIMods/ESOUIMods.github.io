@@ -7,6 +7,8 @@ Philgo68, khaibit, Sharlikran
 
 == What is being scanned
 
+From what I can tell people feel that there is a cache or the server sends guild history to the user like a streaming video service. This is not the case. If you have 100 sales showing that covers a few minutes of sales, if you have 8000 sales that might cover 4 days of sales, or if you have 800 sales that covers 10 days of sales it doesn't matter. What you have loaded into memory is what is going to be scanned.
+
 ### A few days of sales from 109 entries
 
 {{image:shot_history.jpg | shot_history}}
@@ -20,6 +22,28 @@ MM and other guild related tools simply scan entries from the guild history. Wit
 However, as shown in the above screen shot there are 8031 entries which covers 4 days of sales. If you feel you are missing sales from 7 days ago then you will need more sales showing on the guild history tab.
 
 {{note:A specific range of sales can not be requested at this time and the ability to do so might not become available until 2021 as shown in this [[#New API 2021 | response from ZOS]].}}
+
+== Manually updating Guild History
+
+### When you first log in
+
+{{image:long_list.jpg | no_sales_history}}
+
+When you first log in there might be 0 sales in your guild history until you open the guild history. As shown in the above screen shot with some extra debug messages this was the case when I first logged in. What is shown for the current version is "no new sales" and it would probably be more informative to update the message as I have shown.
+
+### Select A Guild
+
+{{image:show_more.jpg | show_more}}
+
+In order to manually request more sales data you have to choose a guild and select All, not perchance. Then press E about every 3 seconds.
+
+{{note:Pressing E more frequently is pointless and the server can impose more restrictions as it sees fit as mentioned [[#It takes too long to scan | here]].}}
+
+### When E is no longer showing
+
+{{image:10_days_sales.jpg | show_more}}
+
+Once you have scanned 10 days of sales then the option to press E will not be shown. This guild is more casual and if you are in a busy guild you may have to press E until you have 16,000 to 20,000 sales listed in the guild history.
 
 == Myths
 

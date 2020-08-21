@@ -23,19 +23,25 @@ title: Master Merchant
 <p class="list-1">&bull;&nbsp; <a href="#Whatisbeingscanned">3.2 What is being scanned</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Afewdaysofsalesfrom109entries">3.2.1 A few days of sales from 109 entries</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#4daysofsalesfrom8031entries">3.2.2 4 days of sales from 8031 entries</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#Myths">3.3 Myths</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Displayingapercentageoftime">3.3.1 Displaying a percentage of time</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Ittakestoolongtoscan">3.3.2 It takes too long to scan</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#NewAPI2021">3.3.3 New API 2021</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#olderdataunchanged">3.3.4 older data unchanged</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#olderintime">3.3.5 older in time</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ReloadUI">3.3.6 Reload UI</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#StreamingData">3.3.7 Streaming Data</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#ManuallyupdatingGuildHistory">3.3 Manually updating Guild History</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Whenyoufirstlogin">3.3.1 When you first log in</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#SelectAGuild">3.3.2 Select A Guild</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#WhenEisnolongershowing">3.3.3 When E is no longer showing</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#Myths">3.4 Myths</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Displayingapercentageoftime">3.4.1 Displaying a percentage of time</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Ittakestoolongtoscan">3.4.2 It takes too long to scan</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#NewAPI2021">3.4.3 New API 2021</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#olderdataunchanged">3.4.4 older data unchanged</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#olderintime">3.4.5 older in time</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ReloadUI">3.4.6 Reload UI</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#StreamingData">3.4.7 Streaming Data</a></p>
 <h2 class="header2" id="Authors">3.1 - Authors</h2>
 <p class="empty">&nbsp;</p>
 <p>Philgo68, khaibit, Sharlikran</p>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="Whatisbeingscanned">3.2 - What is being scanned</h2>
+<p class="empty">&nbsp;</p>
+<p>From what I can tell people feel that there is a cache or the server sends guild history to the user like a streaming video service. This is not the case. If you have 100 sales showing that covers a few minutes of sales, if you have 8000 sales that might cover 4 days of sales, or if you have 800 sales that covers 10 days of sales it doesn't matter. What you have loaded into memory is what is going to be scanned.</p>
 <p class="empty">&nbsp;</p>
 <h3 id="Afewdaysofsalesfrom109entries">3.2.1 - A few days of sales from 109 entries</h3>
 <p class="empty">&nbsp;</p>
@@ -51,9 +57,31 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p class="note">A specific range of sales can not be requested at this time and the ability to do so might not become available until 2021 as shown in this <a  href="#NewAPI2021" >response from ZOS</a>.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="Myths">3.3 - Myths</h2>
+<h2 class="header2" id="ManuallyupdatingGuildHistory">3.3 - Manually updating Guild History</h2>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="Displayingapercentageoftime">3.3.1 - Displaying a percentage of time</h3>
+<h3 id="Whenyoufirstlogin">3.3.1 - When you first log in</h3>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/long_list.jpg" alt="no_sales_history" %}</p>
+<p class="empty">&nbsp;</p>
+<p>When you first log in there might be 0 sales in your guild history until you open the guild history. As shown in the above screen shot with some extra debug messages this was the case when I first logged in. What is shown for the current version is "no new sales" and it would probably be more informative to update the message as I have shown.</p>
+<p class="empty">&nbsp;</p>
+<h3 id="SelectAGuild">3.3.2 - Select A Guild</h3>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/show_more.jpg" alt="show_more" %}</p>
+<p class="empty">&nbsp;</p>
+<p>In order to manually request more sales data you have to choose a guild and select All, not perchance. Then press E about every 3 seconds.</p>
+<p class="empty">&nbsp;</p>
+<p class="note">Pressing E more frequently is pointless and the server can impose more restrictions as it sees fit as mentioned <a  href="#Ittakestoolongtoscan" >here</a>.</p>
+<p class="empty">&nbsp;</p>
+<h3 id="WhenEisnolongershowing">3.3.3 - When E is no longer showing</h3>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/10_days_sales.jpg" alt="show_more" %}</p>
+<p class="empty">&nbsp;</p>
+<p>Once you have scanned 10 days of sales then the option to press E will not be shown. This guild is more casual and if you are in a busy guild you may have to press E until you have 16,000 to 20,000 sales listed in the guild history.</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="Myths">3.4 - Myths</h2>
+<p class="empty">&nbsp;</p>
+<h3 class="header3" id="Displayingapercentageoftime">3.4.1 - Displaying a percentage of time</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/certain_amount_history.jpg" alt="certain_amount_history" %}</p>
 <p class="empty">&nbsp;</p>
@@ -68,13 +96,13 @@ title: Master Merchant
 </section>
 <p>The current message is not any indication that there is a certain amount of time being scanned.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="Ittakestoolongtoscan">3.3.2 - It takes too long to scan</h3>
+<h3 class="header3" id="Ittakestoolongtoscan">3.4.2 - It takes too long to scan</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/every_three_seconds.jpg" alt="every_three_seconds" %}</p>
 <p class="empty">&nbsp;</p>
 <p>You can not request data faster.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="NewAPI2021">3.3.3 - New API 2021</h3>
+<h3 class="header3" id="NewAPI2021">3.4.3 - New API 2021</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/new_api_2021.jpg" alt="new_api_2021" %}</p>
 <p class="empty">&nbsp;</p>
@@ -85,7 +113,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>There has never been any way to scan a range of data. You get the initial 100 most recent sales, and then you can request more older sales. To do so press E on the guild history tab.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="olderdataunchanged">3.3.4 - older data unchanged</h3>
+<h3 class="header3" id="olderdataunchanged">3.4.4 - older data unchanged</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/older_data-unchanged.jpg" alt="older_data-unchanged" %}</p>
 <p class="empty">&nbsp;</p>
@@ -96,19 +124,19 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>There is no point in doing this as you have already seen the data unless you didn't log in enough to keep your data up to date.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="olderintime">3.3.5 - older in time</h3>
+<h3 class="header3" id="olderintime">3.4.5 - older in time</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/older_in_time.jpg" alt="older_in_time" %}</p>
 <p class="empty">&nbsp;</p>
 <p>The server gives you older data when you request it by pressing E on the guild history tab. New sales are received when the server provides them.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="ReloadUI">3.3.6 - Reload UI</h3>
+<h3 class="header3" id="ReloadUI">3.4.6 - Reload UI</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/reloading.jpg" alt="reloading" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Reloading the UI does not reset the history.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="StreamingData">3.3.7 - Streaming Data</h3>
+<h3 class="header3" id="StreamingData">3.4.7 - Streaming Data</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/steaming_data.jpg" alt="steaming_data" %}</p>
 <p class="empty">&nbsp;</p>

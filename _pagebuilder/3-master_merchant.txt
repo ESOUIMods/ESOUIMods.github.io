@@ -3,7 +3,31 @@
 {{CONTENTS=3}}
 == Authors
 
-Philgo68, khaibit, Sharlikran
+Philgo68, Khaibit, dOpiate, sirinsidiator, Garkin, Sharlikran
+
+== Version History
+
+Apparently for version 2.2.0 there was an experimental turbo mode added to MM. From the change log it appears that this was removed by request from Zenimax. However, even I noticed when you tried to download 2.2.1 which had turbo mode removed, you received a file named <font class="purple">Master Merchant 2.2.0.zip</font>. If you tried to engage turbo mode it was still available even if it didn't work as expected.
+
+Aug 01 2020 after the kiosk flip was announced Philgo68 posted that he would be uploading a new version, which would be 2.3.1. From the start it had a small bug in it that prevented it from working. Then after that was fixed people started reporting that the Master Merchant window would not update when you were viewing your personal sales but that all guild sales was still updating properly.
+
+Upon examination of the code 2.3.1 had turbo mode removed which was not really removed in 2.2.1 (2.2.0). In addition to that on the description page it was mentioned that there was Simple Indexing and Simple Scanning. Oddly those options included new options in the Addons menu to toggle the features on and off. These options were not present in 2.2.1.
+
+This makes me believe that 2.3.1 was really intended to be the proposed 2.2.1 but somehow the upload never went through properly. I am glad Philgo68 uploaded the version as it has helped me understand the code a bit more.
+
+== Background Scanning Depreciated
+
+As of version 2.4.8 there is no <code>/mm missing</code> and no background scan. The background scan would get hung up by repeated attempts to request more sales data from the server. When the server denied the request MM would continue to wait for the request to be approved. While in reality if there were 100, 1000, or more sales events in the guild history MM would not attempt to scan them until it simply gave up and stopped scanning altogether. However, at that point you might have received a notification of no new sales.
+
+After starting a new library [[https://github.com/ESOUIMods/LibGuildHistoryCache | LibGuildHistoryCache]] I observed that the cache mod would see some new sales. Usually there were only a few sales maybe 1 or 2 and occasionally less then 10. The cache mod would update showing that the guild history events were not duplicates but MM would not see them as new sales. This is why MM no longer uses a background scan as it attempted to scan from a specific point in time and loop over the guild history events. 
+
+One other calculation made was to try and get the first entry in the guild history and the last. This was used to attempt to determine whether or not to scan from the start of the list or the end. Whether or not you have 1, 100, or more then 1000 events the first event will always be the same. All guild history events are appended onto the end of the list.
+
+== Monitoring Incoming Guild History
+
+With version 2.4.8 any guild history update is examined and then MM will look for new sales and ignore the duplicates. All new sales coming in will be updated automatically as the server adds them to the guild history. However, to obtain older sales data for any time you have been ofline you will need to manually scan the guild history from the guild history tab by [[#Select A Guild | pressing E for Show More]]. Not because anything has changed but because the server will deny the repeated automatic requests.
+
+To know when you no longer need more guild history you need to temporarily set the verbose level to 5 using <code>/mm verbose 5</code>. After you are finished set the verbose level to 4 or lower. For the least amount of notifications but so you still receive any important information <code>/mm verbose 2</code> is a good option.
 
 == What is being scanned
 
@@ -31,7 +55,7 @@ From what I can tell people feel that there is a cache or the server sends guild
 
 {{image:no_sales_history.jpg | no_sales_history}}
 
-When you first log in there might be 0 sales in your guild history until you open the guild history. As shown in the above screen shot with some extra debug messages this was the case when I first logged in. What is shown for the current version is "no new sales" and it would probably be more informative to update the message as I have shown. It might even be helpful to show a reminder when you first log in that there is nothing in the guild history to scan yet. Maybe that would help people so they don't think something is wrong when they expect there to be hundreds of sales already pre loaded in memory waiting for them the second they log in.
+When you first log in there might be 0 sales in your guild history until you open the guild history. As shown in the above screen shot with some extra debug messages this was the case when I first logged in. What some previous versions would show upon logging in was "no new sales". It would probably have been more informative to update the message as I have shown.
 
 ### Select A Guild
 

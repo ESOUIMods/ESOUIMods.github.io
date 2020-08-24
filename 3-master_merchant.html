@@ -62,9 +62,17 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="MonitoringIncomingGuildHistory">3.4 - Monitoring Incoming Guild History</h2>
 <p class="empty">&nbsp;</p>
-<p>With version 2.4.8 any guild history update is examined and then MM will look for new sales and ignore the duplicates. All new sales coming in will be updated automatically as the server adds them to the guild history. However, to obtain older sales data for any time you have been ofline you will need to manually scan the guild history from the guild history tab by <a  href="#SelectAGuild" >pressing E for Show More</a>. Not because anything has changed but because the server will deny the repeated automatic requests.</p>
+<p>With version 2.4.8 any guild history update is examined and then MM will look for new sales and ignore the duplicates. All new sales coming in will be updated automatically as the server adds them to the guild history. However, to obtain older sales data for any time you have been offline you will need to manually scan the guild history from the guild history tab by <a  href="#SelectAGuild" >pressing E for Show More</a>. Not because anything has changed but because the server will deny the repeated automatic requests.</p>
 <p class="empty">&nbsp;</p>
-<p>To know when you no longer need more guild history you need to temporarily set the verbose level to 5 using <code>/mm verbose 5</code>. After you are finished set the verbose level to 4 or lower. For the least amount of notifications but so you still receive any important information <code>/mm verbose 2</code> is a good option.</p>
+<p>To know when you no longer need more guild history you need to temporarily set the verbose level to 5 using <code>/mm verbose 5</code>. As you request more older sales data eventually you will catch up to where you were when you last logged out. At that point MM will notify you that it found no new sales.</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/eventmonitor_notifications.jpg" alt="eventmonitor_notifications" %}</p>
+<p class="empty">&nbsp;</p>
+<p>I beling to three casual trading guilds. For the first you see in the Green box that there were about 106 new sales for the short amount of time I was offline. The second with the blue box only 3 new sales. The last is much busier even for a casual guild and for a few hours of sales 463 sales. You will know you are caught up when MM says it found no new sales.</p>
+<p class="empty">&nbsp;</p>
+<p class="note">This will only work as intended if you have done a 10 day scan for all the guilds you belong to after updating to 2.4.8. Otherwise there could be gaps in guild history you have not recorded in your MM database.</p>
+<p class="empty">&nbsp;</p>
+<p>After you are finished set the verbose level to 4 or lower. For the least amount of notifications but so you still receive any important information <code>/mm verbose 2</code> is a good option.</p>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="Whatisbeingscanned">3.5 - What is being scanned</h2>
 <p class="empty">&nbsp;</p>

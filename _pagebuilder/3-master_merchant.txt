@@ -17,7 +17,7 @@ This makes me believe that 2.3.1 was really intended to be the proposed 2.2.1 bu
 
 == Background Scanning Depreciated
 
-As of version 2.4.8 there is no <code>/mm missing</code> and no background scan. The background scan would get hung up by repeated attempts to request more sales data from the server. When the server denied the request MM would continue to wait for the request to be approved. While in reality if there were 100, 1000, or more sales events in the guild history MM would not attempt to scan them until it simply gave up and stopped scanning altogether. However, at that point you might have received a notification of no new sales.
+As of version 3.0.0 there is no <code>/mm missing</code> and no background scan. The background scan would get hung up by repeated attempts to request more sales data from the server. When the server denied the request MM would continue to wait for the request to be approved. While in reality if there were 100, 1000, or more sales events in the guild history MM would not attempt to scan them until it simply gave up and stopped scanning altogether. However, at that point you might have received a notification of no new sales.
 
 After starting a new library [[https://github.com/ESOUIMods/LibGuildHistoryCache | LibGuildHistoryCache]] I observed that the cache mod would see some new sales. Usually there were only a few sales maybe 1 or 2 and occasionally less then 10. The cache mod would update showing that the guild history events were not duplicates but MM would not see them as new sales. This is why MM no longer uses a background scan as it attempted to scan from a specific point in time and loop over the guild history events. 
 
@@ -25,7 +25,7 @@ One other calculation made was to try and get the first entry in the guild histo
 
 == Monitoring Incoming Guild History
 
-With version 2.4.8 any guild history update is examined and then MM will look for new sales and ignore the duplicates. All new sales coming in will be updated automatically as the server adds them to the guild history. However, to obtain older sales data for any time you have been offline you will need to manually scan the guild history from the guild history tab by [[#Select A Guild | pressing E for Show More]]. Not because anything has changed but because the server will deny the repeated automatic requests.
+With version 3.0.0 any guild history update is examined and then MM will look for new sales and ignore the duplicates. All new sales coming in will be updated automatically as the server adds them to the guild history. However, to obtain older sales data for any time you have been offline you will need to manually scan the guild history from the guild history tab by [[#Select A Guild | pressing E for Show More]]. Not because anything has changed but because the server will deny the repeated automatic requests.
 
 To know when you no longer need more guild history you need to temporarily set the verbose level to 5 using <code>/mm verbose 5</code>. As you request more older sales data eventually you will catch up to where you were when you last logged out. At that point MM will notify you that it found no new sales.
 
@@ -33,7 +33,7 @@ To know when you no longer need more guild history you need to temporarily set t
 
 I belong to three casual trading guilds. For the first you see in the Green box that there were about 106 new sales for the short amount of time I was offline. The second with the blue box only 3 new sales. The last is much busier even for a casual guild and for a few hours of sales 463 sales. You will know you are caught up when MM says it found no new sales.
 
-{{note:This will only work as intended if you have done a 10 day scan for all the guilds you belong to after updating to 2.4.8. Otherwise there could be gaps in guild history you have not recorded in your MM database.}}
+{{note:This will only work as intended if you have done a 10 day scan for all the guilds you belong to after updating to 3.0.0. Otherwise there could be gaps in guild history you have not recorded in your MM database.}}
 
 After you are finished set the verbose level to 4 or lower. For the least amount of notifications but so you still receive any important information <code>/mm verbose 2</code> is a good option.
 

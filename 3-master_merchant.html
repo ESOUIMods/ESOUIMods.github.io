@@ -23,21 +23,23 @@ title: Master Merchant
 <p class="list-1">&bull;&nbsp; <a href="#VersionHistory">3.2 Version History</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#BackgroundScanningDepreciated">3.3 Background Scanning Depreciated</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#MonitoringIncomingGuildHistory">3.4 Monitoring Incoming Guild History</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#Whatisbeingscanned">3.5 What is being scanned</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Afewdaysofsalesfrom109entries">3.5.1 A few days of sales from 109 entries</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#4daysofsalesfrom8031entries">3.5.2 4 days of sales from 8031 entries</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#ManuallyupdatingGuildHistory">3.6 Manually updating Guild History</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Whenyoufirstlogin">3.6.1 When you first log in</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#SelectAGuild">3.6.2 Select A Guild</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#WhenEisnolongershowing">3.6.3 When E is no longer showing</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#Myths">3.7 Myths</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Displayingapercentageoftime">3.7.1 Displaying a percentage of time</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Ittakestoolongtoscan">3.7.2 It takes too long to scan</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#NewAPI2021">3.7.3 New API 2021</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#olderdataunchanged">3.7.4 older data unchanged</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#olderintime">3.7.5 older in time</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ReloadUI">3.7.6 Reload UI</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#StreamingData">3.7.7 Streaming Data</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#Erroneoustimestamp">3.5 Erroneous timestamp</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#Whatisbeingscanned">3.6 What is being scanned</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Afewdaysofsalesfrom109entries">3.6.1 A few days of sales from 109 entries</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#4daysofsalesfrom8031entries">3.6.2 4 days of sales from 8031 entries</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#ManuallyupdatingGuildHistory">3.7 Manually updating Guild History</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Whenyoufirstlogin">3.7.1 When you first log in</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#SelectAGuild">3.7.2 Select A Guild</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#WhenEisnolongershowing">3.7.3 When E is no longer showing</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#Myths">3.8 Myths</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#AutomaticallyRequestingDataFromTheServer">3.8.1 Automatically Requesting Data From The Server</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Displayingapercentageoftime">3.8.2 Displaying a percentage of time</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Ittakestoolongtoscan">3.8.3 It takes too long to scan</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#NewAPI2021">3.8.4 New API 2021</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#olderdataunchanged">3.8.5 older data unchanged</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#olderintime">3.8.6 older in time</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ReloadUI">3.8.7 Reload UI</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#StreamingData">3.8.8 Streaming Data</a></p>
 <h2 class="header2" id="Authors">3.1 - Authors</h2>
 <p class="empty">&nbsp;</p>
 <p>Philgo68, Khaibit, dOpiate, sirinsidiator, Garkin, Sharlikran</p>
@@ -74,17 +76,26 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>After you are finished set the verbose level to 4 or lower. For the least amount of notifications but so you still receive any important information <code>/mm verbose 2</code> is a good option.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="Whatisbeingscanned">3.5 - What is being scanned</h2>
+<h2 class="header2" id="Erroneoustimestamp">3.5 - Erroneous timestamp</h2>
+<p class="empty">&nbsp;</p>
+<p>When you see the notification <code>Erroneous timestamp for a sales event detected</code>, then the server has posted a recent sale with a time stamp that makes no sense. I have seen 1657 months ago or 71582789 minutes ago as shown.</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/1657months.jpg" alt="1657months" %}</p>
+<p>{% include image.html file="img/71582789minutes.jpg" alt="71582789minutes" %}</p>
+<p class="empty">&nbsp;</p>
+<p>What MM will do is go back to the last event that is not a duplicate sale and mark that event. Once the erroneous timestamp is corrected MM will pick up where it left off and add the sales with the proper timestamp. Without the proper timestamp I do not see how the sale could be listed accurately in the Master Merchant window. Not to mention that if the sale was recorded as being 1657 months ago, that would be more then one year which is the max setting for retaining data.</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="Whatisbeingscanned">3.6 - What is being scanned</h2>
 <p class="empty">&nbsp;</p>
 <p>When MM is telling you that it is scanning it is obtaining the number of sales in your guild history that you have loaded into memory and obtaining the data from the game for each entry.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="Afewdaysofsalesfrom109entries">3.5.1 - A few days of sales from 109 entries</h3>
+<h3 id="Afewdaysofsalesfrom109entries">3.6.1 - A few days of sales from 109 entries</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/shot_history.jpg" alt="shot_history" %}</p>
 <p class="empty">&nbsp;</p>
 <p>MM and other guild related tools simply scan entries from the guild history. With another mod installed called <font class="purple">Shissu's Guild Tools</font> a count of the amount of entries is showing. As shown there are 109 entries which only covers a few minutes of sales.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="4daysofsalesfrom8031entries">3.5.2 - 4 days of sales from 8031 entries</h3>
+<h3 id="4daysofsalesfrom8031entries">3.6.2 - 4 days of sales from 8031 entries</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/long_list.jpg" alt="shot_history" %}</p>
 <p class="empty">&nbsp;</p>
@@ -92,17 +103,17 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p class="note">A specific range of sales can not be requested at this time and the ability to do so might not become available until 2021 as shown in this <a  href="#NewAPI2021" >response from ZOS</a>.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="ManuallyupdatingGuildHistory">3.6 - Manually updating Guild History</h2>
+<h2 class="header2" id="ManuallyupdatingGuildHistory">3.7 - Manually updating Guild History</h2>
 <p class="empty">&nbsp;</p>
 <p>From what I can tell people feel that there is a cache or the server sends guild history to the user like a streaming video service. This is not the case. If you have 100 sales showing that covers a few minutes of sales, if you have 8000 sales that might cover 4 days of sales, or if you have 800 sales that covers 10 days of sales it doesn't matter. What you have loaded into memory is what is going to be scanned.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="Whenyoufirstlogin">3.6.1 - When you first log in</h3>
+<h3 id="Whenyoufirstlogin">3.7.1 - When you first log in</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/no_sales_history.jpg" alt="no_sales_history" %}</p>
 <p class="empty">&nbsp;</p>
 <p>When you first log in there might be 0 sales in your guild history until you open the guild history. As shown in the above screen shot with some extra debug messages this was the case when I first logged in. What some previous versions would show upon logging in was "no new sales". It would probably have been more informative to update the message as I have shown.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="SelectAGuild">3.6.2 - Select A Guild</h3>
+<h3 id="SelectAGuild">3.7.2 - Select A Guild</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/show_more.jpg" alt="show_more" %}</p>
 <p class="empty">&nbsp;</p>
@@ -110,7 +121,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p class="note">Pressing E more frequently is pointless and the server can impose more restrictions as it sees fit as mentioned <a  href="#Ittakestoolongtoscan" >here</a>.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="WhenEisnolongershowing">3.6.3 - When E is no longer showing</h3>
+<h3 id="WhenEisnolongershowing">3.7.3 - When E is no longer showing</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/10_days_sales.jpg" alt="show_more" %}</p>
 <p class="empty">&nbsp;</p>
@@ -118,9 +129,20 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p class="note">Scanning 10 days of history every few days or every week is pointless and a drain on the server. Once you scan 10 days of data you only need to scan sales for the time you have been offline. If you have been offline less the 24 hours then request 1 day of sales and use <font class="purple">/mm missing</font> to scan the data.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="Myths">3.7 - Myths</h2>
+<h2 class="header2" id="Myths">3.8 - Myths</h2>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="Displayingapercentageoftime">3.7.1 - Displaying a percentage of time</h3>
+<h3 class="header3" id="AutomaticallyRequestingDataFromTheServer">3.8.1 - Automatically Requesting Data From The Server</h3>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/serverrequests.jpg" alt="serverrequests" %}</p>
+<p class="empty">&nbsp;</p>
+<section class="quote">
+<p class="attr">Quote</p>
+<p>RequestMoreGuildHistoryCategoryEvents will return false if there are no more things to request, if you're on cooldown, or if its in the timeout window. Addons have a different timeout window and cooldown than ZOS code does, and that window can be server controlled. So they may set your cooldown/timeout way higher. Cooldown is 500 ms by default, but the server can set it to whatever it wants. The timeout is at least 3 minutes. Which I think means how long we'll wait for a server response before assuming one isn't coming and letting you try again. So if the server is busy and it's taking more than 5 seconds to get a response, we'll spit back false if you tried again. Non-addon has a 15 second timeout.</p>
+<p class="empty">&nbsp;</p>
+<p>It's heavily dependant on server load and whether or not they decided to throttle the pipe any. Typically they'd only throttle the pipe if there’s an issue at the time, but I really have no control or insight into those policies.</p>
+</section>
+<p class="empty">&nbsp;</p>
+<h3 class="header3" id="Displayingapercentageoftime">3.8.2 - Displaying a percentage of time</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/certain_amount_history.jpg" alt="certain_amount_history" %}</p>
 <p class="empty">&nbsp;</p>
@@ -128,20 +150,20 @@ title: Master Merchant
 <p class="attr">Quote</p>
 <p>Would it be possible to add back the scan % messages back to the verbose modes?</p>
 </section>
-<p> It has not been removed. It only happens during the background scan.</p>
+<p>It has not been removed in 3.0.0. It only happened during the background scan.</p>
 <section class="quote">
 <p class="attr">Quote</p>
 <p>The method I used in the past for loading sales data for the period between my last login and my current login was to set verbosity to 4 so I could see the % of each guild scan. I would then run through each guild history sales (by pressing E) until MM showed 100% for that guild (I am never offline for more than 3 days so I always had full data). Once it hit 100% for a guild I would do the next guild. The entire process took less than a minute (despite being in several major trade guilds) and it always gave me full data each day.</p>
 </section>
-<p>The current message is not any indication that there is a certain amount of time being scanned.</p>
+<p>The message was misleading because you still only processed 1 to X amount of records and only what was loaded into memory. The notification was never any real indication of actual progress based on time needed to complete the process.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="Ittakestoolongtoscan">3.7.2 - It takes too long to scan</h3>
+<h3 class="header3" id="Ittakestoolongtoscan">3.8.3 - It takes too long to scan</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/every_three_seconds.jpg" alt="every_three_seconds" %}</p>
 <p class="empty">&nbsp;</p>
 <p>You can not request data faster.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="NewAPI2021">3.7.3 - New API 2021</h3>
+<h3 class="header3" id="NewAPI2021">3.8.4 - New API 2021</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/new_api_2021.jpg" alt="new_api_2021" %}</p>
 <p class="empty">&nbsp;</p>
@@ -152,7 +174,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>There has never been any way to scan a range of data. You get the initial 100 most recent sales, and then you can request more older sales. To do so press E on the guild history tab.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="olderdataunchanged">3.7.4 - older data unchanged</h3>
+<h3 class="header3" id="olderdataunchanged">3.8.5 - older data unchanged</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/older_data-unchanged.jpg" alt="older_data-unchanged" %}</p>
 <p class="empty">&nbsp;</p>
@@ -163,19 +185,19 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>There is no point in doing this as you have already seen the data unless you didn't log in enough to keep your data up to date.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="olderintime">3.7.5 - older in time</h3>
+<h3 class="header3" id="olderintime">3.8.6 - older in time</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/older_in_time.jpg" alt="older_in_time" %}</p>
 <p class="empty">&nbsp;</p>
 <p>The server gives you older data when you request it by pressing E on the guild history tab. New sales are received when the server provides them.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="ReloadUI">3.7.6 - Reload UI</h3>
+<h3 class="header3" id="ReloadUI">3.8.7 - Reload UI</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/reloading.jpg" alt="reloading" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Reloading the UI does not reset the history.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="StreamingData">3.7.7 - Streaming Data</h3>
+<h3 class="header3" id="StreamingData">3.8.8 - Streaming Data</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/steaming_data.jpg" alt="steaming_data" %}</p>
 <p class="empty">&nbsp;</p>

@@ -37,6 +37,15 @@ I belong to three casual trading guilds. For the first you see in the Green box 
 
 After you are finished set the verbose level to 4 or lower. For the least amount of notifications but so you still receive any important information <code>/mm verbose 2</code> is a good option.
 
+== Erroneous timestamp
+
+When you see the notification <code>Erroneous timestamp for a sales event detected</code>, then the server has posted a recent sale with a time stamp that makes no sense. I have seen 1657 months ago or 71582789 minutes ago as shown.
+
+{{image:1657months.jpg | 1657months}}
+{{image:71582789minutes.jpg | 71582789minutes}}
+
+What MM will do is go back to the last event that is not a duplicate sale and mark that event. Once the erroneous timestamp is corrected MM will pick up where it left off and add the sales with the proper timestamp. Without the proper timestamp I do not see how the sale could be listed accurately in the Master Merchant window. Not to mention that if the sale was recorded as being 1657 months ago, that would be more then one year which is the max setting for retaining data.
+
 == What is being scanned
 
 When MM is telling you that it is scanning it is obtaining the number of sales in your guild history that you have loaded into memory and obtaining the data from the game for each entry.
@@ -83,6 +92,16 @@ Once you have scanned 10 days of sales then the option to press E will not be sh
 
 == Myths
 
+=== Automatically Requesting Data From The Server
+
+{{image:serverrequests.jpg | serverrequests}}
+
+[[bb:Quote]]
+RequestMoreGuildHistoryCategoryEvents will return false if there are no more things to request, if you're on cooldown, or if its in the timeout window. Addons have a different timeout window and cooldown than ZOS code does, and that window can be server controlled. So they may set your cooldown/timeout way higher. Cooldown is 500 ms by default, but the server can set it to whatever it wants. The timeout is at least 3 minutes. Which I think means how long we'll wait for a server response before assuming one isn't coming and letting you try again. So if the server is busy and it's taking more than 5 seconds to get a response, we'll spit back false if you tried again. Non-addon has a 15 second timeout.
+
+It's heavily dependant on server load and whether or not they decided to throttle the pipe any. Typically they'd only throttle the pipe if there’s an issue at the time, but I really have no control or insight into those policies.
+[[be:]]
+
 === Displaying a percentage of time
 
 {{image:certain_amount_history.jpg | certain_amount_history}}
@@ -90,11 +109,11 @@ Once you have scanned 10 days of sales then the option to press E will not be sh
 [[bb:Quote]]
 Would it be possible to add back the scan % messages back to the verbose modes?
 [[be:]]
- It has not been removed. It only happens during the background scan.
+It has not been removed in 3.0.0. It only happened during the background scan.
 [[bb:Quote]]
 The method I used in the past for loading sales data for the period between my last login and my current login was to set verbosity to 4 so I could see the % of each guild scan. I would then run through each guild history sales (by pressing E) until MM showed 100% for that guild (I am never offline for more than 3 days so I always had full data). Once it hit 100% for a guild I would do the next guild. The entire process took less than a minute (despite being in several major trade guilds) and it always gave me full data each day. 
 [[be:]]
-The current message is not any indication that there is a certain amount of time being scanned.
+The message was misleading because you still only processed 1 to X amount of records and only what was loaded into memory. The notification was never any real indication of actual progress based on time needed to complete the process.
 
 === It takes too long to scan
 

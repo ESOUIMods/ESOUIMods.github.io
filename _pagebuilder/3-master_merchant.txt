@@ -41,7 +41,7 @@ After you are finished set the verbose level to 4 or lower. For the least amount
 
 The reason you manually update is the <code>RequestMoreGuildHistoryCategoryEvents</code> requests for more older sales are not approved often enough to make it a timely and efficient way to update guild history. As ZOS has mentioned the call made to check for older guild history events should really be called [[https://esouimods.github.io/3-master_merchant.html#olderintime | DoesGuildHistoryCategoryHaveMoreOlderEvents]]. The two API functions request older sales that occurred while you were offline.
 
-{{image:mmhistory.jpg | mmhistory}}
+{{image-caption:mmhistory.jpg | mmhistory | This is a graph to illustrate something. It is not an exact representation of how guild history is stored in memory.}}
 
 Without first scanning 10 days of data with 3.0 and without manually requesting guild history up to where you were when you last logged off you will end up with gaps in your guild history.
 

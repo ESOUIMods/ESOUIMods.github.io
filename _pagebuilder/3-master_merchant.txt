@@ -47,7 +47,7 @@ Without first scanning 10 days of data with 3.0 and without manually requesting 
 
 {{note:You only need to do a 10 day scan once with 3.0 to make sure you have no missing guild history.}}
 
-The blue arrow represents the new sales that come in as they appear in the guild history. The purple arrow is what you have loaded in memory. The green arrows are your MM data you have saved to disk from each time you were online. The Orange arrows are the offline sales that happened while you were not logged in and while you were not manually requesting guild history.
+The blue arrow represents the new sales that come in as they appear in the guild history. The purple arrow is what you have loaded in memory. The green arrows are your MM data you have saved to disk from each time you were online. The Orange arrows are the offline sales that happened while you were not logged in and represent gaps that would not exist if you make sure you request all guild history for the time you have been offline.
 
 Unless you are caught up each day or caught up for the time you have been offline you will end up with gaps in guild history and you will be missing sales. [[New API 2021 | As mentioned by ZOS]] the option to request a specific range of history will be added in 2021.
 

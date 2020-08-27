@@ -51,7 +51,7 @@ The blue arrow represents the new sales that come in as they appear in the guild
 
 Unless you are caught up each day or caught up for the time you have been offline you will end up with gaps in guild history and you will be missing sales. [[New API 2021 | As mentioned by ZOS]] the option to request a specific range of history will be added in 2021.
 
-== Erroneous timestamp
+== Decrement Button
 
 {{image:decrement.jpg | decrement}}
 

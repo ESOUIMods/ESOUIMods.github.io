@@ -148,10 +148,16 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="AutomaticallyRequestingDataFromTheServer">3.9.1 - Automatically Requesting Data From The Server</h3>
 <p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/certain_amount_history.jpg" alt="certain_amount_history" %}</p>
+<p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/serverrequests.jpg" alt="serverrequests" %}</p>
 <p class="empty">&nbsp;</p>
 <section class="quote">
 <p class="attr">Quote</p>
+<p>When you ask for the first request, the server sends back the last X amount of history, from now going backwards. If there is more in there to request, it says "and oh by the way, there is more if you want it."</p>
+<p class="empty">&nbsp;</p>
+<p>If any new events come in after that initial request, nothing is every going to tell you that, at least not these functions. That's my understanding of the system.</p>
+<p class="empty">&nbsp;</p>
 <p>RequestMoreGuildHistoryCategoryEvents will return false if there are no more things to request, if you're on cooldown, or if its in the timeout window. Addons have a different timeout window and cooldown than ZOS code does, and that window can be server controlled. So they may set your cooldown/timeout way higher. Cooldown is 500 ms by default, but the server can set it to whatever it wants. The timeout is at least 3 minutes. Which I think means how long we'll wait for a server response before assuming one isn't coming and letting you try again. So if the server is busy and it's taking more than 5 seconds to get a response, we'll spit back false if you tried again. Non-addon has a 15 second timeout.</p>
 <p class="empty">&nbsp;</p>
 <p>It's heavily dependant on server load and whether or not they decided to throttle the pipe any. Typically they'd only throttle the pipe if there’s an issue at the time, but I really have no control or insight into those policies.</p>
@@ -159,18 +165,18 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="Displayingapercentageoftime">3.9.2 - Displaying a percentage of time</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/certain_amount_history.jpg" alt="certain_amount_history" %}</p>
+<p>The percentage was just a calculation of the ammount of events in memory and a calculation made on the timestamp. It has been removed in 3.0.0 and will be replaced by a different feature. It only happened during the background scan.</p>
+<p class="empty">&nbsp;</p>
+<p>The message was misleading because you still only processed 1 to X amount of records and only what was loaded into memory. The notification was never any real indication of actual progress based on time needed to complete the process.</p>
 <p class="empty">&nbsp;</p>
 <section class="quote">
 <p class="attr">Quote</p>
 <p>Would it be possible to add back the scan % messages back to the verbose modes?</p>
 </section>
-<p>It has not been removed in 3.0.0. It only happened during the background scan.</p>
 <section class="quote">
 <p class="attr">Quote</p>
 <p>The method I used in the past for loading sales data for the period between my last login and my current login was to set verbosity to 4 so I could see the % of each guild scan. I would then run through each guild history sales (by pressing E) until MM showed 100% for that guild (I am never offline for more than 3 days so I always had full data). Once it hit 100% for a guild I would do the next guild. The entire process took less than a minute (despite being in several major trade guilds) and it always gave me full data each day.</p>
 </section>
-<p>The message was misleading because you still only processed 1 to X amount of records and only what was loaded into memory. The notification was never any real indication of actual progress based on time needed to complete the process.</p>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="Ittakestoolongtoscan">3.9.3 - It takes too long to scan</h3>
 <p class="empty">&nbsp;</p>

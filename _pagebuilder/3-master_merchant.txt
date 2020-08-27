@@ -108,9 +108,15 @@ Once you have scanned 10 days of sales then the option to press E will not be sh
 
 === Automatically Requesting Data From The Server
 
+{{image:certain_amount_history.jpg | certain_amount_history}}
+
 {{image:serverrequests.jpg | serverrequests}}
 
 [[bb:Quote]]
+When you ask for the first request, the server sends back the last X amount of history, from now going backwards. If there is more in there to request, it says "and oh by the way, there is more if you want it."
+
+If any new events come in after that initial request, nothing is every going to tell you that, at least not these functions. That's my understanding of the system.
+
 RequestMoreGuildHistoryCategoryEvents will return false if there are no more things to request, if you're on cooldown, or if its in the timeout window. Addons have a different timeout window and cooldown than ZOS code does, and that window can be server controlled. So they may set your cooldown/timeout way higher. Cooldown is 500 ms by default, but the server can set it to whatever it wants. The timeout is at least 3 minutes. Which I think means how long we'll wait for a server response before assuming one isn't coming and letting you try again. So if the server is busy and it's taking more than 5 seconds to get a response, we'll spit back false if you tried again. Non-addon has a 15 second timeout.
 
 It's heavily dependant on server load and whether or not they decided to throttle the pipe any. Typically they'd only throttle the pipe if there’s an issue at the time, but I really have no control or insight into those policies.
@@ -118,16 +124,16 @@ It's heavily dependant on server load and whether or not they decided to throttl
 
 === Displaying a percentage of time
 
-{{image:certain_amount_history.jpg | certain_amount_history}}
+The percentage was just a calculation of the ammount of events in memory and a calculation made on the timestamp. It has been removed in 3.0.0 and will be replaced by a different feature. It only happened during the background scan.
+
+The message was misleading because you still only processed 1 to X amount of records and only what was loaded into memory. The notification was never any real indication of actual progress based on time needed to complete the process.
 
 [[bb:Quote]]
 Would it be possible to add back the scan % messages back to the verbose modes?
 [[be:]]
-It has not been removed in 3.0.0. It only happened during the background scan.
 [[bb:Quote]]
 The method I used in the past for loading sales data for the period between my last login and my current login was to set verbosity to 4 so I could see the % of each guild scan. I would then run through each guild history sales (by pressing E) until MM showed 100% for that guild (I am never offline for more than 3 days so I always had full data). Once it hit 100% for a guild I would do the next guild. The entire process took less than a minute (despite being in several major trade guilds) and it always gave me full data each day. 
 [[be:]]
-The message was misleading because you still only processed 1 to X amount of records and only what was loaded into memory. The notification was never any real indication of actual progress based on time needed to complete the process.
 
 === It takes too long to scan
 

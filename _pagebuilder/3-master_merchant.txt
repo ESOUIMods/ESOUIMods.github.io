@@ -53,6 +53,12 @@ Unless you are caught up each day or caught up for the time you have been offlin
 
 == Erroneous timestamp
 
+{{image:decrement.jpg | decrement}}
+
+The Decrement button rewinds the guild index marker back 50. This can be used as a way to rewind a bit in the guild history in case you feel you might have missed a recent sale. If you have 10,000 events in the guild history I don't recommend going back more then a few hundred. If you spam it too much it may cause the game to seem like it hangs for a few seconds. It will do that if you process too many events at the same time.
+
+== Erroneous timestamp
+
 When you see the notification <code>Erroneous timestamp for a sales event detected</code>, then the server has posted a recent sale with a time stamp that makes no sense. I have seen 1657 months ago or 71582789 minutes ago as shown.
 
 {{image:1657months.jpg | 1657months}}

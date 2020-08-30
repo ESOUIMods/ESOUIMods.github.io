@@ -51,6 +51,18 @@ The blue arrow represents the new sales that come in as they appear in the guild
 
 Unless you are caught up each day or caught up for the time you have been offline you will end up with gaps in guild history and you will be missing sales. [[New API 2021 | As mentioned by ZOS]] the option to request a specific range of history will be added in 2021.
 
+== Event Index
+
+As of 3.0.4 there are two numbers which represent the Event Index the scan will start from the next time history is received, and the total number of events loaded into memory. There is also the total amount of time the guild history covers.
+
+{{image:unassignedvars.jpg | unassignedvars}}
+
+When you first log in some variables may not be assigned yet. Because of that you will see the null until the variables are assigned. Under most circumstances even if you reload the UI the values will be saved. They are not retained once you log out.
+
+{{image:assignedvalues.jpg | assignedvalues}}
+
+Once some sales have come in the numbers will start to populate. The number on the left is the starting position once more history is received. This can be decremented by 50 using the [[#|Decrement Button]]. The number on the right is the total events or sales loaded into memory so far. The bottom number is the total amount of time loaded so far. A guild with fewer sales may have 300 sales that cover a time span of 3 to 4 days. Busy guilds could have the same amount and it only covers a few seconds of sales. It is all relative to the amount of sales your guild does.
+
 == Decrement Button
 
 {{image:decrement.jpg | decrement}}

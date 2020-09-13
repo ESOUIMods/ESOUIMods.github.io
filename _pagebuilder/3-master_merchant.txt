@@ -123,7 +123,7 @@ However, as shown in the above screen shot there are 8031 entries which covers 4
 
 == Sales Week
 
-As of  August 11 2020 the kiosk flip is now [[th https://forums.elderscrollsonline.com/en/discussion/540142/updates-to-guild-trader-swap-times/p1 | every Tuesday]]. All sales totals are calculated from the time indicated by ZOS.
+As of  August 11 2020 the kiosk flip is now [[ https://forums.elderscrollsonline.com/en/discussion/540142/updates-to-guild-trader-swap-times/p1 | every Tuesday]]. All sales totals are calculated from the time indicated by ZOS.
 
 You should not try to calculate your sales yourself. Each sale is saved with the exact time stamp the sale occurred. All sales even a few seconds prior to the kiosk flip would not show if you selected to see sales from This Week.
 

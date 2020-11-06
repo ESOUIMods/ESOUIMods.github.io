@@ -17,70 +17,43 @@ This makes me believe that 2.3.1 was really intended to be the proposed 2.2.1 bu
 
 == Background Scanning Depreciated
 
-As of version 3.0.0 there is no <code>/mm missing</code> and no background scan. The background scan would get hung up by repeated attempts to request more sales data from the server. When the server denied the request MM would continue to wait for the request to be approved. While in reality if there were 100, 1000, or more sales events in the guild history MM would not attempt to scan them until it simply gave up and stopped scanning altogether. However, at that point you might have received a notification of no new sales.
+As of version 3.0.0 there is no <code>/mm missing</code> and no background scan. The background scan would get hung up by repeated attempts to request more sales data from the server. When the server denied the request MM would continue to wait for the request to be approved.
 
-After starting a new library [[https://github.com/ESOUIMods/LibGuildHistoryCache | LibGuildHistoryCache]] I observed that the cache mod would see some new sales. Usually there were only a few sales maybe 1 or 2 and occasionally less then 10. The cache mod would update showing that the guild history events were not duplicates but MM would not see them as new sales. One other calculation made was to try and get the first entry in the guild history and the last. This was used to attempt to determine whether or not to scan from the start of the list or the end. Whether or not you have 1, 100, or more then 1000 events the first event will always be the same. All guild history events are appended onto the end of the list.
+After starting a new library [[https://github.com/ESOUIMods/LibGuildHistoryCache | LibGuildHistoryCache]] I observed that the cache mod would see some new sales. Usually there were only a few sales maybe 1 or 2 and occasionally less then 10. The cache mod would update showing that the guild history events were not duplicates but MM would not see them as new sales. 
+
+One other calculation made was to try and get the first entry in the guild history and the last. This was used to attempt to determine whether or not to scan from the start of the guild history array, or the end. Whether or not you have 1, 100, or more then 1000 events the first event will always be the same. All guild history events are appended onto the end of the list.
 
 For reasons like these MM no longer uses a background scan as it attempted to scan from a specific point in time and loop over the guild history events.
 
-== Why Manually Update
+== Three states of LibHistoire cache
 
-The reason you manually update is the <code>RequestMoreGuildHistoryCategoryEvents</code> requests for more older sales are not approved often enough to make it a timely and efficient way to update guild history. As ZOS has mentioned the call made to check for older guild history events should really be called [[https://esouimods.github.io/3-master_merchant.html#olderintime | DoesGuildHistoryCategoryHaveMoreOlderEvents]]. The two API functions request older sales that occurred while you were offline.
+### Unlinked
 
-{{image-caption:mmhistory.jpg | mmhistory | This is a graph to illustrate something. It is not an exact representation of how guild history is stored in memory.}}
+{{image:red_text_unlinked.jpg | red_text_unlinked}}
 
-Without first scanning 10 days of data with 3.0 and without manually requesting guild history up to where you were when you last logged off you will end up with gaps in your guild history.
+In the Unlinked state you can either wait for the server to grant the requests for offline data that LibHistoire requests, or you can manually request guild history for the time you were offline.
 
-{{note:You only need to do a 10 day scan once with 3.0 to make sure you have no missing guild history.}}
+### Linking in progress
 
-The blue arrow represents the new sales that come in as they appear in the guild history. The purple arrow is what you have loaded in memory. The green arrows are your MM data you have saved to disk from each time you were online. The Orange arrows are the offline sales that happened while you were not logged in and represent gaps that would not exist if you make sure you request all guild history for the time you have been offline.
+{{image:yellow_text_linking.jpg | yellow_text_linking}}
 
-Unless you are caught up each day or caught up for the time you have been offline you will end up with gaps in guild history and you will be missing sales. [[New API 2021 | As mentioned by ZOS]] the option to request a specific range of history will be added in 2021.
+Once LibHistoire has what I feels it needs, then it will begin processing the guild history events and attempt to link to the last known event.
 
-== Event Index
+### Linked
 
-As of 3.0.4 there are two numbers which represent the Event Index the scan will start from the next time history is received, and the total number of events loaded into memory. There is also the total amount of time the guild history covers.
+{{image:green_text_linked.jpg | green_text_linked}}
 
-{{image:unassignedvars.jpg | unassignedvars}}
+Once LibHistoire has linked to its stored events you should see green text. This means that LibHistoire has finished processing the guild history.
 
-When you first log in some variables may not be assigned yet. Because of that you will see the null until the variables are assigned. Under most circumstances even if you reload the UI the values will be saved. They are not retained once you log out.
-
-{{image:assignedvalues.jpg | assignedvalues}}
-
-Once some sales have come in the numbers will start to populate. The number on the left is the starting position once more history is received. This can be decremented by 50 using the [[#|Decrement Button]]. The number on the right is the total events or sales loaded into memory so far. The bottom number is the total amount of time loaded so far. A guild with fewer sales may have 300 sales that cover a time span of 3 to 4 days. Busy guilds could have the same amount and it only covers a few seconds of sales. It is all relative to the amount of sales your guild does.
-
-== Erroneous timestamp
-
-When you see the notification <code>Erroneous timestamp for a sales event detected</code>, then the server has posted a recent sale with a time stamp that makes no sense. I have seen 1657 months ago or 71582789 minutes ago as shown.
-
-{{image:1657months.jpg | 1657months}}
-{{image:71582789minutes.jpg | 71582789minutes}}
-
-What MM will do is go back to the last event that is not a duplicate sale and mark that event. Once the erroneous timestamp is corrected MM will pick up where it left off and add the sales with the proper timestamp. Without the proper timestamp I do not see how the sale could be listed accurately in the Master Merchant window. Not to mention that if the sale was recorded as being 1657 months ago, that would be more then one year which is the max setting for retaining data.
-
-== Update Your Guild History Each Day
-
-Regardless of how long you have been offline you need to update your guild history. To obtain older sales data for any time you have been offline you will need to manually scan the guild history from the guild history tab by [[#Select A Guild | pressing E for Show More]].
-
-To know when you no longer need more guild history you need to temporarily set the verbose level to 5 using <code>/mm verbose 5</code>. As you request more older sales data eventually you will catch up to where you were when you last logged out. At that point MM will notify you that it found no new sales.
-
-{{image:eventmonitor_notifications.jpg | eventmonitor_notifications}}
-
-I belong to three casual trading guilds. For the first you see in the Green box that there were about 106 new sales for the short amount of time I was offline. The second with the blue box only 3 new sales. The last is much busier even for a casual guild and for a few hours of sales 463 sales. You will know you are caught up when MM says it found no new sales.
-
-{{note:This will only work as intended if you have done a [[#Ten Day Scan | 10 day scan]] for all the guilds you belong to after updating to 3.0.0. Otherwise there could be gaps in guild history you have not recorded in your MM database.}}
-
-After you are finished set the verbose level to 4 or lower. For the least amount of notifications but so you still receive any important information <code>/mm verbose 2</code> is a good option.
+{{note: You can still request additional history and ask LibHistoire to check it using the refresh button.}}
 
 == Ten Day Scan
 
-After upgrading to 3.x you will need to do a Ten Day Scan of all the guilds you are in. This ensures you have all the data stored for the last ten days. After doing a ten day scan for each guild you only need to request guild history for the time you have been offline.
-
-### When you first log in
-
-When you first log in there might be 0 sales in your guild history according to the [[#|Event Index]]. 
+After upgrading to 3.x you will need to do a Ten Day Scan of all the guilds you are in. This ensures that LibHistoire has stored sales data for you to start working with. stored data for you to recall as needed. After doing a ten day scan for each guild you only need to request guild history for the time you have been offline.
 
 ### Select A Guild
+
+When you first log in there won’t be much as far as guild history loaded in memory.
 
 {{image:show_more.jpg | show_more}}
 
@@ -92,34 +65,52 @@ In order to manually request sales data you have to choose a guild and select Al
 
 Once you have scanned 10 days of sales then the option to press E will not be shown. This guild is more casual and if you are in a busy guild you may have to press E until you have 16,000 to 20,000 sales listed in the guild history.
 
+### LibHistoire GUI
+
+{{image:histy_gui.jpg | histy_gui}}
+
+As you perform a ten day scan the LibHistoire GUI will update. It might even finish processing a certain amount of events. For your first initial Ten Day Scan ignore what it is doing until you can no longer press E.
+
+### Finalize the Ten Day Scan
+
+{{image:ten_day_scan_refresh.jpg | ten_day_scan_refresh}}
+
+After you no longer see the option to press E that means you have all the data the server will allow you to have. To finalize the Ten Day Scan press the refresh button. Yellow text will appear as it processes the guild history data.
+
 {{note:Scanning 10 days of history every few days or every week is pointless and a drain on the server.}}
 
-== Decrement Button
+== Update Your Guild History Each Day
 
-{{image:decrement.jpg | decrement}}
+{{image:histy_gui.jpg | histy_gui}}
 
-The Decrement button rewinds the guild index marker back 50. This can be used as a way to rewind a bit in the guild history in case you feel you might have missed a recent sale. If you have 10,000 events in the guild history I don't recommend going back more then a few hundred. If you spam it too much it may cause the game to seem like it hangs for a few seconds. It will do that if you process too many events at the same time.
+Regardless of how long you have been offline you need to update your guild history. To obtain older sales data for any time you have been offline you can wait for the server to send the data to LibHistoire. How quickly the server provides the data depends on many things. Because of that I do not wait. I manually scan the guild history from the guild history tab by [[#Select A Guild | pressing E for Show More]].
 
-{{note:This is added as an option. It doesn't mean you have to use it. If you do not feel it is useful to you or you don't understand it then don't bother using it.}}
+After I have enough guild history to cover the time I have been offline then I use the refresh button which asks LibHistoire to double check the sales loaded in memory are in the cache. Once LibHistoire has verified the sales data the text will turn green indicating that the [[#Linked | sales events are linked]].
 
+== Erroneous timestamp
+
+When you see an erroneous timestamp, LibHistoire will handle this internally. It will not be processed until the timestamp is updated properly by the server.
+
+{{image:1657months.jpg | 1657months}}
+{{image:71582789minutes.jpg | 71582789minutes}}
+
+LibHistoire will send the sale to MM after it checks that the erroneous timestamp is no longer present.
 
 == What is being scanned
 
-When MM is telling you that it is scanning it is obtaining the number of sales in your guild history that you have loaded into memory and obtaining the data from the game for each entry.
+When LibHistoire is scanning the guild history it is obtaining the sales from all the guild history that you have loaded into memory.
 
 ### A few days of sales from 109 entries
 
 {{image:shot_history.jpg | shot_history}}
 
-MM and other guild related tools simply scan entries from the guild history. With another mod installed called <font class="purple">Shissu's Guild Tools</font> a count of the amount of entries is showing. As shown there are 109 entries which only covers a few minutes of sales.
+LibHistoire simply scan entries from the guild history. With another mod installed called <font class="purple">Shissu's Guild Tools</font> a count of the amount of entries is showing. As shown there are 109 entries which only covers a few minutes of sales.
 
 ### 4 days of sales from 8031 entries
 
 {{image:long_list.jpg | shot_history}}
 
 However, as shown in the above screen shot there are 8031 entries which covers 4 days of sales. If you feel you are missing sales from 7 days ago then you will need more sales showing on the guild history tab.
-
-{{note:A specific range of sales can not be requested at this time and the ability to do so might not become available until 2021 as shown in this [[#New API 2021 | response from ZOS]].}}
 
 == Sales Week
 
@@ -128,86 +119,3 @@ As of  August 11 2020 the kiosk flip is now [[ https://forums.elderscrollsonline
 You should not try to calculate your sales yourself. Each sale is saved with the exact time stamp the sale occurred. All sales even a few seconds prior to the kiosk flip would not show if you selected to see sales from This Week.
 
 {{note:On the day of the kiosk flip sales for This Week will only reset after Zenimax transmits the new kiosk flip time. This can occur several hours after the kiosk flip.}}
-
-== Myths
-
-=== Automatically Requesting Data From The Server
-
-{{image:certain_amount_history.jpg | certain_amount_history}}
-
-{{image:serverrequests.jpg | serverrequests}}
-
-[[bb:Quote]]
-When you ask for the first request, the server sends back the last X amount of history, from now going backwards. If there is more in there to request, it says "and oh by the way, there is more if you want it."
-
-If any new events come in after that initial request, nothing is every going to tell you that, at least not these functions. That's my understanding of the system.
-
-RequestMoreGuildHistoryCategoryEvents will return false if there are no more things to request, if you're on cooldown, or if its in the timeout window. Addons have a different timeout window and cooldown than ZOS code does, and that window can be server controlled. So they may set your cooldown/timeout way higher. Cooldown is 500 ms by default, but the server can set it to whatever it wants. The timeout is at least 3 minutes. Which I think means how long we'll wait for a server response before assuming one isn't coming and letting you try again. So if the server is busy and it's taking more than 5 seconds to get a response, we'll spit back false if you tried again. Non-addon has a 15 second timeout.
-
-It's heavily dependant on server load and whether or not they decided to throttle the pipe any. Typically they'd only throttle the pipe if there’s an issue at the time, but I really have no control or insight into those policies.
-[[be:]]
-
-=== Displaying a percentage of time
-
-The percentage was just a calculation of the amount of events in memory and a calculation made on the timestamp. It has been removed in 3.0.0 and will be replaced by a different feature. It only happened during the background scan.
-
-The message was misleading because you still only processed 1 to X amount of records and only what was loaded into memory. The notification was never any real indication of actual progress based on time needed to complete the process.
-
-[[bb:Quote]]
-Would it be possible to add back the scan % messages back to the verbose modes?
-[[be:]]
-[[bb:Quote]]
-The method I used in the past for loading sales data for the period between my last login and my current login was to set verbosity to 4 so I could see the % of each guild scan. I would then run through each guild history sales (by pressing E) until MM showed 100% for that guild (I am never offline for more than 3 days so I always had full data). Once it hit 100% for a guild I would do the next guild. The entire process took less than a minute (despite being in several major trade guilds) and it always gave me full data each day. 
-[[be:]]
-
-=== It takes too long to scan
-
-{{image:every_three_seconds.jpg | every_three_seconds}}
-
-You can only request older sales with the build in API <code>RequestMoreGuildHistoryCategoryEvents</code> every so often. Requesting Guild History manually is recommended over automatically requesting it from MM. You know how long you have been offline and once you are caught up, you don't need any more older data.
-
-In addition to that as mentioned in [[#Automatically Requesting Data From The Server | here]] official ZOS code has a shorter cooldown time then mods. Which is why [[#Update Your Guild History Each Day | manually obtaining guild history]] is so quick and easy.
-
-=== New API 2021
-
-{{image:new_api_2021.jpg | new_api_2021}}
-
-[[bb:Quote]]
-The method I used in the past for loading sales data for the period between my last login and my current login was to set verbosity to 4 so I could see the % of each guild scan. I would then run through each guild history sales (by pressing E) until MM showed 100% for that guild (I am never offline for more than 3 days so I always had full data). Once it hit 100% for a guild I would do the next guild. The entire process took less than a minute (despite being in several major trade guilds) and it always gave me full data each day. 
-[[be:]]
-
-There has never been any way to scan a range of data. You get the initial 100 most recent sales, and then you can request more older sales. To do so press E on the guild history tab.
-
-=== older data unchanged
-
-{{image:older_data-unchanged.jpg | older_data-unchanged}}
-
-[[bb:Quote]]
-I can scan days of history once a week.
-[[be:]]
-
-There is no point in doing this as you have already seen the data unless you didn't log in enough to keep your data up to date.
-
-=== older in time
-
-{{image:older_in_time.jpg | older_in_time}}
-
-The server gives you older data when you request it by pressing E on the guild history tab. New sales are received when the server provides them. 
-
-=== Reload UI
-
-{{image:reloading.jpg | reloading}}
-
-Reloading the UI does not reset the history.
-
-=== Streaming Data
-
-{{image:steaming_data.jpg | steaming_data}}
-
-[[bb:Quote]]
-It worked fine this morning, but when I log in now, it tells me for 4 of my 5 guilds "Guild XY has no sales" (verbose 4) even though they are all trading guilds. Is there way to fix this? There should be several hundred new sales to scan.
-[[be:]]
-[[bb:Quote]]
-I have no idea how else am I supposed to get any sales when MM got to about five hours worth of history in several hours of the game sitting idle. 
-[[be:]]
-MM can not request data like a streaming video server. If you do not have several hundred sales to scan in your guild history then you will not see the updates you expect.

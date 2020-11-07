@@ -124,12 +124,22 @@ You should not try to calculate your sales yourself. Each sale is saved with the
 
 LibExecutionQueue is included with Master Merchant as shown in the zip below.
 
-{{image:leq_included.jpg | shot_history}}
+{{image:leq_included.jpg | leq_included}}
 
 LibExecutionQueue is sorted alphabetically by the base game.
 
-{{image:leq_unsorted.jpg | shot_history}}
+{{image:leq_unsorted.jpg | leq_unsorted}}
 
 If you have LibVotansAddonList installed then it will look close to the base game.
 
-{{image:leq_votans_sort.jpg | shot_history}}
+{{image:leq_votans_sort.jpg | leq_votans_sort}}
+
+== Backup Master Merchant Data
+
+{{image:mm_data_backup.jpg | mm_data_backup}}
+
+To backup your Master Merchant data you will need to navigate to the SavedVariables folder. Usually <code>C:\Users\Your User Name\Documents\Elder Scrolls Online\live</code>. The files can be easily found going to MyDocuments in windows first. 
+
+{{note: I am sorry I don't know where it is located on a Mac.}}
+
+Once you are in the SavedVariables folders, you will need to copy the 16 MMxxData files named MM00Data.kua to MM15Data.lua as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables.

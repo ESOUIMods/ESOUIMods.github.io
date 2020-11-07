@@ -37,7 +37,7 @@ In the Unlinked state you can either wait for the server to grant the requests f
 
 {{image:yellow_text_linking.jpg | yellow_text_linking}}
 
-Once LibHistoire has what I feels it needs, then it will begin processing the guild history events and attempt to link to the last known event.
+Once LibHistoire has what it feels it needs, then it will begin processing the guild history events and attempt to link to the last known event.
 
 ### Linked
 
@@ -45,11 +45,11 @@ Once LibHistoire has what I feels it needs, then it will begin processing the gu
 
 Once LibHistoire has linked to its stored events you should see green text. This means that LibHistoire has finished processing the guild history.
 
-{{note: You can still request additional history and ask LibHistoire to check it using the refresh button.}}
+{{note: You can still request additional history and ask LibHistoire to check the guild history for any missing sales events using the refresh button.}}
 
 == Ten Day Scan
 
-After upgrading to 3.x you will need to do a Ten Day Scan of all the guilds you are in. This ensures that LibHistoire has stored sales data for you to start working with. stored data for you to recall as needed. After doing a ten day scan for each guild you only need to request guild history for the time you have been offline.
+After upgrading to 3.x you will need to do a Ten Day Scan of all the guilds you are in. This ensures that LibHistoire has stored sales data for you to start working with. After doing a ten day scan for each guild you only need to request guild history for the time you have been offline.
 
 ### Select A Guild
 

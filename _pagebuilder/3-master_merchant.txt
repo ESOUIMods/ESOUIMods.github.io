@@ -119,3 +119,17 @@ As of  August 11 2020 the kiosk flip is now [[ https://forums.elderscrollsonline
 You should not try to calculate your sales yourself. Each sale is saved with the exact time stamp the sale occurred. All sales even a few seconds prior to the kiosk flip would not show if you selected to see sales from This Week.
 
 {{note:On the day of the kiosk flip sales for This Week will only reset after Zenimax transmits the new kiosk flip time. This can occur several hours after the kiosk flip.}}
+
+== Locating LibExecutionQueue
+
+LibExecutionQueue is included with Master Merchant as shown in the zip below.
+
+{{image:leq_included.jpg | shot_history}}
+
+LibExecutionQueue is sorted alphabetically by the base game.
+
+{{image:leq_unsorted.jpg | shot_history}}
+
+If you have LibVotansAddonList installed then it will look close to the base game.
+
+{{image:leq_votans_sort.jpg | shot_history}}

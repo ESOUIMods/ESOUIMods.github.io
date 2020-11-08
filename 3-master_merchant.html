@@ -39,6 +39,7 @@ title: Master Merchant
 <p class="list-1">&bull;&nbsp; <a href="#SalesWeek">3.9 Sales Week</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#LocatingLibExecutionQueue">3.10 Locating LibExecutionQueue</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#BackupMasterMerchantData">3.11 Backup Master Merchant Data</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#ExportSalesReport">3.12 Export Sales Report</a></p>
 <h2 class="header2" id="Authors">3.1 - Authors</h2>
 <p class="empty">&nbsp;</p>
 <p>Philgo68, Khaibit, dOpiate, sirinsidiator, Garkin, Aldanga, Sharlikran, Dolgubon</p>
@@ -181,4 +182,40 @@ title: Master Merchant
 <p class="note"> I am sorry I don't know where it is located on a Mac.</p>
 <p class="empty">&nbsp;</p>
 <p>Once you are in the SavedVariables folders, you will need to copy the 16 MMxxData files named MM00Data.kua to MM15Data.lua as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables.</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="ExportSalesReport">3.12 - Export Sales Report</h2>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/mm_export_screen.jpg" alt="mm_export_screen" %}</p>
+<p class="empty">&nbsp;</p>
+<p>Master Merchant can export a general summary of sales for use with spreadsheets. Full disclosure I am not a spreadsheet guru so I can not help with this feature. To use the export feature choose a guild to work with, then select the time and range like This Week or Last Week. Then use <code>/mm export #</code> to export the guild's information. As an example the screen shot shows a 2 for the 2nd guild in your list, therefore the syntax would be <code>/mm export 2</code>.</p>
+<p class="empty">&nbsp;</p>
+<p>Once exported the data is saved in <code>MasterMerchant.lua</code> in your <code>SavedVariables</code> folder.</p>
+<p class="empty">&nbsp;</p>
+<p><font class="cyan">Without Taxes:</font></p>
+<pre>
+["EXPORT"] = 
+{
+    ["version"] = 1,
+    ["YourGuildName"] = 
+    {
+        [1] = "@GuildMember&Sales&Purchaces&Rank",
+    },
+</pre>
+<p class="empty">&nbsp;</p>
+<p><font class="cyan">With Taxes:</font></p>
+<pre>
+["EXPORT"] = 
+{
+    ["version"] = 1,
+    ["YourGuildName"] = 
+    {
+        [1] = "@GuildMember&Sales&Purchaces&Taxes&Rank",
+    },
+</pre>
+<p class="empty">&nbsp;</p>
+<p class="note"> Taxes is new as of 3.2.7 and you toggle the feature on in addon settings.</p>
+<p class="empty">&nbsp;</p>
+<p>Since I have never used this feature with a spreadsheet I do not know how easy that is to use as Lua saves it. You may need to copy and paste it into another text file and use regular expressions to clean that up.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> Some of my GMs have explained if this format changed it would break what they currently use so it will not be altered.</p>
 </div>

@@ -143,3 +143,39 @@ To backup your Master Merchant data you will need to navigate to the SavedVariab
 {{note: I am sorry I don't know where it is located on a Mac.}}
 
 Once you are in the SavedVariables folders, you will need to copy the 16 MMxxData files named MM00Data.kua to MM15Data.lua as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables.
+
+== Export Sales Report
+
+{{image:mm_export_screen.jpg | mm_export_screen}}
+
+Master Merchant can export a general summary of sales for use with spreadsheets. Full disclosure I am not a spreadsheet guru so I can not help with this feature. To use the export feature choose a guild to work with, then select the time and range like This Week or Last Week. Then use <code>/mm export #</code> to export the guild's information. As an example the screen shot shows a 2 for the 2nd guild in your list, therefore the syntax would be <code>/mm export 2</code>.
+
+Once exported the data is saved in <code>MasterMerchant.lua</code> in your <code>SavedVariables</code> folder.
+
+<font class="cyan">Without Taxes:</font>
+<pre>
+["EXPORT"] = 
+{
+    ["version"] = 1,
+    ["YourGuildName"] = 
+    {
+        [1] = "@GuildMember&Sales&Purchaces&Rank",
+    },
+</pre>
+
+<font class="cyan">With Taxes:</font>
+<pre>
+["EXPORT"] = 
+{
+    ["version"] = 1,
+    ["YourGuildName"] = 
+    {
+        [1] = "@GuildMember&Sales&Purchaces&Taxes&Rank",
+    },
+</pre>
+
+{{note: Taxes is new as of 3.2.7 and you toggle the feature on in addon settings.}}
+
+Since I have never used this feature with a spreadsheet I do not know how easy that is to use as Lua saves it. You may need to copy and paste it into another text file and use regular expressions to clean that up.
+
+{{note: Some of my GMs have explained if this format changed it would break what they currently use so it will not be altered.}}

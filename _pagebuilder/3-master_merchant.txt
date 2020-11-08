@@ -45,7 +45,7 @@ Once LibHistoire has what it feels it needs, then it will begin processing the g
 
 Once LibHistoire has linked to its stored events you should see green text. This means that LibHistoire has finished processing the guild history.
 
-{{note: You can still request additional history and ask LibHistoire to check the guild history for any missing sales events using the refresh button.}}
+{{note: You can still request additional history and ask LibHistoire to check the guild history for any missing sales events using the rescan button.}}
 
 == Ten Day Scan
 
@@ -75,7 +75,7 @@ As you perform a ten day scan the LibHistoire GUI will update. It might even fin
 
 {{image:ten_day_scan_refresh.jpg | ten_day_scan_refresh}}
 
-After you no longer see the option to press E that means you have all the data the server will allow you to have. To finalize the Ten Day Scan press the refresh button. Yellow text will appear as it processes the guild history data.
+After you no longer see the option to press E that means you have all the data the server will allow you to have. To finalize the Ten Day Scan press the rescan button. Yellow text will appear as it processes the guild history data.
 
 {{note:Scanning 10 days of history every few days or every week is pointless and a drain on the server.}}
 
@@ -85,7 +85,7 @@ After you no longer see the option to press E that means you have all the data t
 
 Regardless of how long you have been offline you need to update your guild history. To obtain older sales data for any time you have been offline you can wait for the server to send the data to LibHistoire. How quickly the server provides the data depends on many things. Because of that I do not wait. I manually scan the guild history from the guild history tab by [[#Select A Guild | pressing E for Show More]].
 
-After I have enough guild history to cover the time I have been offline then I use the refresh button which asks LibHistoire to double check the sales loaded in memory are in the cache. Once LibHistoire has verified the sales data the text will turn green indicating that the [[#Linked | sales events are linked]].
+After I have enough guild history to cover the time I have been offline then I use the rescan button which asks LibHistoire to double check the sales loaded in memory are in the cache. Once LibHistoire has verified the sales data the text will turn green indicating that the [[#Linked | sales events are linked]].
 
 == Erroneous timestamp
 

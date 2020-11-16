@@ -198,7 +198,7 @@ Since I have never used this feature with a spreadsheet I do not know how easy t
 
 == Uninstall Master Merchant 2.x
 
-Currently there is some confusion about how to uninstall Master merchant 2.x and install 3.x. First you need to open minion. If you see both versions installed as shown below, uninstall both. The reason you uninstall both it because MM 3.x is a continuation of 2.x. It is the same mod with the same file names and the same folder names. Minion will not understand how to handle this.
+Currently there is some confusion about how to uninstall Master merchant 2.x and install 3.x. First you need to open minion. If you see both versions installed as shown below, uninstall both. The reason you uninstall both is because MM 3.x is a continuation of 2.x. It is the same mod with the same file names and the same folder names. Minion will not understand how to handle this.
 
 {{image:both_mm_installed.jpg | both_mm_installed}}
 

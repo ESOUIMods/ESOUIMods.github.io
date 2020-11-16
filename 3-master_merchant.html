@@ -28,9 +28,10 @@ title: Master Merchant
 <p class="list-2">&bull;&nbsp; <a href="#Linked">3.4.3 Linked</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#TenDayScan">3.5 Ten Day Scan</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#SelectAGuild">3.5.1 Select A Guild</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#WhenEisnolongershowing">3.5.2 When E is no longer showing</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#LibHistoireGUI">3.5.3 LibHistoire GUI</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#FinalizetheTenDayScan">3.5.4 Finalize the Ten Day Scan</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Requestonlyafewdaysatatime">3.5.2 Request only a few days at a time</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Rescanbutton">3.5.3 Rescan button</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#WhenEisnolongershowing">3.5.4 When E is no longer showing</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#LibHistoireGUI">3.5.5 LibHistoire GUI</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#UpdateYourGuildHistoryEachDay">3.6 Update Your Guild History Each Day</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Erroneoustimestamp">3.7 Erroneous timestamp</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Whatisbeingscanned">3.8 What is being scanned</a></p>
@@ -90,31 +91,39 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>After upgrading to 3.x you will need to do a Ten Day Scan of all the guilds you are in. This ensures that LibHistoire has stored sales data for you to start working with. After doing a ten day scan for each guild you only need to request guild history for the time you have been offline.</p>
 <p class="empty">&nbsp;</p>
+<p class="note"> Initially I had suggested requesting all the data at once. This seems to cause an issue for some users. Read this section carefully.</p>
+<p class="empty">&nbsp;</p>
 <h3 id="SelectAGuild">3.5.1 - Select A Guild</h3>
 <p class="empty">&nbsp;</p>
 <p>When you first log in there won’t be much as far as guild history loaded in memory.</p>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/show_more.jpg" alt="show_more" %}</p>
 <p class="empty">&nbsp;</p>
-<p>In order to manually request sales data you have to choose a guild and select All, not purchases. Then press E about every 3 seconds.</p>
+<p>In order to manually request sales data you have to choose a guild and select All, not purchases. Then press E about every 3 seconds so you are not kicked from the game by the server.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="WhenEisnolongershowing">3.5.2 - When E is no longer showing</h3>
+<h3 id="Requestonlyafewdaysatatime">3.5.2 - Request only a few days at a time</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/10_days_sales.jpg" alt="show_more" %}</p>
+<p>{% include image.html file="img/one_day_of_data.jpg" alt="one_day_of_data" %}</p>
 <p class="empty">&nbsp;</p>
-<p>Once you have scanned 10 days of sales then the option to press E will not be shown. This guild is more casual and if you are in a busy guild you may have to press E until you have 16,000 to 20,000 sales listed in the guild history.</p>
+<p>You should be able to request 2 or three days of guild history at once. However, some users have seen issues requesting too much at one time. Each time you request a few days of data stop and, click the Rescan button.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="LibHistoireGUI">3.5.3 - LibHistoire GUI</h3>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/histy_gui.jpg" alt="histy_gui" %}</p>
-<p class="empty">&nbsp;</p>
-<p>As you perform a ten day scan the LibHistoire GUI will update. It might even finish processing a certain amount of events. For your first initial Ten Day Scan ignore what it is doing until you can no longer press E.</p>
-<p class="empty">&nbsp;</p>
-<h3 id="FinalizetheTenDayScan">3.5.4 - Finalize the Ten Day Scan</h3>
+<h3 id="Rescanbutton">3.5.3 - Rescan button</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/ten_day_scan_refresh.jpg" alt="ten_day_scan_refresh" %}</p>
 <p class="empty">&nbsp;</p>
-<p>After you no longer see the option to press E that means you have all the data the server will allow you to have. To finalize the Ten Day Scan press the rescan button. Yellow text will appear as it processes the guild history data.</p>
+<p>The Rescan button is the equivalent of the old <code>/mm missing</code> and it will scan all the data loaded into memory so far. LibHistorie will skip any duplicate events as it scans guild history.</p>
+<p class="empty">&nbsp;</p>
+<h3 id="WhenEisnolongershowing">3.5.4 - When E is no longer showing</h3>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/10_days_sales.jpg" alt="show_more" %}</p>
+<p class="empty">&nbsp;</p>
+<p>Once you have scanned 10 days of sales then the option to press E will not be shown. The server will only allow you to request 10 days of data. Once you have done so click the <a  href="#Rescanbutton" >Rescan Button</a> to make sure LibHistorie processes all the events.</p>
+<p class="empty">&nbsp;</p>
+<h3 id="LibHistoireGUI">3.5.5 - LibHistoire GUI</h3>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/histy_gui.jpg" alt="histy_gui" %}</p>
+<p class="empty">&nbsp;</p>
+<p>As you perform a ten day scan the LibHistoire GUI will update. It might even finish processing a certain amount of events. Do not click the small chain link showing in this screen shot. That will link to the current events loaded which for your first initial use of LibHistorie you do not want that to happen. You should only click the <a  href="#Rescanbutton" >Rescan Button</a> if you see it to ensure all events are scanned.</p>
 <p class="empty">&nbsp;</p>
 <p class="note">Scanning 10 days of history every few days or every week is pointless and a drain on the server.</p>
 <p class="empty">&nbsp;</p>

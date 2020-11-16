@@ -42,6 +42,7 @@ title: Master Merchant
 <p class="list-1">&bull;&nbsp; <a href="#LocatingLibExecutionQueue">3.11 Locating LibExecutionQueue</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#BackupMasterMerchantData">3.12 Backup Master Merchant Data</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#ExportSalesReport">3.13 Export Sales Report</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#UninstallMasterMerchant2x">3.14 Uninstall Master Merchant 2.x</a></p>
 <h2 class="header2" id="Authors">3.1 - Authors</h2>
 <p class="empty">&nbsp;</p>
 <p>Philgo68, Khaibit, dOpiate, sirinsidiator, Garkin, Aldanga, Sharlikran, Dolgubon</p>
@@ -236,4 +237,52 @@ title: Master Merchant
 <p>Since I have never used this feature with a spreadsheet I do not know how easy that is to use as Lua saves it. You may need to copy and paste it into another text file and use regular expressions to clean that up.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"> Some of my GMs have explained if this format changed it would break what they currently use so it will not be altered.</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="UninstallMasterMerchant2x">3.14 - Uninstall Master Merchant 2.x</h2>
+<p class="empty">&nbsp;</p>
+<p>Currently there is some confusion about how to uninstall Master merchant 2.x and install 3.x. First you need to open minion. If you see both versions installed as shown below, uninstall both. The reason you uninstall both it because MM 3.x is a continuation of 2.x. It is the same mod with the same file names and the same folder names. Minion will not understand how to handle this.</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/both_mm_installed.jpg" alt="both_mm_installed" %}</p>
+<p class="empty">&nbsp;</p>
+<p>If you manually install your mods, of if you want to know which folders belong to Master merchant, click the spoiler.</p>
+<p class="empty">&nbsp;</p>
+<input type="checkbox" id="spoiler1" />
+<label for="spoiler1">Master Merchant Folders</label>
+<div class="main-content">
+<p>{% include image-caption.html file="img/mm_files_installed.jpg" alt="mm_files_installed" caption="To see a larger image, right click the image and choose View Image." %}</p>
+</div>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/mm_remove_mod.jpg" alt="mm_remove_mod" %}</p>
+<p class="empty">&nbsp;</p>
+<p>When using Minion to uninstall Master Merchant right click and choose Uninstall.</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/mm_remove_mod_caution.jpg" alt="mm_remove_mod_caution" %}</p>
+<p class="empty">&nbsp;</p>
+<p>Do not check that box or it will remove your MM data files! Only click Delete!</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/mm_uninstalled.jpg" alt="mm_uninstalled" %}</p>
+<p class="empty">&nbsp;</p>
+<p>As you see above, both versions of Master merchant are now uninstalled.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> You have to close Minion because it will be confused about uninstalling both versions.</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/search_for_mm.jpg" alt="search_for_mm" %}</p>
+<p class="empty">&nbsp;</p>
+<p>Open Minion again and click Find More and search for <code>Master Merchant 3.0</code> as shown above. Make sure the author's name is Sharlikran. Then click the Install button.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> As noted on the description page you need to install LibAddonMenu, LibMediaProvider, LibGuildRoster, and LibHistoire.</p>
+<p class="empty">&nbsp;</p>
+<p>I won't be showing how to install all the required libraries. If you need examples images of the two new libraries LibGuildRoster, and LibHistoire click the spoiler.</p>
+<p class="empty">&nbsp;</p>
+<input type="checkbox" id="spoiler2" />
+<label for="spoiler2">New Libraries</label>
+<div class="main-content">
+<p>{% include image-caption.html file="img/install_LibGuildRoster.jpg" alt="install_LibGuildRoster" caption="To see a larger image, right click the image and choose View Image." %}</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image-caption.html file="img/install_LibHistoire.jpg" alt="install_LibHistoire" caption="To see a larger image, right click the image and choose View Image." %}</p>
+</div>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/one_mm_only.jpg" alt="one_mm_only" %}</p>
+<p class="empty">&nbsp;</p>
+<p>After you install Master Merchant 3.0 verify it is the only Master Merchant showing in Minion.</p>
 </div>

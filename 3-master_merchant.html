@@ -33,14 +33,15 @@ title: Master Merchant
 <p class="list-2">&bull;&nbsp; <a href="#WhenEisnolongershowing">3.5.4 When E is no longer showing</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#LibHistoireGUI">3.5.5 LibHistoire GUI</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#UpdateYourGuildHistoryEachDay">3.6 Update Your Guild History Each Day</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#Erroneoustimestamp">3.7 Erroneous timestamp</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#Whatisbeingscanned">3.8 What is being scanned</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Afewdaysofsalesfrom109entries">3.8.1 A few days of sales from 109 entries</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#4daysofsalesfrom8031entries">3.8.2 4 days of sales from 8031 entries</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#SalesWeek">3.9 Sales Week</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#LocatingLibExecutionQueue">3.10 Locating LibExecutionQueue</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#BackupMasterMerchantData">3.11 Backup Master Merchant Data</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#ExportSalesReport">3.12 Export Sales Report</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#RefreshButton">3.7 Refresh Button</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#Erroneoustimestamp">3.8 Erroneous timestamp</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#Whatisbeingscanned">3.9 What is being scanned</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Afewdaysofsalesfrom109entries">3.9.1 A few days of sales from 109 entries</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#4daysofsalesfrom8031entries">3.9.2 4 days of sales from 8031 entries</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#SalesWeek">3.10 Sales Week</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#LocatingLibExecutionQueue">3.11 Locating LibExecutionQueue</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#BackupMasterMerchantData">3.12 Backup Master Merchant Data</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#ExportSalesReport">3.13 Export Sales Report</a></p>
 <h2 class="header2" id="Authors">3.1 - Authors</h2>
 <p class="empty">&nbsp;</p>
 <p>Philgo68, Khaibit, dOpiate, sirinsidiator, Garkin, Aldanga, Sharlikran, Dolgubon</p>
@@ -135,7 +136,15 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>After I have enough guild history to cover the time I have been offline then I use the rescan button which asks LibHistoire to double check the sales loaded in memory are in the cache. Once LibHistoire has verified the sales data the text will turn green indicating that the <a  href="#Linked" >sales events are linked</a>.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="Erroneoustimestamp">3.7 - Erroneous timestamp</h2>
+<h2 class="header2" id="RefreshButton">3.7 - Refresh Button</h2>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/refresh_button.jpg" alt="refresh_button" %}</p>
+<p class="empty">&nbsp;</p>
+<p>The Refresh button tells LibHistorie to send all the data it has in its cache. The more data in the cache, the longer it will take to transmit.</p>
+<p class="empty">&nbsp;</p>
+<p>The refresh button is only a fail safe mechanisum in case a user performs the initial Ten Day scan incorrectly and the data is not sent to MM for some reason. It should not be clicked every so often or every once and a while. Clicking this does not refresh the Master Merchant window or cause the server to send any Guild History.</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="Erroneoustimestamp">3.8 - Erroneous timestamp</h2>
 <p class="empty">&nbsp;</p>
 <p>When you see an erroneous timestamp, LibHistoire will handle this internally. It will not be processed until the timestamp is updated properly by the server.</p>
 <p class="empty">&nbsp;</p>
@@ -144,23 +153,23 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>LibHistoire will send the sale to MM after it checks that the erroneous timestamp is no longer present.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="Whatisbeingscanned">3.8 - What is being scanned</h2>
+<h2 class="header2" id="Whatisbeingscanned">3.9 - What is being scanned</h2>
 <p class="empty">&nbsp;</p>
 <p>When LibHistoire is scanning the guild history it is obtaining the sales from all the guild history that you have loaded into memory.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="Afewdaysofsalesfrom109entries">3.8.1 - A few days of sales from 109 entries</h3>
+<h3 id="Afewdaysofsalesfrom109entries">3.9.1 - A few days of sales from 109 entries</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/shot_history.jpg" alt="shot_history" %}</p>
 <p class="empty">&nbsp;</p>
 <p>LibHistoire simply scan entries from the guild history. With another mod installed called <font class="purple">Shissu's Guild Tools</font> a count of the amount of entries is showing. As shown there are 109 entries which only covers a few minutes of sales.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="4daysofsalesfrom8031entries">3.8.2 - 4 days of sales from 8031 entries</h3>
+<h3 id="4daysofsalesfrom8031entries">3.9.2 - 4 days of sales from 8031 entries</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/long_list.jpg" alt="shot_history" %}</p>
 <p class="empty">&nbsp;</p>
 <p>However, as shown in the above screen shot there are 8031 entries which covers 4 days of sales. If you feel you are missing sales from 7 days ago then you will need more sales showing on the guild history tab.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="SalesWeek">3.9 - Sales Week</h2>
+<h2 class="header2" id="SalesWeek">3.10 - Sales Week</h2>
 <p class="empty">&nbsp;</p>
 <p>As of  August 11 2020 the kiosk flip is now <a  href="https://forums.elderscrollsonline.com/en/discussion/540142/updates-to-guild-trader-swap-times/p1" >every Tuesday</a>. All sales totals are calculated from the time indicated by ZOS.</p>
 <p class="empty">&nbsp;</p>
@@ -168,7 +177,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p class="note">On the day of the kiosk flip sales for This Week will only reset after Zenimax transmits the new kiosk flip time. This can occur several hours after the kiosk flip.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="LocatingLibExecutionQueue">3.10 - Locating LibExecutionQueue</h2>
+<h2 class="header2" id="LocatingLibExecutionQueue">3.11 - Locating LibExecutionQueue</h2>
 <p class="empty">&nbsp;</p>
 <p>LibExecutionQueue is included with Master Merchant as shown in the zip below.</p>
 <p class="empty">&nbsp;</p>
@@ -182,7 +191,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/leq_votans_sort.jpg" alt="leq_votans_sort" %}</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="BackupMasterMerchantData">3.11 - Backup Master Merchant Data</h2>
+<h2 class="header2" id="BackupMasterMerchantData">3.12 - Backup Master Merchant Data</h2>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/mm_data_backup.jpg" alt="mm_data_backup" %}</p>
 <p class="empty">&nbsp;</p>
@@ -192,7 +201,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>Once you are in the SavedVariables folders, you will need to copy the 16 MMxxData files named MM00Data.kua to MM15Data.lua as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="ExportSalesReport">3.12 - Export Sales Report</h2>
+<h2 class="header2" id="ExportSalesReport">3.13 - Export Sales Report</h2>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/mm_export_screen.jpg" alt="mm_export_screen" %}</p>
 <p class="empty">&nbsp;</p>

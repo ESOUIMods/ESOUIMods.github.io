@@ -95,6 +95,14 @@ Regardless of how long you have been offline you need to update your guild histo
 
 After I have enough guild history to cover the time I have been offline then I use the rescan button which asks LibHistoire to double check the sales loaded in memory are in the cache. Once LibHistoire has verified the sales data the text will turn green indicating that the [[#Linked | sales events are linked]].
 
+== Refresh Button
+
+{{image:refresh_button.jpg | refresh_button}}
+
+The Refresh button tells LibHistorie to send all the data it has in its cache. The more data in the cache, the longer it will take to transmit.
+
+The refresh button is only a fail safe mechanisum in case a user performs the initial Ten Day scan incorrectly and the data is not sent to MM for some reason. It should not be clicked every so often or every once and a while. Clicking this does not refresh the Master Merchant window or cause the server to send any Guild History.
+
 == Erroneous timestamp
 
 When you see an erroneous timestamp, LibHistoire will handle this internally. It will not be processed until the timestamp is updated properly by the server.

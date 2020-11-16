@@ -65,7 +65,7 @@ In order to manually request sales data you have to choose a guild and select Al
 
 {{image:one_day_of_data.jpg | one_day_of_data}}
 
-You should be able to request 2 or three days of guild history at once. However, some users have seen issues requesting too much at one time. Each time you request a few days of data stop and, click the Rescan button.
+You should be able to request two or three days of guild history at once. However, some users have seen issues requesting too much at one time. Each time you request a few days of data stop and, click the Rescan button.
 
 ### Rescan button
 

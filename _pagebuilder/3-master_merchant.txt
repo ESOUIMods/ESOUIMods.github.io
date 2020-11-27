@@ -113,7 +113,7 @@ After I have enough guild history to cover the time I have been offline then I u
 {{note:<font class="tan">Item Sold</font> is only available from a Seler's Report.}}
 {{note:Donations should be voluntary. People that struggle to make 25K gold a week, feel free to just say thanks. I'd rather receive a 50K donation from top sellers making millions a week.}}
 
-== All Info and Your Info
+== Guild Sales and Personal Sales
 
 {{inline:175px | show_your_info.jpg | show_your_info}}{{inline:175px | show_all_info.jpg | show_all_info}}
 
@@ -155,7 +155,7 @@ If you have ever opened the Master Merchant window you have probably seen the li
 
 ### What The Columns Mean
 
-* <font class="tan">Rank</font>: The rank of the member or item for the guild listed. For example, if you are viewing a <font class="tan">seller's</font> report and your rank is <font class="tan">7</font>, it means you are the <font class="tan">7th</font> biggest <font class="tan">seller</font> in the guild for the time selected. If you are viewing an <font class="tan">item</font> report for and <font class="yellow">Dreugh Wax</font> is the <font class="tan">1th</font> item in the list, then <font class="yellow">Dreugh Wax</font> is the <font class="tan">biggest seller</font> for the guild showing.
+* <font class="tan">Rank</font>: The rank of the member or item for the guild listed. For example, if you are viewing a <font class="tan">seller's</font> report and your rank is <font class="tan">7</font>, it means you are the <font class="tan">7th</font> biggest <font class="tan">seller</font> in the guild for the time selected. If you are viewing an <font class="tan">item</font> report for and <font class="yellow">Dreugh Wax</font> is the <font class="tan">1st</font> item in the list, then <font class="yellow">Dreugh Wax</font> is the <font class="tan">biggest seller</font> for the guild showing.
 * <font class="tan">Sales/Purchases</font>: Total Sales or Purchases for that guild or member for the time selected.
 * <font class="tan">Tax</font>: Total Tax generated for that guild or member for the time selected.
 * <font class="tan">Count</font>: The number on the left is the number of <font class="tan">transactions</font>, while the number on the right is the number of <font class="tan">items</font>. For example @TradingDude had <font class="yellow">10 Dreugh Wax</font> <font class="tan">transactions</font> and sold <font class="yellow">100 Dreugh wax</font> <font class="tan">total</font>.

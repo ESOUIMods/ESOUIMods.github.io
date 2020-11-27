@@ -15,6 +15,8 @@ Upon examination of the code 2.3.1 had turbo mode removed which was not really r
 
 This makes me believe that 2.3.1 was really intended to be the proposed 2.2.1 but somehow the upload never went through properly. I am glad Philgo68 uploaded the version as it has helped me understand the code a bit more.
 
+= Scanning 
+
 == Background Scanning Depreciated
 
 As of version 3.0.0 there is no <code>/mm missing</code> and no background scan. The background scan would get hung up by repeated attempts to request more sales data from the server. When the server denied the request MM would continue to wait for the request to be approved.
@@ -95,13 +97,95 @@ Regardless of how long you have been offline you need to update your guild histo
 
 After I have enough guild history to cover the time I have been offline then I use the rescan button which asks LibHistoire to double check the sales loaded in memory are in the cache. Once LibHistoire has verified the sales data the text will turn green indicating that the [[#Linked | sales events are linked]].
 
+= Master Merchant Window
+
+{{image:mm_window.jpg | mm_window}}
+
+{{inline:158px | search_box.jpg | search_box}} Search Box
+{{nav:People Icon}}
+{{inline:24px | people_icon.jpg | people_icon}} Cycles through: <font class="tan">Seller</font>, All sales totals by Seller. <font class="tan">Item Sold</font>, Top selling ITEMS. <font class="tan">Buyer</font>, All purchase totals by Buyer.
+{{nav:Parchment Paper}}
+{{inline:24px | toggle_seller_item.jpg | toggle_seller_item}} <font class="tan">Seller Info</font> Guild Ranks, <font class="tan">Item Info</font> Your Info or All Info.
+{{inline:24px | open_statistics_window.jpg | open_statistics_window}} Opens the [[#|Statistics Window]].
+{{inline:24px | mail_icon.jpg | mail_icon}} Sends mail to the author with an optional donation amount.
+{{inline:24px | money_bag.jpg | money_bag}} The <font class="tan">Moneybag</font> icon means the purchaser is not a member of that guild.
+
+{{note:<font class="tan">Item Sold</font> is only available from a Seler's Report.}}
+{{note:Donations should be voluntary. People that struggle to make 25K gold a week, feel free to just say thanks. I'd rather receive a 50K donation from top sellers making millions a week.}}
+
+== All Info and Your Info
+
+{{inline:175px | show_your_info.jpg | show_your_info}}{{inline:175px | show_all_info.jpg | show_all_info}}
+
+First select what information you would like to see. <font class="tan">Show Personal Sales</font> will display info ONLY about You. <font class="tan">Show Guild Sales</font> will display data from all members of all of your guilds.
+
+{{note: When the button says <font class="tan">Show Guild Sales</font>, that means you are currently viewing <font class="tan">YOUR</font> information and vice-versa. You can toggle back and forth between <font class="tan">Personal Sales</font> and <font class="tan">Guild Sales</font> while viewing any report.}}
+
+== Item Report
+
+{{image:item_report.jpg | item_report}}
+
+If you have ever opened the Master Merchant window you have probably seen the list of your personal sales. This is an Item Report and if you click the [[#|People Icon]] you will change between the Buyer and the Seller.
+
+### What The Columns Mean
+
+* <font class="tan">Buyer</font>: The purchaser of the item.
+* <font class="tan">Guild</font>: The guild associated with the sale of the item.
+* <font class="tan">Item Sold</font>: To the left of the Item Sold is the items icon. The number indicates how many of that item was sold.
+* <font class="tan">Sale Time</font>: The approximate time the item was sold. The game stores all sales using epoch time so the UI just approximates the sale after the first hour.
+* <font class="tan">Price</font>: The price the item sold for. You can view the individual price by clicking the Show Unit Price button.
+
+{{inline:132px | show_unit_price.jpg | show_unit_price}} Toggle between the Unit Price and Total Sale.
+
+== Seler's Report
+
+### Top Buyers and Sellers
+
+{{image:sellers_report_people.jpg | sellers_report_people}}
+
+### Top Items
+
+{{image:sellers_report_items.jpg | sellers_report_items}}
+
+### Personal Sales - Seler's Report
+
+{{image:sellers_report_personal.jpg | sellers_report_personal}}
+
+{{note: You can also view a Seler's Report for your personal sales only the items will be <font class="tan">YOUR</font> top selling items.}}
+
+### What The Columns Mean
+
+* <font class="tan">Rank</font>: The rank of the member or item for the guild listed. For example, if you are viewing a <font class="tan">seller's</font> report and your rank is <font class="tan">7</font>, it means you are the <font class="tan">7th</font> biggest <font class="tan">seller</font> in the guild for the time selected. If you are viewing an <font class="tan">item</font> report for and <font class="yellow">Dreugh Wax</font> is the <font class="tan">1th</font> item in the list, then <font class="yellow">Dreugh Wax</font> is the <font class="tan">biggest seller</font> for the guild showing.
+* <font class="tan">Sales/Purchases</font>: Total Sales or Purchases for that guild or member for the time selected.
+* <font class="tan">Tax</font>: Total Tax generated for that guild or member for the time selected.
+* <font class="tan">Count</font>: The number on the left is the number of <font class="tan">transactions</font>, while the number on the right is the number of <font class="tan">items</font>. For example @TradingDude had <font class="yellow">10 Dreugh Wax</font> <font class="tan">transactions</font> and sold <font class="yellow">100 Dreugh wax</font> <font class="tan">total</font>.
+* <font class="tan">Percent</font>: This shows what percent of total guild sales or purchases each member is responsible for.
+
+== Date Ranges
+
+{{image:time_frames.jpg | time_frames}}
+
+There are several date ranges you can choose from. <font class="tan">This Week</font>, <font class="tan">Last Week</font> and <font class="tan">Prior Week</font> start from the ZOS trader flip for the current [[#|Sales Week]]. However, the last option is customizable under the Master Merchant settings under [[#|Calculation And Tip Options]].
+
 == Refresh Button
 
 {{image:refresh_button.jpg | refresh_button}}
 
 The Refresh button tells LibHistorie to send all the data it has in its cache. The more data in the cache, the longer it will take to transmit.
 
-The refresh button is only a fail safe mechanisum in case a user performs the initial Ten Day scan incorrectly and the data is not sent to MM for some reason. It should not be clicked every so often or every once and a while. Clicking this does not refresh the Master Merchant window or cause the server to send any Guild History.
+The refresh button is only a fail safe mechanism in case a user performs the initial Ten Day scan incorrectly and the data is not sent to MM for some reason. It should not be clicked every so often or every once and a while. Clicking this does not refresh the Master Merchant window or cause the server to send any Guild History.
+
+= Statistics Window
+
+{{image:statistics_window.jpg | statistics_window}}
+
+= Settings
+
+== Calculation And Tip Options
+
+{{image:tool_tip_settings.jpg | tool_tip_settings}}
+
+= Misc
 
 == Erroneous timestamp
 
@@ -136,29 +220,7 @@ You should not try to calculate your sales yourself. Each sale is saved with the
 
 {{note:On the day of the kiosk flip sales for This Week will only reset after Zenimax transmits the new kiosk flip time. This can occur several hours after the kiosk flip.}}
 
-== Locating LibExecutionQueue
-
-LibExecutionQueue is included with Master Merchant as shown in the zip below.
-
-{{image:leq_included.jpg | leq_included}}
-
-LibExecutionQueue is sorted alphabetically by the base game.
-
-{{image:leq_unsorted.jpg | leq_unsorted}}
-
-If you have LibVotansAddonList installed then it will look close to the base game.
-
-{{image:leq_votans_sort.jpg | leq_votans_sort}}
-
-== Backup Master Merchant Data
-
-{{image:mm_data_backup.jpg | mm_data_backup}}
-
-To backup your Master Merchant data you will need to navigate to the SavedVariables folder. Usually <code>C:\Users\Your User Name\Documents\Elder Scrolls Online\live</code>. The files can be easily found going to MyDocuments in windows first. 
-
-{{note: I am sorry I don't know where it is located on a Mac.}}
-
-Once you are in the SavedVariables folders, you will need to copy the 16 MMxxData files named MM00Data.kua to MM15Data.lua as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables.
+= Slash commands
 
 == Export Sales Report
 
@@ -195,6 +257,32 @@ Once exported the data is saved in <code>MasterMerchant.lua</code> in your <code
 Since I have never used this feature with a spreadsheet I do not know how easy that is to use as Lua saves it. You may need to copy and paste it into another text file and use regular expressions to clean that up.
 
 {{note: Some of my GMs have explained if this format changed it would break what they currently use so it will not be altered.}}
+
+= Technical Information
+
+== Locating LibExecutionQueue
+
+LibExecutionQueue is included with Master Merchant as shown in the zip below.
+
+{{image:leq_included.jpg | leq_included}}
+
+LibExecutionQueue is sorted alphabetically by the base game.
+
+{{image:leq_unsorted.jpg | leq_unsorted}}
+
+If you have LibVotansAddonList installed then it will look close to the base game.
+
+{{image:leq_votans_sort.jpg | leq_votans_sort}}
+
+== Backup Master Merchant Data
+
+{{image:mm_data_backup.jpg | mm_data_backup}}
+
+To backup your Master Merchant data you will need to navigate to the SavedVariables folder. Usually <code>C:\Users\Your User Name\Documents\Elder Scrolls Online\live</code>. The files can be easily found going to MyDocuments in windows first. 
+
+{{note: I am sorry I don't know where it is located on a Mac.}}
+
+Once you are in the SavedVariables folders, you will need to copy the 16 MMxxData files named MM00Data.kua to MM15Data.lua as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables.
 
 == Uninstall Master Merchant 2.x
 

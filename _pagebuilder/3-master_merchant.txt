@@ -152,6 +152,7 @@ If you have ever opened the Master Merchant window you have probably seen the li
 {{image:sellers_report_personal.jpg | sellers_report_personal}}
 
 {{note: You can also view a Seler's Report for your personal sales only the items will be <font class="tan">YOUR</font> top selling items.}}
+{{note: Clicking the People Icon will cycle through Seller, Buyer, and Item Sold.}}
 
 ### What The Columns Mean
 

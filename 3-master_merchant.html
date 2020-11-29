@@ -47,7 +47,8 @@ title: Master Merchant
 <p class="list-2">&bull;&nbsp; <a href="#RefreshButton">3.2.5 Refresh Button</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#StatisticsWindow">3.3 Statistics Window</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Settings">3.4 Settings</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#CalculationAndTipOptions">3.4.1 Calculation And Tip Options</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#DataManagementOptions">3.4.1 Data Management Options</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#CalculationDisplayOptions">3.4.2 Calculation Display Options</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Misc">3.5 Misc</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Erroneoustimestamp">3.5.1 Erroneous timestamp</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Whatisbeingscanned">3.5.2 What is being scanned</a></p>
@@ -240,8 +241,18 @@ title: Master Merchant
 <p>{% include image.html file="img/statistics_window.jpg" alt="statistics_window" %}</p>
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="Settings">3.4 - Settings</h1>
+<h2 class="header2" id="DataManagementOptions">3.4.1 - Data Management Options</h2>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="CalculationAndTipOptions">3.4.1 - Calculation And Tip Options</h2>
+<p>{% include image.html file="img/data_management_options.jpg" alt="data_management_options" %}</p>
+<p class="empty">&nbsp;</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Use Sales History Size Only</font>: This will ignore the minimum and maximum count for sales. If there are 4698 sales of an item with the day range selected for retaining data, then the sales will not be trimmed.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Sales History Size</font>: The days rang to retain data.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Min Item Count</font>: The minimum count of sales for a specific item before the days range is considered. If you select 90 days to retain data, but you have seen only 1 sale and the only recorded sale is 120 days old it will not be trimmed.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Max Item Count</font>: The maximum count of sales for a specific item before the days range is considered. If you select 90 days to retain data, and you choose 1000, then the oldest sale once the threshold is reached will be trimmed. Meaning if you have 1001 sales for an item, 1 will be trimmed and 100 will remain.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Minimal Indexing</font>: Does not add search words for items. It only adds the player search word for displaying personal sales. Searching in the Master merchant window is still possible but will take extra time.</p>
+<p class="empty">&nbsp;</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="CalculationDisplayOptions">3.4.2 - Calculation Display Options</h2>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/tool_tip_settings.jpg" alt="tool_tip_settings" %}</p>
 <p class="empty">&nbsp;</p>

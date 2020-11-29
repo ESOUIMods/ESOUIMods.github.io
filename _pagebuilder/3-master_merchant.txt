@@ -181,8 +181,18 @@ The refresh button is only a fail safe mechanism in case a user performs the ini
 {{image:statistics_window.jpg | statistics_window}}
 
 = Settings
+== Data Management Options
 
-== Calculation And Tip Options
+{{image:data_management_options.jpg | data_management_options}}
+
+* <font class="tan">Use Sales History Size Only</font>: This will ignore the minimum and maximum count for sales. If there are 4698 sales of an item with the day range selected for retaining data, then the sales will not be trimmed.
+* <font class="tan">Sales History Size</font>: The days rang to retain data.
+* <font class="tan">Min Item Count</font>: The minimum count of sales for a specific item before the days range is considered. If you select 90 days to retain data, but you have seen only 1 sale and the only recorded sale is 120 days old it will not be trimmed.
+* <font class="tan">Max Item Count</font>: The maximum count of sales for a specific item before the days range is considered. If you select 90 days to retain data, and you choose 1000, then the oldest sale once the threshold is reached will be trimmed. Meaning if you have 1001 sales for an item, 1 will be trimmed and 100 will remain.
+* <font class="tan">Minimal Indexing</font>: Does not add search words for items. It only adds the player search word for displaying personal sales. Searching in the Master merchant window is still possible but will take extra time.
+
+
+== Calculation Display Options
 
 {{image:tool_tip_settings.jpg | tool_tip_settings}}
 

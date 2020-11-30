@@ -15,6 +15,16 @@ Upon examination of the code 2.3.1 had turbo mode removed which was not really r
 
 This makes me believe that 2.3.1 was really intended to be the proposed 2.2.1 but somehow the upload never went through properly. I am glad Philgo68 uploaded the version as it has helped me understand the code a bit more.
 
+= Master Merchant Extensions
+
+### Shopping List - by MildFlavour
+
+{{image:shopping_list_view.jpg | shopping_list_view}}
+
+Adds a new icon allowing you to view purchanes you make from guild stores.
+
+{{inline:24px | shopping_list.jpg | shopping_list}} The <font class="tan">Shopping List</font> icon allows you to select the installed extension and view purchaces you have made from guild stores.
+
 = Scanning 
 
 == Background Scanning Depreciated
@@ -108,6 +118,7 @@ After I have enough guild history to cover the time I have been offline then I u
 {{inline:24px | toggle_seller_item.jpg | toggle_seller_item}} <font class="tan">Seller Info</font> Guild Ranks, <font class="tan">Item Info</font> Your Info or All Info.
 {{inline:24px | open_statistics_window.jpg | open_statistics_window}} Opens the [[#|Statistics Window]].
 {{inline:24px | mail_icon.jpg | mail_icon}} Sends mail to the author with an optional donation amount.
+{{inline:24px | shopping_list.jpg | shopping_list}} The <font class="tan">Shopping List</font> icon allows you to select the installed extension and view purchaces you have made from guild stores.
 {{inline:24px | money_bag.jpg | money_bag}} The <font class="tan">Moneybag</font> icon means the purchaser is not a member of that guild.
 
 {{note:<font class="tan">Item Sold</font> is only available from a Seler's Report.}}

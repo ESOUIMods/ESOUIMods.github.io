@@ -839,6 +839,31 @@ a.yellow {
   }
 }
 
+.main-content {
+  img.inline {
+    @include full {
+      max-width: 100%;
+      vertical-align: bottom;
+    }
+    @include huge {
+      max-width: 100%;
+      vertical-align: bottom;
+    }
+    @include large {
+      max-width: 100%;
+      vertical-align: bottom;
+    }
+    @include medium {
+      max-width: 100%;
+      vertical-align: bottom;
+    }
+    @include small {
+      max-width: 100%;
+      vertical-align: bottom;
+    }
+  }
+}
+
 section.quote {
   display: block;
   justify-content: center;

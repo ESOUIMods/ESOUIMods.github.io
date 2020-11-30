@@ -73,19 +73,19 @@ You should be able to request two or three days of guild history at once. Howeve
 
 {{image:ten_day_scan_refresh.jpg | ten_day_scan_refresh}}
 
-The Rescan button is the equivalent of the old <code>/mm missing</code> and it will scan all the data loaded into memory so far. LibHistorie will skip any duplicate events as it scans guild history.
+The Rescan button is the equivalent of the old <code>/mm missing</code> and it will scan all the data loaded into memory so far. LibHistoire will skip any duplicate events as it scans guild history.
 
 ### When E is no longer showing
 
 {{image:10_days_sales.jpg | show_more}}
 
-Once you have scanned 10 days of sales then the option to press E will not be shown. The server will only allow you to request 10 days of data. Once you have done so click the [[#Rescanbutton|Rescan Button]] to make sure LibHistorie processes all the events.
+Once you have scanned 10 days of sales then the option to press E will not be shown. The server will only allow you to request 10 days of data. Once you have done so click the [[#Rescanbutton|Rescan Button]] to make sure LibHistoire processes all the events.
 
 ### LibHistoire GUI
 
 {{image:histy_gui.jpg | histy_gui}}
 
-As you perform a ten day scan the LibHistoire GUI will update. It might even finish processing a certain amount of events. Do not click the small chain link showing in this screen shot. That will link to the current events loaded which for your first initial use of LibHistorie you do not want that to happen. You should only click the [[#Rescanbutton|Rescan Button]] if you see it to ensure all events are scanned.
+As you perform a ten day scan the LibHistoire GUI will update. It might even finish processing a certain amount of events. Do not click the small chain link showing in this screen shot. That will link to the current events loaded which for your first initial use of LibHistoire you do not want that to happen. You should only click the [[#Rescanbutton|Rescan Button]] if you see it to ensure all events are scanned.
 
 {{note:Scanning 10 days of history every few days or every week is pointless and a drain on the server.}}
 
@@ -172,7 +172,7 @@ There are several date ranges you can choose from. <font class="tan">This Week</
 
 {{image:refresh_button.jpg | refresh_button}}
 
-The Refresh button tells LibHistorie to send all the data it has in its cache. The more data in the cache, the longer it will take to transmit.
+The Refresh button tells LibHistoire to send all the data it has in its cache. The more data in the cache, the longer it will take to transmit.
 
 The refresh button is only a fail safe mechanism in case a user performs the initial Ten Day scan incorrectly and the data is not sent to MM for some reason. It should not be clicked every so often or every once and a while. Clicking this does not refresh the Master Merchant window or cause the server to send any Guild History.
 
@@ -196,6 +196,21 @@ The refresh button is only a fail safe mechanism in case a user performs the ini
 == Alert Options
 
 {{image:alert_options.jpg | alert_options}}
+
+* <font class="tan">On-Screen Alerts</font>: Show On-Screen popup alerts when you receive a sale. See examples below.
+* <font class="tan">Show Alerts in Cyrodiil</font>: Enable or Disable Alerts in Cyrodiil. Usefull if you watch for specific PVP alerts and do not want MM Alerts to show up.
+* <font class="tan">Chat Alerts</font>: Show chat alerts when you receive a sale. See examples below.
+* <font class="tan">Alert Sound</font>: Choose the Alert sound to diferenciate it from other mod added Alerts.
+* <font class="tan">Show Multiple Alerts</font>: <code>Investigating</code>
+* <font class="tan">Offline Sales Report</font>: Show Alerts for sales received while offline. See note.
+* <font class="tan">Display Listing Message</font>: Show chat alert when you list an item for sale.
+
+{{note: <font class="tan">Show Multiple Alerts</font> and <font class="tan">Offline Sales Report</font> may not function as intended with the addition of LibHistoire. However, you will still see notifications of sales as they are received.}}
+
+### On-Screen and Chat Alert
+
+{{image:onscreen_alert.jpg | onscreen_alert}}
+{{image:chat_alert.jpg | chat_alert}}
 
 == Calculation Display Options
 

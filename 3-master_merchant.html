@@ -49,6 +49,7 @@ title: Master Merchant
 <p class="list-1">&bull;&nbsp; <a href="#Settings">3.4 Settings</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#MasterMerchantWindowOptions">3.4.1 Master Merchant Window Options</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#AlertOptions">3.4.2 Alert Options</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#OnScreenandChatAlert">3.4.2.1 On-Screen and Chat Alert</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#CalculationDisplayOptions">3.4.3 Calculation Display Options</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#DataManagementOptions">3.4.4 Data Management Options</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#OtherTooltipOptions">3.4.5 Other Tooltip Options</a></p>
@@ -139,19 +140,19 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/ten_day_scan_refresh.jpg" alt="ten_day_scan_refresh" %}</p>
 <p class="empty">&nbsp;</p>
-<p>The Rescan button is the equivalent of the old <code>/mm missing</code> and it will scan all the data loaded into memory so far. LibHistorie will skip any duplicate events as it scans guild history.</p>
+<p>The Rescan button is the equivalent of the old <code>/mm missing</code> and it will scan all the data loaded into memory so far. LibHistoire will skip any duplicate events as it scans guild history.</p>
 <p class="empty">&nbsp;</p>
 <h3 id="WhenEisnolongershowing">3.1.3.4 - When E is no longer showing</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/10_days_sales.jpg" alt="show_more" %}</p>
 <p class="empty">&nbsp;</p>
-<p>Once you have scanned 10 days of sales then the option to press E will not be shown. The server will only allow you to request 10 days of data. Once you have done so click the <a  href="#Rescanbutton" >Rescan Button</a> to make sure LibHistorie processes all the events.</p>
+<p>Once you have scanned 10 days of sales then the option to press E will not be shown. The server will only allow you to request 10 days of data. Once you have done so click the <a  href="#Rescanbutton" >Rescan Button</a> to make sure LibHistoire processes all the events.</p>
 <p class="empty">&nbsp;</p>
 <h3 id="LibHistoireGUI">3.1.3.5 - LibHistoire GUI</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/histy_gui.jpg" alt="histy_gui" %}</p>
 <p class="empty">&nbsp;</p>
-<p>As you perform a ten day scan the LibHistoire GUI will update. It might even finish processing a certain amount of events. Do not click the small chain link showing in this screen shot. That will link to the current events loaded which for your first initial use of LibHistorie you do not want that to happen. You should only click the <a  href="#Rescanbutton" >Rescan Button</a> if you see it to ensure all events are scanned.</p>
+<p>As you perform a ten day scan the LibHistoire GUI will update. It might even finish processing a certain amount of events. Do not click the small chain link showing in this screen shot. That will link to the current events loaded which for your first initial use of LibHistoire you do not want that to happen. You should only click the <a  href="#Rescanbutton" >Rescan Button</a> if you see it to ensure all events are scanned.</p>
 <p class="empty">&nbsp;</p>
 <p class="note">Scanning 10 days of history every few days or every week is pointless and a drain on the server.</p>
 <p class="empty">&nbsp;</p>
@@ -238,7 +239,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/refresh_button.jpg" alt="refresh_button" %}</p>
 <p class="empty">&nbsp;</p>
-<p>The Refresh button tells LibHistorie to send all the data it has in its cache. The more data in the cache, the longer it will take to transmit.</p>
+<p>The Refresh button tells LibHistoire to send all the data it has in its cache. The more data in the cache, the longer it will take to transmit.</p>
 <p class="empty">&nbsp;</p>
 <p>The refresh button is only a fail safe mechanism in case a user performs the initial Ten Day scan incorrectly and the data is not sent to MM for some reason. It should not be clicked every so often or every once and a while. Clicking this does not refresh the Master Merchant window or cause the server to send any Guild History.</p>
 <p class="empty">&nbsp;</p>
@@ -262,6 +263,21 @@ title: Master Merchant
 <h2 class="header2" id="AlertOptions">3.4.2 - Alert Options</h2>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/alert_options.jpg" alt="alert_options" %}</p>
+<p class="empty">&nbsp;</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">On-Screen Alerts</font>: Show On-Screen popup alerts when you receive a sale. See examples below.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Show Alerts in Cyrodiil</font>: Enable or Disable Alerts in Cyrodiil. Usefull if you watch for specific PVP alerts and do not want MM Alerts to show up.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Chat Alerts</font>: Show chat alerts when you receive a sale. See examples below.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Alert Sound</font>: Choose the Alert sound to diferenciate it from other mod added Alerts.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Show Multiple Alerts</font>: <code>Investigating</code></p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Offline Sales Report</font>: Show Alerts for sales received while offline. See note.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Display Listing Message</font>: Show chat alert when you list an item for sale.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> <font class="tan">Show Multiple Alerts</font> and <font class="tan">Offline Sales Report</font> may not function as intended with the addition of LibHistoire. However, you will still see notifications of sales as they are received.</p>
+<p class="empty">&nbsp;</p>
+<h3 id="OnScreenandChatAlert">3.4.2.1 - On-Screen and Chat Alert</h3>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/onscreen_alert.jpg" alt="onscreen_alert" %}</p>
+<p>{% include image.html file="img/chat_alert.jpg" alt="chat_alert" %}</p>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="CalculationDisplayOptions">3.4.3 - Calculation Display Options</h2>
 <p class="empty">&nbsp;</p>

@@ -220,8 +220,6 @@ The refresh button is only a fail safe mechanism in case a user performs the ini
 
 {{image:debug_options.jpg | debug_options}}
 
-debug_options
-
 = Misc
 
 == Erroneous timestamp

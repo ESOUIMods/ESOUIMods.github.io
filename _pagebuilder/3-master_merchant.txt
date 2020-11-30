@@ -244,6 +244,24 @@ The refresh button is only a fail safe mechanism in case a user performs the ini
 
 = Misc
 
+== Level Quality Selectors
+
+I will try to update the selector so that there are graphics to click on but for now it is just text.
+
+The images below show a <font class="purple">Hat of a Mother's Sorrow</font> and the Legendary version does not have buttons on the right because there is no Mythic version. The Epic version has selectors on both the left and right to view the Superior or the Legendary version.
+
+{{note: While the selectors do not seem to be dependant on the sales in your Master Merchant Data, there may be unknown factors that prevent the selector from showing. The code is extreamly old and dates back to the introduction of the Champion Points system.}}
+
+<font class="yellow">Hat of a Mother's Sorrow</font>
+[[sb:Spoiler1 | Hat of a Mother's Sorrow]]
+{{image:ms_legendary.jpg | ms_legendary}}
+[[se:]]
+
+<font class="purple">Hat of a Mother's Sorrow</font>
+[[sb:Spoiler2 | Hat of a Mother's Sorrow]]
+{{image:ms_epic.jpg | ms_epic}}
+[[se:]]
+
 == Erroneous timestamp
 
 When you see an erroneous timestamp, LibHistoire will handle this internally. It will not be processed until the timestamp is updated properly by the server.
@@ -349,7 +367,7 @@ Currently there is some confusion about how to uninstall Master merchant 2.x and
 
 If you manually install your mods, of if you want to know which folders belong to Master merchant, click the spoiler.
 
-[[sb:Spoiler1 | Master Merchant Folders]]
+[[sb:Spoiler3 | Master Merchant Folders]]
 {{image-caption:mm_files_installed.jpg | mm_files_installed | To see a larger image, right click the image and choose View Image.}}
 [[se:]]
 
@@ -375,7 +393,7 @@ Open Minion again and click Find More and search for <code>Master Merchant 3.0</
 
 I won't be showing how to install all the required libraries. If you need examples images of the two new libraries LibGuildRoster, and LibHistoire click the spoiler.
 
-[[sb:Spoiler2 | New Libraries]]
+[[sb:Spoiler4 | New Libraries]]
 {{image-caption:install_LibGuildRoster.jpg | install_LibGuildRoster | To see a larger image, right click the image and choose View Image.}}
 
 {{image-caption:install_LibHistoire.jpg | install_LibHistoire | To see a larger image, right click the image and choose View Image.}}

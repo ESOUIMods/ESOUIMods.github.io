@@ -57,11 +57,12 @@ title: Master Merchant
 <p class="list-2">&bull;&nbsp; <a href="#GuildStoreOptions">3.4.7 Guild Store Options</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#DebugOptions">3.4.8 Debug Options</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Misc">3.5 Misc</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Erroneoustimestamp">3.5.1 Erroneous timestamp</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Whatisbeingscanned">3.5.2 What is being scanned</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#Afewdaysofsalesfrom109entries">3.5.2.1 A few days of sales from 109 entries</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#4daysofsalesfrom8031entries">3.5.2.2 4 days of sales from 8031 entries</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#SalesWeek">3.5.3 Sales Week</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#LevelQualitySelectors">3.5.1 Level Quality Selectors</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Erroneoustimestamp">3.5.2 Erroneous timestamp</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Whatisbeingscanned">3.5.3 What is being scanned</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#Afewdaysofsalesfrom109entries">3.5.3.1 A few days of sales from 109 entries</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#4daysofsalesfrom8031entries">3.5.3.2 4 days of sales from 8031 entries</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#SalesWeek">3.5.4 Sales Week</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Slashcommands">3.6 Slash commands</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#ExportSalesReport">3.6.1 Export Sales Report</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#TechnicalInformation">3.7 Technical Information</a></p>
@@ -311,7 +312,29 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="Misc">3.5 - Misc</h1>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="Erroneoustimestamp">3.5.1 - Erroneous timestamp</h2>
+<h2 class="header2" id="LevelQualitySelectors">3.5.1 - Level Quality Selectors</h2>
+<p class="empty">&nbsp;</p>
+<p>I will try to update the selector so that there are graphics to click on but for now it is just text.</p>
+<p class="empty">&nbsp;</p>
+<p>The images below show a <font class="purple">Hat of a Mother's Sorrow</font> and the Legendary version does not have buttons on the right because there is no Mythic version. The Epic version has selectors on both the left and right to view the Superior or the Legendary version.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> While the selectors do not seem to be dependant on the sales in your Master Merchant Data, there may be unknown factors that prevent the selector from showing. The code is extreamly old and dates back to the introduction of the Champion Points system.</p>
+<p class="empty">&nbsp;</p>
+<p><font class="yellow">Hat of a Mother's Sorrow</font></p>
+<input type="checkbox" id="spoiler1" />
+<label for="spoiler1">Hat of a Mother's Sorrow</label>
+<div class="main-content">
+<p>{% include image.html file="img/ms_legendary.jpg" alt="ms_legendary" %}</p>
+</div>
+<p class="empty">&nbsp;</p>
+<p><font class="purple">Hat of a Mother's Sorrow</font></p>
+<input type="checkbox" id="spoiler2" />
+<label for="spoiler2">Hat of a Mother's Sorrow</label>
+<div class="main-content">
+<p>{% include image.html file="img/ms_epic.jpg" alt="ms_epic" %}</p>
+</div>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="Erroneoustimestamp">3.5.2 - Erroneous timestamp</h2>
 <p class="empty">&nbsp;</p>
 <p>When you see an erroneous timestamp, LibHistoire will handle this internally. It will not be processed until the timestamp is updated properly by the server.</p>
 <p class="empty">&nbsp;</p>
@@ -320,23 +343,23 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>LibHistoire will send the sale to MM after it checks that the erroneous timestamp is no longer present.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="Whatisbeingscanned">3.5.2 - What is being scanned</h2>
+<h2 class="header2" id="Whatisbeingscanned">3.5.3 - What is being scanned</h2>
 <p class="empty">&nbsp;</p>
 <p>When LibHistoire is scanning the guild history it is obtaining the sales from all the guild history that you have loaded into memory.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="Afewdaysofsalesfrom109entries">3.5.2.1 - A few days of sales from 109 entries</h3>
+<h3 id="Afewdaysofsalesfrom109entries">3.5.3.1 - A few days of sales from 109 entries</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/shot_history.jpg" alt="shot_history" %}</p>
 <p class="empty">&nbsp;</p>
 <p>LibHistoire simply scan entries from the guild history. With another mod installed called <font class="purple">Shissu's Guild Tools</font> a count of the amount of entries is showing. As shown there are 109 entries which only covers a few minutes of sales.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="4daysofsalesfrom8031entries">3.5.2.2 - 4 days of sales from 8031 entries</h3>
+<h3 id="4daysofsalesfrom8031entries">3.5.3.2 - 4 days of sales from 8031 entries</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/long_list.jpg" alt="shot_history" %}</p>
 <p class="empty">&nbsp;</p>
 <p>However, as shown in the above screen shot there are 8031 entries which covers 4 days of sales. If you feel you are missing sales from 7 days ago then you will need more sales showing on the guild history tab.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="SalesWeek">3.5.3 - Sales Week</h2>
+<h2 class="header2" id="SalesWeek">3.5.4 - Sales Week</h2>
 <p class="empty">&nbsp;</p>
 <p>As of  August 11 2020 the kiosk flip is now <a  href="https://forums.elderscrollsonline.com/en/discussion/540142/updates-to-guild-trader-swap-times/p1" >every Tuesday</a>. All sales totals are calculated from the time indicated by ZOS.</p>
 <p class="empty">&nbsp;</p>
@@ -416,8 +439,8 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>If you manually install your mods, of if you want to know which folders belong to Master merchant, click the spoiler.</p>
 <p class="empty">&nbsp;</p>
-<input type="checkbox" id="spoiler1" />
-<label for="spoiler1">Master Merchant Folders</label>
+<input type="checkbox" id="spoiler3" />
+<label for="spoiler3">Master Merchant Folders</label>
 <div class="main-content">
 <p>{% include image-caption.html file="img/mm_files_installed.jpg" alt="mm_files_installed" caption="To see a larger image, right click the image and choose View Image." %}</p>
 </div>
@@ -444,8 +467,8 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>I won't be showing how to install all the required libraries. If you need examples images of the two new libraries LibGuildRoster, and LibHistoire click the spoiler.</p>
 <p class="empty">&nbsp;</p>
-<input type="checkbox" id="spoiler2" />
-<label for="spoiler2">New Libraries</label>
+<input type="checkbox" id="spoiler4" />
+<label for="spoiler4">New Libraries</label>
 <div class="main-content">
 <p>{% include image-caption.html file="img/install_LibGuildRoster.jpg" alt="install_LibGuildRoster" caption="To see a larger image, right click the image and choose View Image." %}</p>
 <p class="empty">&nbsp;</p>

@@ -182,6 +182,18 @@ The refresh button is only a fail safe mechanism in case a user performs the ini
 
 = Settings
 
+== Master merchant Window Options
+
+{{image:main_wondow_options.jpg | main_wondow_options}}
+
+== Alert Options
+
+{{image:alert_options.jpg | alert_options}}
+
+== Calculation Display Options
+
+{{image:tool_tip_settings.jpg | tool_tip_settings}}
+
 == Data Management Options
 
 {{image:data_management_options.jpg | data_management_options}}
@@ -192,10 +204,23 @@ The refresh button is only a fail safe mechanism in case a user performs the ini
 * <font class="tan">Max Item Count</font>: The maximum count of sales for a specific item before the days range is considered. If you select 90 days to retain data, and you choose 1000, then the oldest sale once the threshold is reached will be trimmed. Meaning if you have 1001 sales for an item, 1 will be trimmed and 100 will remain.
 * <font class="tan">Minimal Indexing</font>: Does not add search words for items. It only adds the player search word for displaying personal sales. Searching in the Master merchant window is still possible but will take extra time.
 
+== Other Tooltip Options
 
-== Calculation Display Options
+{{image:other_tooltip_options.jpg | other_tooltip_options}}
 
-{{image:tool_tip_settings.jpg | tool_tip_settings}}
+== Inventory Options
+
+{{image:inventory_options.jpg | inventory_options}}
+
+== Guild Store Options
+
+{{image:guild_store_options.jpg | guild_store_options}}
+
+== Debug Options
+
+{{image:debug_options.jpg | debug_options}}
+
+debug_options
 
 = Misc
 

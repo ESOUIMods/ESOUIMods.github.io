@@ -475,6 +475,8 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         if maContents:
             temp_var = maContents.group(1)
             addContents = int(temp_var)
+        # -- Inline Images
+        line = reImageInline.sub(imageInline, line)
         # --Re Note -------------------------------
         maNoteTag = reNoteTag.match(line)
         if maNoteTag:
@@ -564,8 +566,6 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         line = reBoldItalic.sub(boldItalicReplace, line)
         # --Wtxt Tags
         line = reAnchorTag.sub(anchorReplace, line)
-        # --Images
-        line = reImageInline.sub(imageInline, line)
         line = reImageOnly.sub(imageInclude, line)
         line = reImageCaption.sub(imageCaption, line)
         line = reImageCaptionUrl.sub(imageCaptionUrl, line)

@@ -182,9 +182,16 @@ The refresh button is only a fail safe mechanism in case a user performs the ini
 
 = Settings
 
-== Master merchant Window Options
+== Master Merchant Window Options
 
 {{image:main_wondow_options.jpg | main_wondow_options}}
+
+* <font class="tan">Open With Mail</font>: Whether or not to open the Master Merchant Window when you open your mail.
+* <font class="tan">Open With Store</font>: Whether or not to open the Master Merchant Window when you interact with a guild store.
+* <font class="tan">Show Full Sale Price</font>: Show the full price of the sale rather then the amount after the store cut ir deducted.
+* <font class="tan">Window Font</font>: The font for the Master Merchant Window. You may have other fonts if you have mods that use LibMediaProvider like one of my other mods [[https://www.esoui.com/downloads/info2558-AdvancedNameplatesGreymoor.html | Advanced Nameplates]].
+
+{{note: If you sold a <font class="purple">Crafting Motif 63: Dremora Bows</font> for <font class="yellow">11,000</font> {{inline:20px | currency_gold.png | currency_gold}} the master merchant window will show what you received in the mail which would be <font class="yellow">10,230</font> {{inline:20px | currency_gold.png | currency_gold}}.}}
 
 == Alert Options
 

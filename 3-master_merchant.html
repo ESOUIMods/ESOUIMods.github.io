@@ -57,12 +57,13 @@ title: Master Merchant
 <p class="list-2">&bull;&nbsp; <a href="#GuildStoreOptions">3.4.7 Guild Store Options</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#DebugOptions">3.4.8 Debug Options</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Misc">3.5 Misc</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#LevelQualitySelectors">3.5.1 Level Quality Selectors</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Erroneoustimestamp">3.5.2 Erroneous timestamp</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Whatisbeingscanned">3.5.3 What is being scanned</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#Afewdaysofsalesfrom109entries">3.5.3.1 A few days of sales from 109 entries</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#4daysofsalesfrom8031entries">3.5.3.2 4 days of sales from 8031 entries</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#SalesWeek">3.5.4 Sales Week</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#PopupItemData">3.5.1 Popup Item Data</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#LevelQualitySelectors">3.5.2 Level Quality Selectors</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Erroneoustimestamp">3.5.3 Erroneous timestamp</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Whatisbeingscanned">3.5.4 What is being scanned</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#Afewdaysofsalesfrom109entries">3.5.4.1 A few days of sales from 109 entries</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#4daysofsalesfrom8031entries">3.5.4.2 4 days of sales from 8031 entries</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#SalesWeek">3.5.5 Sales Week</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Slashcommands">3.6 Slash commands</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#ExportSalesReport">3.6.1 Export Sales Report</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#TechnicalInformation">3.7 Technical Information</a></p>
@@ -298,6 +299,8 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/other_tooltip_options.jpg" alt="other_tooltip_options" %}</p>
 <p class="empty">&nbsp;</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Level/Quality Selectors</font>: Adds Leve and Quality selectors to the tooltip window. You can bring up the window by clicking a link in chat or when you right click an item and choose <a  href="#PopupItemData" >Popup Item Data</a>. See the <a  href="#LevelQualitySelectors" >Level Quality Selectors</a> section for example of the selectors that appear on the tooltip window.</p>
+<p class="empty">&nbsp;</p>
 <h2 class="header2" id="InventoryOptions">3.4.6 - Inventory Options</h2>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/inventory_options.jpg" alt="inventory_options" %}</p>
@@ -312,7 +315,13 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="Misc">3.5 - Misc</h1>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="LevelQualitySelectors">3.5.1 - Level Quality Selectors</h2>
+<h2 class="header2" id="PopupItemData">3.5.1 - Popup Item Data</h2>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/popup_item_data.jpg" alt="popup_item_data" %}</p>
+<p class="empty">&nbsp;</p>
+<p>This contex menu is from having Master merchant and Awesome Guild Store installed. The menu will vary depending on the mods you have installed.</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="LevelQualitySelectors">3.5.2 - Level Quality Selectors</h2>
 <p class="empty">&nbsp;</p>
 <p>I will try to update the selector so that there are graphics to click on but for now it is just text.</p>
 <p class="empty">&nbsp;</p>
@@ -334,7 +343,7 @@ title: Master Merchant
 <p>{% include image.html file="img/ms_epic.jpg" alt="ms_epic" %}</p>
 </div>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="Erroneoustimestamp">3.5.2 - Erroneous timestamp</h2>
+<h2 class="header2" id="Erroneoustimestamp">3.5.3 - Erroneous timestamp</h2>
 <p class="empty">&nbsp;</p>
 <p>When you see an erroneous timestamp, LibHistoire will handle this internally. It will not be processed until the timestamp is updated properly by the server.</p>
 <p class="empty">&nbsp;</p>
@@ -343,23 +352,23 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>LibHistoire will send the sale to MM after it checks that the erroneous timestamp is no longer present.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="Whatisbeingscanned">3.5.3 - What is being scanned</h2>
+<h2 class="header2" id="Whatisbeingscanned">3.5.4 - What is being scanned</h2>
 <p class="empty">&nbsp;</p>
 <p>When LibHistoire is scanning the guild history it is obtaining the sales from all the guild history that you have loaded into memory.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="Afewdaysofsalesfrom109entries">3.5.3.1 - A few days of sales from 109 entries</h3>
+<h3 id="Afewdaysofsalesfrom109entries">3.5.4.1 - A few days of sales from 109 entries</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/shot_history.jpg" alt="shot_history" %}</p>
 <p class="empty">&nbsp;</p>
 <p>LibHistoire simply scan entries from the guild history. With another mod installed called <font class="purple">Shissu's Guild Tools</font> a count of the amount of entries is showing. As shown there are 109 entries which only covers a few minutes of sales.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="4daysofsalesfrom8031entries">3.5.3.2 - 4 days of sales from 8031 entries</h3>
+<h3 id="4daysofsalesfrom8031entries">3.5.4.2 - 4 days of sales from 8031 entries</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/long_list.jpg" alt="shot_history" %}</p>
 <p class="empty">&nbsp;</p>
 <p>However, as shown in the above screen shot there are 8031 entries which covers 4 days of sales. If you feel you are missing sales from 7 days ago then you will need more sales showing on the guild history tab.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="SalesWeek">3.5.4 - Sales Week</h2>
+<h2 class="header2" id="SalesWeek">3.5.5 - Sales Week</h2>
 <p class="empty">&nbsp;</p>
 <p>As of  August 11 2020 the kiosk flip is now <a  href="https://forums.elderscrollsonline.com/en/discussion/540142/updates-to-guild-trader-swap-times/p1" >every Tuesday</a>. All sales totals are calculated from the time indicated by ZOS.</p>
 <p class="empty">&nbsp;</p>

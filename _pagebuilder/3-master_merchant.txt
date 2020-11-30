@@ -230,6 +230,8 @@ The refresh button is only a fail safe mechanism in case a user performs the ini
 
 {{image:other_tooltip_options.jpg | other_tooltip_options}}
 
+* <font class="tan">Level/Quality Selectors</font>: Adds Leve and Quality selectors to the tooltip window. You can bring up the window by clicking a link in chat or when you right click an item and choose [[#|Popup Item Data]]. See the [[#|Level Quality Selectors]] section for example of the selectors that appear on the tooltip window.
+
 == Inventory Options
 
 {{image:inventory_options.jpg | inventory_options}}
@@ -243,6 +245,12 @@ The refresh button is only a fail safe mechanism in case a user performs the ini
 {{image:debug_options.jpg | debug_options}}
 
 = Misc
+
+== Popup Item Data
+
+{{image:popup_item_data.jpg | popup_item_data}}
+
+This contex menu is from having Master merchant and Awesome Guild Store installed. The menu will vary depending on the mods you have installed.
 
 == Level Quality Selectors
 

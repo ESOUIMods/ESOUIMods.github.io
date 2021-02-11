@@ -37,6 +37,16 @@ One other calculation made was to try and get the first entry in the guild histo
 
 For reasons like these MM no longer uses a background scan as it attempted to scan from a specific point in time and loop over the guild history events.
 
+== Unintentional ZOS Bug
+
+{{image:savedvarsapostrophe.jpg | savedvarsapostrophe}}
+
+Unfortunately from time to time ZOS introduces or reintroduces a bug in the saved vars where the apostrophe is converted to HTML code. Which will mean your sales may or may not display properly. Which is a game bug and you are out of luck until or unless they fix it.
+
+Since this can occur I highly recomend changing your user name to only contain letters as it will make it easier for you in the long run.
+
+This also includes creative names that contain things like Æ or æ. As those are not individual letters.
+
 == Three states of LibHistoire cache
 
 ### Unlinked

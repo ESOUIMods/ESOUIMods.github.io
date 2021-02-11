@@ -25,18 +25,19 @@ title: Master Merchant
 <p class="list-3">&bull;&nbsp; <a href="#ShoppingListbyMildFlavour">3.1.0.1 Shopping List - by MildFlavour</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Scanning">3.2 Scanning</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#BackgroundScanningDepreciated">3.2.1 Background Scanning Depreciated</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ThreestatesofLibHistoirecache">3.2.2 Three states of LibHistoire cache</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#Unlinked">3.2.2.1 Unlinked</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#Linkinginprogress">3.2.2.2 Linking in progress</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#Linked">3.2.2.3 Linked</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#TenDayScan">3.2.3 Ten Day Scan</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#SelectAGuild">3.2.3.1 Select A Guild</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#Requestonlyafewdaysatatime">3.2.3.2 Request only a few days at a time</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#Rescanbutton">3.2.3.3 Rescan button</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#WhenEisnolongershowing">3.2.3.4 When E is no longer showing</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#LibHistoireGUI">3.2.3.5 LibHistoire GUI</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#UpdateYourGuildHistoryEachDay">3.2.4 Update Your Guild History Each Day</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ResolvingUnlinkedEvents">3.2.5 Resolving Unlinked Events</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#UnintentionalZOSBug">3.2.2 Unintentional ZOS Bug</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ThreestatesofLibHistoirecache">3.2.3 Three states of LibHistoire cache</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#Unlinked">3.2.3.1 Unlinked</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#Linkinginprogress">3.2.3.2 Linking in progress</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#Linked">3.2.3.3 Linked</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#TenDayScan">3.2.4 Ten Day Scan</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#SelectAGuild">3.2.4.1 Select A Guild</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#Requestonlyafewdaysatatime">3.2.4.2 Request only a few days at a time</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#Rescanbutton">3.2.4.3 Rescan button</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#WhenEisnolongershowing">3.2.4.4 When E is no longer showing</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#LibHistoireGUI">3.2.4.5 LibHistoire GUI</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#UpdateYourGuildHistoryEachDay">3.2.5 Update Your Guild History Each Day</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ResolvingUnlinkedEvents">3.2.6 Resolving Unlinked Events</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#MasterMerchantWindow">3.3 Master Merchant Window</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#GuildSalesandPersonalSales">3.3.1 Guild Sales and Personal Sales</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#ItemReport">3.3.2 Item Report</a></p>
@@ -109,21 +110,31 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>For reasons like these MM no longer uses a background scan as it attempted to scan from a specific point in time and loop over the guild history events.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="ThreestatesofLibHistoirecache">3.2.2 - Three states of LibHistoire cache</h2>
+<h2 class="header2" id="UnintentionalZOSBug">3.2.2 - Unintentional ZOS Bug</h2>
 <p class="empty">&nbsp;</p>
-<h3 id="Unlinked">3.2.2.1 - Unlinked</h3>
+<p>{% include image.html file="img/savedvarsapostrophe.jpg" alt="savedvarsapostrophe" %}</p>
+<p class="empty">&nbsp;</p>
+<p>Unfortunately from time to time ZOS introduces or reintroduces a bug in the saved vars where the apostrophe is converted to HTML code. Which will mean your sales may or may not display properly. Which is a game bug and you are out of luck until or unless they fix it.</p>
+<p class="empty">&nbsp;</p>
+<p>Since this can occur I highly recomend changing your user name to only contain letters as it will make it easier for you in the long run.</p>
+<p class="empty">&nbsp;</p>
+<p>This also includes creative names that contain things like Æ or æ. As those are not individual letters.</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="ThreestatesofLibHistoirecache">3.2.3 - Three states of LibHistoire cache</h2>
+<p class="empty">&nbsp;</p>
+<h3 id="Unlinked">3.2.3.1 - Unlinked</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/red_text_unlinked.jpg" alt="red_text_unlinked" %}</p>
 <p class="empty">&nbsp;</p>
 <p>In the Unlinked state you can either wait for the server to grant the requests for offline data that LibHistoire requests, or you can manually request guild history for the time you were offline.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="Linkinginprogress">3.2.2.2 - Linking in progress</h3>
+<h3 id="Linkinginprogress">3.2.3.2 - Linking in progress</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/yellow_text_linking.jpg" alt="yellow_text_linking" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Once LibHistoire has what it feels it needs, then it will begin processing the guild history events and attempt to link to the last known event.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="Linked">3.2.2.3 - Linked</h3>
+<h3 id="Linked">3.2.3.3 - Linked</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/green_text_linked.jpg" alt="green_text_linked" %}</p>
 <p class="empty">&nbsp;</p>
@@ -131,13 +142,13 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p class="note"> You can still request additional history and ask LibHistoire to check the guild history for any missing sales events using the rescan button.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="TenDayScan">3.2.3 - Ten Day Scan</h2>
+<h2 class="header2" id="TenDayScan">3.2.4 - Ten Day Scan</h2>
 <p class="empty">&nbsp;</p>
 <p>After upgrading to 3.x you will need to do a Ten Day Scan of all the guilds you are in. This ensures that LibHistoire has stored sales data for you to start working with. After doing a ten day scan for each guild you only need to request guild history for the time you have been offline.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"> Initially I had suggested requesting all the data at once. This seems to cause an issue for some users. Read this section carefully.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="SelectAGuild">3.2.3.1 - Select A Guild</h3>
+<h3 id="SelectAGuild">3.2.4.1 - Select A Guild</h3>
 <p class="empty">&nbsp;</p>
 <p>When you first log in there won’t be much as far as guild history loaded in memory.</p>
 <p class="empty">&nbsp;</p>
@@ -145,25 +156,25 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>In order to manually request sales data you have to choose a guild and select All, not purchases. Then press E about every 3 seconds so you are not kicked from the game by the server.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="Requestonlyafewdaysatatime">3.2.3.2 - Request only a few days at a time</h3>
+<h3 id="Requestonlyafewdaysatatime">3.2.4.2 - Request only a few days at a time</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/one_day_of_data.jpg" alt="one_day_of_data" %}</p>
 <p class="empty">&nbsp;</p>
 <p>You should be able to request two or three days of guild history at once. However, some users have seen issues requesting too much at one time. Each time you request a few days of data stop and, click the Rescan button.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="Rescanbutton">3.2.3.3 - Rescan button</h3>
+<h3 id="Rescanbutton">3.2.4.3 - Rescan button</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/ten_day_scan_refresh.jpg" alt="ten_day_scan_refresh" %}</p>
 <p class="empty">&nbsp;</p>
 <p>The Rescan button is the equivalent of the old <code>/mm missing</code> and it will scan all the data loaded into memory so far. LibHistoire will skip any duplicate events as it scans guild history.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="WhenEisnolongershowing">3.2.3.4 - When E is no longer showing</h3>
+<h3 id="WhenEisnolongershowing">3.2.4.4 - When E is no longer showing</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/10_days_sales.jpg" alt="show_more" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Once you have scanned 10 days of sales then the option to press E will not be shown. The server will only allow you to request 10 days of data. Once you have done so click the <a  href="#Rescanbutton" >Rescan Button</a> to make sure LibHistoire processes all the events.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="LibHistoireGUI">3.2.3.5 - LibHistoire GUI</h3>
+<h3 id="LibHistoireGUI">3.2.4.5 - LibHistoire GUI</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/histy_gui.jpg" alt="histy_gui" %}</p>
 <p class="empty">&nbsp;</p>
@@ -171,7 +182,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p class="note">Scanning 10 days of history every few days or every week is pointless and a drain on the server.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="UpdateYourGuildHistoryEachDay">3.2.4 - Update Your Guild History Each Day</h2>
+<h2 class="header2" id="UpdateYourGuildHistoryEachDay">3.2.5 - Update Your Guild History Each Day</h2>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/histy_gui.jpg" alt="histy_gui" %}</p>
 <p class="empty">&nbsp;</p>
@@ -179,7 +190,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>After I have enough guild history to cover the time I have been offline then I use the rescan button which asks LibHistoire to double check the sales loaded in memory are in the cache. Once LibHistoire has verified the sales data the text will turn green indicating that the <a  href="#Linked" >sales events are linked</a>.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="ResolvingUnlinkedEvents">3.2.5 - Resolving Unlinked Events</h2>
+<h2 class="header2" id="ResolvingUnlinkedEvents">3.2.6 - Resolving Unlinked Events</h2>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/unlinked_sales.jpg" alt="unlinked_sales" %}</p>
 <p class="empty">&nbsp;</p>

@@ -1,7 +1,4 @@
 @import "normalize";
-@import "sideMenu";
-@import "colorWheel";
-@import "scaleText";
 @import "variables";
 @import "adopted-styles.scss";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
@@ -238,7 +235,7 @@ body {
   display: grid;
   color: var(--cayman-header-heading);
   background-color: var(--cayman-header-background);
-  background-image: linear-gradient(120deg, rgb(15, 64, 112), rgb(22, 89, 157), rgb(15, 112, 64), rgb(22, 157, 89));
+  background-image: linear-gradient(180deg, rgb(0,0,0), rgb(0,23,92), rgb(0,108,235), rgb(0,99,225), rgb(19,156,245));
   div.gridhead2 {
     text-align: right;
   }
@@ -284,6 +281,26 @@ body {
     }
     div.gridhead6 {
       text-align: center;
+    }
+  }
+  figure {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @include full {
+      max-width: 50%;
+    }
+    @include huge {
+      max-width: 50%;
+    }
+    @include large {
+      max-width: 50%;
+    }
+    @include medium {
+      max-width: 75%;
+    }
+    @include small {
+      max-width: 90%;
     }
   }
 }

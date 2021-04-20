@@ -19,17 +19,23 @@ I have removed the LibStub requirements so they run without it. There is no need
 
 == Useful beginner and returning player video
 
-{% include youtube.html id="cYcfm1Na5so" %}
+{% include youtube.html id="L9D1V6oKzac" %}
 
-This is a good walkthrough of the game changes if you are a returning player. It is also a walkthrough of all the different aspects of the game. It is long but if you just bring it up on your phone and listen while you play you can think to yourself, "Yeah I know that, yeah I knew that, wait what was that?" and rewind it a bit for things you may not have known. It really is a good refresher for returning players.
+This is a good walkthrough of the game changes if you are a returning player. It is also a walkthrough of all the different aspects of the game. It is long but if you just bring it up on your phone and listen while you play you can think to yourself, "Yeah I know that, yeah I knew that, wait what was that?" and rewind it a bit for things you may not have known. It is a good refresher for returning players.
 
 == Chapters, Zone DLC, Dungeon DLC
 
-This is up to date as of __03/28/2020__
+This is up to date as of __04/19/2021__
 
-To play and be in the guild or do anything you don't need anything but the base game. The restriction will be the Morrowind, Summerset, and Elsweyr chapters. If you do not have the chapters you can not access the Morrowind, Summerset, and Elsweyr areas.
+To play and be in the guild or do anything you don't need anything but the base game. You will be restricted from doing anything with the chapters Morrowind, Summerset, Elsweyr, Greymoor, Blackwood. If you do not have the chapters you can not access the content for those areas.
 
 [[ https://en.uesp.net/wiki/Online:Chapters | Chapters]]
+
+Pay close attention to the UESP Wiki section for [[bundles | https://en.uesp.net/wiki/Online:Chapters#Bundles]]. For some reason I don't see any information from UESP about the Greymoor and Blackwood bundles at the time of this update. However, if you visit the ESO site for [[Blackwood | https://www.elderscrollsonline.com/en-us/news/post/59473/]] since that is the latest chapter then review what you get with the different bundles. What I noticed was that if you purchase the upgrade it will cost less but only provides you with the one chapter. 
+
+If you are a returning player and you want more for you money then you should purchase either the base Blackwood collection or the Collectors edition since they come with all the previous chapters.
+
+{{note:Greymoor is the current chapter and Blackwood has not been released at the time this was updated.}}
 
 == Let's talk Zone and Dungeon DLC.
 
@@ -48,6 +54,10 @@ Guilds and Glory
 Dragonhold - Zone DLC (Quests and Story)
 Murkmire - Zone DLC (Quests and Story)
 Clockwork City - Zone DLC (Quests and Story)
+Markarth - Zone DLC (Quests and Story)
+
+{{note: The Markarth DLC gives you access to the Reach.}}
+the Reach
 
 == What to buy
 

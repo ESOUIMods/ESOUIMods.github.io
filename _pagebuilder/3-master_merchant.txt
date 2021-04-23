@@ -117,6 +117,16 @@ Regardless of how long you have been offline you need to update your guild histo
 
 After I have enough guild history to cover the time I have been offline then I use the rescan button which asks LibHistoire to double check the sales loaded in memory are in the cache. Once LibHistoire has verified the sales data the text will turn green indicating that the [[#Linked | sales events are linked]].
 
+== Unlinked Events Notification
+
+With LibHistoire 1.2.0 there is a new notification when you log off.
+
+{{image:log_off_notification.jpg | log_off_notification}}
+
+You could have any amount of time that has not been linked with your Guild History Events. If you chose to log off that is fine but pay close attention to the notification. Any gap in information will still be there when you log back in and you will have to start over. Refer to [[#|Resolving Unlinked Events]] and [[#|Update Your Guild History Each Day]] for more information.
+
+{{note:If you open the Guild History have more then 10 days of missing events you will need to complete a [[#|Ten Day Scan]].}}
+
 == Resolving Unlinked Events
 
 {{image:unlinked_sales.jpg | unlinked_sales}}
@@ -125,7 +135,7 @@ The above screen shot indicates that there is 28 days and 19 hours worth of miss
 
 To start request one day of data as shown in the screen shot for [[#|Request only a few days at a time]]. After you see one day of data then click the small chain link above sales as shown below.
 
-{{image:chain_link.jpg | unlinked_sales}}
+{{image:chain_link.jpg | chain_link}}
 
 After you click the chain link then you will be given a confirmation screen and you will want to click Confirm or press E to confirm the action.
 

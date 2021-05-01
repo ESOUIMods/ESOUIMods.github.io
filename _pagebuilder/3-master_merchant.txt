@@ -1,11 +1,11 @@
 {{PAGETITLE="Master Merchant"}}
 == Contents
 {{CONTENTS=3}}
-== Authors
+= Authors
 
 Philgo68, Khaibit, dOpiate, sirinsidiator, Garkin, Aldanga, Sharlikran, Dolgubon
 
-== Version History
+= Version History
 
 Apparently for version 2.2.0 there was an experimental turbo mode added to MM. From the change log it appears that this was removed by request from Zenimax. However, even I noticed when you tried to download 2.2.1 which had turbo mode removed, you received a file named <font class="purple">Master Merchant 2.2.0.zip</font>. If you tried to engage turbo mode it was still available even if it didn't work as expected.
 
@@ -15,9 +15,15 @@ Upon examination of the code 2.3.1 had turbo mode removed which was not really r
 
 This makes me believe that 2.3.1 was really intended to be the proposed 2.2.1 but somehow the upload never went through properly. I am glad Philgo68 uploaded the version as it has helped me understand the code a bit more.
 
+= Complaints and negative comments
+
+This video is in regards to all the complaints and negative comments.
+
+{% include youtube.html id="h8NyHOUZ1RE" %}
+
 = Master Merchant Extensions
 
-### Shopping List - by MildFlavour
+## Shopping List - by MildFlavour
 
 {{image:shopping_list_view.jpg | shopping_list_view}}
 

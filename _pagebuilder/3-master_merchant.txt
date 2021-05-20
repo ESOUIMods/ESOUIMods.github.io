@@ -31,6 +31,23 @@ Adds a new icon allowing you to view purchanes you make from guild stores.
 
 {{inline:24px | shopping_list.jpg | shopping_list}} The <font class="tan">Shopping List</font> icon allows you to select the installed extension and view purchaces you have made from guild stores.
 
+= LibGuildStore for Master Merchant
+
+LibGuildStore was created to facilitate converting MM sales data from the old format to a new format that uses less space. LGS will also keep track of purchaces for the Shopping List module as well as sold and canceled items.
+
+Once completed Bonanza will provide you with a snapshot of the last 24 hours of items you have seen when visiting traders. <font class="orange">(Currently uncompleted)</font>
+
+For those testing MM 3.6.x you will need to be aware of a few changes.
+
+* [[#Data Management Options | Data Management]] settings is now under LibGuildStore
+* the MMxxData (MM00Data, MM01Data, etc.) modules are used for importing data only
+* MM no longer records sales from LibHistoire.
+* LibGuildStore alows you to import from LibHistoire using the Refresh option, and you may import from MM or ATT
+
+[[sb:Spoiler1 | Disable MM Modules]]
+{{image:disable_mm.jpg | disable_mm}}
+[[se:]]
+
 = Scanning 
 
 == Background Scanning Depreciated
@@ -95,7 +112,7 @@ In order to manually request sales data you have to choose a guild and select Al
 
 You should be able to request two or three days of guild history at once. However, some users have seen issues requesting too much at one time. Each time you request a few days of data stop and, click the Rescan button.
 
-### Rescan button
+### Rescan Button
 
 {{image:ten_day_scan_refresh.jpg | ten_day_scan_refresh}}
 
@@ -105,13 +122,13 @@ The Rescan button is the equivalent of the old <code>/mm missing</code> and it w
 
 {{image:10_days_sales.jpg | show_more}}
 
-Once you have scanned 10 days of sales then the option to press E will not be shown. The server will only allow you to request 10 days of data. Once you have done so click the [[#Rescanbutton|Rescan Button]] to make sure LibHistoire processes all the events.
+Once you have scanned 10 days of sales then the option to press E will not be shown. The server will only allow you to request 10 days of data. Once you have done so click the [[#|Rescan Button]] to make sure LibHistoire processes all the events.
 
 ### LibHistoire GUI
 
 {{image:histy_gui.jpg | histy_gui}}
 
-As you perform a ten day scan the LibHistoire GUI will update. It might even finish processing a certain amount of events. Do not click the small chain link showing in this screen shot. That will link to the current events loaded which for your first initial use of LibHistoire you do not want that to happen. You should only click the [[#Rescanbutton|Rescan Button]] if you see it to ensure all events are scanned.
+As you perform a ten day scan the LibHistoire GUI will update. It might even finish processing a certain amount of events. Do not click the small chain link showing in this screen shot. That will link to the current events loaded which for your first initial use of LibHistoire you do not want that to happen. You should only click the [[#|Rescan Button]] if you see it to ensure all events are scanned.
 
 {{note:Scanning 10 days of history every few days or every week is pointless and a drain on the server.}}
 
@@ -149,7 +166,7 @@ After you click the chain link then you will be given a confirmation screen and 
 
 Once the chain link is clicked LibHistoire will begin processing sales for the time you have loaded into memory. If you have done as suggested, it will process about 1 days worth of sales.
 
-Then repeat the process mentioned in the [[#|Ten Day Scan]] by requesting a day or two of data and then click the small [[#|Rescan button]]. Once the process is complete then remember to [[#|Update Your Guild History Each Day]] so this doesn't happen again.
+Then repeat the process mentioned in the [[#|Ten Day Scan]] by requesting a day or two of data and then click the small [[#|Rescan Button]]. Once the process is complete then remember to [[#|Update Your Guild History Each Day]] so this doesn't happen again.
 
 {{note: This can happen in any guild however, this will occur in guilds with a high volume of sales per day more easily then in a guild with smaller amounts of sales.}}
 
@@ -275,6 +292,8 @@ The refresh button is only a fail safe mechanism in case a user performs the ini
 
 == Data Management Options
 
+{{note:Data Management Options is now under settings for [[#LibGuildStore for Master Merchant | LibGuildStore]].}}
+
 {{image:data_management_options.jpg | data_management_options}}
 
 * <font class="tan">Use Sales History Size Only</font>: This will ignore the minimum and maximum count for sales. If there are 4698 sales of an item with the day range selected for retaining data, then the sales will not be trimmed.
@@ -318,12 +337,12 @@ The images below show a <font class="purple">Hat of a Mother's Sorrow</font> and
 {{note: While the selectors do not seem to be dependant on the sales in your Master Merchant Data, there may be unknown factors that prevent the selector from showing. The code is extreamly old and dates back to the introduction of the Champion Points system.}}
 
 <font class="yellow">Hat of a Mother's Sorrow</font>
-[[sb:Spoiler1 | Hat of a Mother's Sorrow]]
+[[sb:Spoiler2 | Hat of a Mother's Sorrow]]
 {{image:ms_legendary.jpg | ms_legendary}}
 [[se:]]
 
 <font class="purple">Hat of a Mother's Sorrow</font>
-[[sb:Spoiler2 | Hat of a Mother's Sorrow]]
+[[sb:Spoiler3 | Hat of a Mother's Sorrow]]
 {{image:ms_epic.jpg | ms_epic}}
 [[se:]]
 
@@ -432,7 +451,7 @@ Currently there is some confusion about how to uninstall Master merchant 2.x and
 
 If you manually install your mods, of if you want to know which folders belong to Master merchant, click the spoiler.
 
-[[sb:Spoiler3 | Master Merchant Folders]]
+[[sb:Spoiler4 | Master Merchant Folders]]
 {{image-caption:mm_files_installed.jpg | mm_files_installed | To see a larger image, right click the image and choose View Image.}}
 [[se:]]
 
@@ -458,7 +477,7 @@ Open Minion again and click Find More and search for <code>Master Merchant 3.0</
 
 I won't be showing how to install all the required libraries. If you need examples images of the two new libraries LibGuildRoster, and LibHistoire click the spoiler.
 
-[[sb:Spoiler4 | New Libraries]]
+[[sb:Spoiler5 | New Libraries]]
 {{image-caption:install_LibGuildRoster.jpg | install_LibGuildRoster | To see a larger image, right click the image and choose View Image.}}
 
 {{image-caption:install_LibHistoire.jpg | install_LibHistoire | To see a larger image, right click the image and choose View Image.}}

@@ -39,6 +39,8 @@ Once completed Bonanza will provide you with a snapshot of the last 24 hours of 
 
 For those testing MM 3.6.x you will need to be aware of a few changes.
 
+* The first run of MM and LibGuildStore will take a while while LibHistoire processes all the sales data.
+  * MM and ATT data are not automatically imported
 * [[#Data Management Options | Data Management]] settings is now under LibGuildStore
 * the MMxxData (MM00Data, MM01Data, etc.) modules are used for importing data only
 * MM no longer records sales from LibHistoire.

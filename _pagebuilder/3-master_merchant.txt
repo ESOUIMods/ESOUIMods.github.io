@@ -23,28 +23,36 @@ This video is in regards to all the complaints and negative comments.
 
 = Master Merchant Extensions
 
-## Shopping List - by MildFlavour
+## Shopping List
 
 {{image:shopping_list_view.jpg | shopping_list_view}}
 
-Adds a new icon allowing you to view purchanes you make from guild stores.
+Adds a new icon allowing you to view purchases you make from guild stores.
 
-{{inline:24px | shopping_list.jpg | shopping_list}} The <font class="tan">Shopping List</font> icon allows you to select the installed extension and view purchaces you have made from guild stores.
+{{inline:24px | shopping_list.jpg | shopping_list}} The <font class="tan">Shopping List</font> icon allows you to select the installed extension and view purchases you have made from guild stores.
+
+{{note: The by old Shopping List extension by MildFlavour is not longer used and can be disabled after you import your purchases.}}
+
+## Bonanza!
+
+{{image:bonanza_window.jpg | bonanza_window}}
+
+With MM 3.6.x Bonanza a new icon allowing you to view items you have seen at traders as you shop for items to purchase.
 
 = LibGuildStore for Master Merchant
 
-LibGuildStore was created to facilitate converting MM sales data from the old format to a new format that uses less space. LGS will also keep track of purchaces for the Shopping List module as well as sold and canceled items.
+LibGuildStore was created to facilitate converting MM sales data from the old format to a new format that uses less space. LGS will also keep track of purchases for the Shopping List module as well as sold and canceled items.
 
 Once completed Bonanza will provide you with a snapshot of the last 24 hours of items you have seen when visiting traders. <font class="orange">(Currently uncompleted)</font>
 
 For those testing MM 3.6.x you will need to be aware of a few changes.
 
-* The first run of MM and LibGuildStore will take a while while LibHistoire processes all the sales data.
+* The first run of MM and LibGuildStore will take a while LibHistoire processes all the sales data.
   * MM and ATT data are not automatically imported
 * [[#Data Management Options | Data Management]] settings is now under LibGuildStore
 * the MMxxData (MM00Data, MM01Data, etc.) modules are used for importing data only
 * MM no longer records sales from LibHistoire.
-* LibGuildStore alows you to import from LibHistoire using the Refresh option, and you may import from MM or ATT
+* LibGuildStore allows you to import from LibHistoire using the Refresh option, and you may import from MM or ATT
 
 [[sb:Spoiler1 | Disable MM Modules]]
 {{image:disable_mm.jpg | disable_mm}}
@@ -68,7 +76,7 @@ For reasons like these MM no longer uses a background scan as it attempted to sc
 
 Unfortunately from time to time ZOS introduces or reintroduces a bug in the saved vars where the apostrophe is converted to HTML code. Which will mean your sales may or may not display properly. Which is a game bug and you are out of luck until or unless they fix it.
 
-Since this can occur I highly recomend changing your user name to only contain letters as it will make it easier for you in the long run.
+Since this can occur I highly recommend changing your user name to only contain letters as it will make it easier for you in the long run.
 
 This also includes creative names that contain things like Æ or æ. As those are not individual letters.
 
@@ -183,11 +191,11 @@ Then repeat the process mentioned in the [[#|Ten Day Scan]] by requesting a day 
 {{inline:24px | toggle_seller_item.jpg | toggle_seller_item}} <font class="tan">Seller Info</font> Guild Ranks, <font class="tan">Item Info</font> Your Info or All Info.
 {{inline:24px | open_statistics_window.jpg | open_statistics_window}} Opens the [[#|Statistics Window]].
 {{inline:24px | mail_icon.jpg | mail_icon}} Sends mail to the author with an optional donation amount.
-{{inline:24px | shopping_list.jpg | shopping_list}} The <font class="tan">Shopping List</font> icon allows you to select the installed extension and view purchaces you have made from guild stores.
+{{inline:24px | shopping_list.jpg | shopping_list}} The <font class="tan">Shopping List</font> icon allows you to select the installed extension and view purchases you have made from guild stores.
 {{inline:24px | money_bag.jpg | money_bag}} The <font class="tan">Moneybag</font> icon means the purchaser is not a member of that guild.
 
 {{note:<font class="tan">Item Sold</font> is only available from a Seller's Report.}}
-{{note:Donations should be voluntary. People that struggle to make 25K gold a week, feel free to just say thanks. I'd rather receive a 50K donation from top sellers making millions a week.}}
+{{note: Donations should be voluntary. People that struggle to make 25K gold a week, feel free to just say thanks. I'd rather receive a 50K donation from top sellers making millions a week.}}
 
 == Guild Sales and Personal Sales
 
@@ -264,7 +272,7 @@ The refresh button is only a fail safe mechanism in case a user performs the ini
 
 * <font class="tan">Open With Mail</font>: Whether or not to open the Master Merchant Window when you open your mail.
 * <font class="tan">Open With Store</font>: Whether or not to open the Master Merchant Window when you interact with a guild store.
-* <font class="tan">Show Full Sale Price</font>: Show the full price of the sale rather then the amount after the store cut ir deducted.
+* <font class="tan">Show Full Sale Price</font>: Show the full price of the sale rather then the amount after the store cut is deducted.
 * <font class="tan">Window Font</font>: The font for the Master Merchant Window. You may have other fonts if you have mods that use LibMediaProvider like one of my other mods [[https://www.esoui.com/downloads/info2558-AdvancedNameplatesGreymoor.html | Advanced Nameplates]].
 
 {{note: If you sold a <font class="purple">Crafting Motif 63: Dremora Bows</font> for <font class="yellow">11,000</font> {{inline:20px | currency_gold.png | currency_gold}} the master merchant window will show what you received in the mail which would be <font class="yellow">10,230</font> {{inline:20px | currency_gold.png | currency_gold}}.}}
@@ -274,9 +282,9 @@ The refresh button is only a fail safe mechanism in case a user performs the ini
 {{image:alert_options.jpg | alert_options}}
 
 * <font class="tan">On-Screen Alerts</font>: Show On-Screen popup alerts when you receive a sale. See examples below.
-* <font class="tan">Show Alerts in Cyrodiil</font>: Enable or Disable Alerts in Cyrodiil. Usefull if you watch for specific PVP alerts and do not want MM Alerts to show up.
+* <font class="tan">Show Alerts in Cyrodiil</font>: Enable or Disable Alerts in Cyrodiil. Useful if you watch for specific PVP alerts and do not want MM Alerts to show up.
 * <font class="tan">Chat Alerts</font>: Show chat alerts when you receive a sale. See examples below.
-* <font class="tan">Alert Sound</font>: Choose the Alert sound to diferenciate it from other mod added Alerts.
+* <font class="tan">Alert Sound</font>: Choose the Alert sound to differentiate it from other mod added Alerts.
 * <font class="tan">Show Multiple Alerts</font>: <code>Investigating</code>
 * <font class="tan">Offline Sales Report</font>: Show Alerts for sales received while offline. See note.
 * <font class="tan">Display Listing Message</font>: Show chat alert when you list an item for sale.
@@ -308,7 +316,7 @@ The refresh button is only a fail safe mechanism in case a user performs the ini
 
 {{image:other_tooltip_options.jpg | other_tooltip_options}}
 
-* <font class="tan">Level/Quality Selectors</font>: Adds Leve and Quality selectors to the tooltip window. You can bring up the window by clicking a link in chat or when you right click an item and choose [[#|Popup Item Data]]. See the [[#|Level Quality Selectors]] section for example of the selectors that appear on the tooltip window.
+* <font class="tan">Level/Quality Selectors</font>: Adds Level and Quality selectors to the tooltip window. You can bring up the window by clicking a link in chat or when you right click an item and choose [[#|Popup Item Data]]. See the [[#|Level Quality Selectors]] section for example of the selectors that appear on the tooltip window.
 
 == Inventory Options
 
@@ -328,7 +336,7 @@ The refresh button is only a fail safe mechanism in case a user performs the ini
 
 {{image:popup_item_data.jpg | popup_item_data}}
 
-This contex menu is from having Master merchant and Awesome Guild Store installed. The menu will vary depending on the mods you have installed.
+This context menu is from having Master merchant and Awesome Guild Store installed. The menu will vary depending on the mods you have installed.
 
 == Level Quality Selectors
 
@@ -336,7 +344,7 @@ I will try to update the selector so that there are graphics to click on but for
 
 The images below show a <font class="purple">Hat of a Mother's Sorrow</font> and the Legendary version does not have buttons on the right because there is no Mythic version. The Epic version has selectors on both the left and right to view the Superior or the Legendary version.
 
-{{note: While the selectors do not seem to be dependant on the sales in your Master Merchant Data, there may be unknown factors that prevent the selector from showing. The code is extreamly old and dates back to the introduction of the Champion Points system.}}
+{{note: While the selectors do not seem to be dependant on the sales in your Master Merchant Data, there may be unknown factors that prevent the selector from showing. The code is extremely old and dates back to the introduction of the Champion Points system.}}
 
 <font class="yellow">Hat of a Mother's Sorrow</font>
 [[sb:Spoiler2 | Hat of a Mother's Sorrow]]
@@ -421,19 +429,15 @@ Since I have never used this feature with a spreadsheet I do not know how easy t
 
 = Technical Information
 
-== Locating LibExecutionQueue
+== Backup LibGuildStore Data
 
-LibExecutionQueue is included with Master Merchant as shown in the zip below.
+{{image:lgs_data_backup.jpg | lgs_data_backup}}
 
-{{image:leq_included.jpg | leq_included}}
+To backup your LibGuildStore data you will need to navigate to the SavedVariables folder. Usually <code>C:\Users\Your User Name\Documents\Elder Scrolls Online\live</code>. The files can be easily found going to MyDocuments in windows first. 
 
-LibExecutionQueue is sorted alphabetically by the base game.
+{{note: I am sorry I don't know where it is located on a Mac.}}
 
-{{image:leq_unsorted.jpg | leq_unsorted}}
-
-If you have LibVotansAddonList installed then it will look close to the base game.
-
-{{image:leq_votans_sort.jpg | leq_votans_sort}}
+Once you are in the SavedVariables folders, you will need to copy the 16 <code>GSxxData</code> files named <code>GS00Data.lua</code> to <code>GS15Data.lua</code> as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables. You will also want to keep a copy of <code>LibGuildStore.lua</code>, <code>LibHistoire.lua</code>, and <code>MasterMerchant.lua</code>.
 
 == Backup Master Merchant Data
 
@@ -443,7 +447,7 @@ To backup your Master Merchant data you will need to navigate to the SavedVariab
 
 {{note: I am sorry I don't know where it is located on a Mac.}}
 
-Once you are in the SavedVariables folders, you will need to copy the 16 MMxxData files named MM00Data.kua to MM15Data.lua as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables.
+Once you are in the SavedVariables folders, you will need to copy the 16 MMxxData files named MM00Data.lua to MM15Data.lua as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables.
 
 == Uninstall Master Merchant 2.x
 
@@ -488,3 +492,17 @@ I won't be showing how to install all the required libraries. If you need exampl
 {{image:one_mm_only.jpg | one_mm_only}}
 
 After you install Master Merchant 3.0 verify it is the only Master Merchant showing in Minion.
+
+== Locating LibExecutionQueue
+
+LibExecutionQueue is included with Master Merchant as shown in the zip below.
+
+{{image:leq_included.jpg | leq_included}}
+
+LibExecutionQueue is sorted alphabetically by the base game.
+
+{{image:leq_unsorted.jpg | leq_unsorted}}
+
+If you have LibVotansAddonList installed then it will look close to the base game.
+
+{{image:leq_votans_sort.jpg | leq_votans_sort}}

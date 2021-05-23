@@ -23,7 +23,8 @@ title: Master Merchant
 <p class="list-1">&bull;&nbsp; <a href="#VersionHistory">3.2 Version History</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Complaintsandnegativecomments">3.3 Complaints and negative comments</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#MasterMerchantExtensions">3.4 Master Merchant Extensions</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ShoppingListbyMildFlavour">3.4.1 Shopping List - by MildFlavour</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ShoppingList">3.4.1 Shopping List</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Bonanza">3.4.2 Bonanza!</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#LibGuildStoreforMasterMerchant">3.5 LibGuildStore for Master Merchant</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Scanning">3.6 Scanning</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#BackgroundScanningDepreciated">3.6.1 Background Scanning Depreciated</a></p>
@@ -74,9 +75,10 @@ title: Master Merchant
 <p class="list-1">&bull;&nbsp; <a href="#Slashcommands">3.11 Slash commands</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#ExportSalesReport">3.11.1 Export Sales Report</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#TechnicalInformation">3.12 Technical Information</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#LocatingLibExecutionQueue">3.12.1 Locating LibExecutionQueue</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#BackupLibGuildStoreData">3.12.1 Backup LibGuildStore Data</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#BackupMasterMerchantData">3.12.2 Backup Master Merchant Data</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#UninstallMasterMerchant2x">3.12.3 Uninstall Master Merchant 2.x</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#LocatingLibExecutionQueue">3.12.4 Locating LibExecutionQueue</a></p>
 <h1 class="header1" id="Authors">3.1 - Authors</h1>
 <p class="empty">&nbsp;</p>
 <p>Philgo68, Khaibit, dOpiate, sirinsidiator, Garkin, Aldanga, Sharlikran, Dolgubon</p>
@@ -99,28 +101,36 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="MasterMerchantExtensions">3.4 - Master Merchant Extensions</h1>
 <p class="empty">&nbsp;</p>
-<h2 id="ShoppingListbyMildFlavour">3.4.1 - Shopping List - by MildFlavour</h2>
+<h2 id="ShoppingList">3.4.1 - Shopping List</h2>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/shopping_list_view.jpg" alt="shopping_list_view" %}</p>
 <p class="empty">&nbsp;</p>
-<p>Adds a new icon allowing you to view purchanes you make from guild stores.</p>
+<p>Adds a new icon allowing you to view purchases you make from guild stores.</p>
 <p class="empty">&nbsp;</p>
-<p>{% include image-inline.html max-width="24px" file="img/shopping_list.jpg" alt="shopping_list" %} The <font class="tan">Shopping List</font> icon allows you to select the installed extension and view purchaces you have made from guild stores.</p>
+<p>{% include image-inline.html max-width="24px" file="img/shopping_list.jpg" alt="shopping_list" %} The <font class="tan">Shopping List</font> icon allows you to select the installed extension and view purchases you have made from guild stores.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> The by old Shopping List extension by MildFlavour is not longer used and can be disabled after you import your purchases.</p>
+<p class="empty">&nbsp;</p>
+<h2 id="Bonanza">3.4.2 - Bonanza!</h2>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/bonanza_window.jpg" alt="bonanza_window" %}</p>
+<p class="empty">&nbsp;</p>
+<p>With MM 3.6.x Bonanza a new icon allowing you to view items you have seen at traders as you shop for items to purchase.</p>
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="LibGuildStoreforMasterMerchant">3.5 - LibGuildStore for Master Merchant</h1>
 <p class="empty">&nbsp;</p>
-<p>LibGuildStore was created to facilitate converting MM sales data from the old format to a new format that uses less space. LGS will also keep track of purchaces for the Shopping List module as well as sold and canceled items.</p>
+<p>LibGuildStore was created to facilitate converting MM sales data from the old format to a new format that uses less space. LGS will also keep track of purchases for the Shopping List module as well as sold and canceled items.</p>
 <p class="empty">&nbsp;</p>
 <p>Once completed Bonanza will provide you with a snapshot of the last 24 hours of items you have seen when visiting traders. <font class="orange">(Currently uncompleted)</font></p>
 <p class="empty">&nbsp;</p>
 <p>For those testing MM 3.6.x you will need to be aware of a few changes.</p>
 <p class="empty">&nbsp;</p>
-<p class="list-1">&bull;&nbsp; The first run of MM and LibGuildStore will take a while while LibHistoire processes all the sales data.</p>
+<p class="list-1">&bull;&nbsp; The first run of MM and LibGuildStore will take a while LibHistoire processes all the sales data.</p>
   <p class="list-2">&bull;&nbsp; MM and ATT data are not automatically imported</p>
 <p class="list-1">&bull;&nbsp; <a  href="#DataManagementOptions" >Data Management</a> settings is now under LibGuildStore</p>
 <p class="list-1">&bull;&nbsp; the MMxxData (MM00Data, MM01Data, etc.) modules are used for importing data only</p>
 <p class="list-1">&bull;&nbsp; MM no longer records sales from LibHistoire.</p>
-<p class="list-1">&bull;&nbsp; LibGuildStore alows you to import from LibHistoire using the Refresh option, and you may import from MM or ATT</p>
+<p class="list-1">&bull;&nbsp; LibGuildStore allows you to import from LibHistoire using the Refresh option, and you may import from MM or ATT</p>
 <p class="empty">&nbsp;</p>
 <input type="checkbox" id="spoiler1" />
 <label for="spoiler1">Disable MM Modules</label>
@@ -146,7 +156,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>Unfortunately from time to time ZOS introduces or reintroduces a bug in the saved vars where the apostrophe is converted to HTML code. Which will mean your sales may or may not display properly. Which is a game bug and you are out of luck until or unless they fix it.</p>
 <p class="empty">&nbsp;</p>
-<p>Since this can occur I highly recomend changing your user name to only contain letters as it will make it easier for you in the long run.</p>
+<p>Since this can occur I highly recommend changing your user name to only contain letters as it will make it easier for you in the long run.</p>
 <p class="empty">&nbsp;</p>
 <p>This also includes creative names that contain things like Æ or æ. As those are not individual letters.</p>
 <p class="empty">&nbsp;</p>
@@ -261,11 +271,11 @@ title: Master Merchant
 <p>{% include image-inline.html max-width="24px" file="img/toggle_seller_item.jpg" alt="toggle_seller_item" %} <font class="tan">Seller Info</font> Guild Ranks, <font class="tan">Item Info</font> Your Info or All Info.</p>
 <p>{% include image-inline.html max-width="24px" file="img/open_statistics_window.jpg" alt="open_statistics_window" %} Opens the <a  href="#StatisticsWindow" >Statistics Window</a>.</p>
 <p>{% include image-inline.html max-width="24px" file="img/mail_icon.jpg" alt="mail_icon" %} Sends mail to the author with an optional donation amount.</p>
-<p>{% include image-inline.html max-width="24px" file="img/shopping_list.jpg" alt="shopping_list" %} The <font class="tan">Shopping List</font> icon allows you to select the installed extension and view purchaces you have made from guild stores.</p>
+<p>{% include image-inline.html max-width="24px" file="img/shopping_list.jpg" alt="shopping_list" %} The <font class="tan">Shopping List</font> icon allows you to select the installed extension and view purchases you have made from guild stores.</p>
 <p>{% include image-inline.html max-width="24px" file="img/money_bag.jpg" alt="money_bag" %} The <font class="tan">Moneybag</font> icon means the purchaser is not a member of that guild.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"><font class="tan">Item Sold</font> is only available from a Seller's Report.</p>
-<p class="note">Donations should be voluntary. People that struggle to make 25K gold a week, feel free to just say thanks. I'd rather receive a 50K donation from top sellers making millions a week.</p>
+<p class="note"> Donations should be voluntary. People that struggle to make 25K gold a week, feel free to just say thanks. I'd rather receive a 50K donation from top sellers making millions a week.</p>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="GuildSalesandPersonalSales">3.7.1 - Guild Sales and Personal Sales</h2>
 <p class="empty">&nbsp;</p>
@@ -342,7 +352,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Open With Mail</font>: Whether or not to open the Master Merchant Window when you open your mail.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Open With Store</font>: Whether or not to open the Master Merchant Window when you interact with a guild store.</p>
-<p class="list-1">&bull;&nbsp; <font class="tan">Show Full Sale Price</font>: Show the full price of the sale rather then the amount after the store cut ir deducted.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Show Full Sale Price</font>: Show the full price of the sale rather then the amount after the store cut is deducted.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Window Font</font>: The font for the Master Merchant Window. You may have other fonts if you have mods that use LibMediaProvider like one of my other mods <a  href="https://www.esoui.com/downloads/info2558-AdvancedNameplatesGreymoor.html" >Advanced Nameplates</a>.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"> If you sold a <font class="purple">Crafting Motif 63: Dremora Bows</font> for <font class="yellow">11,000</font> {% include image-inline.html max-width="20px" file="img/currency_gold.png" alt="currency_gold" %} the master merchant window will show what you received in the mail which would be <font class="yellow">10,230</font> {% include image-inline.html max-width="20px" file="img/currency_gold.png" alt="currency_gold" %}.</p>
@@ -352,9 +362,9 @@ title: Master Merchant
 <p>{% include image.html file="img/alert_options.jpg" alt="alert_options" %}</p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">On-Screen Alerts</font>: Show On-Screen popup alerts when you receive a sale. See examples below.</p>
-<p class="list-1">&bull;&nbsp; <font class="tan">Show Alerts in Cyrodiil</font>: Enable or Disable Alerts in Cyrodiil. Usefull if you watch for specific PVP alerts and do not want MM Alerts to show up.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Show Alerts in Cyrodiil</font>: Enable or Disable Alerts in Cyrodiil. Useful if you watch for specific PVP alerts and do not want MM Alerts to show up.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Chat Alerts</font>: Show chat alerts when you receive a sale. See examples below.</p>
-<p class="list-1">&bull;&nbsp; <font class="tan">Alert Sound</font>: Choose the Alert sound to diferenciate it from other mod added Alerts.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Alert Sound</font>: Choose the Alert sound to differentiate it from other mod added Alerts.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Show Multiple Alerts</font>: <code>Investigating</code></p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Offline Sales Report</font>: Show Alerts for sales received while offline. See note.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Display Listing Message</font>: Show chat alert when you list an item for sale.</p>
@@ -386,7 +396,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/other_tooltip_options.jpg" alt="other_tooltip_options" %}</p>
 <p class="empty">&nbsp;</p>
-<p class="list-1">&bull;&nbsp; <font class="tan">Level/Quality Selectors</font>: Adds Leve and Quality selectors to the tooltip window. You can bring up the window by clicking a link in chat or when you right click an item and choose <a  href="#PopupItemData" >Popup Item Data</a>. See the <a  href="#LevelQualitySelectors" >Level Quality Selectors</a> section for example of the selectors that appear on the tooltip window.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Level/Quality Selectors</font>: Adds Level and Quality selectors to the tooltip window. You can bring up the window by clicking a link in chat or when you right click an item and choose <a  href="#PopupItemData" >Popup Item Data</a>. See the <a  href="#LevelQualitySelectors" >Level Quality Selectors</a> section for example of the selectors that appear on the tooltip window.</p>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="InventoryOptions">3.9.6 - Inventory Options</h2>
 <p class="empty">&nbsp;</p>
@@ -406,7 +416,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/popup_item_data.jpg" alt="popup_item_data" %}</p>
 <p class="empty">&nbsp;</p>
-<p>This contex menu is from having Master merchant and Awesome Guild Store installed. The menu will vary depending on the mods you have installed.</p>
+<p>This context menu is from having Master merchant and Awesome Guild Store installed. The menu will vary depending on the mods you have installed.</p>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="LevelQualitySelectors">3.10.2 - Level Quality Selectors</h2>
 <p class="empty">&nbsp;</p>
@@ -414,7 +424,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>The images below show a <font class="purple">Hat of a Mother's Sorrow</font> and the Legendary version does not have buttons on the right because there is no Mythic version. The Epic version has selectors on both the left and right to view the Superior or the Legendary version.</p>
 <p class="empty">&nbsp;</p>
-<p class="note"> While the selectors do not seem to be dependant on the sales in your Master Merchant Data, there may be unknown factors that prevent the selector from showing. The code is extreamly old and dates back to the introduction of the Champion Points system.</p>
+<p class="note"> While the selectors do not seem to be dependant on the sales in your Master Merchant Data, there may be unknown factors that prevent the selector from showing. The code is extremely old and dates back to the introduction of the Champion Points system.</p>
 <p class="empty">&nbsp;</p>
 <p><font class="yellow">Hat of a Mother's Sorrow</font></p>
 <input type="checkbox" id="spoiler2" />
@@ -503,19 +513,15 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="TechnicalInformation">3.12 - Technical Information</h1>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="LocatingLibExecutionQueue">3.12.1 - Locating LibExecutionQueue</h2>
+<h2 class="header2" id="BackupLibGuildStoreData">3.12.1 - Backup LibGuildStore Data</h2>
 <p class="empty">&nbsp;</p>
-<p>LibExecutionQueue is included with Master Merchant as shown in the zip below.</p>
+<p>{% include image.html file="img/lgs_data_backup.jpg" alt="lgs_data_backup" %}</p>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/leq_included.jpg" alt="leq_included" %}</p>
+<p>To backup your LibGuildStore data you will need to navigate to the SavedVariables folder. Usually <code>C:\Users\Your User Name\Documents\Elder Scrolls Online\live</code>. The files can be easily found going to MyDocuments in windows first.</p>
 <p class="empty">&nbsp;</p>
-<p>LibExecutionQueue is sorted alphabetically by the base game.</p>
+<p class="note"> I am sorry I don't know where it is located on a Mac.</p>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/leq_unsorted.jpg" alt="leq_unsorted" %}</p>
-<p class="empty">&nbsp;</p>
-<p>If you have LibVotansAddonList installed then it will look close to the base game.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/leq_votans_sort.jpg" alt="leq_votans_sort" %}</p>
+<p>Once you are in the SavedVariables folders, you will need to copy the 16 <code>GSxxData</code> files named <code>GS00Data.lua</code> to <code>GS15Data.lua</code> as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables. You will also want to keep a copy of <code>LibGuildStore.lua</code>, <code>LibHistoire.lua</code>, and <code>MasterMerchant.lua</code>.</p>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="BackupMasterMerchantData">3.12.2 - Backup Master Merchant Data</h2>
 <p class="empty">&nbsp;</p>
@@ -525,7 +531,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p class="note"> I am sorry I don't know where it is located on a Mac.</p>
 <p class="empty">&nbsp;</p>
-<p>Once you are in the SavedVariables folders, you will need to copy the 16 MMxxData files named MM00Data.kua to MM15Data.lua as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables.</p>
+<p>Once you are in the SavedVariables folders, you will need to copy the 16 MMxxData files named MM00Data.lua to MM15Data.lua as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables.</p>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="UninstallMasterMerchant2x">3.12.3 - Uninstall Master Merchant 2.x</h2>
 <p class="empty">&nbsp;</p>
@@ -574,4 +580,18 @@ title: Master Merchant
 <p>{% include image.html file="img/one_mm_only.jpg" alt="one_mm_only" %}</p>
 <p class="empty">&nbsp;</p>
 <p>After you install Master Merchant 3.0 verify it is the only Master Merchant showing in Minion.</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="LocatingLibExecutionQueue">3.12.4 - Locating LibExecutionQueue</h2>
+<p class="empty">&nbsp;</p>
+<p>LibExecutionQueue is included with Master Merchant as shown in the zip below.</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/leq_included.jpg" alt="leq_included" %}</p>
+<p class="empty">&nbsp;</p>
+<p>LibExecutionQueue is sorted alphabetically by the base game.</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/leq_unsorted.jpg" alt="leq_unsorted" %}</p>
+<p class="empty">&nbsp;</p>
+<p>If you have LibVotansAddonList installed then it will look close to the base game.</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/leq_votans_sort.jpg" alt="leq_votans_sort" %}</p>
 </div>

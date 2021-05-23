@@ -37,7 +37,7 @@ Adds a new icon allowing you to view purchases you make from guild stores.
 
 {{image:bonanza_window.jpg | bonanza_window}}
 
-With MM 3.6.x Bonanza a new icon allowing you to view items you have seen at traders as you shop for items to purchase.
+With MM 3.6.x Bonanza adds a new icon allowing you to view items you have seen at traders as you shop for items to purchase.
 
 = LibGuildStore for Master Merchant
 

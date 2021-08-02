@@ -39,6 +39,12 @@ Adds a new icon allowing you to view purchases you make from guild stores.
 
 With MM 3.6.x Bonanza adds a new icon allowing you to view items you have seen at traders as you shop for items to purchase.
 
+## Bonanza Name Filter
+
+{{image:bonanza_window_filter.jpg | bonanza_window_filter}}
+
+When completed 3.6.x will have both a name and type filter.
+
 = LibGuildStore for Master Merchant
 
 LibGuildStore was created to facilitate converting MM sales data from the old format to a new format that uses less space. LGS will also keep track of purchases for the Shopping List module as well as sold and canceled items.

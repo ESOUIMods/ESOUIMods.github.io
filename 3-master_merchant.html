@@ -63,15 +63,19 @@ title: Master Merchant
 <p class="list-2">&bull;&nbsp; <a href="#RefreshButton">3.7.5 Refresh Button</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#StatisticsWindow">3.8 Statistics Window</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Settings">3.9 Settings</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#MasterMerchantWindowOptions">3.9.1 Master Merchant Window Options</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#AlertOptions">3.9.2 Alert Options</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#OnScreenandChatAlert">3.9.2.1 On-Screen and Chat Alert</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#CalculationDisplayOptions">3.9.3 Calculation Display Options</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#DataManagementOptions">3.9.4 Data Management Options</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#OtherTooltipOptions">3.9.5 Other Tooltip Options</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#InventoryOptions">3.9.6 Inventory Options</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#GuildStoreOptions">3.9.7 Guild Store Options</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#DebugOptions">3.9.8 Debug Options</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#MasterMerchant">3.9.1 Master Merchant</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#MasterMerchantWindowOptions">3.9.1.1 Master Merchant Window Options</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#AlertOptions">3.9.1.2 Alert Options</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#OnScreenandChatAlert">3.9.1.3 On-Screen and Chat Alert</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#CalculationDisplayOptions">3.9.1.4 Calculation Display Options</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#OtherTooltipOptions">3.9.2 Other Tooltip Options</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#InventoryOptions">3.9.3 Inventory Options</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#GuildStoreOptions">3.9.4 Guild Store Options</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#GuildMasterOptions">3.9.5 Guild Master Options</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#DebugOptions">3.9.6 Debug Options</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#LibGuildStore">3.9.7 LibGuildStore</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#SalesManagementOptions">3.9.7.1 Sales Management Options</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#DataManagementOptions">3.9.7.2 Data Management Options</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Misc">3.10 Misc</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#PopupItemData">3.10.1 Popup Item Data</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#LevelQualitySelectors">3.10.2 Level Quality Selectors</a></p>
@@ -363,7 +367,9 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="Settings">3.9 - Settings</h1>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="MasterMerchantWindowOptions">3.9.1 - Master Merchant Window Options</h2>
+<h2 class="header2" id="MasterMerchant">3.9.1 - Master Merchant</h2>
+<p class="empty">&nbsp;</p>
+<h3 class="header3" id="MasterMerchantWindowOptions">3.9.1.1 - Master Merchant Window Options</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/main_wondow_options.jpg" alt="main_wondow_options" %}</p>
 <p class="empty">&nbsp;</p>
@@ -374,7 +380,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p class="note"> If you sold a <font class="purple">Crafting Motif 63: Dremora Bows</font> for <font class="yellow">11,000</font> {% include image-inline.html max-width="20px" file="img/currency_gold.png" alt="currency_gold" %} the master merchant window will show what you received in the mail which would be <font class="yellow">10,230</font> {% include image-inline.html max-width="20px" file="img/currency_gold.png" alt="currency_gold" %}.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="AlertOptions">3.9.2 - Alert Options</h2>
+<h3 class="header3" id="AlertOptions">3.9.1.2 - Alert Options</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/alert_options.jpg" alt="alert_options" %}</p>
 <p class="empty">&nbsp;</p>
@@ -388,20 +394,44 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p class="note"> <font class="tan">Show Multiple Alerts</font> and <font class="tan">Offline Sales Report</font> may not function as intended with the addition of LibHistoire. However, you will still see notifications of sales as they are received.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="OnScreenandChatAlert">3.9.2.1 - On-Screen and Chat Alert</h3>
+<h3 id="OnScreenandChatAlert">3.9.1.3 - On-Screen and Chat Alert</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/onscreen_alert.jpg" alt="onscreen_alert" %}</p>
 <p>{% include image.html file="img/chat_alert.jpg" alt="chat_alert" %}</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="CalculationDisplayOptions">3.9.3 - Calculation Display Options</h2>
+<h3 class="header3" id="CalculationDisplayOptions">3.9.1.4 - Calculation Display Options</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/tool_tip_settings.jpg" alt="tool_tip_settings" %}</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="DataManagementOptions">3.9.4 - Data Management Options</h2>
+<h2 class="header2" id="OtherTooltipOptions">3.9.2 - Other Tooltip Options</h2>
 <p class="empty">&nbsp;</p>
-<p class="note">Data Management Options is now under settings for <a  href="#LibGuildStoreforMasterMerchant" >LibGuildStore</a>.</p>
+<p>{% include image.html file="img/other_tooltip_options.jpg" alt="other_tooltip_options" %}</p>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/data_management_options.jpg" alt="data_management_options" %}</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Level/Quality Selectors</font>: Adds Level and Quality selectors to the tooltip window. You can bring up the window by clicking a link in chat or when you right click an item and choose <a  href="#PopupItemData" >Popup Item Data</a>. See the <a  href="#LevelQualitySelectors" >Level Quality Selectors</a> section for example of the selectors that appear on the tooltip window.</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="InventoryOptions">3.9.3 - Inventory Options</h2>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/inventory_options.jpg" alt="inventory_options" %}</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="GuildStoreOptions">3.9.4 - Guild Store Options</h2>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/guild_store_options.jpg" alt="guild_store_options" %}</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="GuildMasterOptions">3.9.5 - Guild Master Options</h2>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/guild_master_options.jpg" alt="guild_master_options" %}</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="DebugOptions">3.9.6 - Debug Options</h2>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/debug_options.jpg" alt="debug_options" %}</p>
+<p class="empty">&nbsp;</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Disable ATT Warning</font>: If you enjoy using both MM and ATT together then please disable the warning that ATT files are active with this toggle.</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="LibGuildStore">3.9.7 - LibGuildStore</h2>
+<p class="empty">&nbsp;</p>
+<h3 class="header3" id="SalesManagementOptions">3.9.7.1 - Sales Management Options</h3>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/lgs_sales_management.jpg" alt="lgs_sales_management" %}</p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Use Sales History Size Only</font>: This will ignore the minimum and maximum count for sales. If there are 4698 sales of an item with the day range selected for retaining data, then the sales will not be trimmed.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Sales History Size</font>: The days range to retain data.</p>
@@ -409,23 +439,9 @@ title: Master Merchant
 <p class="list-1">&bull;&nbsp; <font class="tan">Max Item Count</font>: The maximum count of sales for a specific item before the days range is considered. If you select 90 days to retain data, and you choose 1000, then the oldest sale once the threshold is reached will be trimmed. Meaning if you have 1001 sales for an item, 1 will be trimmed and 100 will remain.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Minimal Indexing</font>: Does not add search words for items. It only adds the player search word for displaying personal sales. Searching in the Master merchant window is still possible but will take extra time.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="OtherTooltipOptions">3.9.5 - Other Tooltip Options</h2>
+<h3 class="header3" id="DataManagementOptions">3.9.7.2 - Data Management Options</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/other_tooltip_options.jpg" alt="other_tooltip_options" %}</p>
-<p class="empty">&nbsp;</p>
-<p class="list-1">&bull;&nbsp; <font class="tan">Level/Quality Selectors</font>: Adds Level and Quality selectors to the tooltip window. You can bring up the window by clicking a link in chat or when you right click an item and choose <a  href="#PopupItemData" >Popup Item Data</a>. See the <a  href="#LevelQualitySelectors" >Level Quality Selectors</a> section for example of the selectors that appear on the tooltip window.</p>
-<p class="empty">&nbsp;</p>
-<h2 class="header2" id="InventoryOptions">3.9.6 - Inventory Options</h2>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/inventory_options.jpg" alt="inventory_options" %}</p>
-<p class="empty">&nbsp;</p>
-<h2 class="header2" id="GuildStoreOptions">3.9.7 - Guild Store Options</h2>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/guild_store_options.jpg" alt="guild_store_options" %}</p>
-<p class="empty">&nbsp;</p>
-<h2 class="header2" id="DebugOptions">3.9.8 - Debug Options</h2>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/debug_options.jpg" alt="debug_options" %}</p>
+<p>{% include image.html file="img/lgs_data_management.jpg" alt="lgs_data_management" %}</p>
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="Misc">3.10 - Misc</h1>
 <p class="empty">&nbsp;</p>

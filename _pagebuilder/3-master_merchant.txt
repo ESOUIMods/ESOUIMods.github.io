@@ -1,4 +1,10 @@
 {{PAGETITLE="Master Merchant"}}
+= Under Construction
+
+{{image:under_construction.jpg | under_construction}}
+
+The site is undergoing changes to the images for 3.6.x so the screen shots, icons, settings  menus, and menu description may not resemble 3.5.30.
+
 == Contents
 {{CONTENTS=3}}
 = Authors
@@ -43,22 +49,22 @@ With MM 3.6.x Bonanza adds a new icon allowing you to view items you have seen a
 
 {{image:bonanza_window_filter.jpg | bonanza_window_filter}}
 
-When completed 3.6.x will have both a name and type filter.
+## Bonanza Type Filter
+
+{{image:bonanza_window_filter_type.jpg | bonanza_window_filter_type}}
 
 = LibGuildStore for Master Merchant
 
-LibGuildStore was created to facilitate converting MM sales data from the old format to a new format that uses less space. LGS will also keep track of purchases for the Shopping List module as well as sold and canceled items.
+LibGuildStore was created to facilitate converting MM sales data from the old format to a new format that uses less space. LGS will also keep track of purchases for the Shopping List module, sold and canceled items, and contains listings from other traders. Bonanza will provide you with a snapshot of the last 24 hours of items you have seen when visiting traders.
 
-Once completed Bonanza will provide you with a snapshot of the last 24 hours of items you have seen when visiting traders. <font class="orange">(Currently uncompleted)</font>
-
-For those testing MM 3.6.x you will need to be aware of a few changes.
+For those upgrading to MM 3.6.x you will need to be aware of a few changes.
 
 * The first run of MM and LibGuildStore will take a while LibHistoire processes all the sales data.
   * MM and ATT data are not automatically imported
 * [[#Data Management Options | Data Management]] settings is now under LibGuildStore
 * the MMxxData (MM00Data, MM01Data, etc.) modules are used for importing data only
-* MM no longer records sales from LibHistoire.
-* LibGuildStore allows you to import from LibHistoire using the Refresh option, and you may import from MM or ATT
+* LGS stores all sales from LibHistoire
+* LibGuildStore allows you to import from LibHistoire using the Refresh option, and you may import sales and purchaces from MM or ATT
 
 [[sb:Spoiler1 | Disable MM Modules]]
 {{image:disable_mm.jpg | disable_mm}}
@@ -194,10 +200,12 @@ Then repeat the process mentioned in the [[#|Ten Day Scan]] by requesting a day 
 {{nav:People Icon}}
 {{inline:24px | people_icon.jpg | people_icon}} Cycles through: <font class="tan">Seller</font>, All sales totals by Seller. <font class="tan">Item Sold</font>, Top selling ITEMS. <font class="tan">Buyer</font>, All purchase totals by Buyer.
 {{nav:Parchment Paper}}
-{{inline:24px | toggle_seller_item.jpg | toggle_seller_item}} <font class="tan">Seller Info</font> Guild Ranks, <font class="tan">Item Info</font> Your Info or All Info.
 {{inline:24px | open_statistics_window.jpg | open_statistics_window}} Opens the [[#|Statistics Window]].
+{{inline:24px | toggle_seller_item.jpg | toggle_seller_item}} <font class="tan">Seller Info</font> Guild Ranks, <font class="tan">Item Info</font> Your Info or All Info.
+{{inline:24px | shopping_list.jpg | shopping_list}} The <font class="tan">Shopping List</font> icon allows you to view purchases you have made from guild stores.
+{{inline:24px | bonanza_icon.jpg | bonanza_icon}} The <font class="tan">Bonanza</font> icon allows you view trader listings you have seen at other guild stores.
+{{inline:24px | reports_icon.jpg | reports_icon}} The <font class="tan">Management</font> view lets you see posted and canceled sales. The information will be used in the future to notify you of any items you may have sold that have been flipped. <font class="orange">(Future update)</font>
 {{inline:24px | mail_icon.jpg | mail_icon}} Sends mail to the author with an optional donation amount.
-{{inline:24px | shopping_list.jpg | shopping_list}} The <font class="tan">Shopping List</font> icon allows you to select the installed extension and view purchases you have made from guild stores.
 {{inline:24px | money_bag.jpg | money_bag}} The <font class="tan">Moneybag</font> icon means the purchaser is not a member of that guild.
 
 {{note:<font class="tan">Item Sold</font> is only available from a Seller's Report.}}

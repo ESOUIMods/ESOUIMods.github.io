@@ -18,6 +18,12 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <div>
 <!-- Needed, sets the top of the page just before the H1 Title -->
+<h1 class="header1" id="UnderConstruction">Under Construction</h1>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/under_construction.jpg" alt="under_construction" %}</p>
+<p class="empty">&nbsp;</p>
+<p>The site is undergoing changes to the images for 3.6.x so the screen shots, icons, settings  menus, and menu description may not resemble 3.5.30.</p>
+<p class="empty">&nbsp;</p>
 <h2 class="header2" id="Contents">Contents</h2>
 <p class="list-1">&bull;&nbsp; <a href="#Authors">3.1 Authors</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#VersionHistory">3.2 Version History</a></p>
@@ -26,6 +32,7 @@ title: Master Merchant
 <p class="list-2">&bull;&nbsp; <a href="#ShoppingList">3.4.1 Shopping List</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Bonanza">3.4.2 Bonanza!</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#BonanzaNameFilter">3.4.3 Bonanza Name Filter</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#BonanzaTypeFilter">3.4.4 Bonanza Type Filter</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#LibGuildStoreforMasterMerchant">3.5 LibGuildStore for Master Merchant</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Scanning">3.6 Scanning</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#BackgroundScanningDepreciated">3.6.1 Background Scanning Depreciated</a></p>
@@ -122,22 +129,22 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/bonanza_window_filter.jpg" alt="bonanza_window_filter" %}</p>
 <p class="empty">&nbsp;</p>
-<p>When completed 3.6.x will have both a name and type filter.</p>
+<h2 id="BonanzaTypeFilter">3.4.4 - Bonanza Type Filter</h2>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/bonanza_window_filter_type.jpg" alt="bonanza_window_filter_type" %}</p>
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="LibGuildStoreforMasterMerchant">3.5 - LibGuildStore for Master Merchant</h1>
 <p class="empty">&nbsp;</p>
-<p>LibGuildStore was created to facilitate converting MM sales data from the old format to a new format that uses less space. LGS will also keep track of purchases for the Shopping List module as well as sold and canceled items.</p>
+<p>LibGuildStore was created to facilitate converting MM sales data from the old format to a new format that uses less space. LGS will also keep track of purchases for the Shopping List module, sold and canceled items, and contains listings from other traders. Bonanza will provide you with a snapshot of the last 24 hours of items you have seen when visiting traders.</p>
 <p class="empty">&nbsp;</p>
-<p>Once completed Bonanza will provide you with a snapshot of the last 24 hours of items you have seen when visiting traders. <font class="orange">(Currently uncompleted)</font></p>
-<p class="empty">&nbsp;</p>
-<p>For those testing MM 3.6.x you will need to be aware of a few changes.</p>
+<p>For those upgrading to MM 3.6.x you will need to be aware of a few changes.</p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; The first run of MM and LibGuildStore will take a while LibHistoire processes all the sales data.</p>
   <p class="list-2">&bull;&nbsp; MM and ATT data are not automatically imported</p>
 <p class="list-1">&bull;&nbsp; <a  href="#DataManagementOptions" >Data Management</a> settings is now under LibGuildStore</p>
 <p class="list-1">&bull;&nbsp; the MMxxData (MM00Data, MM01Data, etc.) modules are used for importing data only</p>
-<p class="list-1">&bull;&nbsp; MM no longer records sales from LibHistoire.</p>
-<p class="list-1">&bull;&nbsp; LibGuildStore allows you to import from LibHistoire using the Refresh option, and you may import from MM or ATT</p>
+<p class="list-1">&bull;&nbsp; LGS stores all sales from LibHistoire</p>
+<p class="list-1">&bull;&nbsp; LibGuildStore allows you to import from LibHistoire using the Refresh option, and you may import sales and purchaces from MM or ATT</p>
 <p class="empty">&nbsp;</p>
 <input type="checkbox" id="spoiler1" />
 <label for="spoiler1">Disable MM Modules</label>
@@ -275,10 +282,12 @@ title: Master Merchant
 <div id="PeopleIcon"></div>
 <p>{% include image-inline.html max-width="24px" file="img/people_icon.jpg" alt="people_icon" %} Cycles through: <font class="tan">Seller</font>, All sales totals by Seller. <font class="tan">Item Sold</font>, Top selling ITEMS. <font class="tan">Buyer</font>, All purchase totals by Buyer.</p>
 <div id="ParchmentPaper"></div>
-<p>{% include image-inline.html max-width="24px" file="img/toggle_seller_item.jpg" alt="toggle_seller_item" %} <font class="tan">Seller Info</font> Guild Ranks, <font class="tan">Item Info</font> Your Info or All Info.</p>
 <p>{% include image-inline.html max-width="24px" file="img/open_statistics_window.jpg" alt="open_statistics_window" %} Opens the <a  href="#StatisticsWindow" >Statistics Window</a>.</p>
+<p>{% include image-inline.html max-width="24px" file="img/toggle_seller_item.jpg" alt="toggle_seller_item" %} <font class="tan">Seller Info</font> Guild Ranks, <font class="tan">Item Info</font> Your Info or All Info.</p>
+<p>{% include image-inline.html max-width="24px" file="img/shopping_list.jpg" alt="shopping_list" %} The <font class="tan">Shopping List</font> icon allows you to view purchases you have made from guild stores.</p>
+<p>{% include image-inline.html max-width="24px" file="img/bonanza_icon.jpg" alt="bonanza_icon" %} The <font class="tan">Bonanza</font> icon allows you view trader listings you have seen at other guild stores.</p>
+<p>{% include image-inline.html max-width="24px" file="img/reports_icon.jpg" alt="reports_icon" %} The <font class="tan">Management</font> view lets you see posted and canceled sales. The information will be used in the future to notify you of any items you may have sold that have been flipped. <font class="orange">(Future update)</font></p>
 <p>{% include image-inline.html max-width="24px" file="img/mail_icon.jpg" alt="mail_icon" %} Sends mail to the author with an optional donation amount.</p>
-<p>{% include image-inline.html max-width="24px" file="img/shopping_list.jpg" alt="shopping_list" %} The <font class="tan">Shopping List</font> icon allows you to select the installed extension and view purchases you have made from guild stores.</p>
 <p>{% include image-inline.html max-width="24px" file="img/money_bag.jpg" alt="money_bag" %} The <font class="tan">Moneybag</font> icon means the purchaser is not a member of that guild.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"><font class="tan">Item Sold</font> is only available from a Seller's Report.</p>

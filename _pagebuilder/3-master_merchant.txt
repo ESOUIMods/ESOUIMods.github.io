@@ -317,25 +317,25 @@ The refresh button is only a fail safe mechanism in case a user performs the ini
 
 {{image:tool_tip_settings.jpg | tool_tip_settings}}
 
-== Other Tooltip Options
+=== Other Tooltip Options
 
 {{image:other_tooltip_options.jpg | other_tooltip_options}}
 
 * <font class="tan">Level/Quality Selectors</font>: Adds Level and Quality selectors to the tooltip window. You can bring up the window by clicking a link in chat or when you right click an item and choose [[#|Popup Item Data]]. See the [[#|Level Quality Selectors]] section for example of the selectors that appear on the tooltip window.
 
-== Inventory Options
+=== Inventory Options
 
 {{image:inventory_options.jpg | inventory_options}}
 
-== Guild Store Options
+=== Guild Store Options
 
 {{image:guild_store_options.jpg | guild_store_options}}
 
-== Guild Master Options
+=== Guild Master Options
 
 {{image:guild_master_options.jpg | guild_master_options}}
 
-== Debug Options
+=== Debug Options
 
 {{image:debug_options.jpg | debug_options}}
 

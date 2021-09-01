@@ -29,6 +29,8 @@ This video is in regards to all the complaints and negative comments.
 
 = What to expect upgrading from 3.5.30 to 3.6.x
 
+{{image:startup_refresh.jpg | startup_refresh}}
+
 There will be a long Refresh once you log in while all the sales from LibHistorie are imported. It took about one hours and eight minutes to import 1,110,000 sales. I will look into reducing the amount of time it takes but for now that is a good estimate for you. If you have about 1M records expect it to take an hour to import sales from LibHistorie.
 
 Once the initial refresh is finished you can import sales from MM. This is to accommodate people who may have more history in their MM data files then they do in LibHistorie. You can also import from ATT for the same reason. If you have been using ATT and have never used MM then you could have 30 days of data in your ATT data files. After you import your ATT data and do a Ten Day with LibHistorie you will have the most data possible. You can also import purchases from ATT and the old standalone ShoppingList for MM. There will be notifications to disable the old MMxxData modules, the old ShoppingList standalone module, and ATT. There is an option to disable the ATT notification if you prefer to use both MM and ATT at the same time.

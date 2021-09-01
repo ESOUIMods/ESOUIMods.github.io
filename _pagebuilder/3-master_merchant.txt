@@ -31,7 +31,7 @@ This video is in regards to all the complaints and negative comments.
 
 {{image:startup_refresh.jpg | startup_refresh}}
 
-There will be a long Refresh once you log in while all the sales from LibHistorie are imported. It took about one hours and eight minutes to import 1,110,000 sales. I will look into reducing the amount of time it takes but for now that is a good estimate for you. If you have about 1M records expect it to take an hour to import sales from LibHistorie.
+There will be a long Refresh once you log in while all the sales from LibHistorie are imported. It took about one hour and eight minutes to import 1,110,000 sales. I will look into reducing the amount of time it takes but for now that is a good estimate for you. If you have about 1M records expect it to take an hour to import sales from LibHistorie.
 
 Once the initial refresh is finished you can import sales from MM. This is to accommodate people who may have more history in their MM data files then they do in LibHistorie. You can also import from ATT for the same reason. If you have been using ATT and have never used MM then you could have 30 days of data in your ATT data files. After you import your ATT data and do a Ten Day with LibHistorie you will have the most data possible. You can also import purchases from ATT and the old standalone ShoppingList for MM. There will be notifications to disable the old MMxxData modules, the old ShoppingList standalone module, and ATT. There is an option to disable the ATT notification if you prefer to use both MM and ATT at the same time.
 
@@ -92,7 +92,7 @@ For reasons like these MM no longer uses a background scan as it attempted to sc
 
 == Unintentional ZOS Bug
 
-{{image:savedvarsapostrophe.jpg | savedvarsapostrophe}}
+{{image-thumbnail:savedvarsapostrophe.jpg | savedvarsapostrophe}}
 
 Unfortunately from time to time ZOS introduces or reintroduces a bug in the saved vars where the apostrophe is converted to HTML code. Which will mean your sales may or may not display properly. Which is a game bug and you are out of luck until or unless they fix it.
 
@@ -213,7 +213,7 @@ Then repeat the process mentioned in the [[#|Ten Day Scan]] by requesting a day 
 {{inline:24px | sales_icon.jpg | sales_icon}} <font class="tan">Sales view</font> shows <font class="tan">Personal Sales</font> or <font class="tan">Guild Sales</font>. Use the Seller Info/Guild Ranks toggle to change views from Item Report to Sellers Report.
 {{inline:24px | shopping_list.jpg | shopping_list}} The <font class="tan">Shopping List</font> icon allows you to view purchases you have made from guild stores.
 {{inline:24px | bonanza_icon.jpg | bonanza_icon}} The <font class="tan">Bonanza</font> icon allows you view trader listings you have seen at other guild stores.
-{{inline:24px | reports_icon.jpg | reports_icon}} The <font class="tan">Management</font> view lets you see posted and canceled sales. The information will be used in the future to notify you of any items you may have sold that have been flipped. <font class="orange">(Future update)</font>
+{{inline:24px | reports_icon.jpg | reports_icon}} The <font class="tan">Management</font> view lets you see posted and canceled sales.
 {{inline:24px | mail_icon.jpg | mail_icon}} Sends mail to the author with an optional donation amount.
 {{inline:24px | money_bag.jpg | money_bag}} The <font class="tan">Moneybag</font> icon means the purchaser is not a member of that guild.
 

@@ -27,7 +27,41 @@ This video is in regards to all the complaints and negative comments.
 
 {% include youtube.html id="h8NyHOUZ1RE" %}
 
-= What to expect upgrading from 3.5.30 to 3.6.x
+= Upgrading from 3.5.30 to 3.6.x
+
+==  What steps should I take when upgrading
+
+* Log out of the game
+* Download the MM 3.6.x update with Minion or manually install it
+  * If you manually install then manually delete the previous version first
+* Log into the game to the character screen
+* Before choosing a character make sure all the new LibGuildStore modules and all the old MMxxData modules are active
+ 
+==  Have the dependencies changed
+
+{{note: LibGuildStore is provided with MM and is not a separate Minion download.}}
+
+MM Adds LibGuildStore which is where all the Guild Store related data will be kept. This also allows importing from MM if you have more MM data then you do LibHistoire data. You would not want to overload MM but you could install any backups you have or backup files from other friends or guild members.
+
+{{note: <font class="yellow">Caution</font>, the more data you import the longer MM will need to load.}}
+
+== Which modules do I need to activate for MM 3.6.x
+
+# Master Merchant and ShoppingList
+
+{{image:mm_shopping_list.jpg | mm_shopping_list}}
+
+# All the LibGuildStore Modules
+
+{{image:all_libguildstore_modules.jpg | all_libguildstore_modules}}
+
+# LibHistoire and all MMxxData Modules
+
+{{image:lh_mmdata_modules.jpg | lh_mmdata_modules}}
+
+{{note: Because of how saved variables work I am forced to keep the old MMxxData modules to load the data into memory. Because of how Minion handles uninstalling I chose not to move the MM modules to a different subfolder.}}
+
+== First What to expect upgrading from 3.5.30 to 3.6.x
 
 {{image:startup_refresh.jpg | startup_refresh}}
 

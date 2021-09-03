@@ -43,6 +43,14 @@ This video is in regards to all the complaints and negative comments.
  
 {{note: You can still use ATT and MM at the same time if you chose. There is a toggle to disable the notification under <font class="purple">Debug Options</font> under the MasterMerchat settings.}}
 
+== What to expect upgrading from 3.5.30 to 3.6.x
+
+{{image:startup_refresh.jpg | startup_refresh}}
+
+There will be a long Refresh once you log in while all the sales from LibHistorie are imported. It took about one hour and eight minutes to import 1,110,000 sales. I will look into reducing the amount of time it takes but for now that is a good estimate for you. If you have about 1M records expect it to take an hour to import sales from LibHistorie.
+
+Once the initial refresh is finished you can import sales from MM. This is to accommodate people who may have more history in their MM data files then they do in LibHistorie. You can also import from ATT for the same reason. If you have been using ATT and have never used MM then you could have 30 days of data in your ATT data files. After you import your ATT data and do a Ten Day with LibHistorie you will have the most data possible. You can also import purchases from ATT and the old standalone ShoppingList for MM. There will be notifications to disable the old MMxxData modules, the old ShoppingList standalone module, and ATT. There is an option to disable the ATT notification if you prefer to use both MM and ATT at the same time.
+
 ==  Have the dependencies changed
 
 {{note: LibGuildStore is provided with MM and is not a separate Minion download.}}
@@ -53,29 +61,21 @@ MM Adds LibGuildStore which is where all the Guild Store related data will be ke
 
 == Which modules do I need to activate for MM 3.6.x
 
-# Master Merchant and ShoppingList
+### Master Merchant and ShoppingList
 
 {{image:mm_shopping_list.jpg | mm_shopping_list}}
 
-# All the LibGuildStore Modules
+### All the LibGuildStore Modules
 
 {{image:all_libguildstore_modules.jpg | all_libguildstore_modules}}
 
-# LibHistoire and all MMxxData Modules
+### LibHistoire and all MMxxData Modules
 
 {{image:lh_mmdata_modules.jpg | lh_mmdata_modules}}
 
 {{note: Because of how saved variables work I am forced to keep the old MMxxData modules to load the data into memory. Because of how Minion handles uninstalling I chose not to move the MM modules to a different subfolder.}}
 
-== First What to expect upgrading from 3.5.30 to 3.6.x
-
-{{image:startup_refresh.jpg | startup_refresh}}
-
-There will be a long Refresh once you log in while all the sales from LibHistorie are imported. It took about one hour and eight minutes to import 1,110,000 sales. I will look into reducing the amount of time it takes but for now that is a good estimate for you. If you have about 1M records expect it to take an hour to import sales from LibHistorie.
-
-Once the initial refresh is finished you can import sales from MM. This is to accommodate people who may have more history in their MM data files then they do in LibHistorie. You can also import from ATT for the same reason. If you have been using ATT and have never used MM then you could have 30 days of data in your ATT data files. After you import your ATT data and do a Ten Day with LibHistorie you will have the most data possible. You can also import purchases from ATT and the old standalone ShoppingList for MM. There will be notifications to disable the old MMxxData modules, the old ShoppingList standalone module, and ATT. There is an option to disable the ATT notification if you prefer to use both MM and ATT at the same time.
-
-= Master Merchant Extensions
+= Shopping List and Bonanza!
 
 ## Shopping List
 
@@ -101,7 +101,7 @@ With MM 3.6.x Bonanza adds a new icon allowing you to view items you have seen a
 
 {{image:bonanza_window_filter_type.jpg | bonanza_window_filter_type}}
 
-= LibGuildStore for Master Merchant
+== LibGuildStore for Master Merchant
 
 LibGuildStore was created to facilitate converting MM sales data from the old format to a new format that uses less space. LGS will also keep track of purchases for the Shopping List module, sold and canceled items, and contains listings from other traders. Bonanza will provide you with a snapshot of the last 24 hours of items you have seen when visiting traders.
 
@@ -134,41 +134,21 @@ The Bonanza price while similar to TTC is the average of what you have found at 
 
 For the last example you will note that the Bonanza price for Chromium Plating is only about 22K above the MM price. With more data it may even fall exactly in line with the MM price. The TTC suggested price is 239Kwhich is 2K different then the Bonanza average. For items that normally do not have a lot of skew to the pricing data this will be common. For items that have more outliers skewing the pricing data you will need to evaluate the TTC and Bonanza prices to get a better idea of what may be a good price to sell the item for.
 
-== Background Scanning Depreciated
+= Three states of LibHistoire cache
 
-As of version 3.0.0 there is no <code>/mm missing</code> and no background scan. The background scan would get hung up by repeated attempts to request more sales data from the server. When the server denied the request MM would continue to wait for the request to be approved.
-
-After starting a new library [[https://github.com/ESOUIMods/LibGuildHistoryCache | LibGuildHistoryCache]] I observed that the cache mod would see some new sales. Usually there were only a few sales maybe 1 or 2 and occasionally less then 10. The cache mod would update showing that the guild history events were not duplicates but MM would not see them as new sales. 
-
-One other calculation made was to try and get the first entry in the guild history and the last. This was used to attempt to determine whether or not to scan from the start of the guild history array, or the end. Whether or not you have 1, 100, or more then 1000 events the first event will always be the same. All guild history events are appended onto the end of the list.
-
-For reasons like these MM no longer uses a background scan as it attempted to scan from a specific point in time and loop over the guild history events.
-
-== Unintentional ZOS Bug
-
-{{image-thumbnail:savedvarsapostrophe.jpg | savedvarsapostrophe}}
-
-Unfortunately from time to time ZOS introduces or reintroduces a bug in the saved vars where the apostrophe is converted to HTML code. Which will mean your sales may or may not display properly. Which is a game bug and you are out of luck until or unless they fix it.
-
-Since this can occur I highly recommend changing your user name to only contain letters as it will make it easier for you in the long run.
-
-This also includes creative names that contain things like Æ or æ. As those are not individual letters.
-
-== Three states of LibHistoire cache
-
-### Unlinked
+## Unlinked
 
 {{image:red_text_unlinked.jpg | red_text_unlinked}}
 
 In the Unlinked state you can either wait for the server to grant the requests for offline data that LibHistoire requests, or you can manually request guild history for the time you were offline.
 
-### Linking in progress
+## Linking in progress
 
 {{image:yellow_text_linking.jpg | yellow_text_linking}}
 
 Once LibHistoire has what it feels it needs, then it will begin processing the guild history events and attempt to link to the last known event.
 
-### Linked
+## Linked
 
 {{image:green_text_linked.jpg | green_text_linked}}
 
@@ -176,13 +156,13 @@ Once LibHistoire has linked to its stored events you should see green text. This
 
 {{note: You can still request additional history and ask LibHistoire to check the guild history for any missing sales events using the rescan button.}}
 
-== Ten Day Scan
+= Ten Day Scan
 
 After upgrading to 3.x you will need to do a Ten Day Scan of all the guilds you are in. This ensures that LibHistoire has stored sales data for you to start working with. After doing a ten day scan for each guild you only need to request guild history for the time you have been offline.
 
 {{note: Initially I had suggested requesting all the data at once. This seems to cause an issue for some users. Read this section carefully.}}
 
-### Select A Guild
+## Select A Guild
 
 When you first log in there won’t be much as far as guild history loaded in memory.
 
@@ -190,25 +170,25 @@ When you first log in there won’t be much as far as guild history loaded in me
 
 In order to manually request sales data you have to choose a guild and select All, not purchases. Then press E about every 3 seconds so you are not kicked from the game by the server.
 
-### Request only a few days at a time
+## Request only a few days at a time
 
 {{image:one_day_of_data.jpg | one_day_of_data}}
 
 You should be able to request two or three days of guild history at once. However, some users have seen issues requesting too much at one time. Each time you request a few days of data stop and, click the Rescan button.
 
-### Rescan Button
+## Rescan Button
 
 {{image:ten_day_scan_refresh.jpg | ten_day_scan_refresh}}
 
 The Rescan button is the equivalent of the old <code>/mm missing</code> and it will scan all the data loaded into memory so far. LibHistoire will skip any duplicate events as it scans guild history.
 
-### When E is no longer showing
+## When E is no longer showing
 
 {{image:10_days_sales.jpg | show_more}}
 
 Once you have scanned 10 days of sales then the option to press E will not be shown. The server will only allow you to request 10 days of data. Once you have done so click the [[#|Rescan Button]] to make sure LibHistoire processes all the events.
 
-### LibHistoire GUI
+## LibHistoire GUI
 
 {{image:histy_gui.jpg | histy_gui}}
 
@@ -216,7 +196,7 @@ As you perform a ten day scan the LibHistoire GUI will update. It might even fin
 
 {{note:Scanning 10 days of history every few days or every week is pointless and a drain on the server.}}
 
-== Update Your Guild History Each Day
+= Update Your Guild History Each Day
 
 {{image:histy_gui.jpg | histy_gui}}
 
@@ -224,7 +204,7 @@ Regardless of how long you have been offline you need to update your guild histo
 
 After I have enough guild history to cover the time I have been offline then I use the rescan button which asks LibHistoire to double check the sales loaded in memory are in the cache. Once LibHistoire has verified the sales data the text will turn green indicating that the [[#Linked | sales events are linked]].
 
-== Unlinked Events Notification
+= Unlinked Events Notification
 
 With LibHistoire 1.2.0 there is a new notification when you log off.
 
@@ -234,7 +214,7 @@ You could have any amount of time that has not been linked with your Guild Histo
 
 {{note:If you open the Guild History have more then 10 days of missing events you will need to complete a [[#|Ten Day Scan]].}}
 
-== Resolving Unlinked Events
+= Resolving Unlinked Events
 
 {{image:unlinked_sales.jpg | unlinked_sales}}
 
@@ -329,14 +309,6 @@ If you have ever opened the Master Merchant window you have probably seen the li
 
 There are several date ranges you can choose from. <font class="tan">This Week</font>, <font class="tan">Last Week</font> and <font class="tan">Prior Week</font> start from the ZOS trader flip for the current [[#|Sales Week]]. However, the last option is customizable under the Master Merchant settings under [[#|Calculation And Tip Options]].
 
-== Refresh Button
-
-{{image:refresh_button.jpg | refresh_button}}
-
-The Refresh button tells LibHistoire to send all the data it has in its cache. The more data in the cache, the longer it will take to transmit.
-
-The refresh button is only a fail safe mechanism in case a user performs the initial Ten Day scan incorrectly and the data is not sent to MM for some reason. It should not be clicked every so often or every once and a while. Clicking this does not refresh the Master Merchant window or cause the server to send any Guild History.
-
 = Statistics Window
 
 {{image:statistics_window.jpg | statistics_window}}
@@ -418,6 +390,38 @@ The refresh button is only a fail safe mechanism in case a user performs the ini
 === Data Management Options
 
 {{image:lgs_data_management.jpg | lgs_data_management}}
+
+=== Debug Options
+
+{{image:lgs_debug_options.jpg | lgs_debug_options}}
+
+=== Import MM Data
+
+{{image:import_mm_data.jpg | import_mm_data}}
+
+=== Import ATT Data
+
+{{image:import_att_data.jpg | import_att_data}}
+
+=== Import ATT Purchaces
+
+{{image:import_att_purchaces.jpg | import_att_purchaces}}
+
+=== Refresh LibHistoire
+
+{{image:refresh_libhistoire.jpg | refresh_libhistoire}}
+
+The Refresh button tells LibHistoire to send all the data it has in its cache. The more data in the cache, the longer it will take to transmit.
+
+The refresh button is only a fail safe mechanism in case a user performs the initial Ten Day scan incorrectly and the data is not sent to MM for some reason. It should not be clicked every so often or every once and a while. Clicking this does not refresh the Master Merchant window or cause the server to send any Guild History.
+
+=== Import ShoppingList Data
+
+{{image:import_shoppinglist_list.jpg | import_shoppinglist_list}}
+
+=== Reset Data
+
+{{image:reset_data.jpg | reset_data}}
 
 = Misc
 
@@ -595,3 +599,25 @@ LibExecutionQueue is sorted alphabetically by the base game.
 If you have LibVotansAddonList installed then it will look close to the base game.
 
 {{image:leq_votans_sort.jpg | leq_votans_sort}}
+
+== Background Scanning Depreciated
+
+As of version 3.0.0 there is no <code>/mm missing</code> and no background scan. The background scan would get hung up by repeated attempts to request more sales data from the server. When the server denied the request MM would continue to wait for the request to be approved.
+
+After starting a new library [[https://github.com/ESOUIMods/LibGuildHistoryCache | LibGuildHistoryCache]] I observed that the cache mod would see some new sales. Usually there were only a few sales maybe 1 or 2 and occasionally less then 10. The cache mod would update showing that the guild history events were not duplicates but MM would not see them as new sales. 
+
+One other calculation made was to try and get the first entry in the guild history and the last. This was used to attempt to determine whether or not to scan from the start of the guild history array, or the end. Whether or not you have 1, 100, or more then 1000 events the first event will always be the same. All guild history events are appended onto the end of the list.
+
+For reasons like these MM no longer uses a background scan as it attempted to scan from a specific point in time and loop over the guild history events.
+
+== Unintentional ZOS Bug
+
+{{image-thumbnail:savedvarsapostrophe.jpg | savedvarsapostrophe}}
+
+Unfortunately from time to time ZOS introduces or reintroduces a bug in the saved vars where the apostrophe is converted to HTML code. Which will mean your sales may or may not display properly. Which is a game bug and you are out of luck until or unless they fix it.
+
+Since this can occur I highly recommend changing your user name to only contain letters as it will make it easier for you in the long run.
+
+This also includes creative names that contain things like Æ or æ. As those are not individual letters.
+
+

@@ -133,13 +133,13 @@ title: Master Merchant
 <p class="list-1">&bull;&nbsp; Download the MM 3.6.x update with Minion or manually install it</p>
   <p class="list-2">&bull;&nbsp; If you manually install then manually delete the previous version first</p>
 <p class="list-1">&bull;&nbsp; Log into the game to the character screen</p>
-<p class="list-1">&bull;&nbsp; Before choosing a character make sure all the new LibGuildStore modules and all the old MMxxData modules are active</p>
-<p class="list-1">&bull;&nbsp; Once you log in wait for LibGuildStore to recieve all of the LibHistoire data </p>
-<p class="list-1">&bull;&nbsp; Verify settings for LibGuildStore</p>
-<p class="list-1">&bull;&nbsp; Use LibGuildStore to import any data you want from MM or ATT</p>
-<p class="list-1">&bull;&nbsp; Disable all older modules and the old standalone ShoppingList</p>
+<p class="list-1">&bull;&nbsp; Before choosing a character make sure all the new <a  href="#AlltheLibGuildStoreModules" >LibGuildStore</a> modules and all the old MMxxData modules are active</p>
+<p class="list-1">&bull;&nbsp; Once you log you will see a notification in chat <font class="yellow">LibGuildStore Refresh Not Finished yet</font>. Wait for LibGuildStore to recieve all of the LibHistoire data.  </p>
+<p class="list-1">&bull;&nbsp; Verify the <a  href="#SalesManagementOptions" >LibGuildStore settings</a> are configured to meet your personal preferences.</p>
+<p class="list-1">&bull;&nbsp; Use LibGuildStore to <a  href="#ImportMMData" >import data MM</a> or to <a  href="#ImportATTData" >import data from ATT</a></p>
+<p class="list-1">&bull;&nbsp; Disable all <a  href="#disablemmmodules" >old MM modules</a> and the old standalone ShoppingList</p>
 <p class="empty">&nbsp;</p>
-<p class="note"> You can still use ATT and MM at the same time if you chose. There is a toggle to disable the notification under <font class="purple">Debug Options</font> under the MasterMerchat settings.</p>
+<p class="note"> You can still use ATT and MM at the same time if you chose. There is a toggle to disable the notification under <font class="purple">Debug Options</font> under the <a  href="#DebugOptions" >MasterMerchat settings</a>.</p>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="Whattoexpectupgradingfrom3530to36x">3.4.2 - What to expect upgrading from 3.5.30 to 3.6.x</h2>
 <p class="empty">&nbsp;</p>
@@ -189,7 +189,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/bonanza_window.jpg" alt="bonanza_window" %}</p>
 <p class="empty">&nbsp;</p>
-<p>With MM 3.6.x Bonanza adds a new icon allowing you to view items you have seen at traders as you shop for items to purchase.</p>
+<p>With MM 3.6.x the Bonanza {% include image-inline.html max-width="24px" file="img/bonanza_icon.jpg" alt="bonanza_icon" %} icon allows you to view items you have seen at traders as you shop for items to purchase.</p>
 <p class="empty">&nbsp;</p>
 <h2 id="BonanzaNameFilter">3.5.3 - Bonanza Name Filter</h2>
 <p class="empty">&nbsp;</p>
@@ -201,17 +201,11 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="LibGuildStoreforMasterMerchant">3.5.5 - LibGuildStore for Master Merchant</h2>
 <p class="empty">&nbsp;</p>
-<p>LibGuildStore was created to facilitate converting MM sales data from the old format to a new format that uses less space. LGS will also keep track of purchases for the Shopping List module, sold and canceled items, and contains listings from other traders. Bonanza will provide you with a snapshot of the last 24 hours of items you have seen when visiting traders.</p>
+<p>LibGuildStore was created to facilitate converting MM sales data from the old format to a new format that uses less space. LGS will also keep track of purchases for the Shopping List module, sold and canceled items, and contains listings from other traders. Bonanza will provide you with a snapshot of the last 24 hours of items you have seen when visiting traders. LibGuildStore also keeps all information separate between NA and EU servers.</p>
 <p class="empty">&nbsp;</p>
-<p>For those upgrading to MM 3.6.x you will need to be aware of a few changes.</p>
+<p>For those upgrading to MM 3.6.x you will need to be aware of a few changes.  The MMxxData (MM00Data, MM01Data, etc.) modules are used for importing data only. After your import your data, these old modules should be deactivated.</p>
 <p class="empty">&nbsp;</p>
-<p class="list-1">&bull;&nbsp; The first run of MM and LibGuildStore will take a while LibHistoire processes all the sales data.</p>
-  <p class="list-2">&bull;&nbsp; MM and ATT data are not automatically imported</p>
-<p class="list-1">&bull;&nbsp; <a  href="#DataManagementOptions" >Data Management</a> settings is now under LibGuildStore</p>
-<p class="list-1">&bull;&nbsp; the MMxxData (MM00Data, MM01Data, etc.) modules are used for importing data only</p>
-<p class="list-1">&bull;&nbsp; LGS stores all sales from LibHistoire</p>
-<p class="list-1">&bull;&nbsp; LibGuildStore allows you to import from LibHistoire using the Refresh option, and you may import sales and purchaces from MM or ATT</p>
-<p class="empty">&nbsp;</p>
+<div id="disablemmmodules"></div>
 <input type="checkbox" id="spoiler1" />
 <label for="spoiler1">Disable MM Modules</label>
 <div class="main-content">
@@ -228,7 +222,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>Looking at the first example of the Hlaalu Bookcase you see it sold 1 time out of all the guilds I am in. So there is no way to get a reasonable price for it. Someone listed it 56 days ago for 100K and it sold. That is one of the drawbacks of the MM price. If you do not have many sales from the guilds you are in then the MM price won't be very helpful. Also from the first example you see that the TTC price is about 19K and the Bonanza price is 17K. There are 9 listings from TTC and 1 from another trader. Once you have more data the Bonanza price may change but you can more easily see that 17K to 19K would probably be a more reasonable price then 100K.</p>
 <p class="empty">&nbsp;</p>
-<p>From the second and third examples you will note that the TTC price is useless.  The bonanza price is also still higher then the MM price and could still be too high or too low. This is where the Bonanza window will be needed because you will need to search for the exact item and look at the prices you have found. If this were your data you will see that you have 74 and 178 prices. Searching for either item you will more easily see that if half of them are 50K then selling for 200K or 400K will be too much. People if they want the item for personal use will buy it for 50K instead of a higher price.</p>
+<p>From the second and third examples you will note that the TTC price is useless for these items.  The TTC price can sometimes be very helpfull. The bonanza price is also higher then the MM price. This is where the Bonanza window will be needed because you will need to search for the exact item and look at the prices you have found. If this were your data you will see that you have 74 and 178 prices. Searching for either item you will more easily see that if half of them are 50K then selling for 200K or 400K will be too much. People if they want the item for personal use will buy it for 50K instead of a higher price.</p>
 <p class="empty">&nbsp;</p>
 <p>The Bonanza price while similar to TTC is the average of what you have found at the traders you have visited in the last 24 hours. Bonanza itself is intended to be a shopping tool but since the data is there it is displayed on the graph for you to use as another way to evaluate what the item is currently selling for. If you only have 1 to 3 sales you can not compute an average from that I'd suggest 5 or more depending on how popular it is on traders at the time.</p>
 <p class="empty">&nbsp;</p>

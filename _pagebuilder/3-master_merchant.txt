@@ -35,13 +35,13 @@ This video is in regards to all the complaints and negative comments.
 * Download the MM 3.6.x update with Minion or manually install it
   * If you manually install then manually delete the previous version first
 * Log into the game to the character screen
-* Before choosing a character make sure all the new LibGuildStore modules and all the old MMxxData modules are active
-* Once you log in wait for LibGuildStore to recieve all of the LibHistoire data 
-* Verify settings for LibGuildStore
-* Use LibGuildStore to import any data you want from MM or ATT
-* Disable all older modules and the old standalone ShoppingList
+* Before choosing a character make sure all the new [[#All the LibGuildStore Modules | LibGuildStore]] modules and all the old MMxxData modules are active
+* Once you log you will see a notification in chat <font class="yellow">LibGuildStore Refresh Not Finished yet</font>. Wait for LibGuildStore to recieve all of the LibHistoire data.  
+* Verify the [[#Sales Management Options | LibGuildStore settings]] are configured to meet your personal preferences.
+* Use LibGuildStore to [[#Import MM Data | import data MM]] or to [[#Import ATT Data | import data from ATT]]
+* Disable all [[#disablemmmodules | old MM modules]] and the old standalone ShoppingList
  
-{{note: You can still use ATT and MM at the same time if you chose. There is a toggle to disable the notification under <font class="purple">Debug Options</font> under the MasterMerchat settings.}}
+{{note: You can still use ATT and MM at the same time if you chose. There is a toggle to disable the notification under <font class="purple">Debug Options</font> under the [[#Debug Options | MasterMerchat settings]].}}
 
 == What to expect upgrading from 3.5.30 to 3.6.x
 
@@ -91,7 +91,7 @@ Adds a new icon allowing you to view purchases you make from guild stores.
 
 {{image:bonanza_window.jpg | bonanza_window}}
 
-With MM 3.6.x Bonanza adds a new icon allowing you to view items you have seen at traders as you shop for items to purchase.
+With MM 3.6.x the Bonanza {{inline:24px | bonanza_icon.jpg | bonanza_icon}} icon allows you to view items you have seen at traders as you shop for items to purchase.
 
 ## Bonanza Name Filter
 
@@ -103,17 +103,11 @@ With MM 3.6.x Bonanza adds a new icon allowing you to view items you have seen a
 
 == LibGuildStore for Master Merchant
 
-LibGuildStore was created to facilitate converting MM sales data from the old format to a new format that uses less space. LGS will also keep track of purchases for the Shopping List module, sold and canceled items, and contains listings from other traders. Bonanza will provide you with a snapshot of the last 24 hours of items you have seen when visiting traders.
+LibGuildStore was created to facilitate converting MM sales data from the old format to a new format that uses less space. LGS will also keep track of purchases for the Shopping List module, sold and canceled items, and contains listings from other traders. Bonanza will provide you with a snapshot of the last 24 hours of items you have seen when visiting traders. LibGuildStore also keeps all information separate between NA and EU servers.
 
-For those upgrading to MM 3.6.x you will need to be aware of a few changes.
+For those upgrading to MM 3.6.x you will need to be aware of a few changes.  The MMxxData (MM00Data, MM01Data, etc.) modules are used for importing data only. After your import your data, these old modules should be deactivated.
 
-* The first run of MM and LibGuildStore will take a while LibHistoire processes all the sales data.
-  * MM and ATT data are not automatically imported
-* [[#Data Management Options | Data Management]] settings is now under LibGuildStore
-* the MMxxData (MM00Data, MM01Data, etc.) modules are used for importing data only
-* LGS stores all sales from LibHistoire
-* LibGuildStore allows you to import from LibHistoire using the Refresh option, and you may import sales and purchaces from MM or ATT
-
+{{nav:disablemmmodules}}
 [[sb:Spoiler1 | Disable MM Modules]]
 {{image:disable_mm.jpg | disable_mm}}
 [[se:]]
@@ -128,7 +122,7 @@ For those upgrading to MM 3.6.x you will need to be aware of a few changes.
 
 Looking at the first example of the Hlaalu Bookcase you see it sold 1 time out of all the guilds I am in. So there is no way to get a reasonable price for it. Someone listed it 56 days ago for 100K and it sold. That is one of the drawbacks of the MM price. If you do not have many sales from the guilds you are in then the MM price won't be very helpful. Also from the first example you see that the TTC price is about 19K and the Bonanza price is 17K. There are 9 listings from TTC and 1 from another trader. Once you have more data the Bonanza price may change but you can more easily see that 17K to 19K would probably be a more reasonable price then 100K.
 
-From the second and third examples you will note that the TTC price is useless.  The bonanza price is also still higher then the MM price and could still be too high or too low. This is where the Bonanza window will be needed because you will need to search for the exact item and look at the prices you have found. If this were your data you will see that you have 74 and 178 prices. Searching for either item you will more easily see that if half of them are 50K then selling for 200K or 400K will be too much. People if they want the item for personal use will buy it for 50K instead of a higher price.
+From the second and third examples you will note that the TTC price is useless for these items.  The TTC price can sometimes be very helpfull. The bonanza price is also higher then the MM price. This is where the Bonanza window will be needed because you will need to search for the exact item and look at the prices you have found. If this were your data you will see that you have 74 and 178 prices. Searching for either item you will more easily see that if half of them are 50K then selling for 200K or 400K will be too much. People if they want the item for personal use will buy it for 50K instead of a higher price.
 
 The Bonanza price while similar to TTC is the average of what you have found at the traders you have visited in the last 24 hours. Bonanza itself is intended to be a shopping tool but since the data is there it is displayed on the graph for you to use as another way to evaluate what the item is currently selling for. If you only have 1 to 3 sales you can not compute an average from that I'd suggest 5 or more depending on how popular it is on traders at the time.
 

@@ -357,7 +357,7 @@ There are several date ranges you can choose from. <font class="tan">This Week</
 
 {{image:guild_master_options.jpg | guild_master_options}}
 
-=== Debug Options
+=== MM Debug Options
 
 {{image:debug_options.jpg | debug_options}}
 
@@ -379,7 +379,7 @@ There are several date ranges you can choose from. <font class="tan">This Week</
 
 {{image:lgs_data_management.jpg | lgs_data_management}}
 
-=== Debug Options
+=== LGS Debug Options
 
 {{image:lgs_debug_options.jpg | lgs_debug_options}}
 

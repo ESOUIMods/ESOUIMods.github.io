@@ -21,12 +21,6 @@ Upon examination of the code 2.3.1 had turbo mode removed which was not really r
 
 This makes me believe that 2.3.1 was really intended to be the proposed 2.2.1 but somehow the upload never went through properly. I am glad Philgo68 uploaded the version as it has helped me understand the code a bit more.
 
-= Complaints and negative comments
-
-This video is in regards to all the complaints and negative comments.
-
-{% include youtube.html id="h8NyHOUZ1RE" %}
-
 = Upgrading from 3.5.30 to 3.6.x
 
 ==  What steps should I take when upgrading
@@ -39,7 +33,7 @@ This video is in regards to all the complaints and negative comments.
 * Once you log you will see a notification in chat <font class="yellow">LibGuildStore Refresh Not Finished yet</font>. Wait for LibGuildStore to recieve all of the LibHistoire data.  
 * Verify the [[#Sales Management Options | LibGuildStore settings]] are configured to meet your personal preferences.
 * Use LibGuildStore to [[#Import MM Data | import data MM]] or to [[#Import ATT Data | import data from ATT]]
-* Disable all [[#disablemmmodules | old MM modules]] and the old standalone ShoppingList
+* Disable all [[#disablemmmodules | old MM modules]] and the old standalone ShoppingList after the data is imported to decrease load times
  
 {{note: You can still use ATT and MM at the same time if you chose. There is a toggle to disable the notification under <font class="purple">Debug Options</font> under the [[#Debug Options | MasterMerchat settings]].}}
 
@@ -55,7 +49,7 @@ Once the initial refresh is finished you can import sales from MM. This is to ac
 
 {{note: LibGuildStore is provided with MM and is not a separate Minion download.}}
 
-MM Adds LibGuildStore which is where all the Guild Store related data will be kept. This also allows importing from MM if you have more MM data then you do LibHistoire data. You would not want to overload MM but you could install any backups you have or backup files from other friends or guild members.
+MM Adds LibGuildStore which is where all the Guild Store related data will be kept. NA and EU information is now stored separately. This also allows importing from MM if you have more MM data then you do LibHistoire data. You would not want to overload MM but you could import any backups you have or backup files from other friends or guild members if you copy them to the SavedVariables folder.
 
 {{note: <font class="yellow">Caution</font>, the more data you import the longer MM will need to load.}}
 
@@ -122,7 +116,7 @@ For those upgrading to MM 3.6.x you will need to be aware of a few changes.  The
 
 Looking at the first example of the Hlaalu Bookcase you see it sold 1 time out of all the guilds I am in. So there is no way to get a reasonable price for it. Someone listed it 56 days ago for 100K and it sold. That is one of the drawbacks of the MM price. If you do not have many sales from the guilds you are in then the MM price won't be very helpful. Also from the first example you see that the TTC price is about 19K and the Bonanza price is 17K. There are 9 listings from TTC and 1 from another trader. Once you have more data the Bonanza price may change but you can more easily see that 17K to 19K would probably be a more reasonable price then 100K.
 
-From the second and third examples you will note that the TTC price is useless for these items.  The TTC price can sometimes be very helpfull. The bonanza price is also higher then the MM price. This is where the Bonanza window will be needed because you will need to search for the exact item and look at the prices you have found. If this were your data you will see that you have 74 and 178 prices. Searching for either item you will more easily see that if half of them are 50K then selling for 200K or 400K will be too much. People if they want the item for personal use will buy it for 50K instead of a higher price.
+From the second and third examples you will note that the TTC price is useless for these items.  The TTC price can sometimes be very helpful. The bonanza price is also higher then the MM price. This is where the Bonanza window will be needed because you will need to search for the exact item and look at the prices you have found. If this were your data you will see that you have 74 and 178 prices. Searching for either item you will more easily see that if half of them are 50K then selling for 200K or 400K will be too much. People if they want the item for personal use will buy it for 50K instead of a higher price.
 
 The Bonanza price while similar to TTC is the average of what you have found at the traders you have visited in the last 24 hours. Bonanza itself is intended to be a shopping tool but since the data is there it is displayed on the graph for you to use as another way to evaluate what the item is currently selling for. If you only have 1 to 3 sales you can not compute an average from that I'd suggest 5 or more depending on how popular it is on traders at the time.
 
@@ -613,5 +607,3 @@ Unfortunately from time to time ZOS introduces or reintroduces a bug in the save
 Since this can occur I highly recommend changing your user name to only contain letters as it will make it easier for you in the long run.
 
 This also includes creative names that contain things like Æ or æ. As those are not individual letters.
-
-

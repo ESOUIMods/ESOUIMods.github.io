@@ -35,7 +35,18 @@ This makes me believe that 2.3.1 was really intended to be the proposed 2.2.1 bu
 * Use LibGuildStore to [[#Import MM Data | import data from MM]] or to [[#Import ATT Data | import data from ATT]]
 * Disable all [[#disablemmmodules | old MM modules]] and the old standalone ShoppingList after the data is imported to decrease load times
  
-{{note: You can still use ATT and MM at the same time if you chose. There is a toggle to disable the notification under <font class="purple">Debug Options</font> under the [[#Debug Options | MasterMerchat settings]].}}
+{{note: You can still use ATT and MM at the same time if you chose. There is a toggle to disable the notification under <font class="purple">Debug Options</font> under the [[#MM Debug Options | MasterMerchat settings]].}}
+
+### What is required
+
+* Master Merchant 3.6.x
+* LibGuildStore
+* LibGuildStore Data File GS00Data, LibGuildStore Data File GS01Data, etc.
+
+### What is optional after importing
+
+Master Merchant Data File MM00Data, Master Merchant Data File MM01Data, etc.
+ShoppingList
 
 == What to expect upgrading from 3.5.30 to 3.6.x
 

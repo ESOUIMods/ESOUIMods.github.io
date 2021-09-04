@@ -30,9 +30,9 @@ This makes me believe that 2.3.1 was really intended to be the proposed 2.2.1 bu
   * If you manually install then manually delete the previous version first
 * Log into the game to the character screen
 * Before choosing a character make sure all the new [[#All the LibGuildStore Modules | LibGuildStore]] modules and all the old MMxxData modules are active
-* Once you log you will see a notification in chat <font class="yellow">LibGuildStore Refresh Not Finished yet</font>. Wait for LibGuildStore to recieve all of the LibHistoire data.  
+* Once you log in you will see a notification in chat <font class="yellow">LibGuildStore Refresh Not Finished yet</font>. Wait for LibGuildStore to recieve all of the LibHistoire data.  
 * Verify the [[#Sales Management Options | LibGuildStore settings]] are configured to meet your personal preferences.
-* Use LibGuildStore to [[#Import MM Data | import data MM]] or to [[#Import ATT Data | import data from ATT]]
+* Use LibGuildStore to [[#Import MM Data | import data from MM]] or to [[#Import ATT Data | import data from ATT]]
 * Disable all [[#disablemmmodules | old MM modules]] and the old standalone ShoppingList after the data is imported to decrease load times
  
 {{note: You can still use ATT and MM at the same time if you chose. There is a toggle to disable the notification under <font class="purple">Debug Options</font> under the [[#Debug Options | MasterMerchat settings]].}}
@@ -110,9 +110,9 @@ For those upgrading to MM 3.6.x you will need to be aware of a few changes.  The
 
 {{inline:256px | example_1_hlaalu.jpg | example_1_hlaalu}}{{inline:256px | example_2_cuirass.jpg | example_2_cuirass}}{{inline:256px | example_3_bow.jpg | example_3_bow}}{{inline:256px | example_4_plating.jpg | example_4_plating}}
 
-* MM is the price the item sold for in one of the guilds you are in. It is not a price from other outside sources like other guilds on the server and it is not from TTC.
+* The MM price is in <font class="yellow">yellow text</font>, and it is the price the item sold for in one of the guilds you are in. It is not a price from other outside sources like other guilds on the server and it is not from TTC.
 * The TTC Price is from their own data collected by their EXE and transmitted to their server. They trim outliers using their own method and then make an average of the remaining data.
-* The Bonanza Price is an average from a 24 hour snapshot of all the listings you have seen of that specific item from the traders you have visited.
+* The Bonanza Price is in <font class="blue">blue text</font> and it is an average from a 24 hour snapshot of all the listings you have seen of that specific item from the traders you have visited.
 
 Looking at the first example of the Hlaalu Bookcase you see it sold 1 time out of all the guilds I am in. So there is no way to get a reasonable price for it. Someone listed it 56 days ago for 100K and it sold. That is one of the drawbacks of the MM price. If you do not have many sales from the guilds you are in then the MM price won't be very helpful. Also from the first example you see that the TTC price is about 19K and the Bonanza price is 17K. There are 9 listings from TTC and 1 from another trader. Once you have more data the Bonanza price may change but you can more easily see that 17K to 19K would probably be a more reasonable price then 100K.
 

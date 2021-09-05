@@ -519,6 +519,24 @@ Since I have never used this feature with a spreadsheet I do not know how easy t
 
 {{note: Some of my GMs have explained if this format changed it would break what they currently use so it will not be altered.}}
 
+== Export Sales Activity
+
+{{image:export_sales.jpg | export_sales}}
+
+You would use <code>/mm sales #</code> to export the sales activity. As an example the screen shot shows a 2 for the 2nd guild in your list, therefore the syntax would be <code>/mm sales 2</code>.
+
+Once exported the data is saved in <code>MasterMerchant.lua</code> in your <code>SavedVariables</code> folder.
+
+<pre>
+["SALES"] = 
+{
+    ["version"] = 1,
+    ["YourGuildName"] = 
+    {
+        [1] = "@Ashjunkie&@Lcs_Flores&|H0:item:46129:30:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0|h|h&200&1630085615&false&4000&Real Guild Best Guild&Quicksilver Ingot&rr01 white normal materials",
+    },
+</pre>
+
 = Technical Information
 
 == Backup LibGuildStore Data

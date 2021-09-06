@@ -418,6 +418,10 @@ The refresh button is only a fail safe mechanism in case a user performs the ini
 
 {{image:import_shoppinglist_list.jpg | import_shoppinglist_list}}
 
+=== Import Pricing Data
+
+{{image:import_pricing_data.jpg | import_pricing_data}}
+
 === Reset Data
 
 {{image:reset_data.jpg | reset_data}}

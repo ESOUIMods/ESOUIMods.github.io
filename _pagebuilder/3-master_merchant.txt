@@ -24,7 +24,7 @@ Shop all of Tamriel with [[https://www.esoui.com/downloads/info2143-BeamMeUp-Tel
 * Once you log in you will see a notification in chat <font class="yellow">LibGuildStore Refresh Not Finished yet</font>. Wait for LibGuildStore to recieve all of the LibHistoire data.  
 * Verify the [[#Sales Management Options | LibGuildStore settings]] are configured to meet your personal preferences.
 * Use LibGuildStore to [[#Import MM Data | import data from MM]] or to [[#Import ATT Data | import data from ATT]]
-* Use LibGuildStore to [[#Import Pricing Data | Import Pricing Data]]
+* Use LibGuildStore to [[#Import Pricing Data | Import Pricing Data]] and review the [[#Guild Store Options | Guild Store Options]] for changes
 * Disable all [[#disablemmmodules | old MM modules]] and the old standalone ShoppingList after the data is imported to decrease load times
  
 {{note: You can still use ATT and MM at the same time if you chose. There is a toggle to disable the notification under <font class="purple">Debug Options</font> under the [[#MM Debug Options | MasterMerchat settings]].}}
@@ -359,6 +359,15 @@ There are several date ranges you can choose from. <font class="tan">This Week</
 === Guild Store Options
 
 {{image:guild_store_options.jpg | guild_store_options}}
+{{image-caption:mm_price_calculator.jpg | mm_price_calculator | Price Calculator when not using AGS.}}
+{{image-caption:ags_profit_filter.jpg | ags_profit_filter | AGS Profit filter.}}
+{{image-caption:ags_profit_margin.jpg | ags_profit_margin | AGS Profit margin.}}
+{{image-caption:ags_display_profit.jpg | ags_display_profit | AGS Profit.}}
+
+* <font class="tan">Show Stack Price Calculator</font>: Adds UI to the guild store if you are not using Awesome Guild Store that aids you in setting the stack price of the item listed
+* <font class="tan">Save Central Pricing Data</font>: When <font class="yellow">Enabled</font> all pricing data is stored and available to all guilds. When <font class="yellow">Disabled</font> all pricing data is stored separate for each guild.
+* <font class="tan">Display Profit Filter</font>: Show the Profit Filter in Awesome Guild Store
+* <font class="tan">Display profit instead of margin</font>: Display the profit margin or percentage, or the profit value in gold pieces.
 
 === Guild Master Options
 

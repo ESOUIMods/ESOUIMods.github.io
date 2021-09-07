@@ -24,6 +24,7 @@ Shop all of Tamriel with [[https://www.esoui.com/downloads/info2143-BeamMeUp-Tel
 * Once you log in you will see a notification in chat <font class="yellow">LibGuildStore Refresh Not Finished yet</font>. Wait for LibGuildStore to recieve all of the LibHistoire data.  
 * Verify the [[#Sales Management Options | LibGuildStore settings]] are configured to meet your personal preferences.
 * Use LibGuildStore to [[#Import MM Data | import data from MM]] or to [[#Import ATT Data | import data from ATT]]
+* Use LibGuildStore to [[#Import Pricing Data | Import Pricing Data]]
 * Disable all [[#disablemmmodules | old MM modules]] and the old standalone ShoppingList after the data is imported to decrease load times
  
 {{note: You can still use ATT and MM at the same time if you chose. There is a toggle to disable the notification under <font class="purple">Debug Options</font> under the [[#MM Debug Options | MasterMerchat settings]].}}

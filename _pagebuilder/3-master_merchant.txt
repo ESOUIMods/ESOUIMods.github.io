@@ -341,6 +341,10 @@ There are several date ranges you can choose from. <font class="tan">This Week</
 
 {{image:tool_tip_settings.jpg | tool_tip_settings}}
 
+{{image:add_seller_to_filter.jpg | add_seller_to_filter}}
+
+{{note: Right click the dots on the graph to add the seller to the Guild & Account filter.}}
+
 === Other Tooltip Options
 
 {{image:other_tooltip_options.jpg | other_tooltip_options}}

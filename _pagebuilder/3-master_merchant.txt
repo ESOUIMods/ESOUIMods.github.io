@@ -369,6 +369,8 @@ There are several date ranges you can choose from. <font class="tan">This Week</
 * <font class="tan">Display Profit Filter</font>: Show the Profit Filter in Awesome Guild Store
 * <font class="tan">Display profit instead of margin</font>: Display the profit margin or percentage, or the profit value in gold pieces.
 
+{{note: Awesome Guild Store uses its own internal pricing routines and only uses the MM Pricing Data when there is not AGS information. Because of that it may appear that the MM pricing data is malfunctioning when it isn't.}}
+
 === Guild Master Options
 
 {{image:guild_master_options.jpg | guild_master_options}}

@@ -7,19 +7,10 @@ The site is undergoing changes to the images for 3.6.x so the screen shots, icon
 
 == Contents
 {{CONTENTS=3}}
-= Authors
 
-Philgo68, Khaibit, dOpiate, sirinsidiator, Garkin, Aldanga, Sharlikran, Dolgubon
+{{image:Bonanza.png | Bonanza}}
 
-= Version History
-
-Apparently for version 2.2.0 there was an experimental turbo mode added to MM. From the change log it appears that this was removed by request from Zenimax. However, even I noticed when you tried to download 2.2.1 which had turbo mode removed, you received a file named <font class="purple">Master Merchant 2.2.0.zip</font>. If you tried to engage turbo mode it was still available even if it didn't work as expected.
-
-Aug 01 2020 after the kiosk flip was announced Philgo68 posted that he would be uploading a new version, which would be 2.3.1. From the start it had a small bug in it that prevented it from working. Then after that was fixed people started reporting that the Master Merchant window would not update when you were viewing your personal sales but that all guild sales was still updating properly.
-
-Upon examination of the code 2.3.1 had turbo mode removed which was not really removed in 2.2.1 (2.2.0). In addition to that on the description page it was mentioned that there was Simple Indexing and Simple Scanning. Oddly those options included new options in the Addons menu to toggle the features on and off. These options were not present in 2.2.1.
-
-This makes me believe that 2.3.1 was really intended to be the proposed 2.2.1 but somehow the upload never went through properly. I am glad Philgo68 uploaded the version as it has helped me understand the code a bit more.
+Shop all of Tamriel with [[https://www.esoui.com/downloads/info2143-BeamMeUp-TeleporterFastTravel.html | Beam Me Up]] and Bonanza. Master Merchant is not just for high end traders anymore. If you are shopping for the best deal you can find it in the Bonanza window.
 
 = Upgrading from 3.5.30 to 3.6.x
 
@@ -640,3 +631,21 @@ Unfortunately from time to time ZOS introduces or reintroduces a bug in the save
 Since this can occur I highly recommend changing your user name to only contain letters as it will make it easier for you in the long run.
 
 This also includes creative names that contain things like Æ or æ. As those are not individual letters.
+
+== Version History
+
+Apparently for version 2.2.0 there was an experimental turbo mode added to MM. From the change log it appears that this was removed by request from Zenimax. However, even I noticed when you tried to download 2.2.1 which had turbo mode removed, you received a file named <font class="purple">Master Merchant 2.2.0.zip</font>. If you tried to engage turbo mode it was still available even if it didn't work as expected.
+
+Aug 01 2020 after the kiosk flip was announced Philgo68 posted that he would be uploading a new version, which would be 2.3.1. From the start it had a small bug in it that prevented it from working. Then after that was fixed people started reporting that the Master Merchant window would not update when you were viewing your personal sales but that all guild sales was still updating properly.
+
+Upon examination of the code 2.3.1 had turbo mode removed which was not really removed in 2.2.1 (2.2.0). In addition to that on the description page it was mentioned that there was Simple Indexing and Simple Scanning. Oddly those options included new options in the Addons menu to toggle the features on and off. These options were not present in 2.2.1.
+
+This makes me believe that 2.3.1 was really intended to be the proposed 2.2.1 but somehow the upload never went through properly. I am glad Philgo68 uploaded the version as it has helped me understand the code a bit more.
+
+= Authors
+
+Philgo68, Khaibit, dOpiate, sirinsidiator, Garkin, Aldanga, Sharlikran, Dolgubon
+
+= Translators
+
+mychaelo, svenpanne, tomkolp, mlsevero, Baertram, jupiter126, Otxics

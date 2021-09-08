@@ -42,6 +42,8 @@ title: Master Merchant
 <p class="list-2">&bull;&nbsp; <a href="#BonanzaTypeFilter">3.2.4 Bonanza Type Filter</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#LibGuildStoreforMasterMerchant">3.2.5 LibGuildStore for Master Merchant</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#MMPricevsTTCvsBonanza">3.3 MM Price vs TTC vs Bonanza</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#EvaluatingtheBonanzaprice">3.3.1 Evaluating the Bonanza price</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#PriceSoldvsPriceListed">3.3.2 Price Sold vs. Price Listed</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#ThreestatesofLibHistoirecache">3.4 Three states of LibHistoire cache</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Unlinked">3.4.1 Unlinked</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Linkinginprogress">3.4.2 Linking in progress</a></p>
@@ -228,6 +230,28 @@ title: Master Merchant
 <p>The Bonanza price while similar to TTC is the average of what you have found at the traders you have visited in the last 24 hours. Bonanza itself is intended to be a shopping tool but since the data is there it is displayed on the graph for you to use as another way to evaluate what the item is currently selling for. If you only have 1 to 3 sales you can not compute an average from that I'd suggest 5 or more depending on how popular it is on traders at the time.</p>
 <p class="empty">&nbsp;</p>
 <p>For the last example you will note that the Bonanza price for Chromium Plating is only about 22K above the MM price. With more data it may even fall exactly in line with the MM price. The TTC suggested price is 239Kwhich is 2K different then the Bonanza average. For items that normally do not have a lot of skew to the pricing data this will be common. For items that have more outliers skewing the pricing data you will need to evaluate the TTC and Bonanza prices to get a better idea of what may be a good price to sell the item for.</p>
+<p class="empty">&nbsp;</p>
+<h2 id="EvaluatingtheBonanzaprice">3.3.1 - Evaluating the Bonanza price</h2>
+<p class="empty">&nbsp;</p>
+<p>{% include image-inline.html max-width="256px" file="img/bonanza_tooltip_style_page.jpg" alt="bonanza_tooltip_style_page" %}{% include image-inline.html max-width="512px" file="img/low_end_prices.jpg" alt="low_end_prices" %}{% include image-inline.html max-width="512px" file="img/high_end_prices.jpg" alt="high_end_prices" %}</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> If those are too small, right click the image and show it in a new tab to see the full size.</p>
+<p class="empty">&nbsp;</p>
+<p>Looking at the tooltip TTC shows 74K to 93K, the Bonanza average is 158K, and the MM price is 70K. Then the highest and lowest listing in TTC is 446 to 5M. With TTC you can not view the current prices being used for their suggestion. You can view the Bonanza prices to evaluate what other people are selling the item for. For this example you would open the Bonanza window and search for <font class="tan">style zero cuirass</font>.</p>
+<p class="empty">&nbsp;</p>
+<p>As you see in the middle screenshot the prices range from 50K to 80K. In the last screen shot the highest prices are 1M to 3.9M.  So now you have three prices all in about the same range. 1) 50K to 80K 2) 70K 3) 74 to 93K and all without opening external websites, google docs pages, or spreadsheets. It didn't require two monitors and it took only a few moments.</p>
+<p class="empty">&nbsp;</p>
+<p>It is easy to see that 70K is probably the best average price to sell the style page for. If you want it to see faster because you want it out of your inventory, 50K won't bee too low that someone might flip it and even if they do you still made close to the going rate of 70K.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> Just because the Bonanza price is not 70K and is showing 158K doesn't mean it is inaccurate. In this example it is being affected by all the prices above 1M. Although you can not see the data you will be able to view your own. For the data used in the screen shots 99 of the prices were above 100K which will affect the average significantly. This is why I recommend you evaluate the price in the manner described.</p>
+<p class="empty">&nbsp;</p>
+<h2 id="PriceSoldvsPriceListed">3.3.2 - Price Sold vs. Price Listed</h2>
+<p class="empty">&nbsp;</p>
+<p>After reading all the above information you may be asking, if there are 124 listings and 99 of them are 100K and above, then couldn't I make more from selling the item? This is the difference between what the item sold for which is the MM price and what the item is listed for which it the Bonanza or TTC price.</p>
+<p class="empty">&nbsp;</p>
+<p>Think of how an author might write a book. They write the book so it is appealing to their audience. So imagine who will be buying your items. Do they have 6M to spend on something and plenty of gold left over? Does your buyer have 6M at all? Have they ever had 6M at one time?</p>
+<p class="empty">&nbsp;</p>
+<p>It is simple common sense that if someone has 124 items to choose from they will buy the cheapest one. Just because something sold for 5M or 6M 60 days ago when the item was scarce and someone had that much to spend on the item doesn't mean people will pay that price when the item is less scarce.</p>
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="ThreestatesofLibHistoirecache">3.4 - Three states of LibHistoire cache</h1>
 <p class="empty">&nbsp;</p>
@@ -465,14 +489,15 @@ title: Master Merchant
 <p>{% include image.html file="img/guild_store_options.jpg" alt="guild_store_options" %}</p>
 <p>{% include image-caption.html file="img/mm_price_calculator.jpg" alt="mm_price_calculator" caption="Price Calculator when not using AGS." %}</p>
 <p>{% include image-caption.html file="img/ags_profit_filter.jpg" alt="ags_profit_filter" caption="AGS Profit filter." %}</p>
-<p>{% include image-caption.html file="img/ags_profit_margin.jpg" alt="ags_profit_margin" caption="AGS Profit margin." %}</p>
-<p>{% include image-caption.html file="img/ags_display_profit.jpg" alt="ags_display_profit" caption="AGS Profit." %}</p>
+<p>{% include image-caption.html file="img/ags_profit_margin.jpg" alt="ags_profit_margin" caption="Profit margin." %}</p>
+<p>{% include image-caption.html file="img/ags_display_profit.jpg" alt="ags_display_profit" caption="Your Profit." %}</p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Show Stack Price Calculator</font>: Adds UI to the guild store if you are not using Awesome Guild Store that aids you in setting the stack price of the item listed</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Save Central Pricing Data</font>: When <font class="yellow">Enabled</font> all pricing data is stored and available to all guilds. When <font class="yellow">Disabled</font> all pricing data is stored separate for each guild.</p>
-<p class="list-1">&bull;&nbsp; <font class="tan">Display Profit Filter</font>: Show the Profit Filter in Awesome Guild Store</p>
-<p class="list-1">&bull;&nbsp; <font class="tan">Display profit instead of margin</font>: Display the profit margin or percentage, or the profit value in gold pieces.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Display Profit Filter</font>: Adds the Profit to the <font class="tan">Time</font> column for the guild store.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Display profit instead of margin</font>: Enabled shows the profit value in gold pieces, and disabled shows a percentage.</p>
 <p class="empty">&nbsp;</p>
+<p class="note"> The Price Calculator will not show up with Awesome Guild Store. The Profit Filter is AGS only. Adding the profit margin or the total profit will be shown with or without AGS.</p>
 <p class="note"> Awesome Guild Store uses its own internal pricing routines and only uses the MM Pricing Data when there is not AGS information. Because of that it may appear that the MM pricing data is malfunctioning when it isn't.</p>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="GuildMasterOptions">3.11.1.8 - Guild Master Options</h3>

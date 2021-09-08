@@ -141,11 +141,11 @@ It is easy to see that 70K is probably the best average price to sell the style 
 
 ## Price Sold vs. Price Listed
 
-After reading all the above information you may be asking, if there are 124 listings and 99 of them are 100K and above, then couldn't I make more from selling the item? This is the difference between what the item sold for which is the MM price and what the item is listed for which it the Bonanza or TTC price. 
+The above items are meant to show items that have an unusual range for the TTC price or Bonanza price because it is the listed price. For items like style pages if there are 124 listings and 99 of them are 100K and above you may wonder if you could make more from selling the item. Maybe and maybe not. This is the difference between what the item sold for which is the MM price and what the item is listed for which it the Bonanza or TTC price. Think of how an author might write a book. They write the book so it is appealing to their audience. So imagine who will be buying your items. Do they have 6M to spend on something and plenty of gold left over? Does your buyer have 6M at all? Have they ever had 6M at one time? Are they willing to spend 6M for the item? It is simple common sense that if someone has 124 items to choose from they will buy the cheapest one. Just because something sold for 5M or 6M 60 days ago when the item was scarce and someone had that much to spend on the item doesn't mean people will pay that price when the item is less scarce.
 
-Think of how an author might write a book. They write the book so it is appealing to their audience. So imagine who will be buying your items. Do they have 6M to spend on something and plenty of gold left over? Does your buyer have 6M at all? Have they ever had 6M at one time?
+The above examples don't represent things like crafting materials where the pricing is more consistent and the MM price is more reliable. With the example of crafting materials that is simple supply and demand. If you want to read an article on it be my guest and you can enjoy such wonderful words as equilibrium and elasticity, knock yourself out. There are a lot of crafting materials on guild stores so there is a large supply and there is a large demand for them. Because there is a consistent need for them people purchase the cheapest listed items and the price remains rather consistent. 
 
-It is simple common sense that if someone has 124 items to choose from they will buy the cheapest one. Just because something sold for 5M or 6M 60 days ago when the item was scarce and someone had that much to spend on the item doesn't mean people will pay that price when the item is less scarce.
+This is not the case for everything. Take your time and use the different prices and tools to evaluate what you are selling, what others are selling it for, and what others are buying it for.
 
 = Three states of LibHistoire cache
 

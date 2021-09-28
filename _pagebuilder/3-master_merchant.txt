@@ -161,6 +161,12 @@ In the Unlinked state you can either wait for the server to grant the requests f
 
 Once LibHistoire has what it feels it needs, then it will begin processing the guild history events and attempt to link to the last known event.
 
+## Linking in progress
+
+{{image:process_stuck.jpg | process_stuck}}
+
+If you ever see it processing 0 events for a while you will just need to wait for the events to link. If there are external factors involved then nothing will process until that is no longer effecting LibHistoire.
+
 ## Linked
 
 {{image:green_text_linked.jpg | green_text_linked}}

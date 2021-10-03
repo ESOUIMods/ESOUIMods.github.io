@@ -591,7 +591,7 @@ To backup your LibGuildStore data you will need to navigate to the SavedVariable
 
 {{note: I am sorry I don't know where it is located on a Mac.}}
 
-Once you are in the SavedVariables folders, you will need to copy the 16 <code>GSxxData</code> files named <code>GS00Data.lua</code> to <code>GS15Data.lua</code> as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables. You will also want to keep a copy of <code>LibGuildStore.lua</code>, <code>LibHistoire.lua</code>, and <code>MasterMerchant.lua</code>.
+Once you are in the SavedVariables folders, you will need to copy the 18 <code>GSxxData</code> files named <code>GS00Data.lua</code> to <code>GS17Data.lua</code> as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables. You will also want to keep a copy of <code>LibGuildStore.lua</code>, <code>LibHistoire.lua</code>, and <code>MasterMerchant.lua</code>.
 
 == Uninstall Master Merchant 2.x
 
@@ -741,7 +741,7 @@ To backup your Master Merchant data you will need to navigate to the SavedVariab
 
 {{note: I am sorry I don't know where it is located on a Mac.}}
 
-Once you are in the SavedVariables folders, you will need to copy the 16 MMxxData files named MM00Data.lua to MM15Data.lua as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables.
+Once you are in the SavedVariables folders, you will need to copy the 17 MMxxData files named MM00Data.lua to MM16Data.lua as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables.
 
 == Background Scanning
 

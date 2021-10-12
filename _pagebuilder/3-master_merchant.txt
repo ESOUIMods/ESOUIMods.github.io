@@ -179,7 +179,7 @@ Once LibHistoire has linked to its stored events you should see green text. This
 
 = Ten Day Scan
 
-After upgrading to 3.x you will need to do a Ten Day Scan of all the guilds you are in. This ensures that LibHistoire has stored sales data for you to start working with. After doing a ten day scan for each guild you only need to request guild history for the time you have been offline.
+If you are upgrading from MM 2.5.x or installing MM 3.x for the first time, you will need to do a Ten Day Scan of all the guilds you are in. This ensures that LibHistoire has stored sales data for you to start working with.
 
 {{note: Initially I had suggested requesting all the data at once. This seems to cause an issue for some users. Read this section carefully.}}
 
@@ -191,17 +191,17 @@ When you first log in there won’t be much as far as guild history loaded in me
 
 In order to manually request sales data you have to choose a guild and select All, not purchases. Then press E about every 3 seconds so you are not kicked from the game by the server.
 
-## Request only a few days at a time
+## Request one day at a time
 
 {{image:one_day_of_data.jpg | one_day_of_data}}
 
-You should be able to request two or three days of guild history at once. However, some users have seen issues requesting too much at one time. Each time you request a few days of data stop and, click the Rescan button.
+Look at the above image and use the right scroll bar to see when you have requested one day of data. Busier guilds with more data will have more sales per day. To keep from processing too much at once request one day at a time and click the Rescan button.
 
 ## Rescan Button
 
 {{image:ten_day_scan_refresh.jpg | ten_day_scan_refresh}}
 
-The Rescan button is the equivalent of the old <code>/mm missing</code> and it will scan all the data loaded into memory so far. LibHistoire will skip any duplicate events as it scans guild history.
+If you are familiar with MM 2.5.x the Rescan button is the equivalent of the old <code>/mm missing</code>. When you click Rescan LibHistoire will scan all the data loaded into memory so far and skip any duplicate events already saved in its data cache.
 
 ## When E is no longer showing
 

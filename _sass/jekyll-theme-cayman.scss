@@ -230,6 +230,7 @@ body {
 
 .toc1 { grid-area: lefttoc; }
 .toc2 { grid-area: righttoc; }
+.toc3 { grid-area: addedtoc; }
 
 .grid-header {
   display: grid;
@@ -313,23 +314,23 @@ body {
   display: grid;
   @include full {
   grid-template-areas:
-    'lefttoc righttoc';
+    'lefttoc righttoc addedtoc';
   }
   @include huge {
   grid-template-areas:
-    'lefttoc righttoc';
+    'lefttoc righttoc addedtoc';
   }
   @include large {
   grid-template-areas:
-    'lefttoc righttoc';
+    'lefttoc righttoc addedtoc';
   }
   @include medium {
   grid-template-areas:
-    'lefttoc righttoc';
+    'lefttoc righttoc addedtoc';
   }
   @include small {
   grid-template-areas:
-    'lefttoc' 'righttoc';
+    'lefttoc righttoc addedtoc';
   }
 }
 

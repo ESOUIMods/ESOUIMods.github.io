@@ -1,0 +1,13 @@
+{{PAGETITLE="Master Merchant"}}
+= En construction
+
+{{image:under_construction.jpg | under_construction}}
+
+La section subira des modifications pour fournir des informations supplementaires sur le MM en francais.
+
+== Contents
+{{CONTENTS=3}}
+
+= Additional Information
+
+{{note: Veuillez patienter pendant la mise a jour de cette section.}}

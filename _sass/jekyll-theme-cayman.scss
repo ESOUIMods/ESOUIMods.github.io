@@ -230,7 +230,10 @@ body {
 
 .toc1 { grid-area: lefttoc; }
 .toc2 { grid-area: righttoc; }
-.toc3 { grid-area: addedtoc; }
+.toc3 { grid-area: modtoc; }
+.toc4 { grid-area: paddingtoc; }
+.toc5 { grid-area: addedtoc; }
+.toc6 { grid-area: padtoc; }
 
 .grid-header {
   display: grid;
@@ -314,23 +317,71 @@ body {
   display: grid;
   @include full {
   grid-template-areas:
-    'lefttoc righttoc addedtoc';
+    'lefttoc righttoc';
   }
   @include huge {
   grid-template-areas:
-    'lefttoc righttoc addedtoc';
+    'lefttoc righttoc';
   }
   @include large {
   grid-template-areas:
-    'lefttoc righttoc addedtoc';
+    'lefttoc righttoc';
   }
   @include medium {
   grid-template-areas:
-    'lefttoc righttoc addedtoc';
+    'lefttoc righttoc';
   }
   @include small {
   grid-template-areas:
-    'lefttoc righttoc addedtoc';
+    'lefttoc righttoc';
+  }
+}
+
+.grid-mod-toc {
+  display: grid;
+  @include full {
+  grid-template-areas:
+    'modtoc paddingtoc';
+  }
+  @include huge {
+  grid-template-areas:
+    'modtoc paddingtoc';
+  }
+  @include large {
+  grid-template-areas:
+    'modtoc paddingtoc';
+  }
+  @include medium {
+  grid-template-areas:
+    'modtoc paddingtoc';
+  }
+  @include small {
+  grid-template-areas:
+    'modtoc paddingtoc';
+  }
+}
+
+.grid-sup-toc {
+  display: grid;
+  @include full {
+  grid-template-areas:
+    'addedtoc padtoc';
+  }
+  @include huge {
+  grid-template-areas:
+    'addedtoc padtoc';
+  }
+  @include large {
+  grid-template-areas:
+    'addedtoc padtoc';
+  }
+  @include medium {
+  grid-template-areas:
+    'addedtoc padtoc';
+  }
+  @include small {
+  grid-template-areas:
+    'addedtoc padtoc';
   }
 }
 

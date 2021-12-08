@@ -3,11 +3,64 @@
 
 {{image:under_construction.jpg | under_construction}}
 
-La section subira des modifications pour fournir des informations supplementaires sur le MM en francais.
+La section subira des modifications pour fournir des informations supplémentaires sur le MM en français.
 
 == Contents
 {{CONTENTS=3}}
 
-= Additional Information
+= Le Tuto d'installation de Master Merchant
 
-{{note: Veuillez patienter pendant la mise a jour de cette section.}}
+{{note: Le didacticiel s'adresse à toute personne ayant besoin d'aide pour installer MM, mais il est destiné aux nouveaux arrivants.}}
+
+Première installation de Master Merchant 3.x ( MM) : 
+
+1) Ouvrez Minion3, installez Master Merchant 3.0 ou mettez le à jour. [[ https://minion.mmoui.com/ | Minion ]]
+
+On en profite pour ajouter également :
+
+LibAddonMenu
+LibMediaProvider
+LibGuildRoster
+Libhistoire
+LibAsync
+LibDebugLogger
+LibCustomMenu
+
+2) lancez le jeu ou faites une déco/reco complète du jeu ( pas de /reloadui sur une installation de ce genre d'addon).
+
+3) Allez dans l'onglet "Extensions" et vérifiez les Libs manquantes, ajoutez les avec Minion3 et faites cette fois ci un /reloadui.
+
+4) Ici plus bas, après le tuto d'installation, vous trouverez dans un tableau le réglage de guilde opti de MM, faites le exactement comme indiqué et terminez par un /reloadui.
+
+5) On va construire la database de MM manuellement, car Teso n'autorise plus  que les addons fassent des demandes d'ajout de données à la place des joueurs. Heureusement LIBHISTOIRE prendra le relais par la suite pour vous aider à garder la data base à jour. Pour ce faire il faut : ... 
+
+6) ouvrir la page de guilde IG (en jeu):
+Comptoir de Bordeciel, Historique, Ventes/tout... et affichez 10 jours d'historique de ventes avec la touche "[E] - afficher plus". 
+
+{{note: cassez le rythme du spam [E] sinon le jeu va vous jeter dehors. Pour voir où vous en êtes dans le téléchargement des données vous pouvez dé-scroller les infos affichées à l'écran vers le bas. Quand la touche [E] disparaît c'est que vous avez tout reçu.}}
+
+7) INFO : Tous les jours il faudra aller sur "Ventes" pour ajouter les datas à Master Merchant. Mais il y suffira simplement de scanner "[E] - afficher plus" pour remplir les barres du tableau de LibHistoire , lorsque les barres sont bleues vous avez reçu toutes les données, poussez jusqu'à 2 jours pour éventuellement récupérer des données perdues par le serveur. LIBHISTOIRE réceptionne les données quand le serveur les diffusent à la connexion de votre compte, puis seulement au compte goûte quand Teso décide de les envoyer si l'état du serveur le permet. Si vous quittez le jeu et que le scan des données n'a pas été fait vous recevrez un notification vous invitant à le faire.
+
+8) L'addon est installé, le réglage est fait, la database est construite, on va maintenant attendre que l'addon mette en place les données collectées, ça peut prendre un petit temps, quelques minutes sans plus, donc on va se refaire une déco/reco complète...
+
+9) retour  sur la page d'entrée en jeu, celle avec la demande de mot de passe, et on relance le jeu...on laisse maintenant le temps à MM de construire votre database.
+
+10) Est ce que ça fonctionne ? Ouvrez la liste des effectifs de la guilde, vous devriez voir des colonnes en plus " achats/ventes/taxes/compter "  ( en bas elles sont réglées sur "AUJOURD'HUI" changez pour " CETTE SEMAINE".
+
+11) Ouvrez également votre "courrier reçu" et ouvrez "Master Merchant" avec son bouton dédié. Si vous voyez le tableau c'est parfait.
+
+12) Le tuto en image du fonctionnement du tableau est sur Discord également, sachez juste que ce tableau comporte deux types d'infos : des données en "chiffres" et en "articles" pour vos ventes ou celles des autres.
+
+== Pour En Terminer, Le Rappel
+
+on n'oublie pas de passer tous les jours sur "Ventes" pour le scan des datas avec l'aide de l'HibHistoire 🙂 si vous ne le faites pas, vous recevrez une notification à la déco pour vous rappeler de le faire.
+
+Quand le serveur "chauffe", Teso arrête d'envoyer les données de gestion en temps réel, plus rien ne s'affiche depuis 1 ou 2h dans le tableau des ventes de la guilde par exemple. Il suffit de faire une déco/reco complète depuis le launcher pour simuler une première connexion, les dernières données vous seront envoyées et c'est dans la poche.
+
+Bon jeu et très bonnes ventes. 
+
+= Reglage de Master Merchant 3.x
+
+{{image:tutu_MM_menu_options.jpg | tutu_MM_menu_options}}
+
+Vous avez besoin de lunettes ? "Ouvrir l'original"

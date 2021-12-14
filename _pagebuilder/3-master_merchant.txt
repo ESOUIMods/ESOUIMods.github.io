@@ -111,7 +111,9 @@ For those upgrading to MM 3.6.x you will need to be aware of a few changes.  The
 {{image:disable_mm.jpg | disable_mm}}
 [[se:]]
 
-= MM Price vs TTC vs Bonanza 
+= MM Price vs TTC vs Bonanza
+
+{{note: There are several examples because I feel Bonanza is new and it may be hard to understand the various ways to use it. I highly suggest reading all of the following sections.}}
 
 {{inline:256px | example_1_hlaalu.jpg | example_1_hlaalu}}{{inline:256px | example_2_cuirass.jpg | example_2_cuirass}}{{inline:256px | example_3_bow.jpg | example_3_bow}}{{inline:256px | example_4_plating.jpg | example_4_plating}}
 
@@ -148,6 +150,38 @@ The above items are meant to show items that have an unusual range for the TTC p
 The above examples don't represent things like crafting materials where the pricing is more consistent and the MM price is more reliable. With the example of crafting materials that is simple supply and demand. If you want to read an article on it be my guest and you can enjoy such wonderful words as equilibrium and elasticity, knock yourself out. There are a lot of crafting materials on guild stores so there is a large supply and there is a large demand for them. Because there is a consistent need for them people purchase the cheapest listed items and the price remains rather consistent. 
 
 This is not the case for everything. Take your time and use the different prices and tools to evaluate what you are selling, what others are selling it for, and what others are buying it for.
+
+## Comparisons between Bonanza, TTC, and MM
+
+{{image:style_page_thurvokun.png | style_page_thurvokun}}
+
+To start with you will have people that list an item for something stupid and it just contaminates the TTC database. They should be prevented from uploading TTC prices from the TTC developers. When you have items with no data or items that people feel should sell for millions of gold then those are harder to evaluate.
+
+That isn't what I will cover in this section because that kind of data is not usable.
+
+Look at these examples of the Bonanza price
+
+{{image:dreugh_wax_bonanza.png | dreugh_wax_bonanza}}
+
+Bonanza is within 1K approximately from TTC and the MM average.
+
+{{image:blassed_thistle_bonanza.png | blassed_thistle_bonanza}}
+
+Bonanza is 1g away from TTC average.
+
+Most sales noobs feel you have to have millions of sales in your database, years and years of stuff, and preserve data like you are the library of congress or something. If you look at both of those screen shots TTC has data points in the thousands. 15,000 for the Dreugh Wax, and 2,800 for the Blessed Thistle. Yet I have the same price for the Blessed Thistle with only a few hundred data points.
+
+I could write Lua code that anyone could copy and paste into an online Lua compiler that could show you how I can add a variety of numbers and come out with a certain average, say 100. Then I could add together another set of data that has different and more numbers, and still come within approximately 5g of the average I am looking for. A range of 95g - 105g more or less.
+
+The example would be bias of course because I am demonstrating that if you when you add 100, 99, 90, 95 and so on.. together that you get a specific average. If you load more of the same numbers you will get the same average. I don't care how many times you add 100 + 100 + 100, it will be the same outcome.
+
+In statistics this is called the [[https://en.wikipedia.org/wiki/Mode_(statistics) | Mode]]. So the value that appears most often. Commonly sold materials such as Chromium Grains, Dreugh Wax, Clam Gall, Blessed Thistle and such that the data is fairly consistent. When data is more consistent you don't need thousands of data points to get the proper average.
+
+Don't make it work. If you visit 3 or 4 cities and search for key items at all traders then you should have enough data to work with. TTC and Bonanza should be close however, it depends on the pricing people use. Some people post the TTC Suggested price and some post the Average price. It depends on the demand of the item and the price.
+
+The other benefit of Bonanza is that you can view the prices. Which is what I show in my documentation under [[#|Evaluating the Bonanza price]]. If you feel the price is not in line with TTC or listings from other traders then look. If other traders list a style page for 50K and that is the most common value then that is the going rate. You can then price your items to be competitive with other guilds.
+
+So it may be a bit of information overload but without the need for two monitors, viewing the TTC website, viewing google docs, viewing spreadsheets, exporting prices from MM to paste on websites, just use the Master Merchant interface. It is simple and easy to switch views and search for things to compare information without leaving the game to look at outside sources for information.
 
 = Three states of LibHistoire cache
 

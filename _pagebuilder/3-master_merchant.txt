@@ -34,6 +34,7 @@ Shop all of Tamriel with [[https://www.esoui.com/downloads/info2143-BeamMeUp-Tel
 ### What is required
 
 * Master Merchant 3.6.x
+* LibExecutionQueue
 * LibGuildStore
 * LibGuildStore Data File GS00Data, LibGuildStore Data File GS01Data, etc.
 

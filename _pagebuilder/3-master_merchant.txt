@@ -363,7 +363,7 @@ If you have ever opened the Master Merchant window you have probably seen the li
 
 {{image:time_frames.jpg | time_frames}}
 
-There are several date ranges you can choose from. <font class="tan">This Week</font>, <font class="tan">Last Week</font> and <font class="tan">Prior Week</font> start from the ZOS trader flip for the current [[#|Sales Week]]. However, the last option is customizable under the Master Merchant settings under [[#|Calculation And Tip Options]].
+There are several date ranges you can choose from. <font class="tan">This Week</font>, <font class="tan">Last Week</font> and <font class="tan">Prior Week</font> start from the ZOS trader flip for the current [[#|Sales Week]]. However, the last option is customizable under the Master Merchant settings under [[#|Calculation Display Options]].
 
 = Statistics Window
 

@@ -101,6 +101,10 @@ With MM 3.6.x the Bonanza {{inline:24px | bonanza_icon.jpg | bonanza_icon}} icon
 
 {{image:bonanza_window_filter_type.jpg | bonanza_window_filter_type}}
 
+## Bonanza - Using BeamMeUp
+
+{{image:bonanza_window_beammeup.jpg | bonanza_window_beammeup}}
+
 == LibGuildStore for Master Merchant
 
 LibGuildStore was created to facilitate converting MM sales data from the old format to a new format that uses less space. LGS will also keep track of purchases for the Shopping List module, sold and canceled items, and contains listings from other traders. Bonanza will provide you with a snapshot of the last 24 hours of items you have seen when visiting traders. LibGuildStore also keeps all information separate between NA and EU servers.

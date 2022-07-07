@@ -134,7 +134,7 @@ While viewing a graph as shown above find out who is skewing the price and add t
 
 Once the seller is added to the [[#|Guild & Account filter]] you can see that the graph is much more useful.
 
-{{note: The absence of the Bonanza price is not what corrected the graph. The item listed for 3000g is no longer considered for the Graph that is what has corrected the situation. Other listings of the same item for 200g would not have the same drastic effect as the listing for 3000g.}}
+{{note: The absence of the Bonanza price is not what corrected the graph. The graph was corrected because the seller of the item listed for 3000g is being ignored. Other listings of the same item for 200g would not have the same drastic effect as the listing for 3000g.}}
 
 = MM Price vs TTC vs Bonanza
 

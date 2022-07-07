@@ -110,11 +110,11 @@ With MM 3.6.x the Bonanza {{inline:24px | bonanza_icon.jpg | bonanza_icon}} icon
 
 = Outliers
 
-{{note: There must be at least 6 sales before Master Merchant can ignore outliers.}}
-
 {{image:less_then_five_outliers.jpg | less_then_five_outliers}}
 
 With only 5 sales the obvious outlier is not ignored.
+
+{{note: There must be at least 6 sales before Master Merchant can ignore outliers.}}
 
 {{image:outlier_ignored.jpg | outlier_ignored}}
 

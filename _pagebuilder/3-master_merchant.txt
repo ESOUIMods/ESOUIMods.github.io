@@ -3,7 +3,7 @@
 
 {{image:under_construction.jpg | under_construction}}
 
-The site is undergoing changes to the images for 3.6.x so the screen shots, icons, settings  menus, and menu description may not resemble 3.5.30.
+The site is undergoing changes to the images for 3.7.x so the screen shots, icons, settings  menus, and menu description may not resemble 3.5.30.
 
 == Contents
 {{CONTENTS=3}}
@@ -26,7 +26,7 @@ Shop all of Tamriel with [[https://www.esoui.com/downloads/info2143-BeamMeUp-Tel
 
 {{note: You can still use ATT and MM at the same time if you chose. There is a toggle to disable the notification under <font class="purple">Debug Options</font> under the [[#MM Debug Options | MasterMerchat settings]].}}
 
-* Master Merchant 3.6.x
+* Master Merchant 3.7.x
 * LibExecutionQueue
 * LibGuildStore
 * LibGuildStore Data File GS00Data, LibGuildStore Data File GS01Data, etc.
@@ -64,11 +64,11 @@ You will know when the refresh has finished when you see, <font class="yellow">L
 
 {{note: LibGuildStore is provided with MM and is not a separate Minion download.}}
 
-After Master Merchant 3.6.x LibGuildStore is where all the Guild Store related data is being kept. NA and EU information is now stored separately. This also allows importing from MM if you have more MM data then you do LibHistoire data. You would not want to overload MM but you could import any backups you have or backup files from other friends or guild members if you copy them to the SavedVariables folder.
+After Master Merchant 3.7.x LibGuildStore is where all the Guild Store related data is being kept. NA and EU information is now stored separately. This also allows importing from MM if you have more MM data then you do LibHistoire data. You would not want to overload MM but you could import any backups you have or backup files from other friends or guild members if you copy them to the SavedVariables folder.
 
 {{note: <font class="yellow">Caution</font>, the more data you import the longer MM will need to load.}}
 
-== Which modules do I need to activate for MM 3.6.x
+== Which modules do I need to activate for MM 3.7.x
 
 ### Master Merchant
 
@@ -94,7 +94,7 @@ Adds a new icon allowing you to view purchases you make from guild stores.
 
 {{image:bonanza_window.jpg | bonanza_window}}
 
-With MM 3.6.x the Bonanza {{inline:24px | bonanza_icon.jpg | bonanza_icon}} icon allows you to view items you have seen at traders as you shop for items to purchase.
+With MM 3.7.x the Bonanza {{inline:24px | bonanza_icon.jpg | bonanza_icon}} icon allows you to view items you have seen at traders as you shop for items to purchase.
 
 ## Bonanza Name Filter
 
@@ -742,7 +742,7 @@ Thanks to Shadowshire for sharing this workaround. While I did alter most of the
 
 This alternate method will primarily use data from the old Master Merchant Data files located in SavedVariables as shown in the depreciated section, [[#|Backup Master Merchant Data]].
 
-It is recommended that only Master Merchant 3.6.x, ShoppingList (older standalone version), the original MMxxData modules, LibGuildStore, all GSxxData modules, and the required library files for Master Merchant are enabled to avoid potential interference while this procedure is performed.
+It is recommended that only Master Merchant 3.7.x, ShoppingList (older standalone version), the original MMxxData modules, LibGuildStore, all GSxxData modules, and the required library files for Master Merchant are enabled to avoid potential interference while this procedure is performed.
 
 {{note: It is recommended to store any backup copies of Master Merchant data outside of SavedVariables in its own folder. For example <font class="purple">.\Documents\Elder Scrolls Online\live\Backups\MM_Backup_01</font>}}
 
@@ -766,13 +766,13 @@ The sticky post for Master Merchant 3.0 mentions some slash commands for LibDebu
 
 During this procedure Master Merchant will check for duplicate sales. Please remember it is recommended that you exit the game before you install any add-on or alter the SavedVariables folder.
 
-{{note: Version 3.6.x will not alter the previous MMxxData files or any purchase data for the older standalone ShoppingList module. If you are concerned about loosing any data then please backup your MM file as shown under [[#|Backup Master Merchant Data]]. Purchase data for the standalone ShoppingList module is located in the same folder as the Master Merchant data files in SavedVariables under the name ShoppingList.lua.}}
+{{note: Version 3.7.x will not alter the previous MMxxData files or any purchase data for the older standalone ShoppingList module. If you are concerned about loosing any data then please backup your MM file as shown under [[#|Backup Master Merchant Data]]. Purchase data for the standalone ShoppingList module is located in the same folder as the Master Merchant data files in SavedVariables under the name ShoppingList.lua.}}
 
 Remove the data file LibHistoire.lua from the SavedVariables folder. If you did not make a backup it is recommended you move the file to another location where you can find it. Depending on the results of this procedure you may want to restore it even though the primary focus is to use the older MMxxData files.
 
 Verify you have the most recent version of Master Merchant 3.0 installed.
 
-Log in and from the character selection screen click the dropdown for All Characters. Choose a character from the dropdown. This will be the character you log into when performing the procedure. Uncheck all the mods except what is shown in the section [[#|Which modules do I need to activate for MM 3.6.x]]
+Log in and from the character selection screen click the dropdown for All Characters. Choose a character from the dropdown. This will be the character you log into when performing the procedure. Uncheck all the mods except what is shown in the section [[#|Which modules do I need to activate for MM 3.7.x]]
 
 {{note: If you have Circonians Addon Selector installed you will be able to enable all your preferred mods after all your data is imported.}}
 
@@ -782,7 +782,7 @@ Press ESC and go to Settings then LibGuildStore to verify that the [[#|Sales Man
 
 Further down under LibGuildStore settings is a button to [[#|Import MM Data]] click it and wait for the data to be imported.
 
-Version 3.6.x was released on 09/03/21 you will not have any sales newer then Sep 3rd and because of that you will need to perform a [[#|Ten Day Scan]]. When complete you will have all the MM data that existed up until 09/03/21 and then all the sales for the last 10 days. All the data from the Ten Day Scan will be saved in LibHistoire. As long as you [[#|Update Your Guild History Each Day]] you will begin to accumulate data the same as you did with 3.5.x.
+Version 3.7.x was released on 09/03/21 you will not have any sales newer then Sep 3rd and because of that you will need to perform a [[#|Ten Day Scan]]. When complete you will have all the MM data that existed up until 09/03/21 and then all the sales for the last 10 days. All the data from the Ten Day Scan will be saved in LibHistoire. As long as you [[#|Update Your Guild History Each Day]] you will begin to accumulate data the same as you did with 3.5.x.
 
 {{note: At this point you can also [[#|Import ATT Data]] if that is available to you.}}
 

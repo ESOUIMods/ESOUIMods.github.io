@@ -58,9 +58,7 @@ Once the initial refresh is finished you can import sales from MM. This is to ac
 
 {{note: If you are experencing issues after trying the following steps you can review the section [[#|Alternate Upgrade Method]].}}
 
-== After the initital refresh finishes
-
-Once the game loads and you see <font class="yellow">LibGuildStore Refresh Finished</font> you need to get your first ten days of data to complete the initial setup. Review the section [[#|Ten Day Scan]].
+You will know when the refresh has finished when you see, <font class="yellow">LibGuildStore Refresh Finished</font> appear in the chat window. You will need to get your first ten days of data to complete the initial setup. Review the section [[#|Ten Day Scan]].
 
 ==  Have the dependencies changed
 

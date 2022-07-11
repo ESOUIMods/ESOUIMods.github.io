@@ -461,6 +461,10 @@ The Seller is located on the tooltip if you do not have Awesome Guild Store inst
 
 {{image:custom_deal_calc.jpg | custom_deal_calc}}
 
+=== Price To Chat Options
+
+{{image:price_to_chat.jpg | price_to_chat}}
+
 === Other Tooltip Options
 
 {{image:other_tooltip_options.jpg | other_tooltip_options}}

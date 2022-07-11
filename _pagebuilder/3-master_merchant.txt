@@ -461,9 +461,7 @@ The Seller is located on the tooltip if you do not have Awesome Guild Store inst
 
 {{image:custom_deal_calc.jpg | custom_deal_calc}}
 
-=== Price To Chat Options
-
-{{image:price_to_chat.jpg | price_to_chat}}
+{{note: There is no function to check if you set an incorrect value or not. Meaning if one value of Okay Deal Range is 25 percent and, the value above it for Reasonable Deal Range is 20 percent, nothing will tell you that's not going to work. You will need to keep the values in line yourself.}}
 
 === Other Tooltip Options
 
@@ -471,6 +469,10 @@ The Seller is located on the tooltip if you do not have Awesome Guild Store inst
 {{image-caption:tool_tip_examples.jpg | tool_tip_examples | Tool Tip Examples}}
 
 * <font class="tan">Level/Quality Selectors</font>: Adds Level and Quality selectors to the tooltip window. You can bring up the window by clicking a link in chat or when you right click an item and choose [[#|Popup Item Data]]. See the [[#|Level Quality Selectors]] section for example of the selectors that appear on the tooltip window.
+
+=== Price To Chat Options
+
+{{image:price_to_chat.jpg | price_to_chat}}
 
 === Inventory Options
 

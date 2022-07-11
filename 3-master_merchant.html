@@ -91,7 +91,7 @@ title: Master Merchant
 <p class="list-3">&bull;&nbsp; <a href="#OnScreenandChatAlert">3.13.1.3 On-Screen and Chat Alert</a></p>
 <p class="list-3">&bull;&nbsp; <a href="#CalculationDisplayOptions">3.13.1.4 Calculation Display Options</a></p>
 <p class="list-3">&bull;&nbsp; <a href="#GuildAccountfilter">3.13.1.5 Guild & Account filter</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#CustomDealCalculator">3.13.1.6 Custom Deal Calculator</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#DealCalculatorOptions">3.13.1.6 Deal Calculator Options</a></p>
 <p class="list-3">&bull;&nbsp; <a href="#OtherTooltipOptions">3.13.1.7 Other Tooltip Options</a></p>
 <p class="list-3">&bull;&nbsp; <a href="#PriceToChatOptions">3.13.1.8 Price To Chat Options</a></p>
 <p class="list-3">&bull;&nbsp; <a href="#InventoryOptions">3.13.1.9 Inventory Options</a></p>
@@ -188,13 +188,11 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/startup_refresh.jpg" alt="startup_refresh" %}</p>
 <p class="empty">&nbsp;</p>
-<p>There will be a long Refresh once you log in while all the sales from LibHistorie are imported. It took about one hour and eight minutes to import 1,110,000 sales. If you have about 1M records expect it to take an hour to import sales from LibHistorie depending on system specifications.</p>
+<p>once you log in the LibHistorie Refresh will start. You will know when the refresh has finished when you see, <font class="yellow">LibGuildStore Refresh Finished</font> appear in the chat window. You will need to get your first ten days of data to complete the initial setup. Review the section <a  href="#TenDayScan" >Ten Day Scan</a>.</p>
 <p class="empty">&nbsp;</p>
 <p>Once the initial refresh is finished you can import sales from MM. This is to accommodate people who may have more history in their MM data files then they do in LibHistorie. You can also import from ATT for the same reason. If you have been using ATT and have never used MM then you could have 30 days of data in your ATT data files. After you import your ATT data and do a Ten Day with LibHistorie you will have the most data possible. You can also import purchases from ATT and the old standalone ShoppingList for MM. There will be notifications to disable the old MMxxData modules, the old ShoppingList standalone module, and ATT. There is an option to disable the ATT notification if you prefer to use both MM and ATT at the same time.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"> If you are experencing issues after trying the following steps you can review the section <a  href="#AlternateUpgradeMethod" >Alternate Upgrade Method</a>.</p>
-<p class="empty">&nbsp;</p>
-<p>You will know when the refresh has finished when you see, <font class="yellow">LibGuildStore Refresh Finished</font> appear in the chat window. You will need to get your first ten days of data to complete the initial setup. Review the section <a  href="#TenDayScan" >Ten Day Scan</a>.</p>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="Havethedependencieschanged">3.2.5 - Have the dependencies changed</h2>
 <p class="empty">&nbsp;</p>
@@ -243,6 +241,8 @@ title: Master Merchant
 <h2 id="BonanzaUsingBeamMeUp">3.3.5 - Bonanza - Using BeamMeUp</h2>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/bonanza_window_beammeup.jpg" alt="bonanza_window_beammeup" %}</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> If you have BeamMeUp installed you can right click the Location column to travel to the zone the trader is located in with the usual BeamMeUp restrictions. If there are no players in the zone to jump to BeamMeUp will notify you and you may travel to a wayshrine that is not close to the trader.</p>
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="Outliers">3.4 - Outliers</h1>
 <p class="empty">&nbsp;</p>
@@ -587,11 +587,11 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>The Seller is located on the tooltip if you do not have Awesome Guild Store installed.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="CustomDealCalculator">3.13.1.6 - Custom Deal Calculator</h3>
+<h3 class="header3" id="DealCalculatorOptions">3.13.1.6 - Deal Calculator Options</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/custom_deal_calc.jpg" alt="custom_deal_calc" %}</p>
 <p class="empty">&nbsp;</p>
-<p class="note"> There is no function to check if you set an incorrect value or not. Meaning if one value of Okay Deal Range is 25 percent and, the value above it for Reasonable Deal Range is 20 percent, nothing will tell you that's not going to work. You will need to keep the values in line yourself.</p>
+<p class="note"> There is no function to check if you set an incorrect value or not. Meaning if Okay Deal Range is 25 percent and the Reasonable Deal Range is 20 percent, nothing will tell you that's not going to work. You will need to keep the values in order yourself from lowest to highest.</p>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="OtherTooltipOptions">3.13.1.7 - Other Tooltip Options</h3>
 <p class="empty">&nbsp;</p>

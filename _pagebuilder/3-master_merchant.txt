@@ -58,13 +58,11 @@ The MMxxData (MM00Data, MM01Data, etc.) modules are used for importing data only
 
 {{image:startup_refresh.jpg | startup_refresh}}
 
-There will be a long Refresh once you log in while all the sales from LibHistorie are imported. It took about one hour and eight minutes to import 1,110,000 sales. If you have about 1M records expect it to take an hour to import sales from LibHistorie depending on system specifications.
+once you log in the LibHistorie Refresh will start. You will know when the refresh has finished when you see, <font class="yellow">LibGuildStore Refresh Finished</font> appear in the chat window. You will need to get your first ten days of data to complete the initial setup. Review the section [[#|Ten Day Scan]].
 
 Once the initial refresh is finished you can import sales from MM. This is to accommodate people who may have more history in their MM data files then they do in LibHistorie. You can also import from ATT for the same reason. If you have been using ATT and have never used MM then you could have 30 days of data in your ATT data files. After you import your ATT data and do a Ten Day with LibHistorie you will have the most data possible. You can also import purchases from ATT and the old standalone ShoppingList for MM. There will be notifications to disable the old MMxxData modules, the old ShoppingList standalone module, and ATT. There is an option to disable the ATT notification if you prefer to use both MM and ATT at the same time.
 
 {{note: If you are experencing issues after trying the following steps you can review the section [[#|Alternate Upgrade Method]].}}
-
-You will know when the refresh has finished when you see, <font class="yellow">LibGuildStore Refresh Finished</font> appear in the chat window. You will need to get your first ten days of data to complete the initial setup. Review the section [[#|Ten Day Scan]].
 
 ==  Have the dependencies changed
 
@@ -113,6 +111,8 @@ With MM 3.7.x the Bonanza {{inline:24px | bonanza_icon.jpg | bonanza_icon}} icon
 ## Bonanza - Using BeamMeUp
 
 {{image:bonanza_window_beammeup.jpg | bonanza_window_beammeup}}
+
+{{note: If you have BeamMeUp installed you can right click the Location column to travel to the zone the trader is located in with the usual BeamMeUp restrictions. If there are no players in the zone to jump to BeamMeUp will notify you and you may travel to a wayshrine that is not close to the trader.}}
 
 = Outliers
 
@@ -457,11 +457,11 @@ You can add the Seller to the Guild & Account filter from the Bonanza window.
 
 The Seller is located on the tooltip if you do not have Awesome Guild Store installed.
 
-=== Custom Deal Calculator
+=== Deal Calculator Options
 
 {{image:custom_deal_calc.jpg | custom_deal_calc}}
 
-{{note: There is no function to check if you set an incorrect value or not. Meaning if one value of Okay Deal Range is 25 percent and, the value above it for Reasonable Deal Range is 20 percent, nothing will tell you that's not going to work. You will need to keep the values in line yourself.}}
+{{note: There is no function to check if you set an incorrect value or not. Meaning if Okay Deal Range is 25 percent and the Reasonable Deal Range is 20 percent, nothing will tell you that's not going to work. You will need to keep the values in order yourself from lowest to highest.}}
 
 === Other Tooltip Options
 

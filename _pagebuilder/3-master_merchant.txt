@@ -457,6 +457,10 @@ You can add the Seller to the Guild & Account filter from the Bonanza window.
 
 The Seller is located on the tooltip if you do not have Awesome Guild Store installed.
 
+=== Custom Deal Calculator
+
+{{image:custom_deal_calc.jpg | custom_deal_calc}}
+
 === Other Tooltip Options
 
 {{image:other_tooltip_options.jpg | other_tooltip_options}}

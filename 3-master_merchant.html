@@ -591,7 +591,17 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/custom_deal_calc.jpg" alt="custom_deal_calc" %}</p>
 <p class="empty">&nbsp;</p>
-<p class="note"> There is no function to check if you set an incorrect value or not. Meaning if Okay Deal Range is 25 percent and the Reasonable Deal Range is 20 percent, nothing will tell you that's not going to work. You will need to keep the values in order yourself from lowest to highest.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Deal Calculator Type</font>: Choose from MM Average, TTC Average, TTC Suggested, and the Bonanza Price.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Modify TTC Suggested Price by 25 percent</font>: When enabled will add 25 percent to the Suggested Price used for the Deal Calculator and the ToolTip. This is the same value as showin in the TTC Tooltip. See the <font class="tan">Modified Suggested Price</font> spoiler below for an example.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> There is no function to check if you set an incorrect value or not. Meaning if <font class="white">Okay Deal Range</font> is <font class="tan">25</font> percent and the <font class="ltgreen">Reasonable Deal Range</font> is <font class="tan">20</font> percent, nothing will tell you that's not going to work. You will need to keep the values in order yourself from lowest to highest.</p>
+<p class="empty">&nbsp;</p>
+<div id="modifiedsuggestedprice"></div>
+<input type="checkbox" id="spoiler2" />
+<label for="spoiler2">Modified Suggested Price</label>
+<div class="main-content">
+<p>{% include image.html file="img/example_ttc_suggested.jpg" alt="example_ttc_suggested" %}</p>
+</div>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="OtherTooltipOptions">3.13.1.7 - Other Tooltip Options</h3>
 <p class="empty">&nbsp;</p>
@@ -608,6 +618,8 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/inventory_options.jpg" alt="inventory_options" %}</p>
 <p class="empty">&nbsp;</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Modify TTC Suggested Price by 25 percent</font>: When enabled will add 25 percent to the Suggested Price shown in the inventory. This is the same value as showin in the TTC Tooltip. See the <font class="tan">Modified Suggested Price</font> <a  href="#modifiedsuggestedprice" >spoiler above</a> for an example.</p>
+<p class="empty">&nbsp;</p>
 <h3 class="header3" id="GuildStoreOptions">3.13.1.10 - Guild Store Options</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/guild_store_options.jpg" alt="guild_store_options" %}</p>
@@ -620,7 +632,6 @@ title: Master Merchant
 <p class="list-1">&bull;&nbsp; <font class="tan">Save Central Pricing Data</font>: When <font class="yellow">Enabled</font> all pricing data is stored and available to all guilds. When <font class="yellow">Disabled</font> all pricing data is stored separate for each guild.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Display Profit Filter</font>: Adds the Profit to the <font class="tan">Time</font> column for the guild store.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Display profit instead of margin</font>: Enabled shows the profit value in gold pieces, and disabled shows a percentage.</p>
-<p class="list-1">&bull;&nbsp; <font class="tan">Deal Calculator Type</font>: Choose from MM Average, TTC Average, TTC Suggested, and the Bonanza Price.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"> The Price Calculator will not show up with Awesome Guild Store. The Profit Filter is AGS only. Adding the profit margin or the total profit will be shown with or without AGS.</p>
 <p class="note"> Awesome Guild Store uses its own internal pricing routines and only uses the MM Pricing Data when there is not AGS information. Because of that it may appear that the MM pricing data is malfunctioning when it isn't.</p>
@@ -704,15 +715,15 @@ title: Master Merchant
 <p class="note"> While the selectors do not seem to be dependant on the sales in your Master Merchant Data, there may be unknown factors that prevent the selector from showing. The code is extremely old and dates back to the introduction of the Champion Points system.</p>
 <p class="empty">&nbsp;</p>
 <p><font class="yellow">Hat of a Mother's Sorrow</font></p>
-<input type="checkbox" id="spoiler2" />
-<label for="spoiler2">Hat of a Mother's Sorrow</label>
+<input type="checkbox" id="spoiler3" />
+<label for="spoiler3">Hat of a Mother's Sorrow</label>
 <div class="main-content">
 <p>{% include image.html file="img/ms_legendary.jpg" alt="ms_legendary" %}</p>
 </div>
 <p class="empty">&nbsp;</p>
 <p><font class="purple">Hat of a Mother's Sorrow</font></p>
-<input type="checkbox" id="spoiler3" />
-<label for="spoiler3">Hat of a Mother's Sorrow</label>
+<input type="checkbox" id="spoiler4" />
+<label for="spoiler4">Hat of a Mother's Sorrow</label>
 <div class="main-content">
 <p>{% include image.html file="img/ms_epic.jpg" alt="ms_epic" %}</p>
 </div>
@@ -826,8 +837,8 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>If you manually install your mods, of if you want to know which folders belong to Master merchant, click the spoiler.</p>
 <p class="empty">&nbsp;</p>
-<input type="checkbox" id="spoiler4" />
-<label for="spoiler4">Master Merchant Folders</label>
+<input type="checkbox" id="spoiler5" />
+<label for="spoiler5">Master Merchant Folders</label>
 <div class="main-content">
 <p>{% include image-caption.html file="img/mm_files_installed.jpg" alt="mm_files_installed" caption="To see a larger image, right click the image and choose View Image." %}</p>
 </div>
@@ -854,8 +865,8 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>I won't be showing how to install all the required libraries. If you need examples images of the two new libraries LibGuildRoster, and LibHistoire click the spoiler.</p>
 <p class="empty">&nbsp;</p>
-<input type="checkbox" id="spoiler5" />
-<label for="spoiler5">New Libraries</label>
+<input type="checkbox" id="spoiler6" />
+<label for="spoiler6">New Libraries</label>
 <div class="main-content">
 <p>{% include image-caption.html file="img/install_LibGuildRoster.jpg" alt="install_LibGuildRoster" caption="To see a larger image, right click the image and choose View Image." %}</p>
 <p class="empty">&nbsp;</p>

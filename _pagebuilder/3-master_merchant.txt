@@ -461,7 +461,15 @@ The Seller is located on the tooltip if you do not have Awesome Guild Store inst
 
 {{image:custom_deal_calc.jpg | custom_deal_calc}}
 
-{{note: There is no function to check if you set an incorrect value or not. Meaning if Okay Deal Range is 25 percent and the Reasonable Deal Range is 20 percent, nothing will tell you that's not going to work. You will need to keep the values in order yourself from lowest to highest.}}
+* <font class="tan">Deal Calculator Type</font>: Choose from MM Average, TTC Average, TTC Suggested, and the Bonanza Price.
+* <font class="tan">Modify TTC Suggested Price by 25 percent</font>: When enabled will add 25 percent to the Suggested Price used for the Deal Calculator and the ToolTip. This is the same value as showin in the TTC Tooltip. See the <font class="tan">Modified Suggested Price</font> spoiler below for an example.
+
+{{note: There is no function to check if you set an incorrect value or not. Meaning if <font class="white">Okay Deal Range</font> is <font class="tan">25</font> percent and the <font class="ltgreen">Reasonable Deal Range</font> is <font class="tan">20</font> percent, nothing will tell you that's not going to work. You will need to keep the values in order yourself from lowest to highest.}}
+
+{{nav:modifiedsuggestedprice}}
+[[sb:Spoiler2 | Modified Suggested Price]]
+{{image:example_ttc_suggested.jpg | example_ttc_suggested}}
+[[se:]]
 
 === Other Tooltip Options
 
@@ -478,6 +486,8 @@ The Seller is located on the tooltip if you do not have Awesome Guild Store inst
 
 {{image:inventory_options.jpg | inventory_options}}
 
+* <font class="tan">Modify TTC Suggested Price by 25 percent</font>: When enabled will add 25 percent to the Suggested Price shown in the inventory. This is the same value as showin in the TTC Tooltip. See the <font class="tan">Modified Suggested Price</font> [[#modifiedsuggestedprice | spoiler above]] for an example.
+
 === Guild Store Options
 
 {{image:guild_store_options.jpg | guild_store_options}}
@@ -490,7 +500,6 @@ The Seller is located on the tooltip if you do not have Awesome Guild Store inst
 * <font class="tan">Save Central Pricing Data</font>: When <font class="yellow">Enabled</font> all pricing data is stored and available to all guilds. When <font class="yellow">Disabled</font> all pricing data is stored separate for each guild.
 * <font class="tan">Display Profit Filter</font>: Adds the Profit to the <font class="tan">Time</font> column for the guild store.
 * <font class="tan">Display profit instead of margin</font>: Enabled shows the profit value in gold pieces, and disabled shows a percentage.
-* <font class="tan">Deal Calculator Type</font>: Choose from MM Average, TTC Average, TTC Suggested, and the Bonanza Price.
 
 {{note: The Price Calculator will not show up with Awesome Guild Store. The Profit Filter is AGS only. Adding the profit margin or the total profit will be shown with or without AGS.}}
 {{note: Awesome Guild Store uses its own internal pricing routines and only uses the MM Pricing Data when there is not AGS information. Because of that it may appear that the MM pricing data is malfunctioning when it isn't.}}
@@ -574,12 +583,12 @@ The images below show a <font class="purple">Hat of a Mother's Sorrow</font> and
 {{note: While the selectors do not seem to be dependant on the sales in your Master Merchant Data, there may be unknown factors that prevent the selector from showing. The code is extremely old and dates back to the introduction of the Champion Points system.}}
 
 <font class="yellow">Hat of a Mother's Sorrow</font>
-[[sb:Spoiler2 | Hat of a Mother's Sorrow]]
+[[sb:Spoiler3 | Hat of a Mother's Sorrow]]
 {{image:ms_legendary.jpg | ms_legendary}}
 [[se:]]
 
 <font class="purple">Hat of a Mother's Sorrow</font>
-[[sb:Spoiler3 | Hat of a Mother's Sorrow]]
+[[sb:Spoiler4 | Hat of a Mother's Sorrow]]
 {{image:ms_epic.jpg | ms_epic}}
 [[se:]]
 
@@ -692,7 +701,7 @@ Currently there is some confusion about how to uninstall Master merchant 2.x and
 
 If you manually install your mods, of if you want to know which folders belong to Master merchant, click the spoiler.
 
-[[sb:Spoiler4 | Master Merchant Folders]]
+[[sb:Spoiler5 | Master Merchant Folders]]
 {{image-caption:mm_files_installed.jpg | mm_files_installed | To see a larger image, right click the image and choose View Image.}}
 [[se:]]
 
@@ -718,7 +727,7 @@ Open Minion again and click Find More and search for <code>Master Merchant 3.0</
 
 I won't be showing how to install all the required libraries. If you need examples images of the two new libraries LibGuildRoster, and LibHistoire click the spoiler.
 
-[[sb:Spoiler5 | New Libraries]]
+[[sb:Spoiler6 | New Libraries]]
 {{image-caption:install_LibGuildRoster.jpg | install_LibGuildRoster | To see a larger image, right click the image and choose View Image.}}
 
 {{image-caption:install_LibHistoire.jpg | install_LibHistoire | To see a larger image, right click the image and choose View Image.}}

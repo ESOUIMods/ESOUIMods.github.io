@@ -395,7 +395,7 @@ If you have ever opened the Master Merchant window you have probably seen the li
 
 * <font class="tan">Default</font>: Default uses the amount of days for Default set in [[#|Calculation Display Options]]. However, if you open the Master Merchant window while holding a Focus key such as SHIFT, CTRL or both, then opening the window will use the amount of days you set for that Focus.
 * <font class="tan">30 Days</font>: 30 Days.
-* <font class="tan">30-60 Days</font>: 60 to 60 Days.
+* <font class="tan">30-60 Days</font>: 30 to 60 Days.
 * <font class="tan">60-90 Days</font>: 60 to 90 Days.
 * <font class="tan">Custom</font>: Custom uses the amount of days set in [[#|MasterMerchantWindowOptions]]
 

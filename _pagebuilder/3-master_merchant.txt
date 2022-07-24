@@ -62,7 +62,7 @@ once you log in the LibHistorie Refresh will start. You will know when the refre
 
 Once the initial refresh is finished you can import sales from MM. This is to accommodate people who may have more history in their MM data files then they do in LibHistorie. You can also import from ATT for the same reason. If you have been using ATT and have never used MM then you could have 30 days of data in your ATT data files. After you import your ATT data and do a Ten Day with LibHistorie you will have the most data possible. You can also import purchases from ATT and the old standalone ShoppingList for MM. There will be notifications to disable the old MMxxData modules, the old ShoppingList standalone module, and ATT. There is an option to disable the ATT notification if you prefer to use both MM and ATT at the same time.
 
-{{note: If you are experencing issues after trying the following steps you can review the section [[#|Alternate Upgrade Method]].}}
+{{note: If you are experiencing issues after trying the following steps you can review the section [[#|Alternate Upgrade Method]].}}
 
 ==  Have the dependencies changed
 
@@ -126,7 +126,7 @@ With only 5 sales the obvious outlier is not ignored.
 
 With 8 sales of the same item you can see that the obvious outlier is being ignored.
 
-{{note: When ignoring outliers with 6 or more sales that does not mean the highest and lowest sale will be ignored. The lowest and highest price may be well withing range and reasonable prices. The above example is a good exmaple to show the remaining 7 are well within tolerance of one another.}}
+{{note: When ignoring outliers with 6 or more sales that does not mean the highest and lowest sale will be ignored. The lowest and highest price may be well within range and reasonable prices. The above example is a good example to show the remaining 7 are well within tolerance of one another.}}
 
 == Controlling skewed Bonanza prices
 
@@ -260,7 +260,7 @@ In order to manually request sales data you have to choose a guild and select Al
 
 {{image:one_day_of_data.jpg | one_day_of_data}}
 
-Look at the above image and use the right scroll bar to see when you have requested one day of data. Busier guilds with more data will have more sales per day. To keep from processing too much at once request one day at a time and click the Rescan button.
+Look at the above image and use the right scroll bar to see when you have requested one day of data. Busier guilds with more data will have more sales per day. To keep from processing too much at once request one day at a time and click the Rescan button. 
 
 ## Rescan Button
 
@@ -389,6 +389,16 @@ If you have ever opened the Master Merchant window you have probably seen the li
 * <font class="tan">Count</font>: The number on the left is the number of <font class="tan">transactions</font>, while the number on the right is the number of <font class="tan">items</font>. For example @TradingDude had <font class="yellow">10 Dreugh Wax</font> <font class="tan">transactions</font> and sold <font class="yellow">100 Dreugh wax</font> <font class="tan">total</font>.
 * <font class="tan">Percent</font>: This shows what percent of total guild sales or purchases each member is responsible for.
 
+== Guild Sales Date Filter Ranges
+
+{{image:filter_time_frames.jpg | time_frames}}
+
+* <font class="tan">Default</font>: Default uses the amount of days for Default set in [[#|Calculation Display Options]]. However, if you open the Master Merchant window while holding a Focus key such as SHIFT, CTRL or both, then opening the window will use the amount of days you set for that Focus.
+* <font class="tan">30 Days</font>: 30 Days.
+* <font class="tan">30-60 Days</font>: 60 to 60 Days.
+* <font class="tan">60-90 Days</font>: 60 to 90 Days.
+* <font class="tan">Custom</font>: Custom uses the amount of days set in [[#|MasterMerchantWindowOptions]]
+
 == Date Ranges
 
 {{image:time_frames.jpg | time_frames}}
@@ -411,6 +421,7 @@ There are several date ranges you can choose from. <font class="tan">This Week</
 * <font class="tan">Open With Store</font>: Whether or not to open the Master Merchant Window when you interact with a guild store.
 * <font class="tan">Show Full Sale Price</font>: Show the full price of the sale rather then the amount after the store cut is deducted.
 * <font class="tan">Window Font</font>: The font for the Master Merchant Window. You may have other fonts if you have mods that use LibMediaProvider like one of my other mods [[https://www.esoui.com/downloads/info2558-AdvancedNameplatesGreymoor.html | Advanced Nameplates]].
+* <font class="tan">Custom Filter Timeframe</font>: The amount of days to use for the Custom dropdown for the [[#|Guild Sales Date Filter Ranges]]
 
 {{note: If you sold a <font class="purple">Crafting Motif 63: Dremora Bows</font> for <font class="yellow">11,000</font> {{inline:20px | currency_gold.png | currency_gold}} the master merchant window will show what you received in the mail which would be <font class="yellow">10,230</font> {{inline:20px | currency_gold.png | currency_gold}}.}}
 
@@ -441,6 +452,10 @@ There are several date ranges you can choose from. <font class="tan">This Week</
 
 {{image:tool_tip_settings.jpg | tool_tip_settings}}
 
+<font class="red">WARNING</font>: All sales have already been sorted by the Custom Timeframe at startup. See documentation for more information.
+
+{{note: <font class="tan">Custom Timeframe</font> requires a reload because all of the sales have been placed into all the date ranges as shown in [[#|Date Ranges]] and therefore changing the value means that all the sales would have to be calculated again. This process is difficult to begin with so to avoid any miscalculations (attempting to clear all sales and stats variables) a reload is required.}}
+
 === Guild & Account filter
 
 {{image:add_seller_to_filter.jpg | add_seller_to_filter}}
@@ -466,7 +481,7 @@ The Seller is located on the tooltip if you do not have Awesome Guild Store inst
 {{image:custom_deal_calc.jpg | custom_deal_calc}}
 
 * <font class="tan">Deal Calculator Type</font>: Choose from MM Average, TTC Average, TTC Suggested, and the Bonanza Price.
-* <font class="tan">Modify TTC Suggested Price by 25 percent</font>: When enabled will add 25 percent to the Suggested Price used for the Deal Calculator and the ToolTip. This is the same value as showin in the TTC Tooltip. See the <font class="tan">Modified Suggested Price</font> spoiler below for an example.
+* <font class="tan">Modify TTC Suggested Price by 25 percent</font>: When enabled will add 25 percent to the Suggested Price used for the Deal Calculator and the ToolTip. This is the same value as shown in the TTC Tooltip. See the <font class="tan">Modified Suggested Price</font> spoiler below for an example.
 
 {{note: There is no function to check if you set an incorrect value or not. Meaning if <font class="white">Okay Deal Range</font> is <font class="tan">25</font> percent and the <font class="ltgreen">Reasonable Deal Range</font> is <font class="tan">20</font> percent, nothing will tell you that's not going to work. You will need to keep the values in order yourself from lowest to highest.}}
 
@@ -490,7 +505,7 @@ The Seller is located on the tooltip if you do not have Awesome Guild Store inst
 
 {{image:inventory_options.jpg | inventory_options}}
 
-* <font class="tan">Modify TTC Suggested Price by 25 percent</font>: When enabled will add 25 percent to the Suggested Price shown in the inventory. This is the same value as showin in the TTC Tooltip. See the <font class="tan">Modified Suggested Price</font> [[#modifiedsuggestedprice | spoiler above]] for an example.
+* <font class="tan">Modify TTC Suggested Price by 25 percent</font>: When enabled will add 25 percent to the Suggested Price shown in the inventory. This is the same value as shown in the TTC Tooltip. See the <font class="tan">Modified Suggested Price</font> [[#modifiedsuggestedprice | spoiler above]] for an example.
 
 === Guild Store Options
 
@@ -546,7 +561,7 @@ The Seller is located on the tooltip if you do not have Awesome Guild Store inst
 
 {{image:import_att_data.jpg | import_att_data}}
 
-=== Import ATT Purchaces
+=== Import ATT Purchases
 
 {{image:import_att_purchaces.jpg | import_att_purchaces}}
 
@@ -823,7 +838,7 @@ At this point you will have to log out to the character screen and enable your p
 
 {{note: If they are enabled, then disable the add-on ShoppingList, and each of the Master Merchant Data File MM00Data through Master Merchant Data File MM16Data files in the Libraries section to decrease load times}}. 
 
-This will leave you with a gap in your sales from 09/03/21 until now. If that gap is too much for you then you can try to import your old LibHistoire information. To do that you will need to exit the game, backup your LibGuildStore data and your current LibHistoire data. Once you restore the copy of your old LibHistoire dala that you moved to a safe place attempt to [[#|Refresh LibHistoire]] again. If you do not have better results then exit the game, restore your LibGuildStore and LibHistoire backups and you won't be able to use the old LibHistoire data.
+This will leave you with a gap in your sales from 09/03/21 until now. If that gap is too much for you then you can try to import your old LibHistoire information. To do that you will need to exit the game, backup your LibGuildStore data and your current LibHistoire data. Once you restore the copy of your old LibHistoire data that you moved to a safe place attempt to [[#|Refresh LibHistoire]] again. If you do not have better results then exit the game, restore your LibGuildStore and LibHistoire backups and you won't be able to use the old LibHistoire data.
 
 == Version History
 

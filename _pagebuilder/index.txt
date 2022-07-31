@@ -9,33 +9,39 @@ Do you need to know how many Potatoes you have? Does your guild have potato auct
 
 [[ https://www.esoui.com/downloads/info2617-TaterTotal.html#info | TaterTotal]]
 
+{{note: This is a cool mod but it's a bit of an inside joke.}}
+
 OMG how can you not have this!
+
+== All of my ESOUI Mods
+
+[[https://www.esoui.com/downloads/author-4973.html | My ESOUI Mods]]
+
+These days I maintain quite a few mods. I am probably most proud of Master Merchant 3.0 although I have much more I would like to optimize.
 
 == All my updated mods
 
-[[https://github.com/ESOUIMods | ESOUI Mods]]
+[[https://github.com/ESOUIMods | ESOUI Mods - GitHub Link]]
 
 I have removed the LibStub requirements so they run without it. There is no need for LibStub because the functionality is now built into the game and some authors are simply to stubborn to remove it. Not having embedded libraries and removing LibStub really does help the mods run properly. I had one mod using Custom Compass Pins as an embedded library and when I updated it to the author's latest version it caused an error. Authors for ESO UI mods make the same kinds of mistakes that Nexus mod authors make in regards to optimization of the mods.
 
 == Useful beginner and returning player video
 
-{% include youtube.html id="8DoJcroV6DI" %}
+{% include youtube.html id="QgcWP_O5L8Q" %}
 
 This is a good walkthrough of the game changes if you are a returning player. It is also a walkthrough of all the different aspects of the game. It is long but if you just bring it up on your phone and listen while you play you can think to yourself, "Yeah I know that, yeah I knew that, wait what was that?" and rewind it a bit for things you may not have known. It is a good refresher for returning players.
 
 == Chapters, Zone DLC, Dungeon DLC
 
-This is up to date as of __12/08/2021__
+This is up to date as of __7/30/2022__
 
-To play and be in the guild or do anything you don't need anything but the base game. You will be restricted from doing anything with the chapters Morrowind, Summerset, Elsweyr, Greymoor, Blackwood. If you do not have the chapters you can not access the content for those areas.
+To play and be in the guild or do anything you don't need anything but the base game. If you do not own Elder Scrolls Online then the base game is [[https://account.elderscrollsonline.com/store/product/eso_highisle_edition | High Isle]] and includes the base game, new High Isle Chapter, and all previous Chapters Morrowind, Summerset, Elsweyr, Greymoor, and Blackwood.
 
 [[ https://en.uesp.net/wiki/Online:Chapters | Chapters]]
 
-Pay close attention to the UESP Wiki section for [[https://en.uesp.net/wiki/Online:Chapters#Bundles | bundles]]. For some reason I don't see any information from UESP about the Greymoor and Blackwood bundles at the time of this update. However, if you visit the ESO site for [[https://www.elderscrollsonline.com/en-us/updates/chapter/blackwood | Blackwood]] since that is the latest chapter then review what you get with the different bundles. If you purchase the upgrade it will cost less but only provides you with the Blackwood chapter. 
+Pay close attention to the UESP Wiki section for [[https://en.uesp.net/wiki/Online:Chapters#Bundles | bundles]]. For some reason I don't see any information from UESP about the Greymoor, Blackwood, and High Isle bundles at the time of this update. However, if you visit the ESO site for [[https://www.elderscrollsonline.com/en-us/updates/chapter/highisle | High Isle]] since that is the latest chapter then review what you get with the different bundles. If you purchase the upgrade it will cost less but only provides you with the Blackwood chapter. 
 
-If you are a returning player and you want more for you money then you should purchase either the base Blackwood collection or the Collectors edition since they come with all the previous chapters.
-
-{{note:Greymoor is the current chapter and Blackwood has not been released at the time this was updated.}}
+If you are a returning player and you want more for you money then you should purchase either the base High Isle collection or the Collectors edition since they come with all the previous chapters.
 
 == Let's talk Zone and Dungeon DLC.
 
@@ -61,13 +67,13 @@ The Deadlands - Zone DLC (Quests and Story)
 
 == What to buy
 
-[[ https://www.elderscrollsonline.com/en-us/updates/chapter/blackwood | ESO Blackwood Edition - Bethesda link]]
+[[https://account.elderscrollsonline.com/store/product/eso_highisle_edition | High Isle- Bethesda link]]
 
-I don't know that they offer Morrowind, Summerset, and Elsweyr chapters ALL separately. Unless you have all of the previous chapters, then I recommend the Blackwood Digital Collector's Edition. If you have purchased all of the previous chapters and want to save some money then buy the upgrade instead.
+I don't know that they offer Morrowind, Summerset, and Elsweyr chapters separately anymore. If you have purchased all of the previous chapters and want to save some money then buy the upgrade instead.
 
 Once you have that to have access to all content except dungeons you have two choices.
 
-1) Get ESO Plus. It comes with 1650 Crowns (Currency for in game micro purchases) and access to all the Zone and Dungeon DLC. There are other benefits see the ESO Plus section below on this page. 2) Get the Blackwood CE to be up to date with all the chapters then for DLC Guilds and Glory, Dragonhold, Murkmire, and Clockwork City. This means you have all the content with no ESO Plus subscription. You can play any time off and on and never spend money on a subscription you are not using.
+1) Get ESO Plus. It comes with 1650 Crowns (Currency for in game micro purchases) and access to all the Zone and Dungeon DLC. There are other benefits see the ESO Plus section below on this page. 2) Get the High Isle. The Collector's Edition is optional because it visual enhancements, pets, or mounts. Then for DLC get Guilds and Glory, Dragonhold, Murkmire, Clockwork City, Deadlands, and Markarth. This means you have all the extra Zones with no ESO Plus subscription. You can play any time off and on and never spend money on a subscription you are not using.
 
 == ESO Plus
 

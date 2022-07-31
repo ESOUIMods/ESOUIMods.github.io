@@ -772,7 +772,7 @@ If you have LibVotansAddonList installed then it will look close to the base gam
 
 == Unintentional ZOS Bug
 
-{{image-thumbnail:savedvarsapostrophe.jpg | savedvarsapostrophe}}
+{{image_thumbnail:savedvarsapostrophe.jpg | savedvarsapostrophe}}
 
 Unfortunately from time to time ZOS introduces or reintroduces a bug in the saved vars where the apostrophe is converted to HTML code. Which will mean your sales may or may not display properly. Which is a game bug and you are out of luck until or unless they fix it.
 

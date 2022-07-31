@@ -319,7 +319,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     reImageOnly = re.compile(r'{{image:(.+?)}}')
     reImageCaption = re.compile(r'{{image-caption:(.+?)}}')
     reImageCaptionUrl = re.compile(r'{{image-cap-url:(.+?)}}')
-    reImageThumbnail = re.compile(r'{{image-thumbnail:(.+?)}}')
+    reImageThumbnail = re.compile(r'{{image_thumbnail:(.+?)}}')
     # --Exclude from Paragraphs
     # reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)|(^\<a\s{1,3}href.+?\>)|(^\<a\s{1,3}(class=".+?)?href.+?\>)|(^\<img\s{1,3}src.+?\>)|^\u00A9|^\<strong|^\<[bB]\>|(^{% include image)')
     reHtmlNotPar = re.compile(r'\<h\d[>]?|<hr>|{{CONTENTS|class="drkbtn"|<[\/]?div>|<div id=|<div class=|<[\/]?iframe|<[\/]?table|<[\/]?tr|<[\/]?td|<[\/]?thead|<[\/]?tbody|<[\/]?th')

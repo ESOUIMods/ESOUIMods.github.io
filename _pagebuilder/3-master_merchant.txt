@@ -756,7 +756,7 @@ Once exported the data is saved in <code>MasterMerchant.lua</code> in your <code
 
 {{image:export_purchases.jpg | export_purchases}}
 
-You would use <code>/mm purchases</code> to export your purchases from traders. Only the time dropdown effects the ecport for purchases.
+You would use <code>/mm purchases</code> to export your purchases from traders. Only the time dropdown effects the export for purchases.
 
 Once exported the data is saved in <code>MasterMerchant.lua</code> in your <code>SavedVariables</code> folder.
 

@@ -8,15 +8,47 @@ The site is undergoing changes to the images for 3.7.x so the screen shots, icon
 == Contents
 {{CONTENTS=3}}
 
-{{image:Bonanza.png | Bonanza}}
+= Features
 
-Shop all of Tamriel with [[https://www.esoui.com/downloads/info2143-BeamMeUp-TeleporterFastTravel.html | Beam Me Up]] and Bonanza. Master Merchant is not just for high end traders anymore. If you are shopping for the best deal you can find it in the Bonanza window.
+Master Merchant offers additional features for the Traders of trading guilds. However, the Bonanza module can be used by anyone looking for deals in Tamriel.
+
+## For Players not in a Trading Guild:
+Use Bonanza to search for deals. It creates a virtual Auction House of sorts. Searches remain in the Bonanza window for 24 hours. An average price is generated depending on how many of each item you find. However, you will want to filter for items in the Bonanza window to seek out the cheapest price for items found.
+## For Trading Guilds:
+* See who your Guild’s top sellers are and what they are selling
+* See your total Guild Sales and Sales Tax income
+## For Trade Guild Members:
+* View your personal sales
+* View items listed for sale
+* View your canceled items
+* View purchased items
+* View items listed at kiosks you have visited (Bonanza)
+* View Guild Sales by other members
+* Show sales by total price or price each
+* View a ranked report of items sold by other Guild Members
+* Deal Finder flags items at kiosks
+* Autofil a price check into chat to share with other members
+* MM automatically saves the last price of any item you list for sale (Awesome Guild Store overrides this feature but provides a similar function)
+* View suggested MM price when listing items for sale
+* Search any item from any view and filter for specific items
+* Toggle to ignore outlier prices (Can be defeated, view documentation)
+* Set custom time ranges for SHIFT, CTRL or both.
+* Custom Deal Calculator settings available
+* Toggle for additional Guild Roster Columns
+* Show condensed TTC information in tooltip (When using it is recommended that you toggle TTC default tooltip off)
+* Replace inventory prices with MM average price (Will effect performance)
+* Stack Price calculator (Awesome Guild Store overrides this feature but provides a similar function)
+* Add sellers to the Guild & Account filter from Graph and some MM UI Views
+* Import ATT sales
+* Import old MM Sales prior to 06/01/2021
 
 = 3.7.x Sorting Writs by voucher count
 
 {{note: /lgs clean, which is /LGS CLEAN but use lowercase.}}
 
 To reorganize Writs by voucher after upgrading to 3.7.02 you need to use the slash command shown above. After the process is complete you should reload your UI.
+
+{{note: This only applies if you are upgrading from 3.7.01 or earlier.}}
 
 = Setup Master Merchant 3.0
 
@@ -82,9 +114,7 @@ After Master Merchant 3.7.x LibGuildStore is where all the Guild Store related d
 
 {{image:all_libguildstore_modules.jpg | all_libguildstore_modules}}
 
-= Shopping List and Bonanza!
-
-## Shopping List
+= Shopping List
 
 {{image:shopping_list_view.jpg | shopping_list_view}}
 
@@ -94,7 +124,11 @@ Adds a new icon allowing you to view purchases you make from guild stores.
 
 {{note: The by old Shopping List extension by MildFlavour is not longer used and can be disabled after you import your purchases.}}
 
-## Bonanza!
+= Bonanza!
+
+{{image:Bonanza.png | Bonanza}}
+
+Shop all of Tamriel with [[https://www.esoui.com/downloads/info2143-BeamMeUp-TeleporterFastTravel.html | Beam Me Up]] and Bonanza. Master Merchant is not just for high end traders anymore. If you are shopping for the best deal you can find it in the Bonanza window.
 
 {{image:bonanza_window.jpg | bonanza_window}}
 
@@ -128,7 +162,7 @@ With 8 sales of the same item you can see that the obvious outlier is being igno
 
 {{note: When ignoring outliers with 6 or more sales that does not mean the highest and lowest sale will be ignored. The lowest and highest price may be well within range and reasonable prices. The above example is a good example to show the remaining 7 are well within tolerance of one another.}}
 
-== Controlling skewed Bonanza prices
+== Controlling skewed prices
 
 {{note: People will intentionally try to sell items much higher then they are worth. Use the resources available rather then squint at the scatter plot.}}
 
@@ -697,6 +731,42 @@ Once exported the data is saved in <code>MasterMerchant.lua</code> in your <code
 ["YourGuildName"] = 
 {
 [1] = "@Ashjunkie&@Lcs_Flores&|H0:item:46129:30:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0|h|h&200&1630085615&false&4000&Real Guild Best Guild&Quicksilver Ingot&rr01 white normal materials",
+},
+</pre>
+
+== Export Personal Sales
+
+{{image:export_personal_sales.jpg | export_sales}}
+
+You would use <code>/mm personal #</code> to export your personal sales. As an example the screen shot shows a 2 for the 2nd guild in your list, therefore the syntax would be <code>/mm personal 2</code>.
+
+Once exported the data is saved in <code>MasterMerchant.lua</code> in your <code>SavedVariables</code> folder.
+
+<pre>
+["PERSONALSALES"] = 
+{
+["version"] = 1,
+["GuildName"] = 
+{
+[1] = "Seller&Buyer&Guild&Quantity&ItemDesc&Price&Timestamp"
+},
+</pre>
+
+== Export Purchases
+
+{{image:export_purchases.jpg | export_purchases}}
+
+You would use <code>/mm purchases</code> to export your purchases from traders. Only the time dropdown effects the ecport for purchases.
+
+Once exported the data is saved in <code>MasterMerchant.lua</code> in your <code>SavedVariables</code> folder.
+
+<pre>
+["PURCHASES"] = 
+{
+["version"] = 1,
+["data"] = 
+{
+[1] = "Seller&Buyer&Guild&Quantity&ItemDesc&Price&Timestamp"
 },
 </pre>
 

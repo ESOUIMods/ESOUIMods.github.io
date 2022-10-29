@@ -27,6 +27,7 @@ Use Bonanza to search for deals. It creates a virtual Auction House of sorts. Se
 * Show sales by total price or price each
 * View a ranked report of items sold by other Guild Members
 * Deal Finder flags items at kiosks
+   * Use TTC, MM, or Bonanza prices
 * Autofil a price check into chat to share with other members
 * MM automatically saves the last price of any item you list for sale (Awesome Guild Store overrides this feature but provides a similar function)
 * View suggested MM price when listing items for sale
@@ -36,11 +37,11 @@ Use Bonanza to search for deals. It creates a virtual Auction House of sorts. Se
 * Custom Deal Calculator settings available
 * Toggle for additional Guild Roster Columns
 * Show condensed TTC information in tooltip (When using it is recommended that you toggle TTC default tooltip off)
-* Replace inventory prices with MM average price (Will effect performance)
+* Replace inventory prices with  TTC or MM average price (Will effect performance)
 * Stack Price calculator (Awesome Guild Store overrides this feature but provides a similar function)
 * Add sellers to the Guild & Account filter from Graph and some MM UI Views
 * Import ATT sales
-* Import old MM Sales prior to 06/01/2021
+* Import old MM Sales prior to 06/01/2021 (Version 3.6.46)
 
 = 3.7.x Sorting Writs by voucher count
 

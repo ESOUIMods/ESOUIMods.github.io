@@ -28,6 +28,7 @@ Use Bonanza to search for deals. It creates a virtual Auction House of sorts. Se
 * View a ranked report of items sold by other Guild Members
 * Deal Finder flags items at kiosks
    * Use TTC, MM, or Bonanza prices
+* Craft cost added to tooltip
 * Autofil a price check into chat to share with other members
 * MM automatically saves the last price of any item you list for sale (Awesome Guild Store overrides this feature but provides a similar function)
 * View suggested MM price when listing items for sale

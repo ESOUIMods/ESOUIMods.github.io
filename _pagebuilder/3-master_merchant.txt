@@ -28,8 +28,9 @@ Use Bonanza to search for deals. It creates a virtual Auction House of sorts. Se
 * View a ranked report of items sold by other Guild Members
 * Deal Finder flags items at kiosks
    * Use TTC, MM, or Bonanza prices
+* Writs are separated by voucher count
 * Craft cost added to tooltip
-* Autofil a price check into chat to share with other members
+* Autofill a price check into chat to share with other members
 * MM automatically saves the last price of any item you list for sale (Awesome Guild Store overrides this feature but provides a similar function)
 * View suggested MM price when listing items for sale
 * Search any item from any view and filter for specific items
@@ -39,20 +40,12 @@ Use Bonanza to search for deals. It creates a virtual Auction House of sorts. Se
 * Toggle for additional Guild Roster Columns
 * Show condensed TTC information in tooltip
    * When using this option it is recommended that you toggle the TTC default tooltip off
-* Replace inventory prices with  TTC or MM average price (Will affect performance)
+* Replace inventory prices with TTC or MM average price (Will affect performance)
 * Stack Price calculator (Awesome Guild Store overrides this feature but provides a similar function)
 * Add sellers to the Guild & Account filter from Graph and some MM UI Views
 * Import ATT sales
 * Import old MM Sales prior to 06/01/2021 (Version 3.6.46)
-   * prior to version 3.6.46
-
-= 3.7.x Sorting Writs by voucher count
-
-{{note: /lgs clean, which is /LGS CLEAN but use lowercase.}}
-
-To reorganize Writs by voucher after upgrading to 3.7.02 you need to use the slash command shown above. After the process is complete you should reload your UI.
-
-{{note: This only applies if you are upgrading from 3.7.01 or earlier.}}
+   * Prior to version 3.6.46
 
 = Setup Master Merchant 3.0
 
@@ -684,6 +677,14 @@ You should not try to calculate your sales yourself. Each sale is saved with the
 
 = Slash commands
 
+== 3.7.x Sorting Writs by voucher count
+
+{{note: /lgs clean, which is /LGS CLEAN but use lowercase.}}
+
+To reorganize Writs by voucher after upgrading to 3.7.02 you need to use the slash command shown above. After the process is complete you should reload your UI.
+
+{{note: This only applies if you are upgrading from 3.7.01 or earlier.}}
+
 == Export Sales Report
 
 {{image:mm_export_screen.jpg | mm_export_screen}}
@@ -914,7 +915,7 @@ At this point you will have to log out to the character screen and enable your p
 
 This will leave you with a gap in your sales from 09/03/21 until now. If that gap is too much for you then you can try to import your old LibHistoire information. To do that you will need to exit the game, backup your LibGuildStore data and your current LibHistoire data. Once you restore the copy of your old LibHistoire data that you moved to a safe place attempt to [[#|Refresh LibHistoire]] again. If you do not have better results then exit the game, restore your LibGuildStore and LibHistoire backups and you won't be able to use the old LibHistoire data.
 
-== Version History
+= Version History
 
 Apparently for version 2.2.0 there was an experimental turbo mode added to MM. From the change log it appears that this was removed by request from Zenimax. However, even I noticed when you tried to download 2.2.1 which had turbo mode removed, you received a file named <font class="purple">Master Merchant 2.2.0.zip</font>. If you tried to engage turbo mode it was still available even if it didn't work as expected.
 

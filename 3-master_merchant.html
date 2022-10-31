@@ -1090,7 +1090,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>After starting a new library <a  href="https://github.com/ESOUIMods/LibGuildHistoryCache" >LibGuildHistoryCache</a> I observed that the cache mod would see some new sales. Usually there were only a few sales maybe 1 or 2 and occasionally less then 10. The cache mod would update showing that the guild history events were not duplicates but MM would not see them as new sales.</p>
 <p class="empty">&nbsp;</p>
-<p>One other calculation made was to try and get the first entry in the guild history and the last. This was used to attempt to determine whether or not to scan from the start of the guild history array, or the end. Whether or not you have 1, 100, or more then 1000 events the first event will always be the same. All guild history events are appended onto the end of the list.</p>
+<p>One other calculation previous versions of MM made was to try and get the first entry in the guild history and the last. This was used to attempt to determine whether or not to scan from the start of the guild history array, or the end. Whether or not you have 1, 100, or more then 1000 events the first event will always be the same. All guild history events are appended onto the end of the list.</p>
 <p class="empty">&nbsp;</p>
 <p>For reasons like these MM no longer uses a background scan as it attempted to scan from a specific point in time and loop over the guild history events.</p>
 <p class="empty">&nbsp;</p>

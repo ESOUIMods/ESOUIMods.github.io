@@ -19,9 +19,9 @@ Use Bonanza to search for deals. It creates a virtual Auction House of sorts. Se
 * See your total Guild Sales and Sales Tax income
 ## For Trade Guild Members:
 * View your personal sales
-* View items listed for sale
+* View items you have listed for sale
 * View your canceled items
-* View purchased items
+* View items purchased from any kiosk (Shopping List)
 * View items listed at kiosks you have visited (Bonanza)
 * View Guild Sales by other members
 * Show sales by total price or price each
@@ -37,12 +37,14 @@ Use Bonanza to search for deals. It creates a virtual Auction House of sorts. Se
 * Set custom time ranges for SHIFT, CTRL or both.
 * Custom Deal Calculator settings available
 * Toggle for additional Guild Roster Columns
-* Show condensed TTC information in tooltip (When using it is recommended that you toggle TTC default tooltip off)
-* Replace inventory prices with  TTC or MM average price (Will effect performance)
+* Show condensed TTC information in tooltip
+   * When using this option it is recommended that you toggle the TTC default tooltip off
+* Replace inventory prices with  TTC or MM average price (Will affect performance)
 * Stack Price calculator (Awesome Guild Store overrides this feature but provides a similar function)
 * Add sellers to the Guild & Account filter from Graph and some MM UI Views
 * Import ATT sales
 * Import old MM Sales prior to 06/01/2021 (Version 3.6.46)
+   * prior to version 3.6.46
 
 = 3.7.x Sorting Writs by voucher count
 
@@ -176,7 +178,7 @@ While viewing a graph as shown above find out who is skewing the price and add t
 
 Once the seller is added to the [[#|Guild & Account filter]] you can see that the graph is much more useful.
 
-{{note: The absence of the Bonanza price is not what corrected the graph. The Bonanza average changed because the seller of the item listed for 3000g is being ignored. Other listings of the same item for 200g would not have the same drastic effect as the listing for 3000g.}}
+{{note: The absence of the Bonanza price is not what corrected the graph. The Bonanza average changed because the seller of the item listed for 3000g is being ignored. Other listings of the same item for 200g would not have the same drastic affect as the listing for 3000g.}}
 
 = MM Price vs TTC vs Bonanza
 
@@ -758,7 +760,7 @@ Once exported the data is saved in <code>MasterMerchant.lua</code> in your <code
 
 {{image:export_purchases.jpg | export_purchases}}
 
-You would use <code>/mm purchases</code> to export your purchases from traders. Only the time dropdown effects the export for purchases.
+You would use <code>/mm purchases</code> to export your purchases from traders. Only the time dropdown affects the export for purchases.
 
 Once exported the data is saved in <code>MasterMerchant.lua</code> in your <code>SavedVariables</code> folder.
 

@@ -571,10 +571,11 @@ The Seller is located on the tooltip if you do not have Awesome Guild Store inst
 {{image:lgs_sales_management.jpg | lgs_sales_management}}
 
 * <font class="tan">Use Sales History Size Only</font>: This will ignore the minimum and maximum count for sales. If there are 4698 sales of an item with the day range selected for retaining data, then the sales will not be trimmed.
+* <font class="tan">Minimal Indexing</font>: Does not add search words for items. It only adds the player search word for displaying personal sales. Searching in the Master merchant window is still possible but will take extra time.
 * <font class="tan">Sales History Size</font>: The days range to retain data.
 * <font class="tan">Min Item Count</font>: The minimum count of sales for a specific item before the days range is considered. If you select 90 days to retain data, but you have seen only 1 sale and the only recorded sale is 120 days old it will not be trimmed.
 * <font class="tan">Max Item Count</font>: The maximum count of sales for a specific item before the days range is considered. If you select 90 days to retain data, and you choose 1000, then the oldest sale once the threshold is reached will be trimmed. Meaning if you have 1001 sales for an item, 1 will be trimmed and 1000 will remain.
-* <font class="tan">Minimal Indexing</font>: Does not add search words for items. It only adds the player search word for displaying personal sales. Searching in the Master merchant window is still possible but will take extra time.
+* <font class="tan">Min Sales Interval</font>: When this value is greater then 0 the Min item count and the sales interval (in Days) will be considered first before truncating. If the interval is set to 10 days and the sale is less then 10 days old the sale will be retained the same as a sale below the Min Item Count.
 
 === Data Management Options
 

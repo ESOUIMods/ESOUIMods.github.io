@@ -573,7 +573,9 @@ The Seller is located on the tooltip if you do not have Awesome Guild Store inst
 === MM Debug Options
 
 {{image:debug_options.jpg | debug_options}}
+{{image-caption:extra_debug_text.jpg | extra_debug_text | Example of extra debug text.}}
 
+* <font class="tan">Activate Custom Debug Logging</font>: The Custom Debug information is really not intended for normal use and should be left disabled.
 * <font class="tan">Disable ATT Warning</font>: If you enjoy using both MM and ATT together then please disable the warning that ATT files are active with this toggle.
 
 == LibGuildStore

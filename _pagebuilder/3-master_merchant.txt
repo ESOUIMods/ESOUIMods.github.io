@@ -59,7 +59,7 @@ Use Bonanza to search for deals. It creates a virtual Auction House of sorts. Se
 
 = Setup Master Merchant 3.0
 
-== In a Nutshell
+If you are installing Master Merchant for the first time please follow these steps. If you do not wait to see that the Refresh is complete in the chat window and if you do not perform a [[#|Ten Day Scan]] then you won't have the initial Ten Days of sales data from the server to start using to price items.
 
 * Install Master Merchant 3.0
 * Log In
@@ -75,19 +75,45 @@ Use Bonanza to search for deals. It creates a virtual Auction House of sorts. Se
 * LibExecutionQueue
 * LibGuildStore
 * LibGuildStore Data File GS00Data, LibGuildStore Data File GS01Data, etc.
+* LibAddonMenu
+* LibMediaProvider
+* LibGuildRoster
+* LibHistoire
+* LibAsync
+* LibDebugLogger
+* LibAlchemy
+* LibPrice
 
-## Importing older Master Merchant Data
+== What to disable when MM is not needed
+
+If you are with a trial group or doing daily writs you may not want MM running in the background to reduce loading times. If you do make sure to disable all of the following.
+
+* Master Merchant 3.7.x
+* LibExecutionQueue
+* LibGuildStore
+* LibGuildStore Data File GS00Data, LibGuildStore Data File GS01Data, etc.
+
+[[sb:Spoiler1 | When Deactivating ]]
+{{image:mm_installed_activated.jpg | mm_installed_activated}}
+{{image:all_libguildstore_modules.jpg | all_libguildstore_modules}}
+[[se:]]
+
+== Importing older Master Merchant Data
+
+{{note: <font class="yellow">Caution</font>, the more data you import the longer MM will need to load.}}
 
 Download [[https://www.esoui.com/downloads/info3334-ImportersforMasterMerchant3.0.html | Importers for Master Merchant 3.0]] which includes all the Master Merchant Data File modules MM00Data, Master Merchant Data File MM01Data, etc. and ShoppingList.
 
 You can import older Master Merchant Data if you have backups for those who like being the library of congress of data. Just know that it will increase load times and the game will take longer to log out as well while saving the data.
+
+{{note: If you are experiencing issues after trying the following steps you can review the section [[#|Alternate Upgrade Method]].}}
 
 ### MMxxData modules needed for importing
 
 The MMxxData (MM00Data, MM01Data, etc.) modules are used for importing data only. After your import your data, these old modules should be deactivated.
 
 {{nav:disablemmmodules}}
-[[sb:Spoiler1 | Disable MM Modules]]
+[[sb:Spoiler2 | Disable MM Modules]]
 {{image:disable_mm.jpg | disable_mm}}
 [[se:]]
 
@@ -101,25 +127,17 @@ once you log in the LibHistorie Refresh will start. You will know when the refre
 
 Once the initial refresh is finished you can import sales from MM. This is to accommodate people who may have more history in their MM data files then they do in LibHistorie. You can also import from ATT for the same reason. If you have been using ATT and have never used MM then you could have 30 days of data in your ATT data files. After you import your ATT data and do a Ten Day with LibHistorie you will have the most data possible. You can also import purchases from ATT and the old standalone ShoppingList for MM. There will be notifications to disable the old MMxxData modules, the old ShoppingList standalone module, and ATT. There is an option to disable the ATT notification if you prefer to use both MM and ATT at the same time.
 
-{{note: If you are experiencing issues after trying the following steps you can review the section [[#|Alternate Upgrade Method]].}}
+= Troubleshooting
 
-==  Have the dependencies changed
+## Game freezes after clicking Rescan button
 
-{{note: LibGuildStore is provided with MM and is not a separate Minion download.}}
+{{image:rescan_button.jpg | rescan_button}}
 
-After Master Merchant 3.7.x LibGuildStore is where all the Guild Store related data is being kept. NA and EU information is now stored separately. This also allows importing from MM if you have more MM data then you do LibHistoire data. You would not want to overload MM but you could import any backups you have or backup files from other friends or guild members if you copy them to the SavedVariables folder.
-
-{{note: <font class="yellow">Caution</font>, the more data you import the longer MM will need to load.}}
-
-== Which modules do I need to activate for MM 3.7.x
-
-### Master Merchant
-
-{{image:mm_shopping_list.jpg | mm_shopping_list}}
-
-### All the LibGuildStore Modules
-
-{{image:all_libguildstore_modules.jpg | all_libguildstore_modules}}
+- Log out to the Character Selection Screen
+- Go to SavedVariables usually <code>.\Documents\Elder Scrolls Online\live\SavedVariables</code>
+- Rename <font class="yellow">LibHistoire.lua</font> to <font class="green">LibHistoire_bak.lua</font>. <font class="orange">DO NOT delete it!</font>
+- Log in and perform a [[#|Ten Day Scan]]
+- Then [[#|Refresh LibHistoire]]
 
 = Shopping List
 
@@ -305,7 +323,7 @@ Look at the above image and use the right scroll bar to see when you have reques
 
 ## Rescan Button
 
-{{image:ten_day_scan_refresh.jpg | ten_day_scan_refresh}}
+{{image:ten_day_scan_rescan.jpg | ten_day_scan_rescan}}
 
 If you are familiar with MM 2.5.x the Rescan button is the equivalent of the old <code>/mm missing</code>. When you click Rescan LibHistoire will scan all the data loaded into memory so far and skip any duplicate events already saved in its data cache.
 
@@ -527,7 +545,7 @@ The Seller is located on the tooltip if you do not have Awesome Guild Store inst
 {{note: There is no function to check if you set an incorrect value or not. Meaning if <font class="white">Okay Deal Range</font> is <font class="tan">25</font> percent and the <font class="ltgreen">Reasonable Deal Range</font> is <font class="tan">20</font> percent, nothing will tell you that's not going to work. You will need to keep the values in order yourself from lowest to highest.}}
 
 {{nav:modifiedsuggestedprice}}
-[[sb:Spoiler2 | Modified Suggested Price]]
+[[sb:Spoiler3 | Modified Suggested Price]]
 {{image:example_ttc_suggested.jpg | example_ttc_suggested}}
 [[se:]]
 
@@ -648,12 +666,12 @@ The images below show a <font class="purple">Hat of a Mother's Sorrow</font> and
 {{note: While the selectors do not seem to be dependant on the sales in your Master Merchant Data, there may be unknown factors that prevent the selector from showing. The code is extremely old and dates back to the introduction of the Champion Points system.}}
 
 <font class="yellow">Hat of a Mother's Sorrow</font>
-[[sb:Spoiler3 | Hat of a Mother's Sorrow]]
+[[sb:Spoiler4 | Hat of a Mother's Sorrow]]
 {{image:ms_legendary.jpg | ms_legendary}}
 [[se:]]
 
 <font class="purple">Hat of a Mother's Sorrow</font>
-[[sb:Spoiler4 | Hat of a Mother's Sorrow]]
+[[sb:Spoiler5 | Hat of a Mother's Sorrow]]
 {{image:ms_epic.jpg | ms_epic}}
 [[se:]]
 
@@ -810,7 +828,7 @@ Currently there is some confusion about how to uninstall Master merchant 2.x and
 
 If you manually install your mods, of if you want to know which folders belong to Master merchant, click the spoiler.
 
-[[sb:Spoiler5 | Master Merchant Folders]]
+[[sb:Spoiler6 | Master Merchant Folders]]
 {{image-caption:mm_files_installed.jpg | mm_files_installed | To see a larger image, right click the image and choose View Image.}}
 [[se:]]
 
@@ -836,7 +854,7 @@ Open Minion again and click Find More and search for <code>Master Merchant 3.0</
 
 I won't be showing how to install all the required libraries. If you need examples images of the two new libraries LibGuildRoster, and LibHistoire click the spoiler.
 
-[[sb:Spoiler6 | New Libraries]]
+[[sb:Spoiler7 | New Libraries]]
 {{image-caption:install_LibGuildRoster.jpg | install_LibGuildRoster | To see a larger image, right click the image and choose View Image.}}
 
 {{image-caption:install_LibHistoire.jpg | install_LibHistoire | To see a larger image, right click the image and choose View Image.}}

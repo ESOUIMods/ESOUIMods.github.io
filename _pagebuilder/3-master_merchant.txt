@@ -133,7 +133,7 @@ Once the initial refresh is finished you can import sales from MM. This is to ac
 
 {{image:rescan_button.jpg | rescan_button}}
 
-- Log out to the Character Selection Screen
+- Close the game entirely, do not log in when at the password screen, or at least be at the Character Selection Screen
 - Go to SavedVariables usually <code>.\Documents\Elder Scrolls Online\live\SavedVariables</code>
 - Rename <font class="yellow">LibHistoire.lua</font> to <font class="green">LibHistoire_bak.lua</font>. <font class="orange">DO NOT delete it!</font>
 - Log in and perform a [[#|Ten Day Scan]]
@@ -365,7 +365,7 @@ You could have any amount of time that has not been linked with your Guild Histo
 
 The above screen shot indicates that there is 28 days and 19 hours worth of missing time from unlinked events. When this happens you can only fix it by doing a [[#|Ten Day Scan]].
 
-To start request one day of data as shown in the screen shot for [[#|Request only a few days at a time]]. After you see one day of data then click the small chain link above sales as shown below.
+To start request one day of data as shown in the screen shot [[#Request one day at a time | to request one day at a time]]. After you see one day of data then click the small chain link above sales as shown below.
 
 {{image:chain_link.jpg | chain_link}}
 
@@ -456,7 +456,7 @@ If you have ever opened the Master Merchant window you have probably seen the li
 * <font class="tan">30 Days</font>: 30 Days.
 * <font class="tan">30-60 Days</font>: 30 to 60 Days.
 * <font class="tan">60-90 Days</font>: 60 to 90 Days.
-* <font class="tan">Custom</font>: Custom uses the amount of days set in [[#|MasterMerchantWindowOptions]]
+* <font class="tan">Custom</font>: Custom uses the amount of days set in [[#MasterMerchantWindowOptions | Master Merchant Window Options]]
 
 == Date Ranges
 
@@ -924,7 +924,7 @@ Remove the data file LibHistoire.lua from the SavedVariables folder. If you did 
 
 Verify you have the most recent version of Master Merchant 3.0 installed.
 
-Log in and from the character selection screen click the dropdown for All Characters. Choose a character from the dropdown. This will be the character you log into when performing the procedure. Uncheck all the mods except what is shown in the section [[#|Which modules do I need to activate for MM 3.7.x]]
+Log in and from the character selection screen click the dropdown for All Characters. Choose a character from the dropdown. This will be the character you log into when performing the procedure. Reduce the amount of mods running by unchecking only [[#What is required | what is required]].
 
 {{note: If you have Circonians Addon Selector installed you will be able to enable all your preferred mods after all your data is imported.}}
 

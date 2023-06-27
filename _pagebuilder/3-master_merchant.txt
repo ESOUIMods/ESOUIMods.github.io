@@ -5,6 +5,12 @@
 
 The site is undergoing changes to the images for 3.7.x so the screen shots, icons, settings  menus, and menu description may not resemble 3.5.30.
 
+= A bit of light reading
+
+{{image:harry_potter_daniel_radcliffe.gif | harry_potter_daniel_radcliffe }}
+
+Master Merchant is pretty complex. While I try to keep it somewhat simple, you do need to read carefully as this is not just a bit of light reading.
+
 == Contents
 {{CONTENTS=3}}
 
@@ -133,11 +139,55 @@ Once the initial refresh is finished you can import sales from MM. This is to ac
 
 {{image:rescan_button.jpg | rescan_button}}
 
-- Close the game entirely, do not log in when at the password screen, or at least be at the Character Selection Screen
+- Close the game entirely, do not log in if you are at the password screen, or at least be at the Character Selection Screen.
 - Go to SavedVariables usually <code>.\Documents\Elder Scrolls Online\live\SavedVariables</code>
 - Rename <font class="yellow">LibHistoire.lua</font> to <font class="green">LibHistoire_bak.lua</font>. <font class="orange">DO NOT delete it!</font>
 - Log in and perform a [[#|Ten Day Scan]]
 - Then [[#|Refresh LibHistoire]]
+
+## Lua errors
+
+There are times when the game for some reason will corrupt GS16Data.lua and when that happens ESO will reset the file. Once that happens nothing about Master Merchant will work with the existing data. You won't be able to open the Master Merchant UI to view sales data or if you hover over the dots on the Graph you will have errors similar to what is shown below.
+
+<pre>
+user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:458: operator .. is not supported for string .. nil
+user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:573: operator .. is not supported for string .. nil
+user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:970: operator .. is not supported for string .. nil
+</pre>
+
+While in game go to the LibGuildStore settings menu and look for the [[#Reset Data | Reset LibGuildStore ]].
+
+After you click the <font class="ltblue">Reset LibGuildStore Data</font> button the UI will reload and Master Merchant will get information from the LibHistoire cache. After the UI reloads about every minute you will see that Master Merchant is still refreshing data. There will be an approximated time remaining that will go up and down because it's not perfect.
+
+Do not log out, do not do writs, update LibHistorie data, or do anything else until the refresh is complete. Do nothing except maybe move enough or type in guild chat so you don't go AFK.
+
+## OneDrive
+
+OneDrive is great for many reasons however, for ESO it can create a situation where the GS16Data.lua and GS17Data.lua files are not synced properly. I would think this would affect any of the GSxxData.lua saved variable files because of their size. They may not syncronize quickly with some internet users because of upload and download speeds being limited. To resolve this you need to change settings so that OneDrive will no longer try to backup your Documents folder where all your Addons and SavedVariables file are located.
+
+{{note: I will admit I do not have Windows 10 or Windows 11 so this is peiced together from helping someone.}}
+
+{{image:onedrive_cloud_icon.jpg | onedrive_cloud_icon}}
+
+First open the OneDrive settings by clicking the Cloud icon for OneDrive.
+
+{{image:manage_backup_button.jpg | manage_backup_button}}
+
+Click the Manage Backup button.
+
+{{image:onedrive_folders_to_backup.jpg | onedrive_folders_to_backup}}
+
+As shown in the above screen shot all three folders are being monitored by OneDrive. You want to disable the backup for the Documents folder.
+
+{{image:onedrive_documents_folders_disabled.jpg | onedrive_documents_folders_disabled}}
+
+Now OneDrive will no longer try to backup the Documents folder.
+
+{{image:onedrive_folders_where_to_backup.jpg | onedrive_folders_where_to_backup}}
+
+If prompted, chose <font class="yellow">This Computer Only</font> so that OneDrive will not attempt to backup your Documents folder.
+
+{{note: You do not have to pay for OneDrive or update to get more space. If you have any issues pausing or stoping OneDrive so that you can change the settings just wait longer until it pauses or stops. It may take a while but it will happen.}}
 
 = Shopping List
 

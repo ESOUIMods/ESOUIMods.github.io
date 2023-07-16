@@ -286,19 +286,20 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <h2 id="Luaerrors">3.3.2 - Lua errors</h2>
 <p class="empty">&nbsp;</p>
-<p>There are times when the game for some reason will corrupt GS16Data.lua and when that happens ESO will reset the file. Once that happens nothing about Master Merchant will work with the existing data. You won't be able to open the Master Merchant UI to view sales data or if you hover over the dots on the Graph you will have errors similar to what is shown below.</p>
+<p>There are times when the game for some reason will corrupt GS16Data.lua or GS17Data.lua and when that happens ESO will reset the file. Once that happens nothing about Master Merchant will work with the existing data. You won't be able to open the Master Merchant UI to view sales data or if you hover over the dots on the Graph you will have errors similar to what is shown below.</p>
 <p class="empty">&nbsp;</p>
 <pre>
 user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:458: operator .. is not supported for string .. nil
 user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:573: operator .. is not supported for string .. nil
 user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:970: operator .. is not supported for string .. nil
+user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a nil value
 </pre>
 <p class="empty">&nbsp;</p>
-<p>While in game go to the LibGuildStore settings menu and look for the <a  href="#ResetData" >Reset LibGuildStore</a>.</p>
+<p>While in game go to the LibGuildStore settings menu and look for the heading <a  href="#ResetData" >Reset LibGuildStore</a>.</p>
 <p class="empty">&nbsp;</p>
 <p>After you click the <font class="ltblue">Reset LibGuildStore Data</font> button the UI will reload and Master Merchant will get information from the LibHistoire cache. After the UI reloads about every minute you will see that Master Merchant is still refreshing data. There will be an approximated time remaining that will go up and down because it's not perfect.</p>
 <p class="empty">&nbsp;</p>
-<p>Do not log out, do not do writs, update LibHistorie data, or do anything else until the refresh is complete. Do nothing except maybe move enough or type in guild chat so you don't go AFK.</p>
+<p class="note"> Do not log out, do writs, open a guild trader, update LibHistorie data, or do anything else until the refresh is complete. Do nothing except maybe move enough or type in guild chat so you don't go AFK.</p>
 <p class="empty">&nbsp;</p>
 <h2 id="OneDrive">3.3.3 - OneDrive</h2>
 <p class="empty">&nbsp;</p>

@@ -252,6 +252,10 @@ Once the seller is added to the [[#|Guild & Account filter]] you can see that th
 
 {{note: The absence of the Bonanza price is not what corrected the graph. The Bonanza average changed because the seller of the item listed for 3000g is being ignored. Other listings of the same item for 200g would not have the same drastic affect as the listing for 3000g.}}
 
+{{image:bonanza_guild_account_filter.jpg | bonanza_guild_account_filter}}
+
+For convenience you can add sellers to the Guild & Account filter from the Bonanza menu.
+
 = MM Price vs TTC vs Bonanza
 
 {{note: There are several examples because I feel Bonanza is new and it may be hard to understand the various ways to use it. I highly suggest reading all of the following sections.}}
@@ -606,6 +610,15 @@ The Seller is located on the tooltip if you do not have Awesome Guild Store inst
 {{image-caption:tool_tip_examples.jpg | tool_tip_examples | Tool Tip Examples}}
 
 * <font class="tan">Level/Quality Selectors</font>: Adds Level and Quality selectors to the tooltip window. You can bring up the window by clicking a link in chat or when you right click an item and choose [[#|Popup Item Data]]. See the [[#|Level Quality Selectors]] section for example of the selectors that appear on the tooltip window.
+
+=== Outlier Options
+
+{{image:outlier_options.jpg | outlier_options}}
+
+* <font class="tan">Trim by percentile only</font>: When enabled you can specify the outer percentile to trim from the sales data without using additional outlier removal methods.
+* <font class="tan">Percentile</font>: Specify the outer percentile 1 to 15 percent.
+* <font class="tan">Ignore Outlier Prices</font>: When enabled MM will use fairly standard methods to remove outliers.
+* <font class="tan">Enable Aggressive Restrictions</font>: When enabled additional restrictions will be used when trimming outliers.
 
 === Price To Chat Options
 

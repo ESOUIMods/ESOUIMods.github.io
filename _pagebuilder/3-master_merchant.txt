@@ -135,6 +135,14 @@ Once the initial refresh is finished you can import sales from MM. This is to ac
 
 = Troubleshooting
 
+## Duplicate Indexes Detected
+
+{{image:duplicate_indexes_detected.jpg | duplicate_indexes_detected}}
+
+If this notification appears then you either need to cancel and restore a backup or allow Master Merchant to reset all its internal data files and refresh sales data from LibHistorie.
+
+{{note: Your LibHistorie cache will not be reset by accepting to reset Master Merchant data files.}}
+
 ## Game freezes after clicking Rescan button
 
 {{image:rescan_button.jpg | rescan_button}}

@@ -53,9 +53,10 @@ title: Master Merchant
 <p class="list-3">&bull;&nbsp; <a href="#MMxxDatamodulesneededforimporting">3.2.3.1 MMxxData modules needed for importing</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Whattoexpectafteryouloginforthefirsttime">3.2.4 What to expect after you log in for the first time</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Troubleshooting">3.3 Troubleshooting</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#GamefreezesafterclickingRescanbutton">3.3.1 Game freezes after clicking Rescan button</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Luaerrors">3.3.2 Lua errors</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#OneDrive">3.3.3 OneDrive</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#DuplicateIndexesDetected">3.3.1 Duplicate Indexes Detected</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#GamefreezesafterclickingRescanbutton">3.3.2 Game freezes after clicking Rescan button</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Luaerrors">3.3.3 Lua errors</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#OneDrive">3.3.4 OneDrive</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#ShoppingList">3.4 Shopping List</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Bonanza">3.5 Bonanza!</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#BonanzaNameFilter">3.5.1 Bonanza Name Filter</a></p>
@@ -275,7 +276,15 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="Troubleshooting">3.3 - Troubleshooting</h1>
 <p class="empty">&nbsp;</p>
-<h2 id="GamefreezesafterclickingRescanbutton">3.3.1 - Game freezes after clicking Rescan button</h2>
+<h2 id="DuplicateIndexesDetected">3.3.1 - Duplicate Indexes Detected</h2>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/duplicate_indexes_detected.jpg" alt="duplicate_indexes_detected" %}</p>
+<p class="empty">&nbsp;</p>
+<p>If this notification appears then you either need to cancel and restore a backup or allow Master Merchant to reset all its internal data files and refresh sales data from LibHistorie.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> Your LibHistorie cache will not be reset by accepting to reset Master Merchant data files.</p>
+<p class="empty">&nbsp;</p>
+<h2 id="GamefreezesafterclickingRescanbutton">3.3.2 - Game freezes after clicking Rescan button</h2>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/rescan_button.jpg" alt="rescan_button" %}</p>
 <p class="empty">&nbsp;</p>
@@ -285,7 +294,7 @@ title: Master Merchant
 <p class="list-1">-&nbsp; Log in and perform a <a  href="#TenDayScan" >Ten Day Scan</a></p>
 <p class="list-1">-&nbsp; Then <a  href="#RefreshLibHistoire" >Refresh LibHistoire</a></p>
 <p class="empty">&nbsp;</p>
-<h2 id="Luaerrors">3.3.2 - Lua errors</h2>
+<h2 id="Luaerrors">3.3.3 - Lua errors</h2>
 <p class="empty">&nbsp;</p>
 <p>There are times when the game for some reason will corrupt GS16Data.lua or GS17Data.lua and when that happens ESO will reset the file. Once that happens nothing about Master Merchant will work with the existing data. You won't be able to open the Master Merchant UI to view sales data or if you hover over the dots on the Graph you will have errors similar to what is shown below.</p>
 <p class="empty">&nbsp;</p>
@@ -302,7 +311,7 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <p class="note"> Do not log out, do writs, open a guild trader, update LibHistorie data, or do anything else until the refresh is complete. Do nothing except maybe move enough or type in guild chat so you don't go AFK.</p>
 <p class="empty">&nbsp;</p>
-<h2 id="OneDrive">3.3.3 - OneDrive</h2>
+<h2 id="OneDrive">3.3.4 - OneDrive</h2>
 <p class="empty">&nbsp;</p>
 <p>OneDrive is great for many reasons however, for ESO it can create a situation where the GS16Data.lua and GS17Data.lua files are not synced properly. I would think this would affect any of the GSxxData.lua saved variable files because of their size. They may not syncronize quickly with some internet users because of upload and download speeds being limited. To resolve this you need to change settings so that OneDrive will no longer try to backup your Documents folder where all your Addons and SavedVariables file are located.</p>
 <p class="empty">&nbsp;</p>

@@ -681,6 +681,8 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <p>There are several date ranges you can choose from. <font class="tan">This Week</font>, <font class="tan">Last Week</font> and <font class="tan">Prior Week</font> start from the ZOS trader flip for the current <a  href="#SalesWeek" >Sales Week</a>. However, the last option is customizable under the Master Merchant settings under <a  href="#CalculationDisplayOptions" >Calculation Display Options</a>.</p>
 <p class="empty">&nbsp;</p>
+<p class="note"> Days are calculated from midnight and weeks are calculated from each kiosk flip on Tuesday. For example the option <font class="tan">7 Days</font> would be the last 7 days of sales while <font class="tan">Last Week</font> will be from the previous kiosk flip to the most recent kiosk flip. </p>
+<p class="empty">&nbsp;</p>
 <h1 class="header1" id="StatisticsWindow">3.15 - Statistics Window</h1>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/statistics_window.jpg" alt="statistics_window" %}</p>
@@ -934,7 +936,7 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="SalesWeek">3.17.5 - Sales Week</h2>
 <p class="empty">&nbsp;</p>
-<p>As of  August 11 2020 the kiosk flip is now <a  href="https://forums.elderscrollsonline.com/en/discussion/540142/updates-to-guild-trader-swap-times/p1" >every Tuesday</a>. All sales totals are calculated from the time indicated by ZOS.</p>
+<p>As of  August 11 2020 the kiosk flip is now <a  href="https://forums.elderscrollsonline.com/en/discussion/540142/updates-to-guild-trader-swap-times/p1" >every Tuesday</a>. All sales totals are calculated from the time indicated by ZOS. Refer to the <a  href="#DateRanges" >date ranges</a> section for information on the timeframes.</p>
 <p class="empty">&nbsp;</p>
 <p>You should not try to calculate your sales yourself. Each sale is saved with the exact time stamp the sale occurred. All sales even a few seconds prior to the kiosk flip would not show if you selected to see sales from This Week.</p>
 <p class="empty">&nbsp;</p>

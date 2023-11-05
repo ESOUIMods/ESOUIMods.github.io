@@ -63,6 +63,18 @@ Use Bonanza to search for deals. It creates a virtual Auction House of sorts. Se
 
 {{note: Craft cost will be affected by your skill in Chemistry, Chef, and Brewer.}}
 
+= Major Changes with Update 41!
+
+With Update 41 all of your previously stored LibHistoire sales data will be deleted. You can read more about the changes in [[ https://www.esoui.com/forums/showthread.php?t=10724 | this thread]]
+
+{{note: None of your Master Merchant sales data <font class="yellow">**will not be deleted or reset**</font> once U41 is released.}}
+
+Zenimax will store 30 days of sales history locally to help lessen server load from requests for sales data. There will be options to keep data from guilds you are no longer in and there will be an option to retain more sales data.  However, both will negatively affect load times.
+
+Sirinsidiator, the author of LibHistoire urges users to **Export** their data. What that means for users is to have their sales data up to date [[ #UpdateYourGuildHistoryEachDay | by updating your sales data each day ]] before U41. Because the cached sales data for LibHistoire will be deleted you will not be able to restore a backup of your previous LibHistoire files and then refresh the data after U41 is released.
+
+Because of this the only way to ensure you do not loose any data is to [[#Backup LibGuildStore Data | backup your LibGuildStore data.]]
+
 = Setup Master Merchant 3.0
 
 If you are installing Master Merchant for the first time please follow these steps. If you do not wait to see that the Refresh is complete in the chat window and if you do not perform a [[#|Ten Day Scan]] then you won't have the initial Ten Days of sales data from the server to start using to price items.

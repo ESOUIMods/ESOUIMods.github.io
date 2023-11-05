@@ -67,7 +67,7 @@ Use Bonanza to search for deals. It creates a virtual Auction House of sorts. Se
 
 With Update 41 all of your previously stored LibHistoire sales data will be deleted. You can read more about the changes in [[ https://www.esoui.com/forums/showthread.php?t=10724 | this thread]]
 
-{{note: None of your Master Merchant sales data <font class="yellow">**will not be deleted or reset**</font> once U41 is released.}}
+{{note: Your Master Merchant sales data <font class="yellow">**will not be deleted or reset**</font> once U41 is released.}}
 
 Zenimax will store 30 days of sales history locally to help lessen server load from requests for sales data. There will be options to keep data from guilds you are no longer in and there will be an option to retain more sales data.  However, both will negatively affect load times.
 

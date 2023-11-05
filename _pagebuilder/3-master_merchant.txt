@@ -539,7 +539,7 @@ If you have ever opened the Master Merchant window you have probably seen the li
 
 There are several date ranges you can choose from. <font class="tan">This Week</font>, <font class="tan">Last Week</font> and <font class="tan">Prior Week</font> start from the ZOS trader flip for the current [[#|Sales Week]]. However, the last option is customizable under the Master Merchant settings under [[#|Calculation Display Options]].
 
-{{note: Days are calculated from midnight and weeks are calculated from each kiosk flip on Tuesday. For example the option <font class="tan">7 Days</font> would be the last 7 days of sales while <font class="tan">Last Week</font> will be from the previous kiosk flip to the most recent kiosk flip. }}
+{{note: Days are calculated from midnight and weeks are calculated from each kiosk flip on Tuesday. For example the option <font class="tan">7 Days</font> would be the last 7 days of sales while <font class="tan">Last Week</font> will be from the previous kiosk flip to the most recent kiosk flip. Both of which will be a Tuesday.}}
 
 = Statistics Window
 

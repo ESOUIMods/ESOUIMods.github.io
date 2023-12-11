@@ -56,8 +56,9 @@ title: Master Merchant
 <p class="list-1">&bull;&nbsp; <a href="#Troubleshooting">3.4 Troubleshooting</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#DuplicateIndexesDetected">3.4.1 Duplicate Indexes Detected</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#GamefreezesafterclickingRescanbutton">3.4.2 Game freezes after clicking Rescan button</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Luaerrors">3.4.3 Lua errors</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#OneDrive">3.4.4 OneDrive</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#LibGuildStorelua309attempttoindexanilvalue">3.4.3 LibGuildStore.lua:309: attempt to index a nil value</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Luaerrors">3.4.4 Lua errors</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#OneDrive">3.4.5 OneDrive</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#ShoppingList">3.5 Shopping List</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Bonanza">3.6 Bonanza!</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#BonanzaNameFilter">3.6.1 Bonanza Name Filter</a></p>
@@ -307,7 +308,17 @@ title: Master Merchant
 <p class="list-1">-&nbsp; Log in and perform a <a  href="#TenDayScan" >Ten Day Scan</a></p>
 <p class="list-1">-&nbsp; Then <a  href="#RefreshLibHistoire" >Refresh LibHistoire</a></p>
 <p class="empty">&nbsp;</p>
-<h2 id="Luaerrors">3.4.3 - Lua errors</h2>
+<h2 id="LibGuildStorelua309attempttoindexanilvalue">3.4.3 - LibGuildStore.lua:309: attempt to index a nil value</h2>
+<p class="empty">&nbsp;</p>
+<pre>
+user:/AddOns/MasterMerchant/Libs/LibGuildStore/LibGuildStore.lua:309: attempt to index a nil value
+</pre>
+<p class="empty">&nbsp;</p>
+<p>If you have the above error then that means you deactivated Master Merchant but not the rest of the required modules. You need to deactivate all of the GSxxData modules and LibGuildStore. This is mentioned in <a  href="#WhattodisablewhenMMisnotneeded" >What to disable when MM is not needed</a></p>
+<p class="empty">&nbsp;</p>
+<p class="note"> If you intend to use Master Merchant and you have the above error then you need to update or activate the required modules for Master Merchant.</p>
+<p class="empty">&nbsp;</p>
+<h2 id="Luaerrors">3.4.4 - Lua errors</h2>
 <p class="empty">&nbsp;</p>
 <p>There are times when the game for some reason will corrupt GS16Data.lua or GS17Data.lua and when that happens ESO will reset the file. Once that happens nothing about Master Merchant will work with the existing data. You won't be able to open the Master Merchant UI to view sales data or if you hover over the dots on the Graph you will have errors similar to what is shown below.</p>
 <p class="empty">&nbsp;</p>
@@ -324,7 +335,7 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <p class="note"> Do not log out, do writs, open a guild trader, update LibHistorie data, or do anything else until the refresh is complete. Do nothing except maybe move enough or type in guild chat so you don't go AFK.</p>
 <p class="empty">&nbsp;</p>
-<h2 id="OneDrive">3.4.4 - OneDrive</h2>
+<h2 id="OneDrive">3.4.5 - OneDrive</h2>
 <p class="empty">&nbsp;</p>
 <p>OneDrive is great for many reasons however, for ESO it can create a situation where the GS16Data.lua and GS17Data.lua files are not synced properly. I would think this would affect any of the GSxxData.lua saved variable files because of their size. They may not syncronize quickly with some internet users because of upload and download speeds being limited. To resolve this you need to change settings so that OneDrive will no longer try to backup your Documents folder where all your Addons and SavedVariables file are located.</p>
 <p class="empty">&nbsp;</p>

@@ -165,6 +165,16 @@ If this notification appears then you either need to cancel and restore a backup
 - Log in and perform a [[#|Ten Day Scan]]
 - Then [[#|Refresh LibHistoire]]
 
+## LibGuildStore.lua:309: attempt to index a nil value
+
+<pre>
+user:/AddOns/MasterMerchant/Libs/LibGuildStore/LibGuildStore.lua:309: attempt to index a nil value
+</pre>
+
+If you have the above error then that means you deactivated Master Merchant but not the rest of the required modules. You need to deactivate all of the GSxxData modules and LibGuildStore. This is mentioned in [[#| What to disable when MM is not needed]]
+
+{{note: If you intend to use Master Merchant and you have the above error then you need to update or activate the required modules for Master Merchant.}}
+
 ## Lua errors
 
 There are times when the game for some reason will corrupt GS16Data.lua or GS17Data.lua and when that happens ESO will reset the file. Once that happens nothing about Master Merchant will work with the existing data. You won't be able to open the Master Merchant UI to view sales data or if you hover over the dots on the Graph you will have errors similar to what is shown below.

@@ -636,9 +636,13 @@ The Seller is located on the tooltip if you do not have Awesome Guild Store inst
 {{image:example_ttc_suggested.jpg | example_ttc_suggested}}
 [[se:]]
 
-=== Other Tooltip Options
+=== Tooltips
 
-{{image:other_tooltip_options.jpg | other_tooltip_options}}
+{{image:tooltips.jpg | tooltips}}
+
+=== Tooltip Options
+
+{{image:tooltip_options.jpg | tooltip_options}}
 {{image-caption:tool_tip_examples.jpg | tool_tip_examples | Tool Tip Examples}}
 
 * <font class="tan">Level/Quality Selectors</font>: Adds Level and Quality selectors to the tooltip window. You can bring up the window by clicking a link in chat or when you right click an item and choose [[#|Popup Item Data]]. See the [[#|Level Quality Selectors]] section for example of the selectors that appear on the tooltip window.

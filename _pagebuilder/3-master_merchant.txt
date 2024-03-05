@@ -71,7 +71,7 @@ With Update 41 all of your previously stored LibHistoire sales data will be dele
 
 ## Preface: Understanding the Zenimax Database Changes
 
-Before I explain the details I'd like to clarify that the transition from id64 to id53 for sales identifiers is not the primary reason behind their reset. Zenimax made this change to facilitate working with the sales identifiers and introduced a new database structure for storing guild history data on the server.
+Before I explain the details I'd like to clarify that the transition from id64 to id53 for sales identifiers is not the primary reason behind their reset. Even if the type of identifier remained unchanged, the same issue would occur. Zenimax made this change to facilitate working with the sales identifiers and introduced a new database structure for storing guild history data on the server.
 
 I will focus on why this matters to you as a Master Merchant user. If you notice duplicate sales in the interface, rest assured that it's not an error caused by the id64 to id53 transition. This unavoidable situation stems from the changes in how Zenimax stores sales data. I'll help you understand the impact and your options.
 

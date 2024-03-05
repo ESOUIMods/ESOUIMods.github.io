@@ -65,15 +65,51 @@ Use Bonanza to search for deals. It creates a virtual Auction House of sorts. Se
 
 = Major Changes with Update 41!
 
-With Update 41 all of your previously stored LibHistoire sales data will be deleted. You can read more about the changes in [[ https://www.esoui.com/forums/showthread.php?t=10724 | this thread]]
+With Update 41 all of your previously stored LibHistoire sales data will be deleted. You can read more about the changes in [[ https://www.esoui.com/forums/showthread.php?t=10724 | this thread]].
 
 {{note: Your Master Merchant sales data <font class="yellow">**will not be deleted or reset**</font> once U41 is released.}}
 
-Zenimax will store 30 days of sales history locally to help lessen server load from requests for sales data. There will be options to keep data from guilds you are no longer in and there will be an option to retain more sales data.  However, both will negatively affect load times.
+## Preface: Understanding the Zenimax Database Changes
 
-Sirinsidiator, the author of LibHistoire urges users to **Export** their data. What that means for users is to have their sales data up to date [[ #UpdateYourGuildHistoryEachDay | by updating your sales data each day ]] before U41. Because the cached sales data for LibHistoire will be deleted you will not be able to restore a backup of your previous LibHistoire files and then refresh the data after U41 is released.
+Before I explain the details I'd like to clarify that the transition from id64 to id53 for sales identifiers is not the primary reason behind their reset. Zenimax made this change to facilitate working with the sales identifiers and introduced a new database structure for storing guild history data on the server.
 
-Because of this the only way to ensure you do not loose any data is to [[#Backup LibGuildStore Data | backup your LibGuildStore data.]]
+I will focus on why this matters to you as a Master Merchant user. If you notice duplicate sales in the interface, rest assured that it's not an error caused by the id64 to id53 transition. This unavoidable situation stems from the changes in how Zenimax stores sales data. I'll help you understand the impact and your options.
+
+## Important Reminder!
+
+Because the changes to the Zenimax server's database are significant, you should have a backup that you have made prior to Update 41 to restore if changes are made to Master Merchant functionality after launch. Likewise, if Zenimax makes any changes that would directly impact how the data is obtained from the local binary file stored on each user's hard drive.
+
+## Introduction
+
+In the upcoming Elder Scrolls Online Update 41, Zenimax is making changes to the Guild History data. They will be using a newer format for unique sales identifiers. One significant consequence for users is the inability to check for duplicate sales between the old and new database entries.
+
+{{image:dupe_sales_image.jpg | dupe_sales_image}}
+
+Using the image as an example, without the timestamp (1709606076) and without the unique identifier, the sales would be duplicates because they are all from the same seller, buyer, for the same item, and the same amount.
+
+## Transition from id64 to id53
+
+In Update 41, Zenimax has reset the unique sales identifiers and will be using the new id53 system. Even if id64 identifiers were still being used, they'd still have started over.
+
+<font class="yellow">Paraphrasing the UI developer Dan Batson:</font>
+
+Luainteger53 is superior because it allows for straightforward mathematical computations and comparisons without the need for complex functions. It can handle values as high as 2^53 (9,007,199,254,740,992) without precision issues. Id64 will still be used when needed such as character IDs. Luainteger53 was introduced a few updates ago and continuing to utilize id64 would be like holding onto an outdated and problematic system just for tradition's sake, which isn't a philosophy I support.
+
+## Adapting Master Merchant to the Changes
+
+With these changes, and because the id53 identifiers have started over, Master Merchant will be separating data using the id64 and id53 identifiers. Master Merchant will be able to check duplicates only when the same type of data is compared, meaning id64 and id64 or id53 and id53 because the Zenimax server database is different.
+
+All item averages used for evaluating item pricing and weekly sales totals for Guild Masters will only be accurate when using data from the new Zenimax cache and the id53 identifiers.
+
+While there will be a toggle to utilize the old sales data, without the ability to properly check for duplicate sales, data using id53 mixed with the older id64 data will mean those totals will not be accurate.
+
+## Impact on Master Merchant Users
+
+For the majority, the changes will have minimal impact because the binary cache should already contain data. Users that retain 30 to 90 days of data will not have a significant loss of data and Guild Masters will be able to accurately track recent weeks for evaluating user contribution in sales. 
+
+However, users archiving extensive sales data, trying to be the library of congress of data, will have inaccurate averages when the id53 and id64 data overlaps. 
+
+Additionally, I would like to remind users that maintaining an excessive amount of sales data in the Zenimax binary cache will negatively impact load times during login, even if Master Merchant is disabled.
 
 = Setup Master Merchant 3.0
 

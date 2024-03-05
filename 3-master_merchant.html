@@ -47,6 +47,12 @@ title: Master Merchant
 <p class="list-2">&bull;&nbsp; <a href="#ForTradingGuilds">3.1.2 For Trading Guilds:</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#ForTradeGuildMembers">3.1.3 For Trade Guild Members:</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#MajorChangeswithUpdate41">3.2 Major Changes with Update 41!</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#PrefaceUnderstandingtheZenimaxDatabaseChanges">3.2.1 Preface: Understanding the Zenimax Database Changes</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ImportantReminder">3.2.2 Important Reminder!</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Introduction">3.2.3 Introduction</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Transitionfromid64toid53">3.2.4 Transition from id64 to id53</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#AdaptingMasterMerchanttotheChanges">3.2.5 Adapting Master Merchant to the Changes</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ImpactonMasterMerchantUsers">3.2.6 Impact on Master Merchant Users</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#SetupMasterMerchant30">3.3 Setup Master Merchant 3.0</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Whatisrequired">3.3.1 What is required</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#WhattodisablewhenMMisnotneeded">3.3.2 What to disable when MM is not needed</a></p>
@@ -205,15 +211,51 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="MajorChangeswithUpdate41">3.2 - Major Changes with Update 41!</h1>
 <p class="empty">&nbsp;</p>
-<p>With Update 41 all of your previously stored LibHistoire sales data will be deleted. You can read more about the changes in <a  href="https://www.esoui.com/forums/showthread.php?t=10724" >this thread</a></p>
+<p>With Update 41 all of your previously stored LibHistoire sales data will be deleted. You can read more about the changes in <a  href="https://www.esoui.com/forums/showthread.php?t=10724" >this thread</a>.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"> Your Master Merchant sales data <font class="yellow"><B><I>will not be deleted or reset</I></B></font> once U41 is released.</p>
 <p class="empty">&nbsp;</p>
-<p>Zenimax will store 30 days of sales history locally to help lessen server load from requests for sales data. There will be options to keep data from guilds you are no longer in and there will be an option to retain more sales data.  However, both will negatively affect load times.</p>
+<h2 id="PrefaceUnderstandingtheZenimaxDatabaseChanges">3.2.1 - Preface: Understanding the Zenimax Database Changes</h2>
 <p class="empty">&nbsp;</p>
-<p>Sirinsidiator, the author of LibHistoire urges users to <B><I>Export</I></B> their data. What that means for users is to have their sales data up to date <a  href="#UpdateYourGuildHistoryEachDay" >by updating your sales data each day</a> before U41. Because the cached sales data for LibHistoire will be deleted you will not be able to restore a backup of your previous LibHistoire files and then refresh the data after U41 is released.</p>
+<p>Before I explain the details I'd like to clarify that the transition from id64 to id53 for sales identifiers is not the primary reason behind their reset. Zenimax made this change to facilitate working with the sales identifiers and introduced a new database structure for storing guild history data on the server.</p>
 <p class="empty">&nbsp;</p>
-<p>Because of this the only way to ensure you do not loose any data is to <a  href="#BackupLibGuildStoreData" >backup your LibGuildStore data.</a></p>
+<p>I will focus on why this matters to you as a Master Merchant user. If you notice duplicate sales in the interface, rest assured that it's not an error caused by the id64 to id53 transition. This unavoidable situation stems from the changes in how Zenimax stores sales data. I'll help you understand the impact and your options.</p>
+<p class="empty">&nbsp;</p>
+<h2 id="ImportantReminder">3.2.2 - Important Reminder!</h2>
+<p class="empty">&nbsp;</p>
+<p>Because the changes to the Zenimax server's database are significant, you should have a backup that you have made prior to Update 41 to restore if changes are made to Master Merchant functionality after launch. Likewise, if Zenimax makes any changes that would directly impact how the data is obtained from the local binary file stored on each user's hard drive.</p>
+<p class="empty">&nbsp;</p>
+<h2 id="Introduction">3.2.3 - Introduction</h2>
+<p class="empty">&nbsp;</p>
+<p>In the upcoming Elder Scrolls Online Update 41, Zenimax is making changes to the Guild History data. They will be using a newer format for unique sales identifiers. One significant consequence for users is the inability to check for duplicate sales between the old and new database entries.</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/dupe_sales_image.jpg" alt="dupe_sales_image" %}</p>
+<p class="empty">&nbsp;</p>
+<p>Using the image as an example, without the timestamp (1709606076) and without the unique identifier, the sales would be duplicates because they are all from the same seller, buyer, for the same item, and the same amount.</p>
+<p class="empty">&nbsp;</p>
+<h2 id="Transitionfromid64toid53">3.2.4 - Transition from id64 to id53</h2>
+<p class="empty">&nbsp;</p>
+<p>In Update 41, Zenimax has reset the unique sales identifiers and will be using the new id53 system. Even if id64 identifiers were still being used, they'd still have started over.</p>
+<p class="empty">&nbsp;</p>
+<p><font class="yellow">Paraphrasing the UI developer Dan Batson:</font></p>
+<p class="empty">&nbsp;</p>
+<p>Luainteger53 is superior because it allows for straightforward mathematical computations and comparisons without the need for complex functions. It can handle values as high as 2^53 (9,007,199,254,740,992) without precision issues. Id64 will still be used when needed such as character IDs. Luainteger53 was introduced a few updates ago and continuing to utilize id64 would be like holding onto an outdated and problematic system just for tradition's sake, which isn't a philosophy I support.</p>
+<p class="empty">&nbsp;</p>
+<h2 id="AdaptingMasterMerchanttotheChanges">3.2.5 - Adapting Master Merchant to the Changes</h2>
+<p class="empty">&nbsp;</p>
+<p>With these changes, and because the id53 identifiers have started over, Master Merchant will be separating data using the id64 and id53 identifiers. Master Merchant will be able to check duplicates only when the same type of data is compared, meaning id64 and id64 or id53 and id53 because the Zenimax server database is different.</p>
+<p class="empty">&nbsp;</p>
+<p>All item averages used for evaluating item pricing and weekly sales totals for Guild Masters will only be accurate when using data from the new Zenimax cache and the id53 identifiers.</p>
+<p class="empty">&nbsp;</p>
+<p>While there will be a toggle to utilize the old sales data, without the ability to properly check for duplicate sales, data using id53 mixed with the older id64 data will mean those totals will not be accurate.</p>
+<p class="empty">&nbsp;</p>
+<h2 id="ImpactonMasterMerchantUsers">3.2.6 - Impact on Master Merchant Users</h2>
+<p class="empty">&nbsp;</p>
+<p>For the majority, the changes will have minimal impact because the binary cache should already contain data. Users that retain 30 to 90 days of data will not have a significant loss of data and Guild Masters will be able to accurately track recent weeks for evaluating user contribution in sales.</p>
+<p class="empty">&nbsp;</p>
+<p>However, users archiving extensive sales data, trying to be the library of congress of data, will have inaccurate averages when the id53 and id64 data overlaps.</p>
+<p class="empty">&nbsp;</p>
+<p>Additionally, I would like to remind users that maintaining an excessive amount of sales data in the Zenimax binary cache will negatively impact load times during login, even if Master Merchant is disabled.</p>
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="SetupMasterMerchant30">3.3 - Setup Master Merchant 3.0</h1>
 <p class="empty">&nbsp;</p>

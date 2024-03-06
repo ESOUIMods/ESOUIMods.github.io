@@ -217,17 +217,17 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <h2 id="PrefaceUnderstandingtheZenimaxDatabaseChanges">3.2.1 - Preface: Understanding the Zenimax Database Changes</h2>
 <p class="empty">&nbsp;</p>
-<p>Before I explain the details I'd like to clarify that the transition from id64 to id53 for sales identifiers is not the primary reason behind their reset. Even if the type of identifier remained unchanged, the same issue would occur. Zenimax made this change to facilitate working with the sales identifiers and introduced a new database structure for storing guild history data on the server.</p>
+<p>Before delving into the details, it's crucial to clarify that the transition from id64 to id53 for sales identifiers is not the main reason behind their reset. Even if the identifier type remained unchanged, the same issue would persist. Zenimax made this change to enhance the efficiency of handling sales identifiers and introduced a new database structure for storing guild history data on the server.</p>
 <p class="empty">&nbsp;</p>
 <p>I will focus on why this matters to you as a Master Merchant user. If you notice duplicate sales in the interface, rest assured that it's not an error caused by the id64 to id53 transition. This unavoidable situation stems from the changes in how Zenimax stores sales data. I'll help you understand the impact and your options.</p>
 <p class="empty">&nbsp;</p>
 <h2 id="ImportantReminder">3.2.2 - Important Reminder!</h2>
 <p class="empty">&nbsp;</p>
-<p>Because the changes to the Zenimax server's database are significant, you should have a backup that you have made prior to Update 41 to restore if changes are made to Master Merchant functionality after launch. Likewise, if Zenimax makes any changes that would directly impact how the data is obtained from the local binary file stored on each user's hard drive.</p>
+<p>Because the changes to the Zenimax server's database are significant, it's recommended to have a backup made prior to Update 41 to restore if changes are made to Master Merchant functionality after launch. Likewise, if Zenimax makes any changes that would directly impact how the data is obtained from the local binary file stored on each user's hard drive.</p>
 <p class="empty">&nbsp;</p>
 <h2 id="Introduction">3.2.3 - Introduction</h2>
 <p class="empty">&nbsp;</p>
-<p>In the upcoming Elder Scrolls Online Update 41, Zenimax is making changes to the Guild History data. They will be using a newer format for unique sales identifiers. One significant consequence for users is the inability to check for duplicate sales between the old and new database entries.</p>
+<p>In the upcoming Elder Scrolls Online Update 41, Zenimax is making changes to the Guild History data. The server database for sales data has been updated, and due to that, the unique sales identifiers will not continue from where they left off prior to the update. One significant consequence for users is the inability to check for duplicate sales between the old and new database entries.</p>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/dupe_sales_image.jpg" alt="dupe_sales_image" %}</p>
 <p class="empty">&nbsp;</p>
@@ -235,7 +235,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <h2 id="Transitionfromid64toid53">3.2.4 - Transition from id64 to id53</h2>
 <p class="empty">&nbsp;</p>
-<p>In Update 41, Zenimax has reset the unique sales identifiers and will be using the new id53 system. Even if id64 identifiers were still being used, they'd still have started over.</p>
+<p>In Update 41, Zenimax is implementing significant changes to the Guild History data, introducing a new guild history format and resetting the server's database. Consequently, unique sales identifiers are starting over, and the system will now use the id53 format. This shift is not solely about the transition from id64 to id53; it's part of a broader move toward a more efficient guild history database structure.</p>
 <p class="empty">&nbsp;</p>
 <p><font class="yellow">Paraphrasing the UI developer Dan Batson:</font></p>
 <p class="empty">&nbsp;</p>
@@ -251,9 +251,9 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <h2 id="ImpactonMasterMerchantUsers">3.2.6 - Impact on Master Merchant Users</h2>
 <p class="empty">&nbsp;</p>
-<p>For the majority, the changes will have minimal impact because the binary cache should already contain data. Users that retain 30 to 90 days of data will not have a significant loss of data and Guild Masters will be able to accurately track recent weeks for evaluating user contribution in sales.</p>
+<p>For the majority, the changes will have minimal impact because the binary cache should already contain data. Users that retain 30 to 90 days of data will not have a significant loss of data, and Guild Masters will be able to accurately track recent weeks for evaluating user contribution in sales.</p>
 <p class="empty">&nbsp;</p>
-<p>However, users archiving extensive sales data, trying to be the library of congress of data, will have inaccurate averages when the id53 and id64 data overlaps.</p>
+<p>However, users archiving extensive sales data, trying to be the library of congress of data, will have inaccurate averages when the id53 and id64 data overlap.</p>
 <p class="empty">&nbsp;</p>
 <p>Additionally, I would like to remind users that maintaining an excessive amount of sales data in the Zenimax binary cache will negatively impact load times during login, even if Master Merchant is disabled.</p>
 <p class="empty">&nbsp;</p>

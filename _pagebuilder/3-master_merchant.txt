@@ -79,6 +79,8 @@ I will focus on why this matters to you as a Master Merchant user. If you notice
 
 Because the changes to the Zenimax server's database are significant, it's recommended to have a backup made prior to Update 41 to restore if changes are made to Master Merchant functionality after launch. Likewise, if Zenimax makes any changes that would directly impact how the data is obtained from the local binary file stored on each user's hard drive.
 
+{{note: For more information review how to [[#|Backup LibGuildStore Data]]. }}
+
 ## Introduction
 
 In the upcoming Elder Scrolls Online Update 41, Zenimax is making changes to the Guild History data. The server database for sales data has been updated, and due to that, the unique sales identifiers will not continue from where they left off prior to the update. One significant consequence for users is the inability to check for duplicate sales between the old and new database entries.

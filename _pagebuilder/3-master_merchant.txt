@@ -69,6 +69,52 @@ With Update 41 all of your previously stored LibHistoire sales data will be dele
 
 {{note: Your Master Merchant sales data <font class="yellow">**will not be deleted or reset**</font> once U41 is released.}}
 
+== Things to know about Update 41
+
+The following sections go into more detail. With update 41 the server database for all guild history was reset and ZOS created a new database on their server. Mod authors can not cross reference any previous sales data with the current sales data from the server and look for duplicate sales.
+
+{{image:dupe_sales_setting.jpg | dupe_sales_setting}}
+
+{{note: Changing that will reload the UI because it's not a soft toggle. }}
+
+All the pricing data and guild sales totals are calculated during initialization so you can not toggle between using and not using historical data in addition to the current server data without another full initialization of all data.
+
+For that reason, unless you feel you must be the library of congress of data I recommend to leave that feature OFF or disabled.
+
+== New LibHistoire
+
+{{image:new_interface_LibHistoire.jpg | new_interface_LibHistoire}}
+
+There is a new interface for LibHistoire and I will be updating more documentation as time permits. The important difference is the Rescan button has been removed and you have a settings button instead.
+
+## Request Mode
+
+{{image:settings_request_mode.jpg | settings_request_mode}}
+
+If you want to disable requests for specific categories you can use the settings menu to ignore specific categories not in use by mods you have installed. Master Merchant will use Trader and Advanced Member Tooltip will use Roster and Bank Gold.
+
+## Reset Linked Range
+
+{{image:reset_linked_range.jpg | reset_linked_range}}
+
+After you have requested the data you want, then use Reset Linked Range. This will process the sales data and and send any missing data to Master Merchant.
+
+== New Vanilla UI
+
+## Data is available
+
+{{image:data_ready_page1.jpg | data_ready_page1}}
+
+If no arrows appear then the data is not ready and this is not a mod error. The server may not have information and ZOS may need to make updates to the game. If reloading the UI does not correct the issue you will have to wait for authors to communicate with ZOS to see if there is a resolution.
+
+## Show More is available
+
+{{image:new_show_more.jpg | new_show_more}}
+
+To request more data you will need to go to the last page available. Then the E Show More option will appear.
+
+== Details about Update 41
+
 ## Preface: Understanding the Zenimax Database Changes
 
 Before delving into the details, it's crucial to clarify that the transition from id64 to id53 for sales identifiers is not the main reason behind their reset. Even if the identifier type remained unchanged, the same issue would persist. Zenimax made this change to enhance the efficiency of handling sales identifiers and introduced a new database structure for storing guild history data on the server.

@@ -77,6 +77,8 @@ The following sections go into more detail. With update 41 the server database f
 
 {{note: Changing that will reload the UI because it's not a soft toggle. }}
 
+When the setting <font class="ltblue">**Use historical and recent sales data**</font> is enabled historical and current sales data will be combined but all duplicate data will affect the totals. While users may not mind mixing the data for pricing, your weekly sales totals will reflect an incorrect total unless the option is disabled.
+
 All the pricing data and guild sales totals are calculated during initialization so you can not toggle between using and not using historical data in addition to the current server data without another full initialization of all data.
 
 For that reason, unless you feel you must be the library of congress of data I recommend to leave that feature OFF or disabled.

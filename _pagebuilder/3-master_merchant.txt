@@ -83,25 +83,17 @@ All the pricing data and guild sales totals are calculated during initialization
 
 For that reason, unless you feel you must be the library of congress of data I recommend to leave that feature OFF or disabled.
 
-== New LibHistoire
+## New LibHistoire UI
 
 {{image:new_interface_LibHistoire.jpg | new_interface_LibHistoire}}
 
 There is a new interface for LibHistoire and I will be updating more documentation as time permits. The important difference is the Rescan button has been removed and you have a settings button instead.
 
-## Request Mode
+## New Vanilla UI
 
-{{image:settings_request_mode.jpg | settings_request_mode}}
+{{image:new_vanilla_interface.jpg | new_vanilla_interface}}
 
-If you want to disable requests for specific categories you can use the settings menu to ignore specific categories not in use by mods you have installed. Master Merchant will use Trader and Advanced Member Tooltip will use Roster and Bank Gold.
-
-## Reset Linked Range
-
-{{image:reset_linked_range.jpg | reset_linked_range}}
-
-After you have requested the data you want, then use Reset Linked Range. This will process the sales data and and send any missing data to Master Merchant.
-
-== New Vanilla UI
+There is a new interface for Guild History. There are arrows for navigating the various pages of guild history and the Show More option only appears when you are on the last page of data.
 
 ## Data is available
 
@@ -119,13 +111,13 @@ To request more data you will need to go to the last page available. Then the E 
 
 ## Preface: Understanding the Zenimax Database Changes
 
-Before delving into the details, it's crucial to clarify that the transition from id64 to id53 for sales identifiers is not the main reason behind their reset. Even if the identifier type remained unchanged, the same issue would persist. Zenimax made this change to enhance the efficiency of handling sales identifiers and introduced a new database structure for storing guild history data on the server.
+Before delving into the details, it's crucial to clarify that the transition from id64 to id53 for sales identifiers is not the main reason behind their reset. Even if the identifier type remained unchanged, the same issue would persist. Zenimax introduced a new database structure for storing guild history data on the server to enhance the efficiency of handling sales. In addition they changed the type of sales identifiers.
 
-I will focus on why this matters to you as a Master Merchant user. If you notice duplicate sales in the interface, rest assured that it's not an error caused by the id64 to id53 transition. This unavoidable situation stems from the changes in how Zenimax stores sales data. I'll help you understand the impact and your options.
+I will focus on why this matters to you as a Master Merchant user. If you notice duplicate sales in the interface, rest assured that it's not an error caused by the id64 to id53 transition. This unavoidable situation stems from the changes in how Zenimax stores sales data.
 
 ## Important Reminder!
 
-Because the changes to the Zenimax server's database are significant, it's recommended to have a backup made prior to Update 41 to restore if changes are made to Master Merchant functionality after launch. Likewise, if Zenimax makes any changes that would directly impact how the data is obtained from the local binary file stored on each user's hard drive.
+Because the changes to the Zenimax server's database are significant, it's recommended to have a backup made prior to Update 41 (March 11 2024) to restore if changes are made to Master Merchant functionality after launch. Likewise, if Zenimax makes any changes that would directly impact how the data is obtained from the local binary file stored on each user's hard drive.
 
 {{note: For more information review how to [[#|Backup LibGuildStore Data]]. }}
 
@@ -140,10 +132,6 @@ Using the image as an example, without the timestamp (1709606076) and without th
 ## Transition from id64 to id53
 
 In Update 41, Zenimax is implementing significant changes to the Guild History data, introducing a new guild history format and resetting the server's database. Consequently, unique sales identifiers are starting over, and the system will now use the id53 format. This shift is not solely about the transition from id64 to id53; it's part of a broader move toward a more efficient guild history database structure.
-
-<font class="yellow">Paraphrasing the UI developer Dan Batson:</font>
-
-Luainteger53 is superior because it allows for straightforward mathematical computations and comparisons without the need for complex functions. It can handle values as high as 2^53 (9,007,199,254,740,992) without precision issues. Id64 will still be used when needed such as character IDs. Luainteger53 was introduced a few updates ago and continuing to utilize id64 would be like holding onto an outdated and problematic system just for tradition's sake, which isn't a philosophy I support.
 
 ## Adapting Master Merchant to the Changes
 
@@ -163,13 +151,14 @@ Additionally, I would like to remind users that maintaining an excessive amount 
 
 = Setup Master Merchant 3.0
 
-If you are installing Master Merchant for the first time please follow these steps. If you do not wait to see that the Refresh is complete in the chat window and if you do not perform a [[#|Ten Day Scan]] then you won't have the initial Ten Days of sales data from the server to start using to price items.
+If you are installing Master Merchant for the first time please follow these steps.
 
 * Install Master Merchant 3.0
 * Log In
 * Wait for Refresh to finish
-* Perform a [[#|Ten Day Scan]]
-* Read how to [[#|Update Your Guild History Each Day]]
+* Read the section on [[#|Obtaining Guild History]]
+
+What is described in Obtaining Guild History is how you request  data from the server for use.
 
 == What is required
 
@@ -227,7 +216,7 @@ The MMxxData (MM00Data, MM01Data, etc.) modules are used for importing data only
 
 {{image:startup_refresh.jpg | startup_refresh}}
 
-once you log in the LibHistorie Refresh will start. You will know when the refresh has finished when you see, <font class="yellow">LibGuildStore Refresh Finished</font> appear in the chat window. You will need to get your first ten days of data to complete the initial setup. Review the section [[#|Ten Day Scan]].
+once you log in the LibHistorie Refresh will start. You will know when the refresh has finished when you see, <font class="yellow">LibGuildStore Refresh Finished</font> appear in the chat window. You will need to obtain guild history data from the server.
 
 Once the initial refresh is finished you can import sales from MM. This is to accommodate people who may have more history in their MM data files then they do in LibHistorie. You can also import from ATT for the same reason. If you have been using ATT and have never used MM then you could have 30 days of data in your ATT data files. After you import your ATT data and do a Ten Day with LibHistorie you will have the most data possible. You can also import purchases from ATT and the old standalone ShoppingList for MM. There will be notifications to disable the old MMxxData modules, the old ShoppingList standalone module, and ATT. There is an option to disable the ATT notification if you prefer to use both MM and ATT at the same time.
 
@@ -240,16 +229,6 @@ Once the initial refresh is finished you can import sales from MM. This is to ac
 If this notification appears then you either need to cancel and restore a backup or allow Master Merchant to reset all its internal data files and refresh sales data from LibHistorie.
 
 {{note: Your LibHistorie cache will not be reset by accepting to reset Master Merchant data files.}}
-
-## Game freezes after clicking Rescan button
-
-{{image:rescan_button.jpg | rescan_button}}
-
-- Close the game entirely, do not log in if you are at the password screen, or at least be at the Character Selection Screen.
-- Go to SavedVariables usually <code>.\Documents\Elder Scrolls Online\live\SavedVariables</code>
-- Rename <font class="yellow">LibHistoire.lua</font> to <font class="green">LibHistoire_bak.lua</font>. <font class="orange">DO NOT delete it!</font>
-- Log in and perform a [[#|Ten Day Scan]]
-- Then [[#|Refresh LibHistoire]]
 
 ## LibGuildStore.lua:309: attempt to index a nil value
 
@@ -305,6 +284,48 @@ Now OneDrive will no longer try to backup the Documents folder.
 If prompted, chose <font class="yellow">This Computer Only</font> so that OneDrive will not attempt to backup your Documents folder.
 
 {{note: You do not have to pay for OneDrive or update to get more space. If you have any issues pausing or stoping OneDrive so that you can change the settings just wait longer until it pauses or stops. It may take a while but it will happen.}}
+
+= LibHistoire UI
+
+{{image:new_interface_LibHistoire.jpg | libhistoire_popout_menu}}
+
+The new interface has all the new categories from guild hsitory. 
+
+{{image:interface_menu_options.jpg | interface_menu_options}}
+
+There are options to lock and unlock the window to move it and then lock its position.
+
+{{image:libhistoire_popout_menu.jpg | libhistoire_popout_menu}}
+
+Each category has a popout menu that will be explained below.
+
+## Reset Linked Range
+
+This feature should not be used.  I am having a hard time understanding when to use it. 
+
+Here are some reasons not to click it:
+
+* You are missing less than 1 day of data
+* You are missing 5 days of data
+* You have not played for 2 monts, the ZOS chace was set at 30 days, and you cannot obtain data for 2 months because too much time has passed
+
+LibHistoire is smart enough to know what to do in either case. So it is recomended to not use that option. 
+
+In all cases manually requesting data from the server is the best option and LibHistoire will process the data.
+
+## Clear Cache
+
+This feature will clear the cache stored on your local hard drive. It does not delete any data from the server. Should you want the data from the server again, you would need to manually request it.
+
+## Request Mode
+
+{{image:request_mode_menu.jpg | request_mode_menu}}
+
+Automatic: means data will be requested based on the Addon requesting the data from LibHistoire
+Force Off: means data will not be requested whether or not an Addon uses the data
+Force On: means data will be requested from the server and kept in the binary cache so that a mod can access it
+
+{{note: LibHistoire automatically requests data from the server and depending on LibHistoire options and features used the requests may be interupdated.}}
 
 = Shopping List
 
@@ -444,7 +465,7 @@ The other benefit of Bonanza is that you can view the prices. Which is what I sh
 
 So it may be a bit of information overload but without the need for two monitors, viewing the TTC website, viewing google docs, viewing spreadsheets, exporting prices from MM to paste on websites, just use the Master Merchant interface. It is simple and easy to switch views and search for things to compare information without leaving the game to look at outside sources for information.
 
-= Three states of LibHistoire cache
+= States of the LibHistoire cache
 
 ## Unlinked
 
@@ -472,53 +493,21 @@ Once LibHistoire has linked to its stored events you should see green text. This
 
 {{note: You can still request additional history and ask LibHistoire to check the guild history for any missing sales events using the rescan button.}}
 
-= Ten Day Scan
+= Obtaining Guild History
 
-If you are upgrading from MM 2.5.x or installing MM 3.x for the first time, you will need to do a Ten Day Scan of all the guilds you are in. This ensures that LibHistoire has stored sales data for you to start working with.
+{{image:request_daily_data.jpg | request_daily_data}}
 
-{{note: Initially I had suggested requesting all the data at once. This seems to cause an issue for some users. Read this section carefully.}}
-
-## Select A Guild
-
-When you first log in there won’t be much as far as guild history loaded in memory.
+To obtain sales data the page number and right arrow (or forward arrow) must be showing. You will need to use the arrow to go to the last page of available data. 
 
 {{image:show_more.jpg | show_more}}
 
-In order to manually request sales data you have to choose a guild and select All, not purchases. Then press E about every 3 seconds so you are not kicked from the game by the server.
+Once you have done that the E Show More option will appear. Even if there is no right arrow showing press E to request more data.
 
-## Request one day at a time
+{{image:sales_gap_filled.jpg | sales_gap_filled}}
 
-{{image:one_day_of_data.jpg | one_day_of_data}}
+After you have enough guild history to cover the time you have been offline the right arrow will appear. This means you have requested all the missing data. Using the right arrow to go to the end of all the history stored in your binary cache will not request more data from the server. It simply displays the data. You can go all the way to the end if you like but it is not needed.
 
-Look at the above image and use the right scroll bar to see when you have requested one day of data. Busier guilds with more data will have more sales per day. To keep from processing too much at once request one day at a time and click the Rescan button. 
-
-## Rescan Button
-
-{{image:ten_day_scan_rescan.jpg | ten_day_scan_rescan}}
-
-If you are familiar with MM 2.5.x the Rescan button is the equivalent of the old <code>/mm missing</code>. When you click Rescan LibHistoire will scan all the data loaded into memory so far and skip any duplicate events already saved in its data cache.
-
-## When E is no longer showing
-
-{{image:10_days_sales.jpg | show_more}}
-
-Once you have scanned 10 days of sales then the option to press E will not be shown. The server will only allow you to request 10 days of data. Once you have done so click the [[#|Rescan Button]] to make sure LibHistoire processes all the events.
-
-## LibHistoire GUI
-
-{{image:histy_gui.jpg | histy_gui}}
-
-As you perform a ten day scan the LibHistoire GUI will update. It might even finish processing a certain amount of events. Do not click the small chain link showing in this screen shot. That will link to the current events loaded which for your first initial use of LibHistoire you do not want that to happen. You should only click the [[#|Rescan Button]] if you see it to ensure all events are scanned.
-
-{{note:Scanning 10 days of history every few days or every week is pointless and a drain on the server.}}
-
-= Update Your Guild History Each Day
-
-{{image:histy_gui.jpg | histy_gui}}
-
-Regardless of how long you have been offline you need to update your guild history. To obtain older sales data for any time you have been offline you can wait for the server to send the data to LibHistoire. How quickly the server provides the data depends on many things. Because of that I do not wait. I manually scan the guild history from the guild history tab by [[#Select A Guild | pressing E for Show More]].
-
-After I have enough guild history to cover the time I have been offline then I use the rescan button which asks LibHistoire to double check the sales loaded in memory are in the cache. Once LibHistoire has verified the sales data the text will turn green indicating that the [[#Linked | sales events are linked]].
+{{note: If you have not been keeping your data up to date and you have multiple gaps in data the LibHistoire UI will show you and you may need to advance to the next gap and request more data.}}
 
 = Unlinked Events Notification
 
@@ -526,29 +515,7 @@ With LibHistoire 1.2.0 there is a new notification when you log off.
 
 {{image:log_off_notification.jpg | log_off_notification}}
 
-You could have any amount of time that has not been linked with your Guild History Events. If you chose to log off that is fine but pay close attention to the notification. Any gap in information will still be there when you log back in and you will have to start over. Refer to [[#|Resolving Unlinked Events]] and [[#|Update Your Guild History Each Day]] for more information.
-
-{{note:If you open the Guild History have more then 10 days of missing events you will need to complete a [[#|Ten Day Scan]].}}
-
-= Resolving Unlinked Events
-
-{{image:unlinked_sales.jpg | unlinked_sales}}
-
-The above screen shot indicates that there is 28 days and 19 hours worth of missing time from unlinked events. When this happens you can only fix it by doing a [[#|Ten Day Scan]].
-
-To start request one day of data as shown in the screen shot [[#Request one day at a time | to request one day at a time]]. After you see one day of data then click the small chain link above sales as shown below.
-
-{{image:chain_link.jpg | chain_link}}
-
-After you click the chain link then you will be given a confirmation screen and you will want to click Confirm or press E to confirm the action.
-
-{{image-caption:confirm_forcing.jpg | confirm_forcing | Since the server only stores 10 days of data, you will not be able to retrieve sales more then 10 days old.}}
-
-Once the chain link is clicked LibHistoire will begin processing sales for the time you have loaded into memory. If you have done as suggested, it will process about 1 days worth of sales.
-
-Then repeat the process mentioned in the [[#|Ten Day Scan]] by requesting a day or two of data and then click the small [[#|Rescan Button]]. Once the process is complete then remember to [[#|Update Your Guild History Each Day]] so this doesn't happen again.
-
-{{note: This can happen in any guild however, this will occur in guilds with a high volume of sales per day more easily then in a guild with smaller amounts of sales.}}
+You could have any amount of time that has not been linked with your Guild History Events. If you chose to log off that is fine but pay close attention to the notification. Any gap in information will still be there when you log back in and you will have to take additional steps to obtain any missing sales data.
 
 = Master Merchant Window
 
@@ -656,6 +623,10 @@ There are several date ranges you can choose from. <font class="tan">This Week</
 * <font class="tan">Custom Filter Timeframe</font>: The amount of days to use for the Custom dropdown for the [[#|Guild Sales Date Filter Ranges]]
 
 {{note: If you sold a <font class="purple">Crafting Motif 63: Dremora Bows</font> for <font class="yellow">11,000</font> {{inline:20px | currency_gold.png | currency_gold}} the master merchant window will show what you received in the mail which would be <font class="yellow">10,230</font> {{inline:20px | currency_gold.png | currency_gold}}.}}
+
+=== Time Format Options
+
+{{image:dupe_sales_setting.jpg | dupe_sales_setting}}
 
 === Time Format Options
 
@@ -819,9 +790,9 @@ The Seller is located on the tooltip if you do not have Awesome Guild Store inst
 
 {{image:refresh_libhistoire.jpg | refresh_libhistoire}}
 
-The Refresh button tells LibHistoire to send all the data it has in its cache. The more data in the cache, the longer it will take to transmit.
+The Refresh button tells LibHistoire to send all the data from the zos binary cache. The more data in the cache, the longer it will take to transmit.
 
-The refresh button is only a fail safe mechanism in case a user performs the initial Ten Day scan incorrectly and the data is not sent to MM for some reason. It should not be clicked every so often or every once and a while. Clicking this does not refresh the Master Merchant window or cause the server to send any Guild History.
+The refresh button is only a fail safe mechanism in case a user uses a feature that interupts LibHistoire, preventing it from transmitting data to MM. It should not be clicked every so often or every once and a while. Clicking this does not refresh the Master Merchant window or cause the server to send any Guild History.
 
 === Import ShoppingList Data
 
@@ -1120,7 +1091,7 @@ Press ESC and go to Settings then LibGuildStore to verify that the [[#|Sales Man
 
 Further down under LibGuildStore settings is a button to [[#|Import MM Data]] click it and wait for the data to be imported.
 
-Version 3.7.x was released on 09/03/21 you will not have any sales newer then Sep 3rd and because of that you will need to perform a [[#|Ten Day Scan]]. When complete you will have all the MM data that existed up until 09/03/21 and then all the sales for the last 10 days. All the data from the Ten Day Scan will be saved in LibHistoire. As long as you [[#|Update Your Guild History Each Day]] you will begin to accumulate data the same as you did with 3.5.x.
+Version 3.7.x was released on 09/03/21 you will not have any sales newer then Sep 3rd and because of that you will need to [[#Obtaining Guild History |obtainin Guild History]]. When complete you will have all the MM data that existed up until 09/03/21 and then all the sales that exist on the server. Then you will begin to accumulate data the same as you did with 3.5.x.
 
 {{note: At this point you can also [[#|Import ATT Data]] if that is available to you.}}
 

@@ -311,7 +311,7 @@ Here are some reasons not to click it:
 
 LibHistoire is smart enough to know what to do in either case. So it is recomended to not use that option. 
 
-In all cases manually requesting data from the server is the best option and LibHistoire will process the data.
+In all cases [[#|Obtaining Guild History]] from the server is the best option and LibHistoire will process the data.
 
 ## Clear Cache
 

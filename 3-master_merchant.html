@@ -47,18 +47,19 @@ title: Master Merchant
 <p class="list-2">&bull;&nbsp; <a href="#ForTradingGuilds">3.1.2 For Trading Guilds:</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#ForTradeGuildMembers">3.1.3 For Trade Guild Members:</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#MajorChangeswithUpdate41">3.2 Major Changes with Update 41!</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ThingstoknowaboutUpdate41">3.2.1 Things to know about Update 41</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#NewLibHistoireUI">3.2.2 New LibHistoire UI</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#NewVanillaUI">3.2.3 New Vanilla UI</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Dataisavailable">3.2.4 Data is available</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ShowMoreisavailable">3.2.5 Show More is available</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#DetailsaboutUpdate41">3.2.6 Details about Update 41</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#PrefaceUnderstandingtheZenimaxDatabaseChanges">3.2.7 Preface: Understanding the Zenimax Database Changes</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ImportantReminder">3.2.8 Important Reminder!</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Introduction">3.2.9 Introduction</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Transitionfromid64toid53">3.2.10 Transition from id64 to id53</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#AdaptingMasterMerchanttotheChanges">3.2.11 Adapting Master Merchant to the Changes</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ImpactonMasterMerchantUsers">3.2.12 Impact on Master Merchant Users</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#KnownissueswithUpdate41">3.2.1 Known issues with Update 41</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ThingstoknowaboutUpdate41">3.2.2 Things to know about Update 41</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#NewLibHistoireUI">3.2.3 New LibHistoire UI</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#NewVanillaUI">3.2.4 New Vanilla UI</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Dataisavailable">3.2.5 Data is available</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ShowMoreisavailable">3.2.6 Show More is available</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#DetailsaboutUpdate41">3.2.7 Details about Update 41</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#PrefaceUnderstandingtheZenimaxDatabaseChanges">3.2.8 Preface: Understanding the Zenimax Database Changes</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ImportantReminder">3.2.9 Important Reminder!</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Introduction">3.2.10 Introduction</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Transitionfromid64toid53">3.2.11 Transition from id64 to id53</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#AdaptingMasterMerchanttotheChanges">3.2.12 Adapting Master Merchant to the Changes</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ImpactonMasterMerchantUsers">3.2.13 Impact on Master Merchant Users</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#SetupMasterMerchant30">3.3 Setup Master Merchant 3.0</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Whatisrequired">3.3.1 What is required</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#WhattodisablewhenMMisnotneeded">3.3.2 What to disable when MM is not needed</a></p>
@@ -218,7 +219,17 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p class="note"> Your Master Merchant sales data <font class="yellow"><B><I>will not be deleted or reset</I></B></font> once U41 is released.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="ThingstoknowaboutUpdate41">3.2.1 - Things to know about Update 41</h2>
+<h2 class="header2" id="KnownissueswithUpdate41">3.2.1 - Known issues with Update 41</h2>
+<p class="empty">&nbsp;</p>
+<p class="list-1">&bull;&nbsp; Mod authors cannot check duplicate sales between old and new server data</p>
+<p class="list-1">&bull;&nbsp; Item links from the server do not contain extended information</p>
+<p class="list-1">&bull;&nbsp; Guild history categories may become unusable</p>
+<p class="empty">&nbsp;</p>
+<p>To sum up the known issues, mod authors can not cross reference any previous sales data with the current sales data from the server and look for duplicate sales. Item links don't contain any extended information such as writ vouchers, potion effects, and possibly effects for glyphs. In addition to that you may have all green bars but switch characters and any Trader category could become stuck and you won't be able to use the forward arrow key or E Show More to request more data.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> The only known way to resolve a stuck category is to use the Clear Cache option. </p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="ThingstoknowaboutUpdate41">3.2.2 - Things to know about Update 41</h2>
 <p class="empty">&nbsp;</p>
 <p>The following sections go into more detail. With update 41 the server database for all guild history was reset and ZOS created a new database on their server. Mod authors can not cross reference any previous sales data with the current sales data from the server and look for duplicate sales.</p>
 <p class="empty">&nbsp;</p>
@@ -232,45 +243,45 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>For that reason, unless you feel you must be the library of congress of data I recommend to leave that feature OFF or disabled.</p>
 <p class="empty">&nbsp;</p>
-<h2 id="NewLibHistoireUI">3.2.2 - New LibHistoire UI</h2>
+<h2 id="NewLibHistoireUI">3.2.3 - New LibHistoire UI</h2>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/new_interface_LibHistoire.jpg" alt="new_interface_LibHistoire" %}</p>
 <p class="empty">&nbsp;</p>
 <p>There is a new interface for LibHistoire and I will be updating more documentation as time permits. The important difference is the Rescan button has been removed and you have a settings button instead.</p>
 <p class="empty">&nbsp;</p>
-<h2 id="NewVanillaUI">3.2.3 - New Vanilla UI</h2>
+<h2 id="NewVanillaUI">3.2.4 - New Vanilla UI</h2>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/new_vanilla_interface.jpg" alt="new_vanilla_interface" %}</p>
 <p class="empty">&nbsp;</p>
 <p>There is a new interface for Guild History. There are arrows for navigating the various pages of guild history and the Show More option only appears when you are on the last page of data.</p>
 <p class="empty">&nbsp;</p>
-<h2 id="Dataisavailable">3.2.4 - Data is available</h2>
+<h2 id="Dataisavailable">3.2.5 - Data is available</h2>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/data_ready_page1.jpg" alt="data_ready_page1" %}</p>
 <p class="empty">&nbsp;</p>
 <p>If no arrows appear then the data is not ready and this is not a mod error. The server may not have information and ZOS may need to make updates to the game. If reloading the UI does not correct the issue you will have to wait for authors to communicate with ZOS to see if there is a resolution.</p>
 <p class="empty">&nbsp;</p>
-<h2 id="ShowMoreisavailable">3.2.5 - Show More is available</h2>
+<h2 id="ShowMoreisavailable">3.2.6 - Show More is available</h2>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/new_show_more.jpg" alt="new_show_more" %}</p>
 <p class="empty">&nbsp;</p>
 <p>To request more data you will need to go to the last page available. Then the E Show More option will appear.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="DetailsaboutUpdate41">3.2.6 - Details about Update 41</h2>
+<h2 class="header2" id="DetailsaboutUpdate41">3.2.7 - Details about Update 41</h2>
 <p class="empty">&nbsp;</p>
-<h2 id="PrefaceUnderstandingtheZenimaxDatabaseChanges">3.2.7 - Preface: Understanding the Zenimax Database Changes</h2>
+<h2 id="PrefaceUnderstandingtheZenimaxDatabaseChanges">3.2.8 - Preface: Understanding the Zenimax Database Changes</h2>
 <p class="empty">&nbsp;</p>
 <p>Before delving into the details, it's crucial to clarify that the transition from id64 to id53 for sales identifiers is not the main reason behind their reset. Even if the identifier type remained unchanged, the same issue would persist. Zenimax introduced a new database structure for storing guild history data on the server to enhance the efficiency of handling sales. In addition they changed the type of sales identifiers.</p>
 <p class="empty">&nbsp;</p>
 <p>I will focus on why this matters to you as a Master Merchant user. If you notice duplicate sales in the interface, rest assured that it's not an error caused by the id64 to id53 transition. This unavoidable situation stems from the changes in how Zenimax stores sales data.</p>
 <p class="empty">&nbsp;</p>
-<h2 id="ImportantReminder">3.2.8 - Important Reminder!</h2>
+<h2 id="ImportantReminder">3.2.9 - Important Reminder!</h2>
 <p class="empty">&nbsp;</p>
 <p>Because the changes to the Zenimax server's database are significant, it's recommended to have a backup made prior to Update 41 (March 11 2024) to restore if changes are made to Master Merchant functionality after launch. Likewise, if Zenimax makes any changes that would directly impact how the data is obtained from the local binary file stored on each user's hard drive.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"> For more information review how to <a  href="#BackupLibGuildStoreData" >Backup LibGuildStore Data</a>. </p>
 <p class="empty">&nbsp;</p>
-<h2 id="Introduction">3.2.9 - Introduction</h2>
+<h2 id="Introduction">3.2.10 - Introduction</h2>
 <p class="empty">&nbsp;</p>
 <p>In the upcoming Elder Scrolls Online Update 41, Zenimax is making changes to the Guild History data. The server database for sales data has been updated, and due to that, the unique sales identifiers will not continue from where they left off prior to the update. One significant consequence for users is the inability to check for duplicate sales between the old and new database entries.</p>
 <p class="empty">&nbsp;</p>
@@ -278,11 +289,11 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>Using the image as an example, without the timestamp (1709606076) and without the unique identifier, the sales would be duplicates because they are all from the same seller, buyer, for the same item, and the same amount.</p>
 <p class="empty">&nbsp;</p>
-<h2 id="Transitionfromid64toid53">3.2.10 - Transition from id64 to id53</h2>
+<h2 id="Transitionfromid64toid53">3.2.11 - Transition from id64 to id53</h2>
 <p class="empty">&nbsp;</p>
 <p>In Update 41, Zenimax is implementing significant changes to the Guild History data, introducing a new guild history format and resetting the server's database. Consequently, unique sales identifiers are starting over, and the system will now use the id53 format. This shift is not solely about the transition from id64 to id53; it's part of a broader move toward a more efficient guild history database structure.</p>
 <p class="empty">&nbsp;</p>
-<h2 id="AdaptingMasterMerchanttotheChanges">3.2.11 - Adapting Master Merchant to the Changes</h2>
+<h2 id="AdaptingMasterMerchanttotheChanges">3.2.12 - Adapting Master Merchant to the Changes</h2>
 <p class="empty">&nbsp;</p>
 <p>With these changes, and because the id53 identifiers have started over, Master Merchant will be separating data using the id64 and id53 identifiers. Master Merchant will be able to check duplicates only when the same type of data is compared, meaning id64 and id64 or id53 and id53 because the Zenimax server database is different.</p>
 <p class="empty">&nbsp;</p>
@@ -290,7 +301,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>While there will be a toggle to utilize the old sales data, without the ability to properly check for duplicate sales, data using id53 mixed with the older id64 data will mean those totals will not be accurate.</p>
 <p class="empty">&nbsp;</p>
-<h2 id="ImpactonMasterMerchantUsers">3.2.12 - Impact on Master Merchant Users</h2>
+<h2 id="ImpactonMasterMerchantUsers">3.2.13 - Impact on Master Merchant Users</h2>
 <p class="empty">&nbsp;</p>
 <p>For the majority, the changes will have minimal impact because the binary cache should already contain data. Users that retain 30 to 90 days of data will not have a significant loss of data, and Guild Masters will be able to accurately track recent weeks for evaluating user contribution in sales.</p>
 <p class="empty">&nbsp;</p>

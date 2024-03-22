@@ -69,6 +69,16 @@ With Update 41 all of your previously stored LibHistoire sales data will be dele
 
 {{note: Your Master Merchant sales data <font class="yellow">**will not be deleted or reset**</font> once U41 is released.}}
 
+== Known issues with Update 41
+
+* Mod authors cannot check duplicate sales between old and new server data
+* Item links from the server do not contain extended information
+* Guild history categories may become unusable
+
+To sum up the known issues, mod authors can not cross reference any previous sales data with the current sales data from the server and look for duplicate sales. Item links don't contain any extended information such as writ vouchers, potion effects, and possibly effects for glyphs. In addition to that you may have all green bars but switch characters and any Trader category could become stuck and you won't be able to use the forward arrow key or E Show More to request more data.
+
+{{note: The only known way to resolve a stuck category is to use the Clear Cache option. }}
+
 == Things to know about Update 41
 
 The following sections go into more detail. With update 41 the server database for all guild history was reset and ZOS created a new database on their server. Mod authors can not cross reference any previous sales data with the current sales data from the server and look for duplicate sales.

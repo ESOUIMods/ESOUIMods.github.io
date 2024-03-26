@@ -150,19 +150,19 @@ title: Master Merchant
 <p class="list-2">&bull;&nbsp; <a href="#ExportPurchases">3.17.5 Export Purchases</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#TechnicalInformation">3.18 Technical Information</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#BackupLibGuildStoreData">3.18.1 Backup LibGuildStore Data</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#UninstallMasterMerchant2x">3.18.2 Uninstall Master Merchant 2.x</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#LocatingLibExecutionQueue">3.18.3 Locating LibExecutionQueue</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#UnintentionalZOSBug">3.18.4 Unintentional ZOS Bug</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#AlternateUpgradeMethod">3.19 Alternate Upgrade Method</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#OptionalModsForThisProcedure">3.19.1 Optional Mods For This Procedure</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#OptionalDebugSettings">3.19.2 Optional Debug Settings</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#TheProcedure">3.19.3 The Procedure</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#VersionHistory">3.20 Version History</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#Depreciated">3.21 Depreciated</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#BackupMasterMerchantData">3.21.1 Backup Master Merchant Data</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#BackgroundScanning">3.21.2 Background Scanning</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#Authors">3.22 Authors</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#Translators">3.23 Translators</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#LocatingLibExecutionQueue">3.18.2 Locating LibExecutionQueue</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#UnintentionalZOSBug">3.18.3 Unintentional ZOS Bug</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#VersionHistory">3.19 Version History</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#Depreciated">3.20 Depreciated</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#BackgroundScanning">3.20.1 Background Scanning</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#BackupMasterMerchant2xData">3.20.2 Backup Master Merchant 2.x Data</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#UninstallMasterMerchant2x">3.20.3 Uninstall Master Merchant 2.x</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#AlternateUpgradeMethod">3.20.4 Alternate Upgrade Method</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#OptionalModsForThisProcedure">3.20.5 Optional Mods For This Procedure</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#OptionalDebugSettings">3.20.6 Optional Debug Settings</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#TheProcedure">3.20.7 The Procedure</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#Authors">3.21 Authors</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#Translators">3.22 Translators</a></p>
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="Features">3.1 - Features</h1>
 <p class="empty">&nbsp;</p>
@@ -1154,16 +1154,81 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <p>Once you are in the SavedVariables folders, you will need to copy the 18 <code>GSxxData</code> files named <code>GS00Data.lua</code> to <code>GS17Data.lua</code> as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables. You will also want to keep a copy of <code>LibGuildStore.lua</code>, <code>LibHistoire.lua</code>, and <code>MasterMerchant.lua</code>.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="UninstallMasterMerchant2x">3.18.2 - Uninstall Master Merchant 2.x</h2>
+<h2 class="header2" id="LocatingLibExecutionQueue">3.18.2 - Locating LibExecutionQueue</h2>
 <p class="empty">&nbsp;</p>
+<p>LibExecutionQueue is included with Master Merchant as shown in the zip below.</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/leq_included.jpg" alt="leq_included" %}</p>
+<p class="empty">&nbsp;</p>
+<p>LibExecutionQueue is sorted alphabetically by the base game.</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/leq_unsorted.jpg" alt="leq_unsorted" %}</p>
+<p class="empty">&nbsp;</p>
+<p>If you have LibVotansAddonList installed then it will look close to the base game.</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/leq_votans_sort.jpg" alt="leq_votans_sort" %}</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="UnintentionalZOSBug">3.18.3 - Unintentional ZOS Bug</h2>
+<p class="empty">&nbsp;</p>
+<p>{% include image_thumbnail.html file="img/savedvarsapostrophe.jpg" alt="savedvarsapostrophe" %}</p>
+<p class="empty">&nbsp;</p>
+<p>Unfortunately from time to time ZOS introduces or reintroduces a bug in the saved vars where the apostrophe is converted to HTML code. Which will mean your sales may or may not display properly. Which is a game bug and you are out of luck until or unless they fix it.</p>
+<p class="empty">&nbsp;</p>
+<p>Since this can occur I highly recommend changing your user name to only contain letters as it will make it easier for you in the long run.</p>
+<p class="empty">&nbsp;</p>
+<p>This also includes creative names that contain things like Æ or æ. As those are not individual letters.</p>
+<p class="empty">&nbsp;</p>
+<p class="empty">&nbsp;</p>
+<p class="empty">&nbsp;</p>
+<h1 class="header1" id="VersionHistory">3.19 - Version History</h1>
+<p class="empty">&nbsp;</p>
+<p>Apparently for version 2.2.0 there was an experimental turbo mode added to MM. From the change log it appears that this was removed by request from Zenimax. However, even I noticed when you tried to download 2.2.1 which had turbo mode removed, you received a file named <font class="purple">Master Merchant 2.2.0.zip</font>. If you tried to engage turbo mode it was still available even if it didn't work as expected.</p>
+<p class="empty">&nbsp;</p>
+<p>Aug 01 2020 after the kiosk flip was announced Philgo68 posted that he would be uploading a new version, which would be 2.3.1. From the start it had a small bug in it that prevented it from working. Then after that was fixed people started reporting that the Master Merchant window would not update when you were viewing your personal sales but that all guild sales was still updating properly.</p>
+<p class="empty">&nbsp;</p>
+<p>Upon examination of the code 2.3.1 had turbo mode removed which was not really removed in 2.2.1 (2.2.0). In addition to that on the description page it was mentioned that there was Simple Indexing and Simple Scanning. Oddly those options included new options in the Addons menu to toggle the features on and off. These options were not present in 2.2.1.</p>
+<p class="empty">&nbsp;</p>
+<p>This makes me believe that 2.3.1 was really intended to be the proposed 2.2.1 but somehow the upload never went through properly. I am glad Philgo68 uploaded the version as it has helped me understand the code a bit more.</p>
+<p class="empty">&nbsp;</p>
+<h1 class="header1" id="Depreciated">3.20 - Depreciated</h1>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="BackgroundScanning">3.20.1 - Background Scanning</h2>
+<p class="empty">&nbsp;</p>
+<p>As of version 3.0.0 there is no <code>/mm missing</code> and no background scan. The background scan would get hung up by repeated attempts to request more sales data from the server. When the server denied the request MM would continue to wait for the request to be approved.</p>
+<p class="empty">&nbsp;</p>
+<p>After starting a new library <a  href="https://github.com/ESOUIMods/LibGuildHistoryCache" >LibGuildHistoryCache</a> I observed that the cache mod would see some new sales. Usually there were only a few sales maybe 1 or 2 and occasionally less then 10. The cache mod would update showing that the guild history events were not duplicates but MM would not see them as new sales.</p>
+<p class="empty">&nbsp;</p>
+<p>One other calculation previous versions of MM made was to try and get the first entry in the guild history and the last. This was used to attempt to determine whether or not to scan from the start of the guild history array, or the end. Whether or not you have 1, 100, or more then 1000 events the first event will always be the same. All guild history events are appended onto the end of the list.</p>
+<p class="empty">&nbsp;</p>
+<p>For reasons like these MM no longer uses a background scan as it attempted to scan from a specific point in time and loop over the guild history events.</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="BackupMasterMerchant2xData">3.20.2 - Backup Master Merchant 2.x Data</h2>
+<p class="empty">&nbsp;</p>
+<p class="note"> This backup procedure is exclusively intended for version 2.x or for maintaining a historical backup for importing into 3.x.</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image.html file="img/mm_data_backup.jpg" alt="mm_data_backup" %}</p>
+<p class="empty">&nbsp;</p>
+<p>To backup your Master Merchant data you will need to navigate to the SavedVariables folder. Usually <code>C:\Users\Your User Name\Documents\Elder Scrolls Online\live</code>. The files can be easily found going to MyDocuments in windows first.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> I am sorry I don't know where it is located on a Mac.</p>
+<p class="empty">&nbsp;</p>
+<p>Once you are in the SavedVariables folders, you will need to copy the 17 MMxxData files named MM00Data.lua to MM16Data.lua as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables.</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="UninstallMasterMerchant2x">3.20.3 - Uninstall Master Merchant 2.x</h2>
+<p class="empty">&nbsp;</p>
+<p class="note"> For historical reference, as of August 2020, it was expected that users would have already updated to version 3.x, rendering this procedure unnecessary.</p>
+<p class="empty">&nbsp;</p>
+<input type="checkbox" id="spoiler6" />
+<label for="spoiler6">New Libraries</label>
+<div class="main-content">
 <p>Currently there is some confusion about how to uninstall Master merchant 2.x and install 3.x. First you need to open minion. If you see both versions installed as shown below, uninstall both. The reason you uninstall both is because MM 3.x is a continuation of 2.x. It is the same mod with the same file names and the same folder names. Minion will not understand how to handle this.</p>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/both_mm_installed.jpg" alt="both_mm_installed" %}</p>
 <p class="empty">&nbsp;</p>
 <p>If you manually install your mods, of if you want to know which folders belong to Master merchant, click the spoiler.</p>
 <p class="empty">&nbsp;</p>
-<input type="checkbox" id="spoiler6" />
-<label for="spoiler6">Master Merchant Folders</label>
+<input type="checkbox" id="spoiler7" />
+<label for="spoiler7">Master Merchant Folders</label>
 <div class="main-content">
 <p>{% include image-caption.html file="img/mm_files_installed.jpg" alt="mm_files_installed" caption="To see a larger image, right click the image and choose View Image." %}</p>
 </div>
@@ -1190,8 +1255,8 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <p>I won't be showing how to install all the required libraries. If you need examples images of the two new libraries LibGuildRoster, and LibHistoire click the spoiler.</p>
 <p class="empty">&nbsp;</p>
-<input type="checkbox" id="spoiler7" />
-<label for="spoiler7">New Libraries</label>
+<input type="checkbox" id="spoiler8" />
+<label for="spoiler8">New Libraries</label>
 <div class="main-content">
 <p>{% include image-caption.html file="img/install_LibGuildRoster.jpg" alt="install_LibGuildRoster" caption="To see a larger image, right click the image and choose View Image." %}</p>
 <p class="empty">&nbsp;</p>
@@ -1201,33 +1266,15 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p>{% include image.html file="img/one_mm_only.jpg" alt="one_mm_only" %}</p>
 <p class="empty">&nbsp;</p>
 <p>After you install Master Merchant 3.0 verify it is the only Master Merchant showing in Minion.</p>
+</div>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="LocatingLibExecutionQueue">3.18.3 - Locating LibExecutionQueue</h2>
+<h2 class="header2" id="AlternateUpgradeMethod">3.20.4 - Alternate Upgrade Method</h2>
 <p class="empty">&nbsp;</p>
-<p>LibExecutionQueue is included with Master Merchant as shown in the zip below.</p>
+<p class="note"> Due to Update 41 and LibHistoire 2.x, this procedure is no longer possible.</p>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/leq_included.jpg" alt="leq_included" %}</p>
-<p class="empty">&nbsp;</p>
-<p>LibExecutionQueue is sorted alphabetically by the base game.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/leq_unsorted.jpg" alt="leq_unsorted" %}</p>
-<p class="empty">&nbsp;</p>
-<p>If you have LibVotansAddonList installed then it will look close to the base game.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/leq_votans_sort.jpg" alt="leq_votans_sort" %}</p>
-<p class="empty">&nbsp;</p>
-<h2 class="header2" id="UnintentionalZOSBug">3.18.4 - Unintentional ZOS Bug</h2>
-<p class="empty">&nbsp;</p>
-<p>{% include image_thumbnail.html file="img/savedvarsapostrophe.jpg" alt="savedvarsapostrophe" %}</p>
-<p class="empty">&nbsp;</p>
-<p>Unfortunately from time to time ZOS introduces or reintroduces a bug in the saved vars where the apostrophe is converted to HTML code. Which will mean your sales may or may not display properly. Which is a game bug and you are out of luck until or unless they fix it.</p>
-<p class="empty">&nbsp;</p>
-<p>Since this can occur I highly recommend changing your user name to only contain letters as it will make it easier for you in the long run.</p>
-<p class="empty">&nbsp;</p>
-<p>This also includes creative names that contain things like Æ or æ. As those are not individual letters.</p>
-<p class="empty">&nbsp;</p>
-<h1 class="header1" id="AlternateUpgradeMethod">3.19 - Alternate Upgrade Method</h1>
-<p class="empty">&nbsp;</p>
+<input type="checkbox" id="spoiler9" />
+<label for="spoiler9">New Libraries</label>
+<div class="main-content">
 <p>Thanks to Shadowshire for sharing this workaround. While I did alter most of the steps I wanted to preserve his suggestion because it could provide a good alternative to importing LibHistoire data for those experiencing issues.</p>
 <p class="empty">&nbsp;</p>
 <p>This alternate method will primarily use data from the old Master Merchant Data files located in SavedVariables as shown in the depreciated section, <a  href="#BackupMasterMerchantData" >Backup Master Merchant Data</a>.</p>
@@ -1236,12 +1283,12 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <p class="note"> It is recommended to store any backup copies of Master Merchant data outside of SavedVariables in its own folder. For example <font class="purple">.\Documents\Elder Scrolls Online\live\Backups\MM_Backup_01</font></p>
 <p class="empty">&nbsp;</p>
-<h2 id="OptionalModsForThisProcedure">3.19.1 - Optional Mods For This Procedure</h2>
+<h2 id="OptionalModsForThisProcedure">3.20.5 - Optional Mods For This Procedure</h2>
 <p class="list-1">&bull;&nbsp; <a  href="https://www.esoui.com/downloads/info1161-CirconiansAddonSelector.html" >Circonians Addon Selector</a></p>
 <p class="empty">&nbsp;</p>
 <p>Circonians Addon Selector will allow you to save your current active mods before performing this procedure.</p>
 <p class="empty">&nbsp;</p>
-<h2 id="OptionalDebugSettings">3.19.2 - Optional Debug Settings</h2>
+<h2 id="OptionalDebugSettings">3.20.6 - Optional Debug Settings</h2>
 <p class="empty">&nbsp;</p>
 <p>The sticky post for Master Merchant 3.0 mentions some slash commands for LibDebugLogger. When these settings are changed this helps provide additional debug information in the event of any errors. Only use these slash commands as a precaution if you have been having issues upgrading.</p>
 <p class="empty">&nbsp;</p>
@@ -1252,7 +1299,7 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <p class="note"> You should see a confirmation of each command in the chat window. For users with chat mods installed check your mods settings. System might be redirected to other tabs such as Zone chat.</p>
 <p class="empty">&nbsp;</p>
-<h2 id="TheProcedure">3.19.3 - The Procedure</h2>
+<h2 id="TheProcedure">3.20.7 - The Procedure</h2>
 <p class="empty">&nbsp;</p>
 <p>During this procedure Master Merchant will check for duplicate sales. Please remember it is recommended that you exit the game before you install any add-on or alter the SavedVariables folder.</p>
 <p class="empty">&nbsp;</p>
@@ -1285,44 +1332,13 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="note"> If they are enabled, then disable the add-on ShoppingList, and each of the Master Merchant Data File MM00Data through Master Merchant Data File MM16Data files in the Libraries section to decrease load times</p>
 <p class="empty">&nbsp;</p>
 <p>This will leave you with a gap in your sales from 09/03/21 until now. If that gap is too much for you then you can try to import your old LibHistoire information. To do that you will need to exit the game, backup your LibGuildStore data and your current LibHistoire data. Once you restore the copy of your old LibHistoire data that you moved to a safe place attempt to <a  href="#RefreshLibHistoire" >Refresh LibHistoire</a> again. If you do not have better results then exit the game, restore your LibGuildStore and LibHistoire backups and you won't be able to use the old LibHistoire data.</p>
+</div>
 <p class="empty">&nbsp;</p>
-<h1 class="header1" id="VersionHistory">3.20 - Version History</h1>
-<p class="empty">&nbsp;</p>
-<p>Apparently for version 2.2.0 there was an experimental turbo mode added to MM. From the change log it appears that this was removed by request from Zenimax. However, even I noticed when you tried to download 2.2.1 which had turbo mode removed, you received a file named <font class="purple">Master Merchant 2.2.0.zip</font>. If you tried to engage turbo mode it was still available even if it didn't work as expected.</p>
-<p class="empty">&nbsp;</p>
-<p>Aug 01 2020 after the kiosk flip was announced Philgo68 posted that he would be uploading a new version, which would be 2.3.1. From the start it had a small bug in it that prevented it from working. Then after that was fixed people started reporting that the Master Merchant window would not update when you were viewing your personal sales but that all guild sales was still updating properly.</p>
-<p class="empty">&nbsp;</p>
-<p>Upon examination of the code 2.3.1 had turbo mode removed which was not really removed in 2.2.1 (2.2.0). In addition to that on the description page it was mentioned that there was Simple Indexing and Simple Scanning. Oddly those options included new options in the Addons menu to toggle the features on and off. These options were not present in 2.2.1.</p>
-<p class="empty">&nbsp;</p>
-<p>This makes me believe that 2.3.1 was really intended to be the proposed 2.2.1 but somehow the upload never went through properly. I am glad Philgo68 uploaded the version as it has helped me understand the code a bit more.</p>
-<p class="empty">&nbsp;</p>
-<h1 class="header1" id="Depreciated">3.21 - Depreciated</h1>
-<p class="empty">&nbsp;</p>
-<h2 class="header2" id="BackupMasterMerchantData">3.21.1 - Backup Master Merchant Data</h2>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/mm_data_backup.jpg" alt="mm_data_backup" %}</p>
-<p class="empty">&nbsp;</p>
-<p>To backup your Master Merchant data you will need to navigate to the SavedVariables folder. Usually <code>C:\Users\Your User Name\Documents\Elder Scrolls Online\live</code>. The files can be easily found going to MyDocuments in windows first.</p>
-<p class="empty">&nbsp;</p>
-<p class="note"> I am sorry I don't know where it is located on a Mac.</p>
-<p class="empty">&nbsp;</p>
-<p>Once you are in the SavedVariables folders, you will need to copy the 17 MMxxData files named MM00Data.lua to MM16Data.lua as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables.</p>
-<p class="empty">&nbsp;</p>
-<h2 class="header2" id="BackgroundScanning">3.21.2 - Background Scanning</h2>
-<p class="empty">&nbsp;</p>
-<p>As of version 3.0.0 there is no <code>/mm missing</code> and no background scan. The background scan would get hung up by repeated attempts to request more sales data from the server. When the server denied the request MM would continue to wait for the request to be approved.</p>
-<p class="empty">&nbsp;</p>
-<p>After starting a new library <a  href="https://github.com/ESOUIMods/LibGuildHistoryCache" >LibGuildHistoryCache</a> I observed that the cache mod would see some new sales. Usually there were only a few sales maybe 1 or 2 and occasionally less then 10. The cache mod would update showing that the guild history events were not duplicates but MM would not see them as new sales.</p>
-<p class="empty">&nbsp;</p>
-<p>One other calculation previous versions of MM made was to try and get the first entry in the guild history and the last. This was used to attempt to determine whether or not to scan from the start of the guild history array, or the end. Whether or not you have 1, 100, or more then 1000 events the first event will always be the same. All guild history events are appended onto the end of the list.</p>
-<p class="empty">&nbsp;</p>
-<p>For reasons like these MM no longer uses a background scan as it attempted to scan from a specific point in time and loop over the guild history events.</p>
-<p class="empty">&nbsp;</p>
-<h1 class="header1" id="Authors">3.22 - Authors</h1>
+<h1 class="header1" id="Authors">3.21 - Authors</h1>
 <p class="empty">&nbsp;</p>
 <p>Philgo68, Khaibit, dOpiate, sirinsidiator, Garkin, Aldanga, Sharlikran, Dolgubon</p>
 <p class="empty">&nbsp;</p>
-<h1 class="header1" id="Translators">3.23 - Translators</h1>
+<h1 class="header1" id="Translators">3.22 - Translators</h1>
 <p class="empty">&nbsp;</p>
 <p>mychaelo, svenpanne, tomkolp, mlsevero, Baertram, jupiter126, Otxics, Jakez</p>
 </div>

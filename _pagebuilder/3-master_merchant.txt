@@ -994,15 +994,78 @@ To backup your LibGuildStore data you will need to navigate to the SavedVariable
 
 Once you are in the SavedVariables folders, you will need to copy the 18 <code>GSxxData</code> files named <code>GS00Data.lua</code> to <code>GS17Data.lua</code> as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables. You will also want to keep a copy of <code>LibGuildStore.lua</code>, <code>LibHistoire.lua</code>, and <code>MasterMerchant.lua</code>.
 
+== Locating LibExecutionQueue
+
+LibExecutionQueue is included with Master Merchant as shown in the zip below.
+
+{{image:leq_included.jpg | leq_included}}
+
+LibExecutionQueue is sorted alphabetically by the base game.
+
+{{image:leq_unsorted.jpg | leq_unsorted}}
+
+If you have LibVotansAddonList installed then it will look close to the base game.
+
+{{image:leq_votans_sort.jpg | leq_votans_sort}}
+
+== Unintentional ZOS Bug
+
+{{image_thumbnail:savedvarsapostrophe.jpg | savedvarsapostrophe}}
+
+Unfortunately from time to time ZOS introduces or reintroduces a bug in the saved vars where the apostrophe is converted to HTML code. Which will mean your sales may or may not display properly. Which is a game bug and you are out of luck until or unless they fix it.
+
+Since this can occur I highly recommend changing your user name to only contain letters as it will make it easier for you in the long run.
+
+This also includes creative names that contain things like Æ or æ. As those are not individual letters.
+
+
+
+= Version History
+
+Apparently for version 2.2.0 there was an experimental turbo mode added to MM. From the change log it appears that this was removed by request from Zenimax. However, even I noticed when you tried to download 2.2.1 which had turbo mode removed, you received a file named <font class="purple">Master Merchant 2.2.0.zip</font>. If you tried to engage turbo mode it was still available even if it didn't work as expected.
+
+Aug 01 2020 after the kiosk flip was announced Philgo68 posted that he would be uploading a new version, which would be 2.3.1. From the start it had a small bug in it that prevented it from working. Then after that was fixed people started reporting that the Master Merchant window would not update when you were viewing your personal sales but that all guild sales was still updating properly.
+
+Upon examination of the code 2.3.1 had turbo mode removed which was not really removed in 2.2.1 (2.2.0). In addition to that on the description page it was mentioned that there was Simple Indexing and Simple Scanning. Oddly those options included new options in the Addons menu to toggle the features on and off. These options were not present in 2.2.1.
+
+This makes me believe that 2.3.1 was really intended to be the proposed 2.2.1 but somehow the upload never went through properly. I am glad Philgo68 uploaded the version as it has helped me understand the code a bit more.
+
+= Depreciated
+
+== Background Scanning
+
+As of version 3.0.0 there is no <code>/mm missing</code> and no background scan. The background scan would get hung up by repeated attempts to request more sales data from the server. When the server denied the request MM would continue to wait for the request to be approved.
+
+After starting a new library [[https://github.com/ESOUIMods/LibGuildHistoryCache | LibGuildHistoryCache]] I observed that the cache mod would see some new sales. Usually there were only a few sales maybe 1 or 2 and occasionally less then 10. The cache mod would update showing that the guild history events were not duplicates but MM would not see them as new sales. 
+
+One other calculation previous versions of MM made was to try and get the first entry in the guild history and the last. This was used to attempt to determine whether or not to scan from the start of the guild history array, or the end. Whether or not you have 1, 100, or more then 1000 events the first event will always be the same. All guild history events are appended onto the end of the list.
+
+For reasons like these MM no longer uses a background scan as it attempted to scan from a specific point in time and loop over the guild history events.
+
+== Backup Master Merchant 2.x Data
+
+{{note: This backup procedure is exclusively intended for version 2.x or for maintaining a historical backup for importing into 3.x.}}
+
+{{image:mm_data_backup.jpg | mm_data_backup}}
+
+To backup your Master Merchant data you will need to navigate to the SavedVariables folder. Usually <code>C:\Users\Your User Name\Documents\Elder Scrolls Online\live</code>. The files can be easily found going to MyDocuments in windows first. 
+
+{{note: I am sorry I don't know where it is located on a Mac.}}
+
+Once you are in the SavedVariables folders, you will need to copy the 17 MMxxData files named MM00Data.lua to MM16Data.lua as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables.
+
 == Uninstall Master Merchant 2.x
 
+{{note: For historical reference, as of August 2020, it was expected that users would have already updated to version 3.x, rendering this procedure unnecessary.}}
+
+[[sb:Spoiler6 | New Libraries]]
 Currently there is some confusion about how to uninstall Master merchant 2.x and install 3.x. First you need to open minion. If you see both versions installed as shown below, uninstall both. The reason you uninstall both is because MM 3.x is a continuation of 2.x. It is the same mod with the same file names and the same folder names. Minion will not understand how to handle this.
 
 {{image:both_mm_installed.jpg | both_mm_installed}}
 
 If you manually install your mods, of if you want to know which folders belong to Master merchant, click the spoiler.
 
-[[sb:Spoiler6 | Master Merchant Folders]]
+[[sb:Spoiler7 | Master Merchant Folders]]
 {{image-caption:mm_files_installed.jpg | mm_files_installed | To see a larger image, right click the image and choose View Image.}}
 [[se:]]
 
@@ -1028,7 +1091,7 @@ Open Minion again and click Find More and search for <code>Master Merchant 3.0</
 
 I won't be showing how to install all the required libraries. If you need examples images of the two new libraries LibGuildRoster, and LibHistoire click the spoiler.
 
-[[sb:Spoiler7 | New Libraries]]
+[[sb:Spoiler8 | New Libraries]]
 {{image-caption:install_LibGuildRoster.jpg | install_LibGuildRoster | To see a larger image, right click the image and choose View Image.}}
 
 {{image-caption:install_LibHistoire.jpg | install_LibHistoire | To see a larger image, right click the image and choose View Image.}}
@@ -1037,33 +1100,13 @@ I won't be showing how to install all the required libraries. If you need exampl
 {{image:one_mm_only.jpg | one_mm_only}}
 
 After you install Master Merchant 3.0 verify it is the only Master Merchant showing in Minion.
+[[se:]]
 
-== Locating LibExecutionQueue
+== Alternate Upgrade Method
 
-LibExecutionQueue is included with Master Merchant as shown in the zip below.
+{{note: Due to Update 41 and LibHistoire 2.x, this procedure is no longer possible.}}
 
-{{image:leq_included.jpg | leq_included}}
-
-LibExecutionQueue is sorted alphabetically by the base game.
-
-{{image:leq_unsorted.jpg | leq_unsorted}}
-
-If you have LibVotansAddonList installed then it will look close to the base game.
-
-{{image:leq_votans_sort.jpg | leq_votans_sort}}
-
-== Unintentional ZOS Bug
-
-{{image_thumbnail:savedvarsapostrophe.jpg | savedvarsapostrophe}}
-
-Unfortunately from time to time ZOS introduces or reintroduces a bug in the saved vars where the apostrophe is converted to HTML code. Which will mean your sales may or may not display properly. Which is a game bug and you are out of luck until or unless they fix it.
-
-Since this can occur I highly recommend changing your user name to only contain letters as it will make it easier for you in the long run.
-
-This also includes creative names that contain things like Æ or æ. As those are not individual letters.
-
-= Alternate Upgrade Method
-
+[[sb:Spoiler9 | New Libraries]]
 Thanks to Shadowshire for sharing this workaround. While I did alter most of the steps I wanted to preserve his suggestion because it could provide a good alternative to importing LibHistoire data for those experiencing issues.
 
 This alternate method will primarily use data from the old Master Merchant Data files located in SavedVariables as shown in the depreciated section, [[#|Backup Master Merchant Data]].
@@ -1121,38 +1164,7 @@ At this point you will have to log out to the character screen and enable your p
 {{note: If they are enabled, then disable the add-on ShoppingList, and each of the Master Merchant Data File MM00Data through Master Merchant Data File MM16Data files in the Libraries section to decrease load times}}. 
 
 This will leave you with a gap in your sales from 09/03/21 until now. If that gap is too much for you then you can try to import your old LibHistoire information. To do that you will need to exit the game, backup your LibGuildStore data and your current LibHistoire data. Once you restore the copy of your old LibHistoire data that you moved to a safe place attempt to [[#|Refresh LibHistoire]] again. If you do not have better results then exit the game, restore your LibGuildStore and LibHistoire backups and you won't be able to use the old LibHistoire data.
-
-= Version History
-
-Apparently for version 2.2.0 there was an experimental turbo mode added to MM. From the change log it appears that this was removed by request from Zenimax. However, even I noticed when you tried to download 2.2.1 which had turbo mode removed, you received a file named <font class="purple">Master Merchant 2.2.0.zip</font>. If you tried to engage turbo mode it was still available even if it didn't work as expected.
-
-Aug 01 2020 after the kiosk flip was announced Philgo68 posted that he would be uploading a new version, which would be 2.3.1. From the start it had a small bug in it that prevented it from working. Then after that was fixed people started reporting that the Master Merchant window would not update when you were viewing your personal sales but that all guild sales was still updating properly.
-
-Upon examination of the code 2.3.1 had turbo mode removed which was not really removed in 2.2.1 (2.2.0). In addition to that on the description page it was mentioned that there was Simple Indexing and Simple Scanning. Oddly those options included new options in the Addons menu to toggle the features on and off. These options were not present in 2.2.1.
-
-This makes me believe that 2.3.1 was really intended to be the proposed 2.2.1 but somehow the upload never went through properly. I am glad Philgo68 uploaded the version as it has helped me understand the code a bit more.
-
-= Depreciated
-
-== Backup Master Merchant Data
-
-{{image:mm_data_backup.jpg | mm_data_backup}}
-
-To backup your Master Merchant data you will need to navigate to the SavedVariables folder. Usually <code>C:\Users\Your User Name\Documents\Elder Scrolls Online\live</code>. The files can be easily found going to MyDocuments in windows first. 
-
-{{note: I am sorry I don't know where it is located on a Mac.}}
-
-Once you are in the SavedVariables folders, you will need to copy the 17 MMxxData files named MM00Data.lua to MM16Data.lua as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables.
-
-== Background Scanning
-
-As of version 3.0.0 there is no <code>/mm missing</code> and no background scan. The background scan would get hung up by repeated attempts to request more sales data from the server. When the server denied the request MM would continue to wait for the request to be approved.
-
-After starting a new library [[https://github.com/ESOUIMods/LibGuildHistoryCache | LibGuildHistoryCache]] I observed that the cache mod would see some new sales. Usually there were only a few sales maybe 1 or 2 and occasionally less then 10. The cache mod would update showing that the guild history events were not duplicates but MM would not see them as new sales. 
-
-One other calculation previous versions of MM made was to try and get the first entry in the guild history and the last. This was used to attempt to determine whether or not to scan from the start of the guild history array, or the end. Whether or not you have 1, 100, or more then 1000 events the first event will always be the same. All guild history events are appended onto the end of the list.
-
-For reasons like these MM no longer uses a background scan as it attempted to scan from a specific point in time and loop over the guild history events.
+[[se:]]
 
 = Authors
 

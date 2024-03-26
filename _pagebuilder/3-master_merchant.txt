@@ -635,7 +635,7 @@ There are several date ranges you can choose from. <font class="tan">This Week</
 
 {{note: If you sold a <font class="purple">Crafting Motif 63: Dremora Bows</font> for <font class="yellow">11,000</font> {{inline:20px | currency_gold.png | currency_gold}} the master merchant window will show what you received in the mail which would be <font class="yellow">10,230</font> {{inline:20px | currency_gold.png | currency_gold}}.}}
 
-=== Time Format Options
+=== Sales Format Options
 
 {{image:dupe_sales_setting.jpg | dupe_sales_setting}}
 

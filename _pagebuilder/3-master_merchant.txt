@@ -3,7 +3,7 @@
 
 {{image:under_construction.jpg | under_construction}}
 
-The site is undergoing changes to the images for 3.7.x so the screen shots, icons, settings  menus, and menu description may not resemble 3.5.30.
+The website is being updated to reflect changes in the images for LibHistoire 2.1.1 and Master Merchant 3.8.x, thus the screenshots, icons, settings menus, and menu descriptions may not mirror those found in-game.
 
 = A bit of light reading
 

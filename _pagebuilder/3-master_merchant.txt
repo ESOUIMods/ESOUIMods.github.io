@@ -1058,7 +1058,7 @@ Once you are in the SavedVariables folders, you will need to copy the 17 MMxxDat
 
 {{note: For historical reference, as of August 2020, it was expected that users would have already updated to version 3.x, rendering this procedure unnecessary.}}
 
-[[sb:Spoiler6 | New Libraries]]
+[[sb:Spoiler6 | Uninstall 2.x]]
 Currently there is some confusion about how to uninstall Master merchant 2.x and install 3.x. First you need to open minion. If you see both versions installed as shown below, uninstall both. The reason you uninstall both is because MM 3.x is a continuation of 2.x. It is the same mod with the same file names and the same folder names. Minion will not understand how to handle this.
 
 {{image:both_mm_installed.jpg | both_mm_installed}}
@@ -1106,7 +1106,7 @@ After you install Master Merchant 3.0 verify it is the only Master Merchant show
 
 {{note: Due to Update 41 and LibHistoire 2.x, this procedure is no longer possible.}}
 
-[[sb:Spoiler9 | New Libraries]]
+[[sb:Spoiler9 | Alternate Method]]
 Thanks to Shadowshire for sharing this workaround. While I did alter most of the steps I wanted to preserve his suggestion because it could provide a good alternative to importing LibHistoire data for those experiencing issues.
 
 This alternate method will primarily use data from the old Master Merchant Data files located in SavedVariables as shown in the depreciated section, [[#|Backup Master Merchant Data]].

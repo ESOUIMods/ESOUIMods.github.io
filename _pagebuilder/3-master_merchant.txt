@@ -71,13 +71,32 @@ With Update 41 all of your previously stored LibHistoire sales data will be dele
 
 == Known issues with Update 41
 
+The recent incremental patch on April  08, 2024 resolve some issues. [[ https://forums.elderscrollsonline.com/en/discussion/655989/pc-mac-patch-notes-v9-3-7 | Patch Notes ]]
+
 * Mod authors cannot check duplicate sales between old and new server data
-* Item links from the server do not contain extended information
 * Guild history categories may become unusable
 
-To sum up the known issues, mod authors can not cross reference any previous sales data with the current sales data from the server and look for duplicate sales. Item links don't contain any extended information such as writ vouchers, potion effects, and possibly effects for glyphs. In addition to that you may have all green bars but switch characters and any Trader category could become stuck and you won't be able to use the forward arrow key or E Show More to request more data.
+With Update 41, mod authors can not cross reference any previous sales data with the current sales data from the server and look for duplicate sales. You may have all green bars but switch characters and any Trader category could become stuck and you won't be able to use the forward arrow key or E Show More to request more data.
 
-{{note: The only known way to resolve a stuck category is to use the Clear Cache option. }}
+[[bb:sirinsidiator]]
+...there is still one (hopefully) last bug left in the game that "bricks" your history when new events are pushed by the server.
+
+In case there are no more events between the pushed data and the already cached data, the game currently won't be able to merge the two resulting segments in some cases. You can recognize it when the status bar has a blue (or green) and a red segment that nearly touch and the ingame UI won't show the "Show more" button on the last page.
+[[be:]]
+
+{{image:bricked_trader.jpg | bricked_trader}}
+
+## Restore a backup
+
+Restoring a backup ensures you keep all data in perfect condition and takes minimal effort. Simply check if everything has linked before you log out for the day and if it did, create a new backup of the cache files. Otherwise, restore a previous working version of these files and try again the next day.
+
+## Reset the managed range
+
+ZOS has said there are no missing events between the segments that did not merge properly. ZOS has said that any data should get merged automatically when the fix goes live. Not all addons may support this properly, it won't show the whole bar as green any more and you'll have to trust on ZOS' word that it will automatically merge the segments.
+
+## Clear the cache
+
+Using this option means you will loose all data beyond the server range. Manually requesting the full 30 day range again takes a great deal of time and any sales data already in MM will be treated as a duplicate and ignored.
 
 == Things to know about Update 41
 

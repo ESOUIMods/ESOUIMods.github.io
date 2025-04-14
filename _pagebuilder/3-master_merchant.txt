@@ -695,6 +695,12 @@ For that reason, unless you feel you must be the library of congress of data I r
 
 {{note: <font class="tan">Custom Timeframe</font> requires a reload because all of the sales have been placed into all the date ranges as shown in [[#|Date Ranges]] and therefore changing the value means that all the sales would have to be calculated again. This process is difficult to begin with so to avoid any miscalculations (attempting to clear all sales and stats variables) a reload is required.}}
 
+### Timeframes
+
+{{image:calc_display_options_timeframe.jpg | tool_tip_settings}}
+
+For the Custom Timeframe dropdown, Hours, Days, and Weeks are based off of Midnight for the current day. Full Guild Weeks are based off of the current Kiosk Flip.
+
 === Guild & Account filter
 
 {{image:add_seller_to_filter.jpg | add_seller_to_filter}}

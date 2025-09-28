@@ -23,66 +23,116 @@ This list is of the houses that I see in the UI from in game. It is not complete
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Mara's Kiss Public house</td>
-            <td>Inn Room</td>
-            <td>High Elf</td>
-            <td>Auridon</td>
-            <td>No</td>
-            <td>3000</td>
-            <td>Gold Only</td>
-            <td>Gold Only</td>
-        </tr>
-        <tr>
-            <td>[[https://en.uesp.net/wiki/Online:Golden_Gryphon_Garret | Golden Gryphon Garret]]</td>
-            <td>Inn Room</td>
-            <td>High Elf</td>
-            <td>Alinor</td>
-            <td>No</td>
-            <td>3000</td>
-            <td>Gold Only</td>
-            <td>Gold Only</td>
-        </tr>
-        <tr>
-            <td>The Rosy Lion</td>
-            <td>Inn Room</td>
-            <td>Breton</td>
-            <td>Glenumbra</td>
-            <td>No</td>
-            <td>3000</td>
-            <td>Gold Only</td>
-            <td>Gold Only</td>
-        </tr>
-        <tr>
-            <td>[[https://en.uesp.net/wiki/Online:Saint_Delyn_Penthouse | Saint Delyn Penthouse]]</td>
-            <td>Inn Room</td>
-            <td>Vivec</td>
-            <td>Vvardenfell</td>
-            <td>No</td>
-            <td>3000</td>
-            <td>Gold Only</td>
-            <td>Gold Only</td>
-        </tr>
-        <tr>
-            <td>[[https://en.uesp.net/wiki/Online:Sugar_Bowl_Suite | Sugar Bowl Suite]]</td>
-            <td>Inn Room</td>
-            <td>Elsweyr</td>
-            <td>Northern Elsweyr</td>
-            <td>No</td>
-            <td>3000</td>
-            <td>Gold Only</td>
-            <td>Gold Only</td>
-        </tr>
-        <tr>
-            <td>[[https://en.uesp.net/wiki/Online:The_Ebony_Flask_Inn_Room | The Ebony Flask Inn Room]]</td>
-            <td>Inn Room</td>
-            <td>Dark Elf</td>
-            <td>Ebonheart</td>
-            <td>No</td>
-            <td>3000</td>
-            <td>Gold Only</td>
-            <td>Gold Only</td>
-        </tr>
+		<tr>
+			<td>[[https://en.uesp.net/wiki/Online:Ancient_Anchor_Berth | Ancient Anchor Berth]]</td>
+			<td>Inn Room</td>
+			<td>Breton</td>
+			<td>High Isle</td>
+			<td>No</td>
+			<td>3000</td>
+			<td>Gold Only</td>
+			<td>Gold Only</td>
+		</tr>
+		<tr>
+			<td>[[https://en.uesp.net/wiki/Online:Golden_Gryphon_Garret | Golden Gryphon Garret]]</td>
+			<td>Inn Room</td>
+			<td>High Elf</td>
+			<td>Alinor</td>
+			<td>No</td>
+			<td>3000</td>
+			<td>Gold Only</td>
+			<td>Gold Only</td>
+		</tr>
+		<tr>
+			<td>[[https://en.uesp.net/wiki/Online:Journey%27s_End_Lodgings | Journey’s End Lodgings]]</td>
+			<td>Inn Room</td>
+			<td>Dark Elf</td>
+			<td>Telvanni Peninsula</td>
+			<td>No</td>
+			<td>3000</td>
+			<td>Gold Only</td>
+			<td>Gold Only</td>
+		</tr>
+		<tr>
+			<td>Mara's Kiss Public house</td>
+			<td>Inn Room</td>
+			<td>High Elf</td>
+			<td>Auridon</td>
+			<td>No</td>
+			<td>3000</td>
+			<td>Gold Only</td>
+			<td>Gold Only</td>
+		</tr>
+		<tr>
+			<td>[[https://en.uesp.net/wiki/Online:Pilgrim%27s_Rest | Pilgrim's Rest]]</td>
+			<td>Inn Room</td>
+			<td>Imperial</td>
+			<td>Blackwood</td>
+			<td>No</td>
+			<td>3000</td>
+			<td>Gold Only</td>
+			<td>Gold Only</td>
+		</tr>
+		<tr>
+			<td>[[https://en.uesp.net/wiki/Online:Rosewine_Retreat | Rosewine Retreat]]</td>
+			<td>Inn Room</td>
+			<td>Colovian</td>
+			<td>West Weald</td>
+			<td>No</td>
+			<td>3000</td>
+			<td>Gold Only</td>
+			<td>Gold Only</td>
+		</tr>
+		<tr>
+			<td>[[https://en.uesp.net/wiki/Online:Saint_Delyn_Penthouse | Saint Delyn Penthouse]]</td>
+			<td>Inn Room</td>
+			<td>Vivec</td>
+			<td>Vvardenfell</td>
+			<td>No</td>
+			<td>3000</td>
+			<td>Gold Only</td>
+			<td>Gold Only</td>
+		</tr>
+		<tr>
+			<td>[[https://en.uesp.net/wiki/Online:Snowmelt_Suite | Snowmelt Suite]]</td>
+			<td>Inn Room</td>
+			<td>Nord</td>
+			<td>Western Skyrim</td>
+			<td>No</td>
+			<td>3000</td>
+			<td>Gold Only</td>
+			<td>Gold Only</td>
+		</tr>
+		<tr>
+			<td>[[https://en.uesp.net/wiki/Online:Sugar_Bowl_Suite | Sugar Bowl Suite]]</td>
+			<td>Inn Room</td>
+			<td>Khajiit</td>
+			<td>Northern Elsweyr</td>
+			<td>No</td>
+			<td>3000</td>
+			<td>Gold Only</td>
+			<td>Gold Only</td>
+		</tr>
+		<tr>
+			<td>The Rosy Lion</td>
+			<td>Inn Room</td>
+			<td>Breton</td>
+			<td>Glenumbra</td>
+			<td>No</td>
+			<td>3000</td>
+			<td>Gold Only</td>
+			<td>Gold Only</td>
+		</tr>
+		<tr>
+			<td>[[https://en.uesp.net/wiki/Online:The_Ebony_Flask_Inn_Room | The Ebony Flask Inn Room]]</td>
+			<td>Inn Room</td>
+			<td>Dark Elf</td>
+			<td>Ebonheart</td>
+			<td>No</td>
+			<td>3000</td>
+			<td>Gold Only</td>
+			<td>Gold Only</td>
+		</tr>
         <tr>
             <td>Barbed Hook Private Room</td>
             <td>Apartment</td>
@@ -113,106 +163,106 @@ This list is of the houses that I see in the UI from in game. It is not complete
             <td>640</td>
             <td>800</td>
         </tr>
-        <tr>
-            <td>Autumn's Gate</td>
-            <td>Small</td>
-            <td>Nord</td>
-            <td>The Rift</td>
-            <td>Yes</td>
-            <td>60000</td>
-            <td>2350</td>
-            <td>2900</td>
-        </tr>
-        <tr>
-            <td>Black Vine Villa</td>
-            <td>Small</td>
-            <td>High Elf</td>
-            <td>Malabal Tor</td>
-            <td>Yes</td>
-            <td>54000</td>
-            <td>2250</td>
-            <td>2800</td>
-        </tr>
-        <tr>
-            <td>Captain Margaux's Place</td>
-            <td>Small</td>
-            <td>Breton</td>
-            <td>Glenumbra</td>
-            <td>No</td>
-            <td>56000</td>
-            <td>2300</td>
-            <td>2900</td>
-        </tr>
-        <tr>
-            <td>Cyrodilic Jungle House</td>
-            <td>Small</td>
-            <td>Imperial</td>
-            <td>Malabal Tor</td>
-            <td>Yes</td>
-            <td>71000</td>
-            <td>2550</td>
-            <td>3200</td>
-        </tr>
-        <tr>
-            <td>Hammerdeath Bungalow</td>
-            <td>Small</td>
-            <td>Orc</td>
-            <td>Stormhaven</td>
-            <td>No</td>
-            <td>65000</td>
-            <td>2400</td>
-            <td>3000</td>
-        </tr>
-        <tr>
-            <td>Humblemud</td>
-            <td>Small</td>
-            <td>Argonian</td>
-            <td>Bal Foyen</td>
-            <td>Yes</td>
-            <td>40000</td>
-            <td>2100</td>
-            <td>2600</td>
-        </tr>
-        <tr>
-            <td>Kragenhome</td>
-            <td>Small</td>
-            <td>Dark Elf</td>
-            <td>Stonefalls</td>
-            <td>No</td>
-            <td>69000</td>
-            <td>2500</td>
-            <td>3100</td>
-        </tr>
-        <tr>
-            <td>Moonmirth House</td>
-            <td>Small</td>
-            <td>Khajiit</td>
-            <td>Khenarthi's Roost</td>
-            <td>No</td>
-            <td>50000</td>
-            <td>2200</td>
-            <td>2800</td>
-        </tr>
-        <tr>
-            <td>Snugpod</td>
-            <td>Small</td>
-            <td>Wood Elf</td>
-            <td>Grahtwood</td>
-            <td>No</td>
-            <td>45000</td>
-            <td>2150</td>
-            <td>2700</td>
-        </tr>
-        <tr>
-            <td>Twin Arches</td>
-            <td>Small</td>
-            <td>Redguard</td>
-            <td>Bangkorai</td>
-            <td>Yes</td>
-            <td>73000</td>
-            <td>2600</td>
-            <td>3300</td>
-        </tr>
+		<tr>
+			<td>Autumn's Gate</td>
+			<td>Small</td>
+			<td>Nord</td>
+			<td>The Rift</td>
+			<td>Yes</td>
+			<td>60000</td>
+			<td>2350</td>
+			<td>2900</td>
+		</tr>
+		<tr>
+			<td>Black Vine Villa</td>
+			<td>Small</td>
+			<td>High Elf</td>
+			<td>Malabal Tor</td>
+			<td>Yes</td>
+			<td>54000</td>
+			<td>2250</td>
+			<td>2800</td>
+		</tr>
+		<tr>
+			<td>Captain Margaux's Place</td>
+			<td>Small</td>
+			<td>Breton</td>
+			<td>Glenumbra</td>
+			<td>No</td>
+			<td>56000</td>
+			<td>2300</td>
+			<td>2900</td>
+		</tr>
+		<tr>
+			<td>Cyrodilic Jungle House</td>
+			<td>Small</td>
+			<td>Imperial</td>
+			<td>Malabal Tor</td>
+			<td>Yes</td>
+			<td>71000</td>
+			<td>2550</td>
+			<td>3200</td>
+		</tr>
+		<tr>
+			<td>Hammerdeath Bungalow</td>
+			<td>Small</td>
+			<td>Orc</td>
+			<td>Stormhaven</td>
+			<td>No</td>
+			<td>65000</td>
+			<td>2400</td>
+			<td>3000</td>
+		</tr>
+		<tr>
+			<td>Humblemud</td>
+			<td>Small</td>
+			<td>Argonian</td>
+			<td>Bal Foyen</td>
+			<td>Yes</td>
+			<td>40000</td>
+			<td>2100</td>
+			<td>2600</td>
+		</tr>
+		<tr>
+			<td>Kragenhome</td>
+			<td>Small</td>
+			<td>Dark Elf</td>
+			<td>Stonefalls</td>
+			<td>No</td>
+			<td>69000</td>
+			<td>2500</td>
+			<td>3100</td>
+		</tr>
+		<tr>
+			<td>Moonmirth House</td>
+			<td>Small</td>
+			<td>Khajiit</td>
+			<td>Khenarthi's Roost</td>
+			<td>No</td>
+			<td>50000</td>
+			<td>2200</td>
+			<td>2800</td>
+		</tr>
+		<tr>
+			<td>Snugpod</td>
+			<td>Small</td>
+			<td>Wood Elf</td>
+			<td>Grahtwood</td>
+			<td>No</td>
+			<td>45000</td>
+			<td>2150</td>
+			<td>2700</td>
+		</tr>
+		<tr>
+			<td>Twin Arches</td>
+			<td>Small</td>
+			<td>Redguard</td>
+			<td>Bangkorai</td>
+			<td>Yes</td>
+			<td>73000</td>
+			<td>2600</td>
+			<td>3300</td>
+		</tr>
         <tr>
             <td>Bouldertree Refuge</td>
             <td>Medium</td>

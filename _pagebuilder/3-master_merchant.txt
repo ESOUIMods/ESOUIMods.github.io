@@ -205,6 +205,8 @@ What is described in Obtaining Guild History is how you request  data from the s
 * LibDebugLogger
 * LibAlchemy
 * LibPrice
+* LibItemLink
+* LibRecipe
 
 == What to disable when MM is not needed
 

@@ -26,7 +26,7 @@ Use Bonanza to search for deals. It creates a virtual Auction House of sorts. Se
 * Mark writs on the Guild Store menu you can craft (Writ Worthy required)
 * Mark items sold for more then the vendor price
 ## For Trading Guilds:
-* See who your Guild’s top sellers are and what they are selling
+* See who your Guild's top sellers are and what they are selling
 * See your total Guild Sales and Sales Tax income
 * Export Sales Report or Sales Activity
 ## For Trade Guild Members:
@@ -63,68 +63,21 @@ Use Bonanza to search for deals. It creates a virtual Auction House of sorts. Se
 
 {{note: Craft cost will be affected by your skill in Chemistry, Chef, and Brewer.}}
 
-= Major Changes with Update 41!
+= Guild History UI Overview
 
-With Update 41 all of your previously stored LibHistoire sales data will be deleted. You can read more about the changes in [[ https://www.esoui.com/forums/showthread.php?t=10724 | this thread]].
-
-{{note: Your Master Merchant sales data <font class="yellow">**will not be deleted or reset**</font> once U41 is released.}}
-
-== Known issues with Update 41
-
-The recent incremental patch on April  08, 2024 resolve some issues. [[ https://forums.elderscrollsonline.com/en/discussion/655989/pc-mac-patch-notes-v9-3-7 | Patch Notes ]]
-
-* Mod authors cannot check duplicate sales between old and new server data
-* Guild history categories may become unusable
-
-With Update 41, mod authors can not cross reference any previous sales data with the current sales data from the server and look for duplicate sales. You may have all green bars but switch characters and any Trader category could become stuck and you won't be able to use the forward arrow key or E Show More to request more data.
-
-[[bb:sirinsidiator]]
-...there is still one (hopefully) last bug left in the game that "bricks" your history when new events are pushed by the server.
-
-In case there are no more events between the pushed data and the already cached data, the game currently won't be able to merge the two resulting segments in some cases. You can recognize it when the status bar has a blue (or green) and a red segment that nearly touch and the ingame UI won't show the "Show more" button on the last page.
-[[be:]]
-
-{{image:bricked_trader.jpg | bricked_trader}}
-
-## Restore a backup
-
-Restoring a backup ensures you keep all data in perfect condition and takes minimal effort. Simply check if everything has linked before you log out for the day and if it did, create a new backup of the cache files. Otherwise, restore a previous working version of these files and try again the next day.
-
-## Reset the managed range
-
-ZOS has said there are no missing events between the segments that did not merge properly. ZOS has said that any data should get merged automatically when the fix goes live. Not all addons may support this properly, it won't show the whole bar as green any more and you'll have to trust on ZOS' word that it will automatically merge the segments.
-
-## Clear the cache
-
-Using this option means you will loose all data beyond the server range. Manually requesting the full 30 day range again takes a great deal of time and any sales data already in MM will be treated as a duplicate and ignored.
-
-== Things to know about Update 41
-
-The following sections go into more detail. With update 41 the server database for all guild history was reset and ZOS created a new database on their server. Mod authors can not cross reference any previous sales data with the current sales data from the server and look for duplicate sales.
-
-{{image:dupe_sales_setting.jpg | dupe_sales_setting}}
-
-{{note: Changing that will reload the UI because it's not a soft toggle. }}
-
-When the setting <font class="ltblue">**Use historical and recent sales data**</font> is enabled historical and current sales data will be combined but all duplicate data will affect the totals. While users may not mind mixing the data for pricing, your weekly sales totals will reflect an incorrect total unless the option is disabled.
-
-All the pricing data and guild sales totals are calculated during initialization so you can not toggle between using and not using historical data in addition to the current server data without another full initialization of all data.
-
-For that reason, unless you feel you must be the library of congress of data I recommend to leave that feature OFF or disabled.
-
-## New LibHistoire UI
+## LibHistoire UI
 
 {{image:new_interface_LibHistoire.jpg | new_interface_LibHistoire}}
 
 There is a new interface for LibHistoire and I will be updating more documentation as time permits. The important difference is the Rescan button has been removed and you have a settings button instead.
 
-## New Vanilla UI
+## Guild History UI
 
 {{image:new_vanilla_interface.jpg | new_vanilla_interface}}
 
 There is a new interface for Guild History. There are arrows for navigating the various pages of guild history and the Show More option only appears when you are on the last page of data.
 
-## Data is available
+## Data Is Available
 
 {{image:data_ready_page1.jpg | data_ready_page1}}
 
@@ -136,47 +89,99 @@ If no arrows appear then the data is not ready and this is not a mod error. The 
 
 To request more data you will need to go to the last page available. Then the E Show More option will appear.
 
-== Details about Update 41
+= LibHistoire UI
 
-## Preface: Understanding the Zenimax Database Changes
+{{image:new_interface_LibHistoire.jpg | libhistoire_popout_menu}}
 
-Before delving into the details, it's crucial to clarify that the transition from id64 to id53 for sales identifiers is not the main reason behind their reset. Even if the identifier type remained unchanged, the same issue would persist. Zenimax introduced a new database structure for storing guild history data on the server to enhance the efficiency of handling sales. In addition they changed the type of sales identifiers.
+The new interface has all the new categories from guild hsitory. 
 
-I will focus on why this matters to you as a Master Merchant user. If you notice duplicate sales in the interface, rest assured that it's not an error caused by the id64 to id53 transition. This unavoidable situation stems from the changes in how Zenimax stores sales data.
+{{image:interface_menu_options.jpg | interface_menu_options}}
 
-## Important Reminder!
+There are options to lock and unlock the window to move it and then lock its position.
 
-Because the changes to the Zenimax server's database are significant, it's recommended to have a backup made prior to Update 41 (March 11 2024) to restore if changes are made to Master Merchant functionality after launch. Likewise, if Zenimax makes any changes that would directly impact how the data is obtained from the local binary file stored on each user's hard drive.
+{{image:libhistoire_popout_menu.jpg | libhistoire_popout_menu}}
 
-{{note: For more information review how to [[#|Backup LibGuildStore Data]]. }}
+Each category has a popout menu that will be explained below.
 
-## Introduction
+## Reset Linked Range
 
-In the upcoming Elder Scrolls Online Update 41, Zenimax is making changes to the Guild History data. The server database for sales data has been updated, and due to that, the unique sales identifiers will not continue from where they left off prior to the update. One significant consequence for users is the inability to check for duplicate sales between the old and new database entries.
+This feature should not be used.  I am having a hard time understanding when to use it. 
 
-{{image:dupe_sales_image.jpg | dupe_sales_image}}
+Here are some reasons not to click it:
 
-Using the image as an example, without the timestamp (1709606076) and without the unique identifier, the sales would be duplicates because they are all from the same seller, buyer, for the same item, and the same amount.
+* You are missing less than 1 day of data
+* You are missing 5 days of data
+* You have not played for 2 monts, the ZOS chace was set at 30 days, and you cannot obtain data for 2 months because too much time has passed
 
-## Transition from id64 to id53
+LibHistoire is smart enough to know what to do in either case. So it is recomended to not use that option. 
 
-In Update 41, Zenimax is implementing significant changes to the Guild History data, introducing a new guild history format and resetting the server's database. Consequently, unique sales identifiers are starting over, and the system will now use the id53 format. This shift is not solely about the transition from id64 to id53; it's part of a broader move toward a more efficient guild history database structure.
+In all cases [[#|Obtaining Guild History]] from the server is the best option and LibHistoire will process the data.
 
-## Adapting Master Merchant to the Changes
+## Clear Cache
 
-With these changes, and because the id53 identifiers have started over, Master Merchant will be separating data using the id64 and id53 identifiers. Master Merchant will be able to check duplicates only when the same type of data is compared, meaning id64 and id64 or id53 and id53 because the Zenimax server database is different.
+This feature will clear the cache stored on your local hard drive. It does not delete any data from the server. Should you want the data from the server again, you would need to manually request it.
 
-All item averages used for evaluating item pricing and weekly sales totals for Guild Masters will only be accurate when using data from the new Zenimax cache and the id53 identifiers.
+## Request Mode
 
-While there will be a toggle to utilize the old sales data, without the ability to properly check for duplicate sales, data using id53 mixed with the older id64 data will mean those totals will not be accurate.
+{{image:request_mode_menu.jpg | request_mode_menu}}
 
-## Impact on Master Merchant Users
+Automatic: means data will be requested based on the Addon requesting the data from LibHistoire
+Force Off: means data will not be requested whether or not an Addon uses the data
+Force On: means data will be requested from the server and kept in the binary cache so that a mod can access it
 
-For the majority, the changes will have minimal impact because the binary cache should already contain data. Users that retain 30 to 90 days of data will not have a significant loss of data, and Guild Masters will be able to accurately track recent weeks for evaluating user contribution in sales.
+{{note: LibHistoire automatically requests data from the server and depending on LibHistoire options and features used the requests may be interupdated.}}
 
-However, users archiving extensive sales data, trying to be the library of congress of data, will have inaccurate averages when the id53 and id64 data overlap.
+= States of the LibHistoire cache
 
-Additionally, I would like to remind users that maintaining an excessive amount of sales data in the Zenimax binary cache will negatively impact load times during login, even if Master Merchant is disabled.
+## Unlinked
+
+{{image:red_text_unlinked.jpg | red_text_unlinked}}
+
+In the Unlinked state you can either wait for the server to grant the requests for offline data that LibHistoire requests, or you can manually request guild history for the time you were offline.
+
+## Linking in progress
+
+{{image:yellow_text_linking.jpg | yellow_text_linking}}
+
+Once LibHistoire has what it feels it needs, then it will begin processing the guild history events and attempt to link to the last known event.
+
+## Linking in progress, with 0 events left
+
+{{image:process_stuck.jpg | process_stuck}}
+
+If you ever see it processing 0 events for a while you will just need to wait for the events to link. If there are external factors involved then nothing will process until that is no longer affecting LibHistoire.
+
+## Linked
+
+{{image:green_text_linked.jpg | green_text_linked}}
+
+Once LibHistoire has linked to its stored events you should see green text. This means that LibHistoire has finished processing the guild history.
+
+{{note: You can still request additional history and ask LibHistoire to check the guild history for any missing sales events using the rescan button.}}
+
+= Obtaining Guild History
+
+{{image:request_daily_data.jpg | request_daily_data}}
+
+To obtain sales data the page number and right arrow (or forward arrow) must be showing. You will need to use the arrow to go to the last page of available data. 
+
+{{image:show_more.jpg | show_more}}
+
+Once you have done that the E Show More option will appear. Even if there is no right arrow showing press E to request more data.
+
+{{image:sales_gap_filled.jpg | sales_gap_filled}}
+
+After you have enough guild history to cover the time you have been offline the right arrow will appear. This means you have requested all the missing data. Using the right arrow to go to the end of all the history stored in your binary cache will not request more data from the server. It simply displays the data. You can go all the way to the end if you like but it is not needed.
+
+{{note: If you have not been keeping your data up to date and you have multiple gaps in data the LibHistoire UI will show you and you may need to advance to the next gap and request more data.}}
+
+= Unlinked Events Notification
+
+With LibHistoire 1.2.0 there is a new notification when you log off.
+
+{{image:log_off_notification.jpg | log_off_notification}}
+
+You could have any amount of time that has not been linked with your Guild History Events. If you chose to log off that is fine but pay close attention to the notification. Any gap in information will still be there when you log back in and you will have to take additional steps to obtain any missing sales data.
 
 = Setup Master Merchant 3.0
 
@@ -250,305 +255,6 @@ The MMxxData (MM00Data, MM01Data, etc.) modules are used for importing data only
 once you log in the LibHistorie Refresh will start. You will know when the refresh has finished when you see, <font class="yellow">LibGuildStore Refresh Finished</font> appear in the chat window. You will need to obtain guild history data from the server.
 
 Once the initial refresh is finished you can import sales from MM. This is to accommodate people who may have more history in their MM data files then they do in LibHistorie. You can also import from ATT for the same reason. If you have been using ATT and have never used MM then you could have 30 days of data in your ATT data files. After you import your ATT data and do a Ten Day with LibHistorie you will have the most data possible. You can also import purchases from ATT and the old standalone ShoppingList for MM. There will be notifications to disable the old MMxxData modules, the old ShoppingList standalone module, and ATT. There is an option to disable the ATT notification if you prefer to use both MM and ATT at the same time.
-
-= Troubleshooting
-
-## Duplicate Indexes Detected
-
-{{image:duplicate_indexes_detected.jpg | duplicate_indexes_detected}}
-
-If this notification appears then you either need to cancel and restore a backup or allow Master Merchant to reset all its internal data files and refresh sales data from LibHistorie.
-
-{{note: Your LibHistorie cache will not be reset by accepting to reset Master Merchant data files.}}
-
-## LibGuildStore.lua:316: attempt to index a nil value
-
-<pre>
-user:/AddOns/MasterMerchant/Libs/LibGuildStore/LibGuildStore.lua:309: attempt to index a nil value
-user:/AddOns/MasterMerchant/Libs/LibGuildStore/LibGuildStore.lua:316: operator < is not supported for nil < number
-</pre>
-
-If you have the above error then that means you deactivated Master Merchant but not the rest of the required modules. You need to deactivate all of the GSxxData modules and LibGuildStore. This is mentioned in [[#| What to disable when MM is not needed]]
-
-{{note: If you intend to use Master Merchant and you have the above error then you need to update or activate the required modules for Master Merchant.}}
-
-## Lua errors
-
-There are times when the game for some reason will corrupt GS16Data.lua or GS17Data.lua and when that happens ESO will reset the file. Once that happens nothing about Master Merchant will work with the existing data. You won't be able to open the Master Merchant UI to view sales data or if you hover over the dots on the Graph you will have errors similar to what is shown below.
-
-<pre>
-user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:455: operator .. is not supported for string .. nil
-user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:458: operator .. is not supported for string .. nil
-user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:573: operator .. is not supported for string .. nil
-user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:970: operator .. is not supported for string .. nil
-user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a nil value
-</pre>
-
-While in game go to the LibGuildStore settings menu and look for the heading [[#Reset Data | Reset LibGuildStore ]].
-
-After you click the <font class="ltblue">Reset LibGuildStore Data</font> button the UI will reload and Master Merchant will get information from the LibHistoire cache. After the UI reloads about every minute you will see that Master Merchant is still refreshing data. There will be an approximated time remaining that will go up and down because it's not perfect.
-
-{{note: Do not log out, do writs, open a guild trader, update LibHistorie data, or do anything else until the refresh is complete. Do nothing except maybe move enough or type in guild chat so you don't go AFK.}}
-
-## OneDrive
-
-OneDrive is great for many reasons however, for ESO it can create a situation where the GS16Data.lua and GS17Data.lua files are not synced properly. I would think this would affect any of the GSxxData.lua saved variable files because of their size. They may not syncronize quickly with some internet users because of upload and download speeds being limited. To resolve this you need to change settings so that OneDrive will no longer try to backup your Documents folder where all your Addons and SavedVariables file are located.
-
-{{note: I will admit I do not have Windows 10 or Windows 11 so this is peiced together from helping someone.}}
-
-{{image:onedrive_cloud_icon.jpg | onedrive_cloud_icon}}
-
-First open the OneDrive settings by clicking the Cloud icon for OneDrive.
-
-{{image:manage_backup_button.jpg | manage_backup_button}}
-
-Click the Manage Backup button.
-
-{{image:onedrive_folders_to_backup.jpg | onedrive_folders_to_backup}}
-
-As shown in the above screen shot all three folders are being monitored by OneDrive. You want to disable the backup for the Documents folder.
-
-{{image:onedrive_documents_folders_disabled.jpg | onedrive_documents_folders_disabled}}
-
-Now OneDrive will no longer try to backup the Documents folder.
-
-{{image:onedrive_folders_where_to_backup.jpg | onedrive_folders_where_to_backup}}
-
-If prompted, chose <font class="yellow">This Computer Only</font> so that OneDrive will not attempt to backup your Documents folder.
-
-{{note: You do not have to pay for OneDrive or update to get more space. If you have any issues pausing or stoping OneDrive so that you can change the settings just wait longer until it pauses or stops. It may take a while but it will happen.}}
-
-= LibHistoire UI
-
-{{image:new_interface_LibHistoire.jpg | libhistoire_popout_menu}}
-
-The new interface has all the new categories from guild hsitory. 
-
-{{image:interface_menu_options.jpg | interface_menu_options}}
-
-There are options to lock and unlock the window to move it and then lock its position.
-
-{{image:libhistoire_popout_menu.jpg | libhistoire_popout_menu}}
-
-Each category has a popout menu that will be explained below.
-
-## Reset Linked Range
-
-This feature should not be used.  I am having a hard time understanding when to use it. 
-
-Here are some reasons not to click it:
-
-* You are missing less than 1 day of data
-* You are missing 5 days of data
-* You have not played for 2 monts, the ZOS chace was set at 30 days, and you cannot obtain data for 2 months because too much time has passed
-
-LibHistoire is smart enough to know what to do in either case. So it is recomended to not use that option. 
-
-In all cases [[#|Obtaining Guild History]] from the server is the best option and LibHistoire will process the data.
-
-## Clear Cache
-
-This feature will clear the cache stored on your local hard drive. It does not delete any data from the server. Should you want the data from the server again, you would need to manually request it.
-
-## Request Mode
-
-{{image:request_mode_menu.jpg | request_mode_menu}}
-
-Automatic: means data will be requested based on the Addon requesting the data from LibHistoire
-Force Off: means data will not be requested whether or not an Addon uses the data
-Force On: means data will be requested from the server and kept in the binary cache so that a mod can access it
-
-{{note: LibHistoire automatically requests data from the server and depending on LibHistoire options and features used the requests may be interupdated.}}
-
-= Shopping List
-
-{{image:shopping_list_view.jpg | shopping_list_view}}
-
-Adds a new icon allowing you to view purchases you make from guild stores.
-
-{{inline:24px | shopping_list.jpg | shopping_list}} The <font class="tan">Shopping List</font> icon allows you to select the installed extension and view purchases you have made from guild stores.
-
-{{note: The by old Shopping List extension by MildFlavour is not longer used and can be disabled after you import your purchases.}}
-
-= Bonanza!
-
-{{image:Bonanza.png | Bonanza}}
-
-Shop all of Tamriel with [[https://www.esoui.com/downloads/info2143-BeamMeUp-TeleporterFastTravel.html | Beam Me Up]] and Bonanza. Master Merchant is not just for high end traders anymore. If you are shopping for the best deal you can find it in the Bonanza window.
-
-{{image:bonanza_window.jpg | bonanza_window}}
-
-With MM 3.7.x the Bonanza {{inline:24px | bonanza_icon.jpg | bonanza_icon}} icon allows you to view items you have seen at traders as you shop for items to purchase.
-
-## Bonanza Name Filter
-
-{{image:bonanza_window_filter.jpg | bonanza_window_filter}}
-
-## Bonanza Type Filter
-
-{{image:bonanza_window_filter_type.jpg | bonanza_window_filter_type}}
-
-## Bonanza - Using BeamMeUp
-
-{{image:bonanza_window_beammeup.jpg | bonanza_window_beammeup}}
-
-{{note: If you have BeamMeUp installed you can right click the Location column to travel to the zone the trader is located in with the usual BeamMeUp restrictions. If there are no players in the zone to jump to BeamMeUp will notify you and you may travel to a wayshrine that is not close to the trader.}}
-
-= Outliers
-
-{{image:less_then_five_outliers.jpg | less_then_five_outliers}}
-
-With only 5 sales the obvious outlier is not ignored.
-
-{{note: There must be at least 6 sales before Master Merchant can ignore outliers.}}
-
-{{image:outlier_ignored.jpg | outlier_ignored}}
-
-With 8 sales of the same item you can see that the obvious outlier is being ignored.
-
-{{note: When ignoring outliers with 6 or more sales that does not mean the highest and lowest sale will be ignored. The lowest and highest price may be well within range and reasonable prices. The above example is a good example to show the remaining 7 are well within tolerance of one another.}}
-
-== Controlling skewed prices
-
-{{note: People will intentionally try to sell items much higher then they are worth. Use the resources available rather then squint at the scatter plot.}}
-
-{{image:bonanza_skewed_prices.jpg | bonanza_skewed_prices}}
-
-While viewing a graph as shown above find out who is skewing the price and add them to the [[#|Guild & Account filter]].
-
-{{image:resolved_skewed_price.jpg | resolved_skewed_price}}
-
-Once the seller is added to the [[#|Guild & Account filter]] you can see that the graph is much more useful.
-
-{{note: The absence of the Bonanza price is not what corrected the graph. The Bonanza average changed because the seller of the item listed for 3000g is being ignored. Other listings of the same item for 200g would not have the same drastic affect as the listing for 3000g.}}
-
-{{image:bonanza_guild_account_filter.jpg | bonanza_guild_account_filter}}
-
-For convenience you can add sellers to the Guild & Account filter from the Bonanza menu.
-
-= MM Price vs TTC vs Bonanza
-
-{{note: There are several examples because I feel Bonanza is new and it may be hard to understand the various ways to use it. I highly suggest reading all of the following sections.}}
-
-{{inline:256px | example_1_hlaalu.jpg | example_1_hlaalu}}{{inline:256px | example_2_cuirass.jpg | example_2_cuirass}}{{inline:256px | example_3_bow.jpg | example_3_bow}}{{inline:256px | example_4_plating.jpg | example_4_plating}}
-
-* The MM price is in <font class="yellow">yellow text</font>, and it is the price the item sold for in one of the guilds you are in. It is not a price from other outside sources like other guilds on the server and it is not from TTC.
-* The TTC Price is from their own data collected by their EXE and transmitted to their server. They trim outliers using their own method and then make an average of the remaining data.
-* The Bonanza Price is in <font class="blue">blue text</font> and it is an average from a 24 hour snapshot of all the listings you have seen of that specific item from the traders you have visited.
-
-Looking at the first example of the Hlaalu Bookcase you see it sold 1 time out of all the guilds I am in. So there is no way to get a reasonable price for it. Someone listed it 56 days ago for 100K and it sold. That is one of the drawbacks of the MM price. If you do not have many sales from the guilds you are in then the MM price won't be very helpful. Also from the first example you see that the TTC price is about 19K and the Bonanza price is 17K. There are 9 listings from TTC and 1 from another trader. Once you have more data the Bonanza price may change but you can more easily see that 17K to 19K would probably be a more reasonable price then 100K.
-
-From the second and third examples you will note that the TTC price is useless for these items.  The TTC price can sometimes be very helpful. The bonanza price is also higher then the MM price. This is where the Bonanza window will be needed because you will need to search for the exact item and look at the prices you have found. This is discussed in the section [[#Evaluating the Bonanza price | Evaluating the Bonanza price]]
-
-The Bonanza price while similar to TTC is the average of what you have found at the traders you have visited in the last 24 hours. Bonanza itself is intended to be a shopping tool but since the data is there it is displayed on the graph for you to use as another way to evaluate what the item is currently selling for. If you only have 1 to 3 sales you can not compute an average from that I'd suggest 5 or more depending on how popular it is on traders at the time.
-
-For the last example you will note that the Bonanza price for Chromium Plating is only about 22K above the MM price. With more data it may even fall exactly in line with the MM price. The TTC suggested price is 239Kwhich is 2K different then the Bonanza average. For items that normally do not have a lot of skew to the pricing data this will be common. For items that have more outliers skewing the pricing data you will need to evaluate the TTC and Bonanza prices to get a better idea of what may be a good price to sell the item for.
-
-## Evaluating the Bonanza price
-
-{{inline:256px | bonanza_tooltip_style_page.jpg | bonanza_tooltip_style_page}}{{inline:512px | low_end_prices.jpg | low_end_prices}}{{inline:512px | high_end_prices.jpg | high_end_prices}}
-
-{{note: If those are too small, right click the image and show it in a new tab to see the full size.}}
-
-Looking at the tooltip TTC shows 74K to 93K, the Bonanza average is 158K, and the MM price is 70K. Then the highest and lowest listing in TTC is 446 to 5M. With TTC you can not view the current prices being used for their suggestion. You can view the Bonanza prices to evaluate what other people are selling the item for. For this example you would open the Bonanza window and search for <font class="tan">style zero cuirass</font>.
-
-As you see in the middle screenshot the prices range from 50K to 80K. In the last screen shot the highest prices are 1M to 3.9M.  So now you have three prices all in about the same range. 1) 50K to 80K 2) 70K 3) 74 to 93K and all without opening external websites, google docs pages, or spreadsheets. It didn't require two monitors and it took only a few moments.
-
-It is easy to see that 70K is probably the best average price to sell the style page for. If you want it to see faster because you want it out of your inventory, 50K won't bee too low that someone might flip it and even if they do you still made close to the going rate of 70K.
-
-{{note: Just because the Bonanza price is not 70K and is showing 158K doesn't mean it is inaccurate. In this example it is being affected by all the prices above 1M. Although you can not see the data you will be able to view your own. For the data used in the screen shots 99 of the prices were above 100K which will affect the average significantly. This is why I recommend you evaluate the price in the manner described.}}
-
-## Price Sold vs. Price Listed
-
-The above items are meant to show items that have an unusual range for the TTC price or Bonanza price because it is the listed price. For items like style pages if there are 124 listings and 99 of them are 100K and above you may wonder if you could make more from selling the item. Maybe and maybe not. This is the difference between what the item sold for which is the MM price and what the item is listed for which it the Bonanza or TTC price. Think of how an author might write a book. They write the book so it is appealing to their audience. So imagine who will be buying your items. Do they have 6M to spend on something and plenty of gold left over? Does your buyer have 6M at all? Have they ever had 6M at one time? Are they willing to spend 6M for the item? It is simple common sense that if someone has 124 items to choose from they will buy the cheapest one. Just because something sold for 5M or 6M 60 days ago when the item was scarce and someone had that much to spend on the item doesn't mean people will pay that price when the item is less scarce.
-
-The above examples don't represent things like crafting materials where the pricing is more consistent and the MM price is more reliable. With the example of crafting materials that is simple supply and demand. If you want to read an article on it be my guest and you can enjoy such wonderful words as equilibrium and elasticity, knock yourself out. There are a lot of crafting materials on guild stores so there is a large supply and there is a large demand for them. Because there is a consistent need for them people purchase the cheapest listed items and the price remains rather consistent. 
-
-This is not the case for everything. Take your time and use the different prices and tools to evaluate what you are selling, what others are selling it for, and what others are buying it for.
-
-## Comparisons between Bonanza, TTC, and MM
-
-{{image:style_page_thurvokun.png | style_page_thurvokun}}
-
-To start with you will have people that list an item for something stupid and it just contaminates the TTC database. They should be prevented from uploading TTC prices from the TTC developers. When you have items with no data or items that people feel should sell for millions of gold then those are harder to evaluate.
-
-That isn't what I will cover in this section because that kind of data is not usable.
-
-Look at these examples of the Bonanza price
-
-{{image:dreugh_wax_bonanza.png | dreugh_wax_bonanza}}
-
-Bonanza is within 1K approximately from TTC and the MM average.
-
-{{image:blassed_thistle_bonanza.png | blassed_thistle_bonanza}}
-
-Bonanza is 1g away from the TTC average.
-
-Most sales noobs feel you have to have millions of sales in your database, years and years of stuff, and preserve data like you are the library of congress or something. If you look at both of those screen shots TTC has data points in the thousands. 15,000 for the Dreugh Wax, and 2,800 for the Blessed Thistle. Yet I have the same price for the Blessed Thistle with only a few hundred data points.
-
-I could write Lua code that anyone could copy and paste into an online Lua compiler that could show you how I can add a variety of numbers and come out with a certain average, say 100. Then I could add together another set of data that has different and more numbers, and still come within approximately 5g of the average I am looking for. A range of 95g - 105g more or less.
-
-The example would be bias of course because I am demonstrating that if you when you add 100, 99, 90, 95 and so on.. together that you get a specific average. If you load more of the same numbers you will get the same average. I don't care how many times you add 100 + 100 + 100, it will be the same outcome.
-
-In statistics this is called the [[https://en.wikipedia.org/wiki/Mode_(statistics) | Mode]]. So the value that appears most often. Commonly sold materials such as Chromium Grains, Dreugh Wax, Clam Gall, Blessed Thistle and such that the data is fairly consistent. When data is more consistent you don't need thousands of data points to get the proper average.
-
-Don't make it work. If you visit 3 or 4 cities and search for key items at all traders then you should have enough data to work with. TTC and Bonanza should be close however, it depends on the pricing people use. Some people post the TTC Suggested price and some post the Average price. It depends on the demand of the item and the price.
-
-The other benefit of Bonanza is that you can view the prices. Which is what I show in my documentation under [[#|Evaluating the Bonanza price]]. If you feel the price is not in line with TTC or listings from other traders then look. If other traders list a style page for 50K and that is the most common value then that is the going rate. You can then price your items to be competitive with other guilds.
-
-So it may be a bit of information overload but without the need for two monitors, viewing the TTC website, viewing google docs, viewing spreadsheets, exporting prices from MM to paste on websites, just use the Master Merchant interface. It is simple and easy to switch views and search for things to compare information without leaving the game to look at outside sources for information.
-
-= States of the LibHistoire cache
-
-## Unlinked
-
-{{image:red_text_unlinked.jpg | red_text_unlinked}}
-
-In the Unlinked state you can either wait for the server to grant the requests for offline data that LibHistoire requests, or you can manually request guild history for the time you were offline.
-
-## Linking in progress
-
-{{image:yellow_text_linking.jpg | yellow_text_linking}}
-
-Once LibHistoire has what it feels it needs, then it will begin processing the guild history events and attempt to link to the last known event.
-
-## Linking in progress, with 0 events left
-
-{{image:process_stuck.jpg | process_stuck}}
-
-If you ever see it processing 0 events for a while you will just need to wait for the events to link. If there are external factors involved then nothing will process until that is no longer affecting LibHistoire.
-
-## Linked
-
-{{image:green_text_linked.jpg | green_text_linked}}
-
-Once LibHistoire has linked to its stored events you should see green text. This means that LibHistoire has finished processing the guild history.
-
-{{note: You can still request additional history and ask LibHistoire to check the guild history for any missing sales events using the rescan button.}}
-
-= Obtaining Guild History
-
-{{image:request_daily_data.jpg | request_daily_data}}
-
-To obtain sales data the page number and right arrow (or forward arrow) must be showing. You will need to use the arrow to go to the last page of available data. 
-
-{{image:show_more.jpg | show_more}}
-
-Once you have done that the E Show More option will appear. Even if there is no right arrow showing press E to request more data.
-
-{{image:sales_gap_filled.jpg | sales_gap_filled}}
-
-After you have enough guild history to cover the time you have been offline the right arrow will appear. This means you have requested all the missing data. Using the right arrow to go to the end of all the history stored in your binary cache will not request more data from the server. It simply displays the data. You can go all the way to the end if you like but it is not needed.
-
-{{note: If you have not been keeping your data up to date and you have multiple gaps in data the LibHistoire UI will show you and you may need to advance to the next gap and request more data.}}
-
-= Unlinked Events Notification
-
-With LibHistoire 1.2.0 there is a new notification when you log off.
-
-{{image:log_off_notification.jpg | log_off_notification}}
-
-You could have any amount of time that has not been linked with your Guild History Events. If you chose to log off that is fine but pay close attention to the notification. Any gap in information will still be there when you log back in and you will have to take additional steps to obtain any missing sales data.
 
 = Master Merchant Window
 
@@ -659,13 +365,13 @@ There are several date ranges you can choose from. <font class="tan">This Week</
 
 === Sales Format Options
 
+Master Merchant provides several ways to view and calculate pricing data based on your current sales history. These options determine how item averages, deal values, sales totals, and other pricing details are processed using the id53 sales data provided by the game's Guild History system.
+
 {{image:dupe_sales_setting.jpg | dupe_sales_setting}}
 
-When the setting <font class="ltblue">**Use historical and recent sales data**</font> is enabled historical and current sales data will be combined but all duplicate data will affect the totals. While users may not mind mixing the data for pricing, your weekly sales totals will reflect an incorrect total unless the option is disabled.
+Use the Sales Format Options menu to choose how pricing is calculated. Each option controls how Master Merchant evaluates your local sales history when determining averages, trends, and suggested prices.
 
-All the pricing data and guild sales totals are calculated during initialization so you can not toggle between using and not using historical data in addition to the current server data without another full initialization of all data.
-
-For that reason, unless you feel you must be the library of congress of data I recommend to leave that feature OFF or disabled.
+{{note: This option applies to current id53 sales data. If you imported old Master Merchant archives from before Update 41, see [[#|Legacy Data Behavior from Update 41]].}}
 
 === Time Format Options
 
@@ -851,6 +557,156 @@ The refresh button is only a fail safe mechanism in case a user uses a feature t
 
 {{image:reset_data.jpg | reset_data}}
 
+= Shopping List
+
+{{image:shopping_list_view.jpg | shopping_list_view}}
+
+Adds a new icon allowing you to view purchases you make from guild stores.
+
+{{inline:24px | shopping_list.jpg | shopping_list}} The <font class="tan">Shopping List</font> icon allows you to select the installed extension and view purchases you have made from guild stores.
+
+{{note: The by old Shopping List extension by MildFlavour is not longer used and can be disabled after you import your purchases.}}
+
+= Bonanza!
+
+{{image:Bonanza.png | Bonanza}}
+
+Shop all of Tamriel with [[https://www.esoui.com/downloads/info2143-BeamMeUp-TeleporterFastTravel.html | Beam Me Up]] and Bonanza. Master Merchant is not just for high end traders anymore. If you are shopping for the best deal you can find it in the Bonanza window.
+
+{{image:bonanza_window.jpg | bonanza_window}}
+
+With MM 3.7.x the Bonanza {{inline:24px | bonanza_icon.jpg | bonanza_icon}} icon allows you to view items you have seen at traders as you shop for items to purchase.
+
+## Bonanza Name Filter
+
+{{image:bonanza_window_filter.jpg | bonanza_window_filter}}
+
+## Bonanza Type Filter
+
+{{image:bonanza_window_filter_type.jpg | bonanza_window_filter_type}}
+
+## Bonanza - Using BeamMeUp
+
+{{image:bonanza_window_beammeup.jpg | bonanza_window_beammeup}}
+
+{{note: If you have BeamMeUp installed you can right click the Location column to travel to the zone the trader is located in with the usual BeamMeUp restrictions. If there are no players in the zone to jump to BeamMeUp will notify you and you may travel to a wayshrine that is not close to the trader.}}
+
+= Outliers
+
+{{image:less_then_five_outliers.jpg | less_then_five_outliers}}
+
+With only 5 sales the obvious outlier is not ignored.
+
+{{note: There must be at least 6 sales before Master Merchant can ignore outliers.}}
+
+{{image:outlier_ignored.jpg | outlier_ignored}}
+
+With 8 sales of the same item you can see that the obvious outlier is being ignored.
+
+{{note: When ignoring outliers with 6 or more sales that does not mean the highest and lowest sale will be ignored. The lowest and highest price may be well within range and reasonable prices. The above example is a good example to show the remaining 7 are well within tolerance of one another.}}
+
+== Controlling skewed prices
+
+{{note: People will intentionally try to sell items much higher then they are worth. Use the resources available rather then squint at the scatter plot.}}
+
+{{image:bonanza_skewed_prices.jpg | bonanza_skewed_prices}}
+
+While viewing a graph as shown above find out who is skewing the price and add them to the [[#|Guild & Account filter]].
+
+{{image:resolved_skewed_price.jpg | resolved_skewed_price}}
+
+Once the seller is added to the [[#|Guild & Account filter]] you can see that the graph is much more useful.
+
+{{note: The absence of the Bonanza price is not what corrected the graph. The Bonanza average changed because the seller of the item listed for 3000g is being ignored. Other listings of the same item for 200g would not have the same drastic affect as the listing for 3000g.}}
+
+{{image:bonanza_guild_account_filter.jpg | bonanza_guild_account_filter}}
+
+For convenience you can add sellers to the Guild & Account filter from the Bonanza menu.
+
+= MM Price vs TTC vs Bonanza
+
+{{note: These examples demonstrate how MM, TTC, and Bonanza each calculate prices differently. Since Bonanza is newer, the examples help show how to interpret its values. I recommend looking through all of them before making pricing decisions.}}
+
+{{inline:256px | example_1_hlaalu.jpg | example_1_hlaalu}}{{inline:256px | example_2_cuirass.jpg | example_2_cuirass}}{{inline:256px | example_3_bow.jpg | example_3_bow}}{{inline:256px | example_4_plating.jpg | example_4_plating}}
+
+* The MM price is shown in <font class="yellow">yellow text</font>. It is based on actual sales recorded in your guild history. It does not use any TTC information.
+* The TTC price comes from their client application. They remove outliers using their own method and calculate an average based on the remaining listings.
+* The Bonanza price is shown in <font class="blue">blue text</font>. It is based on the listings you personally saw while checking traders. It reflects what you have encountered yourself, not data from other players.
+
+In the first example with the Hlaalu Bookcase, the Bonanza prices you saw were all in a reasonable range. If most traders offered it around 17K to 19K, that price range is far more reliable than a single inflated listing at 100K.
+
+The second and third examples show how TTC values can differ from what you actually found. When a TTC average includes a wide range of prices, the Bonanza window becomes useful because it shows the listings you personally verified at traders.
+
+Bonanza prices may appear to match TTC at times, but they will vary depending on how many traders you visit and how often the item is listed. Some items appear frequently and require only a few trader visits. Others are uncommon and may need more sampling to get an accurate picture.
+
+You do not need thousands of MM sales to understand a price. Even a few hundred data points for a common item, such as Blessed Thistle, are enough for MM to calculate a stable average.
+
+The same idea applies to the statistical mean. Repeating the same value many times will still lead to the same average. This is known as the Law of Large Numbers, and it explains why a consistent price will stay consistent even when the sample size is moderate.
+
+Pricing does not have to be complicated. Visiting a few traders across different cities is usually enough to identify the normal price range for an item. What matters is demand and how frequently the item appears.
+
+Bonanza has an additional advantage: it shows the listings you actually saw. This helps you choose realistic prices and stay competitive with other guilds without relying on external websites.
+
+While all this information may seem like a lot at first, each tool provides valuable insight. MM, TTC, and Bonanza together give you a complete understanding of the market without needing to leave the game.
+
+## Evaluating the Bonanza price
+
+{{inline:256px | bonanza_tooltip_style_page.jpg | bonanza_tooltip_style_page}}{{inline:512px | low_end_prices.jpg | low_end_prices}}{{inline:512px | high_end_prices.jpg | high_end_prices}}
+
+{{note: If these images appear too small, right click and open them in a new tab to view them at full size.}}
+
+In the first screenshot, the TTC range shows 74K to 93K, while the Bonanza average reflects what you actually saw while visiting traders. When the TTC range is wide or influenced by extreme listings, Bonanza helps verify what you found during your searches.
+
+To evaluate Bonanza correctly, search for the item in the game. For example, you can look up <font class="tan">style zero cuirass</font> in the Bonanza window. This allows you to confirm the prices you have personally seen and compare them to the TTC values.
+
+In the middle image, the listings range from 50K to 125K. By checking several traders, you can quickly see that most listings fall around the middle of that range. It does not require two monitors or outside tools, and it only takes a few minutes to gather reliable results.
+
+From these listings, it is clear that 70K is a realistic average. If you list your item at 70K, you are matching the prices found at the majority of traders you visited. Even if an occasional outlier exists, you are still pricing close to the true market value.
+
+{{note: If the Bonanza price appears higher than your estimate, such as showing 158K instead of 70K, this does not mean it is incorrect. It simply means your sample of traders included higher listings. Always compare the range of prices you saw and make a judgment based on the most common values.}}
+
+## Price Sold vs. Price Listed
+
+The examples above highlight items with unusually large price ranges. These cases help explain the difference between what an item sells for and what players choose to list it for. Anyone can list an item at any price, but that does not mean the item will actually sell at that amount.
+
+The Bonanza and TTC prices are both useful, but they are not the same. Bonanza shows the prices you personally saw at traders, while TTC gives an average after removing outliers. Neither of these values tells you the final sale price unless you combine them with your own observations.
+
+When evaluating an item, think about the intent behind the listings you see. Some players price items very high in the hope that someone will overpay. Others list too low because they want a quick sale. The goal is to find the realistic range where sales actually occur, not the extreme values.
+
+Bonanza helps with this because it lets you compare multiple listings quickly. If most prices fall within a narrow range, that is usually the true value of the item. The extremes on either end are rarely reliable indicators of what the item will sell for.
+
+Keep this in mind when deciding how to price your own items. A high listing does not guarantee a high sale, and a low listing does not mean the market value is low. Use the patterns you see across several traders to determine a fair and accurate price.
+
+## Comparisons between Bonanza, TTC, and MM
+
+{{image:style_page_thurvokun.png | style_page_thurvokun}}
+
+Some players will list an item for an extremely high or unrealistic price. These listings do not reflect the true value of the item and can distort the TTC averages. Ideally the TTC developers would filter out these extreme cases more aggressively, but since they appear in the raw data, items with no consistent history or items that people believe should sell for millions are naturally harder to evaluate.
+
+This section does not focus on those unusable listings. Instead, it looks at situations where TTC, MM, and Bonanza all provide helpful and consistent information.
+
+Below are two examples of the Bonanza price:
+
+{{image:dreugh_wax_bonanza.png | dreugh_wax_bonanza}}
+
+In this example, the Bonanza value is within about 1K of both TTC and the MM average. This shows how closely all three systems can align for commonly traded materials.
+
+{{image:blassed_thistle_bonanza.png | blassed_thistle_bonanza}}
+
+Here, the Bonanza value is only 1 gold away from the TTC average. Even though TTC has thousands of data points for this material, the value is still consistent with what Bonanza shows from the traders you actually visited.
+
+A common misconception is that you need years and years of sales data stored in Master Merchant in order to get accurate results. That is not true. In the Dreugh Wax example, TTC shows more than 15,000 data points, and in the Blessed Thistle example, TTC shows around 2,800. Yet MM is able to show the same price for Blessed Thistle using only a few hundred sale records.
+
+You could demonstrate this with a simple Lua script by adding sets of numbers that average around 100. Even if you mix different values, such as 100, 99, 90, 95, and similar numbers, the average will remain close to the same. No matter how many times you add 100 + 100 + 100, the result does not change.
+
+In statistics this is related to the Mode, the value that appears most often. For commonly sold materials like Chromium Grains, Dreugh Wax, Clam Gall, Blessed Thistle, and others, the data is consistent enough that thousands of points are not required to determine the true average.
+
+Pricing should not be difficult. If you visit three or four cities and check the main traders for key items, you will usually gather enough information to see the normal price range. TTC and Bonanza should agree in most cases, depending on how people choose their listing prices. Some players use the TTC Suggested value, others use the Average value, and it depends on demand and current availability.
+
+Another advantage of Bonanza is that it allows you to view actual listings. As shown earlier in the section [[#Evaluating the Bonanza price | Evaluating the Bonanza price]], you can always verify prices right in the interface. If you see that most traders list a style page for 50K, then 50K is the real going rate. You can then list your item competitively without guessing.
+
+Overall this may seem like a lot of information, but the point is that you do not need extra monitors, external websites, spreadsheets, google docs, or exporting MM data. The Master Merchant interface itself provides everything you need. Using the information on the tooltip makes it fast and easy to compare MM, TTC, and Bonanza prices without leaving the game.
+
 = Misc
 
 == Popup Item Data
@@ -1010,6 +866,73 @@ Once exported the data is saved in <code>MasterMerchant.lua</code> in your <code
 },
 </pre>
 
+= Troubleshooting
+
+## Duplicate Indexes Detected
+
+{{image:duplicate_indexes_detected.jpg | duplicate_indexes_detected}}
+
+If this notification appears then you either need to cancel and restore a backup or allow Master Merchant to reset all its internal data files and refresh sales data from LibHistorie.
+
+{{note: Your LibHistorie cache will not be reset by accepting to reset Master Merchant data files.}}
+
+## LibGuildStore.lua:316: attempt to index a nil value
+
+<pre>
+user:/AddOns/MasterMerchant/Libs/LibGuildStore/LibGuildStore.lua:309: attempt to index a nil value
+user:/AddOns/MasterMerchant/Libs/LibGuildStore/LibGuildStore.lua:316: operator < is not supported for nil < number
+</pre>
+
+If you have the above error then that means you deactivated Master Merchant but not the rest of the required modules. You need to deactivate all of the GSxxData modules and LibGuildStore. This is mentioned in [[#| What to disable when MM is not needed]]
+
+{{note: If you intend to use Master Merchant and you have the above error then you need to update or activate the required modules for Master Merchant.}}
+
+## Lua errors
+
+There are times when the game for some reason will corrupt GS16Data.lua or GS17Data.lua and when that happens ESO will reset the file. Once that happens nothing about Master Merchant will work with the existing data. You won't be able to open the Master Merchant UI to view sales data or if you hover over the dots on the Graph you will have errors similar to what is shown below.
+
+<pre>
+user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:455: operator .. is not supported for string .. nil
+user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:458: operator .. is not supported for string .. nil
+user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:573: operator .. is not supported for string .. nil
+user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:970: operator .. is not supported for string .. nil
+user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a nil value
+</pre>
+
+While in game go to the LibGuildStore settings menu and look for the heading [[#Reset Data | Reset LibGuildStore ]].
+
+After you click the <font class="ltblue">Reset LibGuildStore Data</font> button the UI will reload and Master Merchant will get information from the LibHistoire cache. After the UI reloads about every minute you will see that Master Merchant is still refreshing data. There will be an approximated time remaining that will go up and down because it's not perfect.
+
+{{note: Do not log out, do writs, open a guild trader, update LibHistorie data, or do anything else until the refresh is complete. Do nothing except maybe move enough or type in guild chat so you don't go AFK.}}
+
+## OneDrive
+
+OneDrive is great for many reasons however, for ESO it can create a situation where the GS16Data.lua and GS17Data.lua files are not synced properly. I would think this would affect any of the GSxxData.lua saved variable files because of their size. They may not syncronize quickly with some internet users because of upload and download speeds being limited. To resolve this you need to change settings so that OneDrive will no longer try to backup your Documents folder where all your Addons and SavedVariables file are located.
+
+{{note: I will admit I do not have Windows 10 or Windows 11 so this is peiced together from helping someone.}}
+
+{{image:onedrive_cloud_icon.jpg | onedrive_cloud_icon}}
+
+First open the OneDrive settings by clicking the Cloud icon for OneDrive.
+
+{{image:manage_backup_button.jpg | manage_backup_button}}
+
+Click the Manage Backup button.
+
+{{image:onedrive_folders_to_backup.jpg | onedrive_folders_to_backup}}
+
+As shown in the above screen shot all three folders are being monitored by OneDrive. You want to disable the backup for the Documents folder.
+
+{{image:onedrive_documents_folders_disabled.jpg | onedrive_documents_folders_disabled}}
+
+Now OneDrive will no longer try to backup the Documents folder.
+
+{{image:onedrive_folders_where_to_backup.jpg | onedrive_folders_where_to_backup}}
+
+If prompted, chose <font class="yellow">This Computer Only</font> so that OneDrive will not attempt to backup your Documents folder.
+
+{{note: You do not have to pay for OneDrive or update to get more space. If you have any issues pausing or stoping OneDrive so that you can change the settings just wait longer until it pauses or stops. It may take a while but it will happen.}}
+
 = Technical Information
 
 == Backup LibGuildStore Data
@@ -1046,8 +969,6 @@ Since this can occur I highly recommend changing your user name to only contain 
 
 This also includes creative names that contain things like Æ or æ. As those are not individual letters.
 
-
-
 = Version History
 
 Apparently for version 2.2.0 there was an experimental turbo mode added to MM. From the change log it appears that this was removed by request from Zenimax. However, even I noticed when you tried to download 2.2.1 which had turbo mode removed, you received a file named <font class="purple">Master Merchant 2.2.0.zip</font>. If you tried to engage turbo mode it was still available even if it didn't work as expected.
@@ -1058,7 +979,34 @@ Upon examination of the code 2.3.1 had turbo mode removed which was not really r
 
 This makes me believe that 2.3.1 was really intended to be the proposed 2.2.1 but somehow the upload never went through properly. I am glad Philgo68 uploaded the version as it has helped me understand the code a bit more.
 
-= Depreciated
+= Deprecated
+
+== Legacy Data Behavior from Update 41
+
+During Update 41 (March 2024), Zenimax reset the Guild History server database and switched from id64 to id53 sales identifiers. Because of this reset, Master Merchant could not deduplicate sales across the boundary between pre-U41 id64 data and the new id53 format.
+
+{{note: If you still have archived Master Merchant data from before Update 41 (March 2024), be aware that mixed id64/id53 records cannot be deduplicated. This does not affect users who started fresh after Update 41.}}
+
+### Impact on Users During Update 41
+
+During the transition to Update 41, most users experienced little to no disruption because their binary cache already contained recent sales data. Players who typically retained only 30 to 90 days of history saw minimal data loss, and Guild Masters were still able to evaluate recent weekly activity without issue.
+
+However, users with extensive archival data, years of sales or "library of congress"-style collections, experienced inaccurate averages when mixed id64 and id53 records overlapped. Because the identifier formats could not be matched across the Update 41 boundary, Master Merchant was unable to reliably deduplicate these overlapping records.
+
+This behavior is now legacy and only applies to users who retained significant pre-U41 archived data.
+
+### Bricked Guild Trader / Stuck History Segments
+
+During Update 41 there was also a bug in the base game where the Guild History could become "bricked" when the server pushed new events that could not be merged with the user's already-cached data. This occurred when the cache contained two segments that were supposed to join, but the server reported them as touching with no events in between. When this happened:
+
+* The history bar showed a blue/green segment nearly touching a red segment.
+* "Show More" stopped appearing on the last page.
+* The player could not advance the trader history.
+* Reloading the UI did not resolve it.
+
+{{image:bricked_trader.jpg | bricked_trader}}
+
+Because this bug came from the base game and not addons, it may still occur if the server pushes guild history segments that cannot be merged with your local cache. If this happens, you can use the [[#|Clear Cache]] option in the LibHistoire UI to rebuild your local history data. This will clear the affected cache entries and automatically reload the UI.
 
 == Background Scanning
 
@@ -1137,7 +1085,7 @@ After you install Master Merchant 3.0 verify it is the only Master Merchant show
 [[sb:Spoiler9 | Alternate Method]]
 Thanks to Shadowshire for sharing this workaround. While I did alter most of the steps I wanted to preserve his suggestion because it could provide a good alternative to importing LibHistoire data for those experiencing issues.
 
-This alternate method will primarily use data from the old Master Merchant Data files located in SavedVariables as shown in the depreciated section, [[#|Backup Master Merchant Data]].
+This alternate method will primarily use data from the old Master Merchant Data files located in SavedVariables as shown in the deprecated section, [[#|Backup Master Merchant Data]].
 
 It is recommended that only Master Merchant 3.7.x, ShoppingList (older standalone version), the original MMxxData modules, LibGuildStore, all GSxxData modules, and the required library files for Master Merchant are enabled to avoid potential interference while this procedure is performed.
 

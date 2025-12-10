@@ -1,43 +1,249 @@
----
-layout: default
-title: Master Merchant
----
-<h1 class="header1">{{ page.title }}</h1>
-<hr>
-<h1 class="grhead1">Main Table of Contents</h1>
-<div id="tableOfContents" class="grid-toc">
-    <div class="toc1">
-        <h2 class="grhead2"><a href="houses.html">Housing</a></h2>
-    </div>
-    <div class="toc2">
-        <h2 class="grhead2"><a href="1-install_luarocks.html">Installing LuaRocks</a></h2>
-        <h2 class="grhead2"><a href="2-setup_intellij.html">Setup IntelliJ</a></h2>
-    </div>
-</div>
-<h1 class="grhead1">ESOUI Mod Documentation</h1>
-<div id="tableOfContents" class="grid-mod-toc">
-    <div class="toc3">
-        <h2 class="grhead2"><a href="3-master_merchant.html">Master Merchant</a></h2>
-    </div>
-</div>
-<h1 class="grhead1">Localized Suplimental Documentation</h1>
-<div id="tableOfContents" class="grid-sup-toc">
-    <div class="toc5">
-        <h2 class="grhead2"><a href="4-french.html">Informations complementaires : Francais</a></h2>
-    </div>
-</div>
-<p class="empty">&nbsp;</p>
-<div>
-<!-- Needed, sets the top of the page just before the H1 Title -->
+
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>Master Merchant</TITLE>
+<STYLE>
+:root {  --sideMenu_OPVAR_TabCount: 2;  --sideMenuBorderStyle: solid; --sideMenuBorderWidth: 0.13; --sideMenuBorderWidthArray: 0 var(--sideMenuBorderWidth) var(--sideMenuBorderWidth) 0; --sideMenuContentPadding: 0.25rem; --sideMenuMaxHeight: 99vh; --sideMenuMaxInnerHeight: calc(var(--sideMenuMaxHeight) - var(--sideMenuBorderWidth)); --sideBaseMenuWidth: 45vw; --sideMenuMaxWidth: calc(var(--sideBaseMenuWidth) - var(--sideMenuTabWidth)); --sideMenuMinHeight: calc(var(--sideMenuTabHeight) * var(--sideMenu_OPVAR_TabCount)); --sideMenuPOSEdge: calc(var(--sideMenuWidth) * (-1)); --sideMenuPOSEdgeNoJS: calc((var(--sideMenuWidth) + var(--sideMenuTabWidth)) * (-1)); --sideMenuTabBorderWidthArray: 0 var(--sideMenuBorderWidth) var(--sideMenuBorderWidth) var(--sideMenuBorderWidth); --sideMenuTabHeight: 2.50rem; --sideMenuTabWidth: 1.25rem; --sideMenuTabPOSEdge: calc(var(--sideMenuTabWidth) * (-1)); --sideMenuTab1POSTop: 0; --sideMenuTab2POSTop: var(--sideMenuTabHeight); --sideMenuTab3POSTop: calc(var(--sideMenuTab2POSTop) + var(--sideMenuTabHeight)); --sideMenuTab4POSTop: calc(var(--sideMenuTab3POSTop) + var(--sideMenuTabHeight)); --sideMenuTab5POSTop: calc(var(--sideMenuTab4POSTop) + var(--sideMenuTabHeight)); --sideMenuTransitionSpeed: 0.3s; --sideMenuWidth: 16rem; --sideMenuZIndex: 1000; --sizeMenuZIndexActive: 1002; --sideMenuZIndexInactive: 1001; --fontSizeBase: 16px; --fontSizeMod: 100; --fontSizeModPreview: 100; --fontSizeScale: calc(var(--fontSizeBase) * var(--fontSizeMod) * 0.01); --fontSizeScalePreview: calc(var(--fontSizeBase) * var(--fontSizeModPreview) * 0.01); --cayman-header-heading: rgb(255, 255, 255); --cayman-header-background: rgb(21, 153, 87); --cayman-header-background-secondary: rgb(21, 87, 153); --cayman-section-headings: rgb(21, 153, 87); --cayman-body-text: rgb(96, 108, 113); --cayman-body-href: rgb(30, 107, 184); --cayman-blockquote-text: rgb(129, 145, 152); --cayman-code-background: rgb(243, 246, 250); --cayman-code-text: rgb(86, 116, 130); --cayman-border: rgb(220, 230, 240); --cayman-table-border-color: rgb(233, 235, 236); --cayman-hr-border: rgb(239, 240, 241); --body-text: rgb(149, 157, 165); --body-background: rgb(36, 41, 46); --code-background: rgb(29, 33, 37); --header1-text: rgb(225, 228, 232); --header2-text: rgb(223, 226, 229); --header3-text: rgb(216, 220, 225); --header4-text: rgb(209, 213, 218); --header5-text: rgb(202, 207, 211); --header6-text: rgb(174, 182, 190); --header-border: rgb(100, 109, 119); --header1-background: rgb(79, 90, 100); --header2-background: rgb(81, 88, 97); --header3-background: rgb(61, 69, 77); --header4-background: rgb(58, 67, 75); --header5-background: rgb(47, 54, 60); --header6-background: rgb(40, 46, 52); --toc-header-text: var(--cayman-header-background); --blockquote-grey: rgb(33, 33, 33); --black-text: rgb(0, 0, 0); --blue-text: rgb(33, 136, 255); --brown-text: rgb(152, 112, 16); --cyan-text: rgb(41, 208, 208); --ltgray-text: rgb(209, 210, 212); --gray-text: rgb(181, 181, 181); --dkgray-text: rgb(87, 87, 87); --green-text: rgb(21, 153, 87); --ltblue-text: rgb(157, 175, 255); --ltgreen-text: rgb(129, 197, 122); --orange-text: rgb(218, 119, 62); --pink-text: rgb(255, 205, 243); --purple-text: rgb(209, 188, 249); --red-text: rgb(207,52,50); --tan-text: rgb(233, 222, 187); --white-text: rgb(255, 255, 255); --yellow-text: rgb(244, 203, 53); --old-red-text: rgb(224, 88, 88); --darkred-text: rgb(214, 24, 0); --ltred-text: rgb(211, 47, 47); }
+
+.page-header {
+  color: var(--white-text);
+  text-align: center;
+  background-color: var(--cayman-header-background);
+  background-image: linear-gradient(
+    120deg,
+    var(--cayman-header-background-secondary),
+    var(--cayman-header-background)
+  );
+  padding: 3rem 4rem;
+}
+
+.clearfix:before, .clearfix:after { content: " ";  display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+html * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+tr:nth-child(odd) { background: var(--header3-background); }
+tr:nth-child(even) { background: var(--header6-background); }
+tr:hover { background-color: var(--code-background); }
+table.wontwrap td:nth-child(3n+3) { white-space: -moz-pre-wrap !important;  white-space: -webkit-pre-wrap;  white-space: -pre-wrap;  white-space: -o-pre-wrap;  white-space: pre-wrap;  word-wrap: break-word;  white-space: nowrap; }
+@media screen and (min-width: 1900px) { html { font-size: 16px; } }
+@media screen and (min-width: 1580px) and (max-width: 1900px) { html { font-size: 16px; } }
+@media screen and (min-width: 1260px) and (max-width: 1580px) { html { font-size: 16px; } }
+@media screen and (min-width: 780px) and (max-width: 1260px) { html { font-size: 16px; } }
+@media screen and (max-width: 780px) { html { font-size: 16px; } }
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; line-height: 1.5; color: var(--body-text); background: var(--body-background); }
+#skip-to-content { height: 1px; width: 1px; position: absolute; overflow: hidden; top: -10px; }
+#skip-to-content:focus { position: fixed; top: 10px; left: 10px; height: auto; width: auto; background: #e19447; outline: thick solid #e19447; }
+.btn { display: inline-block; margin-bottom: 0.5rem;  color: rgba(255, 255, 255, 0.7); background-color: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); border-style: solid; border-width: 1px; border-radius: 0.3rem; transition: color 0.2s, background-color 0.2s, border-color 0.2s; }
+.btn:hover { color: rgba(255, 255, 255, 0.8); text-decoration: none; background-color: rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.3); }
+.btn + .btn { margin-left: 0.50rem; }
+@media screen and (min-width: 1900px) { .btn { padding: 0.9rem; font-size: 1.3rem; } }
+@media screen and (min-width: 1580px) and (max-width: 1900px) { .btn { padding: 0.9rem; font-size: 1.2rem; } }
+@media screen and (min-width: 1260px) and (max-width: 1580px) { .btn { padding: 0.8rem; font-size: 1.1rem; } }
+@media screen and (min-width: 780px) and (max-width: 1260px) { .btn { padding: 0.7rem; font-size: 1rem; } }
+@media screen and (max-width: 780px) { .btn { display: block; width: 100%; padding: 0.60rem; font-size: 0.9rem; }
+  .btn + .btn { margin-top: 0.5rem; margin-left: 0; } }
+.drkbtn { display: inline-block; margin-bottom: 0.5rem; margin-left: 0.90rem;  color: white; background-color: rgba(23, 130, 130, 0.9); border-color: rgba(23, 130, 130, 0.2); border-style: solid; border-width: 1px; border-radius: 0.3rem; transition: color 0.2s, background-color 0.2s, border-color 0.2s; }
+@media screen and (max-width: 780px) { .drkbtn { margin-left: 0; } }
+.drkbtn:hover { text-decoration: none; color: rgba(255, 255, 255, 0.8); background-color: rgba(34, 195, 195, 0.7); border-color: rgba(255, 255, 255, 0.3); }
+.drkbtn + .drkbtn { margin-left: 0.50rem; }
+@media screen and (min-width: 1900px) { .drkbtn { padding: 0.9rem; font-size: 1.3rem; } }
+@media screen and (min-width: 1580px) and (max-width: 1900px) { .drkbtn { padding: 0.9rem; font-size: 1.2rem; } }
+@media screen and (min-width: 1260px) and (max-width: 1580px) { .drkbtn { padding: 0.8rem; font-size: 1.1rem; } }
+@media screen and (min-width: 780px) and (max-width: 1260px) { .drkbtn { padding: 0.7rem; font-size: 1rem; } }
+@media screen and (max-width: 780px) { .drkbtn { display: block; width: 100%; padding: 0.60rem; font-size: 0.9rem; }
+  .drkbtn + .drkbtn { margin-top: 0.5rem; margin-left: 0; } }
+.project-name { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+@media screen and (min-width: 1900px) { .project-name { font-size: 2.75rem; } }
+@media screen and (min-width: 1580px) and (max-width: 1900px) { .project-name { font-size: 2.75rem; } }
+@media screen and (min-width: 1260px) and (max-width: 1580px) { .project-name { font-size: 2.25rem; } }
+@media screen and (min-width: 780px) and (max-width: 1260px) { .project-name { font-size: 2rem; } }
+@media screen and (max-width: 780px) { .project-name { font-size: 1.75rem; } }
+.project-tagline { margin-top: 0.5rem; margin-bottom: 0.5rem; font-weight: normal; opacity: 0.7; }
+@media screen and (min-width: 1900px) { .project-tagline { font-size: 2rem; } }
+@media screen and (min-width: 1580px) and (max-width: 1900px) { .project-tagline { font-size: 2rem; } }
+@media screen and (min-width: 1260px) and (max-width: 1580px) { .project-tagline { font-size: 1.50rem; } }
+@media screen and (min-width: 780px) and (max-width: 1260px) { .project-tagline { font-size: 1.25rem; } }
+@media screen and (max-width: 780px) { .project-tagline { font-size: 1rem; } }
+.gridhead1 { grid-area: padding1; }
+.gridhead2 { grid-area: image; }
+.gridhead3 { grid-area: header; }
+.gridhead4 { grid-area: padding2; }
+.gridhead5 { grid-area: nav-buttons; }
+.gridhead6 { grid-area: page-buttons; }
+.toc1 { grid-area: lefttoc; }
+.toc2 { grid-area: righttoc; }
+.toc3 { grid-area: modtoc; }
+.toc4 { grid-area: paddingtoc; }
+.toc5 { grid-area: addedtoc; }
+.toc6 { grid-area: padtoc; }
+.grid-header { display: grid; color: var(--cayman-header-heading); background-color: var(--cayman-header-background); background-image: linear-gradient(180deg, #010c14, #03253d, #053e65, #07568e, #096fb6); }
+.grid-header div.gridhead2 { text-align: right; }
+.grid-header div.gridhead3 { text-align: left; }
+.grid-header div.gridhead5 { text-align: center; }
+.grid-header div.gridhead6 { text-align: center; }
+@media screen and (min-width: 1900px) { .grid-header { grid-template-areas: 'padding1 image header padding2' 'nav-buttons nav-buttons nav-buttons nav-buttons' 'page-buttons page-buttons page-buttons page-buttons'; } }
+@media screen and (min-width: 1580px) and (max-width: 1900px) { .grid-header { grid-template-areas: 'padding1 image header padding2' 'nav-buttons nav-buttons nav-buttons nav-buttons' 'page-buttons page-buttons page-buttons page-buttons'; } }
+@media screen and (min-width: 1260px) and (max-width: 1580px) { .grid-header { grid-template-areas: 'padding1 image header padding2' 'nav-buttons nav-buttons nav-buttons nav-buttons' 'page-buttons page-buttons page-buttons page-buttons'; } }
+@media screen and (min-width: 780px) and (max-width: 1260px) { .grid-header { grid-template-areas: 'padding1 image header padding2' 'nav-buttons nav-buttons nav-buttons nav-buttons' 'page-buttons page-buttons page-buttons page-buttons'; } }
+@media screen and (max-width: 780px) { .grid-header { grid-template-areas: 'padding1' 'image' 'header' 'padding2' 'nav-buttons' 'page-buttons'; }
+  .grid-header div.gridhead2 { text-align: center; }
+  .grid-header div.gridhead3 { text-align: center; }
+  .grid-header div.gridhead5 { text-align: center; }
+  .grid-header div.gridhead6 { text-align: center; } }
+.grid-header figure { display: block; margin-left: auto; margin-right: auto; }
+@media screen and (min-width: 1900px) { .grid-header figure { max-width: 50%; } }
+@media screen and (min-width: 1580px) and (max-width: 1900px) { .grid-header figure { max-width: 50%; } }
+@media screen and (min-width: 1260px) and (max-width: 1580px) { .grid-header figure { max-width: 50%; } }
+@media screen and (min-width: 780px) and (max-width: 1260px) { .grid-header figure { max-width: 75%; } }
+@media screen and (max-width: 780px) { .grid-header figure { max-width: 90%; } }
+.grid-toc { display: grid; }
+@media screen and (min-width: 1900px) { .grid-toc { grid-template-areas: 'lefttoc righttoc'; } }
+@media screen and (min-width: 1580px) and (max-width: 1900px) { .grid-toc { grid-template-areas: 'lefttoc righttoc'; } }
+@media screen and (min-width: 1260px) and (max-width: 1580px) { .grid-toc { grid-template-areas: 'lefttoc righttoc'; } }
+@media screen and (min-width: 780px) and (max-width: 1260px) { .grid-toc { grid-template-areas: 'lefttoc righttoc'; } }
+@media screen and (max-width: 780px) { .grid-toc { grid-template-areas: 'lefttoc righttoc'; } }
+.grid-mod-toc { display: grid; }
+@media screen and (min-width: 1900px) { .grid-mod-toc { grid-template-areas: 'modtoc paddingtoc'; } }
+@media screen and (min-width: 1580px) and (max-width: 1900px) { .grid-mod-toc { grid-template-areas: 'modtoc paddingtoc'; } }
+@media screen and (min-width: 1260px) and (max-width: 1580px) { .grid-mod-toc { grid-template-areas: 'modtoc paddingtoc'; } }
+@media screen and (min-width: 780px) and (max-width: 1260px) { .grid-mod-toc { grid-template-areas: 'modtoc paddingtoc'; } }
+@media screen and (max-width: 780px) { .grid-mod-toc { grid-template-areas: 'modtoc paddingtoc'; } }
+.grid-sup-toc { display: grid; }
+@media screen and (min-width: 1900px) { .grid-sup-toc { grid-template-areas: 'addedtoc padtoc'; } }
+@media screen and (min-width: 1580px) and (max-width: 1900px) { .grid-sup-toc { grid-template-areas: 'addedtoc padtoc'; } }
+@media screen and (min-width: 1260px) and (max-width: 1580px) { .grid-sup-toc { grid-template-areas: 'addedtoc padtoc'; } }
+@media screen and (min-width: 780px) and (max-width: 1260px) { .grid-sup-toc { grid-template-areas: 'addedtoc padtoc'; } }
+@media screen and (max-width: 780px) { .grid-sup-toc { grid-template-areas: 'addedtoc padtoc'; } }
+.grid-toc div { background: var(--body-background); }
+@media screen and (min-width: 1900px) { .scriptTable { font: 1.3rem Consolas; } }
+@media screen and (min-width: 1580px) and (max-width: 1900px) { .scriptTable { font: 1.2rem Consolas; } }
+@media screen and (min-width: 1260px) and (max-width: 1580px) { .scriptTable { font: 1.1rem Consolas; } }
+@media screen and (min-width: 780px) and (max-width: 1260px) { .scriptTable { font: 1rem Consolas; } }
+@media screen and (max-width: 780px) { .scriptTable { font: 0.9rem Consolas; } }
+@media screen and (min-width: 1900px) { .scriptHeader { font: 1.5rem Consolas; } }
+@media screen and (min-width: 1580px) and (max-width: 1900px) { .scriptHeader { font: 1.3rem Consolas; } }
+@media screen and (min-width: 1260px) and (max-width: 1580px) { .scriptHeader { font: 1.2rem Consolas; } }
+@media screen and (min-width: 780px) and (max-width: 1260px) { .scriptHeader { font: 1.1rem Consolas; } }
+@media screen and (max-width: 780px) { .scriptHeader { font: 1rem Consolas; } }
+.no-bullet { list-style-type: none; }
+.main-content { word-wrap: break-word; }
+.main-content :first-child { margin-top: 0; }
+@media screen and (min-width: 1900px) { .main-content { padding: 0.25rem; font-size: 1.1rem; } }
+@media screen and (min-width: 1580px) and (max-width: 1900px) { .main-content { padding: 0.25rem; font-size: 1.1rem; } }
+@media screen and (min-width: 1260px) and (max-width: 1580px) { .main-content { padding: 0.25rem; font-size: 1rem; } }
+@media screen and (min-width: 780px) and (max-width: 1260px) { .main-content { padding: 0.25rem; font-size: 0.9rem; } }
+@media screen and (max-width: 780px) { .main-content { padding: 0.25rem; font-size: 0.85rem; } }
+.main-content kbd { background-color: #fafbfc; border: 1px solid #c6cbd1; border-bottom-color: #959da5; border-radius: 3px; box-shadow: inset 0 -1px 0 #959da5; color: #444d56; display: inline-block; font-size: 11px; line-height: 10px; padding: 3px 5px; vertical-align: middle; }
+@media screen and (min-width: 1900px) { .main-content img { max-width: 100%; } }
+@media screen and (min-width: 1580px) and (max-width: 1900px) { .main-content img { max-width: 100%; } }
+@media screen and (min-width: 1260px) and (max-width: 1580px) { .main-content img { max-width: 100%; } }
+@media screen and (min-width: 780px) and (max-width: 1260px) { .main-content img { max-width: 100%; } }
+@media screen and (max-width: 780px) { .main-content img { max-width: 100%; } }
+@media screen and (min-width: 1900px) { .main-content figure.image-caption { max-width: 50%; padding: 10px; } }
+@media screen and (min-width: 1580px) and (max-width: 1900px) { .main-content figure.image-caption { max-width: 50%; padding: 10px; } }
+@media screen and (min-width: 1260px) and (max-width: 1580px) { .main-content figure.image-caption { max-width: 50%; padding: 10px; } }
+@media screen and (min-width: 780px) and (max-width: 1260px) { .main-content figure.image-caption { max-width: 75%; padding: 10px; } }
+@media screen and (max-width: 780px) { .main-content figure.image-caption { max-width: 90%; padding: 10px; } }
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { margin: 0.75rem; padding-left: 0.25rem; font-weight: normal; color: var(--toc-header-text); }
+.main-content iframe { margin: 0.38rem 0 0.38rem 0.95rem; }
+.main-content p { margin: 0 0 0 0.95rem; color: var(--body-text); }
+.main-content code { padding: 0.13rem 0.25rem; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 0.9rem; color: var(--purple-text); background-color: var(--code-background); border-radius: 0.3rem; }
+.main-content pre { padding: 0.8rem; margin: 0.25rem 0.75rem 0.25rem 0.75rem; font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace; color: var(--purple-text); word-wrap: normal; background-color: var(--code-background); border: solid 1px var(--cayman-border); border-radius: 0.3rem; white-space: pre-wrap; }
+.main-content pre > code { padding: 0; margin: 0; font-size: 0.9rem; color: var(--purple-text); word-break: normal; background: transparent; border: 0; }
+.main-content .highlight { margin-bottom: 0.75rem; }
+.main-content .highlight pre { margin-bottom: 0; word-break: normal; }
+.main-content .highlight pre, .main-content pre { padding: 0.75rem; overflow: auto; font-size: 0.9rem; line-height: 1.45; border-radius: 0.3rem; -webkit-overflow-scrolling: touch; }
+.main-content pre code, .main-content pre tt { display: inline; max-width: initial; padding: 0; margin: 0; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0; }
+.main-content pre code:before, .main-content pre code:after, .main-content pre tt:before, .main-content pre tt:after { content: normal; }
+.main-content ul, .main-content ol { margin-top: 0; }
+.main-content table { display: block; width: 100%; overflow: auto; word-break: normal; word-break: keep-all; -webkit-overflow-scrolling: touch; }
+.main-content table th { font-weight: bold; background-color: var(--header1-border); }
+.main-content table th, .main-content table td { padding: 0.25rem 0.75rem; border: 0.13rem solid var(--header-border); }
+.main-content dl { padding: 0; }
+.main-content dl dt { padding: 0; margin-top: 0.75rem; font-size: 1rem; font-weight: bold; }
+.main-content dl dd { padding: 0; margin-bottom: 0.75rem; }
+.main-content h1.grhead1 { font-size: 1.40rem; margin: 0.13rem 0 0.13rem 0.9rem; color: var(--toc-header-text); padding: 0 0 0 0; line-height: 24px; }
+.main-content h2.grhead2 { font-size: 1.30rem; margin: 0.13rem 0 0.13rem 1.50rem; color: var(--toc-header-text); padding: 0 0 0 0; line-height: 24px; }
+.main-content h3.grhead3 { font-size: 1.20rem; margin: 0.13rem 0 0.13rem 2.10rem; color: var(--toc-header-text); padding: 0 0 0 0; line-height: 24px; }
+.main-content h4.grhead4 { font-size: 1.10rem; margin: 0.13rem 0 0.13rem 2.75rem; color: var(--toc-header-text); padding: 0 0 0 0; line-height: 24px; }
+.main-content h1.header1 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header1-text); background: var(--header1-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
+.main-content h2.header2 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header2-text); background: var(--header2-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
+.main-content h3.header3 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header3-text); background: var(--header3-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
+.main-content h4.header4 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header4-text); background: var(--header4-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
+.main-content h5.header5 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header5-text); background: var(--header5-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
+.main-content h6.header6 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header6-text); background: var(--header6-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
+.main-content hr { height: 0.13rem; padding: 0; margin: 0.75rem 0; background-color: var(--cayman-hr-border); border: 0; }
+.main-content p.empty { margin-top: 0.1rem; margin-bottom: 0.1rem; }
+.main-content p.note { -moz-border-radius: 6px; -webkit-border-radius: 6px; background-color: var(--code-background); background-image: url(img/note.png); background-position: 9px 0; background-repeat: no-repeat; border: solid 0.13rem var(--header-border); border-radius: 6px; line-height: 18px; overflow: hidden; padding: 15px 60px; margin: 0 1rem; }
+.main-content p.list-1 { margin-left: 0.9rem; }
+.main-content p.list-2 { margin-left: 1.50rem; }
+.main-content p.list-3 { margin-left: 2.10rem; }
+.main-content p.list-4 { margin-left: 2.75rem; }
+.main-content p.list-5 { margin-left: 3.4rem; }
+.main-content p.list-6 { margin-left: 4rem; }
+a { color: var(--blue-text); text-decoration: none; }
+a:hover { text-decoration: underline; }
+font.black, a.black { color: var(--black-text); }
+font.blue, a.blue { color: var(--blue-text); }
+font.brown, a.brown { color: var(--brown-text); }
+font.cyan, a.cyan { color: var(--cyan-text); }
+font.dkgray, a.dkgray { color: var(--dkgray-text); }
+font.gray, a.gray { color: var(--gray-text); }
+font.green, a.green { color: var(--green-text); }
+font.ltblue, a.ltblue { color: var(--ltblue-text); }
+font.ltgray, a.ltgray { color: var(--ltgray-text); }
+font.ltgreen, a.ltgreen { color: var(--ltgreen-text); }
+font.orange, a.orange { color: var(--orange-text); }
+font.pink, a.pink { color: var(--pink-text); }
+font.purple, a.purple { color: var(--purple-text); }
+font.red, a.red { color: var(--red-text); }
+font.tan, a.tan { color: var(--tan-text); }
+font.white, a.white { color: var(--white-text); }
+font.yellow, a.yellow { color: var(--yellow-text); }
+input[id^="spoiler"] { display: none; }
+input[id^="spoiler"] + label { display: inline; margin: 0.85rem; padding: 0.25rem; color: white; background-color: rgba(23, 130, 130, 0.9); border-color: rgba(23, 130, 130, 0.2); text-align: center; font-size: 1.25rem; border-radius: 0.5rem; cursor: pointer; transition: all .6s; }
+input[id^="spoiler"]:checked + label { color: var(--purple-text); background-color: var(--code-background); outline-style: hidden; }
+input[id^="spoiler"] ~ .main-content { height: 0; overflow: auto; opacity: 0; margin: 0 0 0 0.95rem; background-color: var(--code-background); border: 2px; border-style: solid; border-color: rgba(255, 255, 255, 0.8); border-radius: 8px; font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace; transition: all .6s; }
+input[id^="spoiler"]:checked + label + .main-content { height: auto; opacity: 1; }
+section.quote { display: block; justify-content: center; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem; color: rgba(150, 150, 150, 0.8); background-color: rgba(150, 150, 150, 0.08); border-color: rgba(150, 150, 150, 0.2); border-style: solid; border-width: 3px; border-radius: 0.3rem; transition: color 0.2s, background-color 0.2s, border-color 0.2s; box-shadow: 5px 3px 30px black; }
+section.quote p { margin: 0; padding: 0; line-height: 24px; }
+section.quote p.empty { margin: 0; padding: 0; line-height: 24px; }
+section.quote .attr { margin: 0; padding: 0 0 0.1rem 0.5rem; font: normal 400 1.5em/1.5em 'Montserrat', sans-serif; background-color: rgba(150, 150, 150, 0.2); letter-spacing: 0.04em; text-align: left; }
+section.quote .attr:before { content: " - "; }
+section.quote .attr:after { content: " - "; }
+figure.image-caption { position: relative; height: auto; padding: 0.25rem 0 0.25rem 0; margin: 0 0 0 0.75rem; background: var(--body-background); }
+figure.image-caption a { position: relative; font-size: 0.90rem; color: #1e6bb8; background-color: var(--code-background); border-color: var(--header-border); border-style: solid; border-width: 0.13rem; border-radius: 0.3rem; padding: 0.25rem; margin: 0.25rem 0 0.25rem 0; }
+figure.image-caption figcaption { color: var(--header4-text); background-color: var(--code-background); border-color: var(--header-border); border-style: solid; border-width: 0.13rem; border-radius: 0.3rem; position: relative; font-size: 0.90rem; padding: 0.25rem; margin: 0.25rem 0 0.25rem 0; }
+figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0; margin: 0; }
+.tooltip { position: relative; display: block; }
+.tooltip .tooltiptext { display: block; visibility: hidden; width: auto; color: var(--header4-text); background-color: var(--code-background); border-color: var(--header-border); border-style: solid; text-align: center; border-radius: 6px; padding: 0; position: absolute; z-index: 1; left: 0.9rem;  opacity: 0; transition: opacity 1s; }
+.tooltip:hover .tooltiptext { visibility: visible; opacity: 1; }
+</STYLE>
+</HEAD>
+<BODY>
+    <section class="page-header">
+      <h1 class="project-name">Master Merchant</h1>
+      <h2 class="project-tagline">Collection of Wrye Bash history and information</h2>
+    </section>
+<SECTION  class="main-content">
+<DIV>
+<h1 class="header1" id="MasterMerchant">Master Merchant</h1>
 <h1 class="header1" id="UnderConstruction">Under Construction</h1>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/under_construction.jpg" alt="under_construction" %}</p>
+<p><figure class="image-caption">
+<img src="img\under_construction.jpg" alt="under_construction"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>The website is being updated to reflect changes in the images for LibHistoire 2.1.1 and Master Merchant 3.8.x, thus the screenshots, icons, settings menus, and menu descriptions may not mirror those found in-game.</p>
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="Abitoflightreading">A bit of light reading</h1>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/harry_potter_daniel_radcliffe.gif" alt="harry_potter_daniel_radcliffe" %}</p>
+<p><figure class="image-caption">
+<img src="img\harry_potter_daniel_radcliffe.gif" alt="harry_potter_daniel_radcliffe"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>Master Merchant is pretty complex. While I try to keep it somewhat simple, you do need to read carefully as this is not just a bit of light reading.</p>
 <p class="empty">&nbsp;</p>
@@ -46,125 +252,116 @@ title: Master Merchant
 <p class="list-2">&bull;&nbsp; <a href="#ForPlayersnotinaTradingGuild">3.1.1 For Players not in a Trading Guild:</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#ForTradingGuilds">3.1.2 For Trading Guilds:</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#ForTradeGuildMembers">3.1.3 For Trade Guild Members:</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#MajorChangeswithUpdate41">3.2 Major Changes with Update 41!</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#KnownissueswithUpdate41">3.2.1 Known issues with Update 41</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Restoreabackup">3.2.2 Restore a backup</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Resetthemanagedrange">3.2.3 Reset the managed range</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Clearthecache">3.2.4 Clear the cache</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ThingstoknowaboutUpdate41">3.2.5 Things to know about Update 41</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#NewLibHistoireUI">3.2.6 New LibHistoire UI</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#NewVanillaUI">3.2.7 New Vanilla UI</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Dataisavailable">3.2.8 Data is available</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ShowMoreisavailable">3.2.9 Show More is available</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#DetailsaboutUpdate41">3.2.10 Details about Update 41</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#PrefaceUnderstandingtheZenimaxDatabaseChanges">3.2.11 Preface: Understanding the Zenimax Database Changes</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ImportantReminder">3.2.12 Important Reminder!</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Introduction">3.2.13 Introduction</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Transitionfromid64toid53">3.2.14 Transition from id64 to id53</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#AdaptingMasterMerchanttotheChanges">3.2.15 Adapting Master Merchant to the Changes</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ImpactonMasterMerchantUsers">3.2.16 Impact on Master Merchant Users</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#SetupMasterMerchant30">3.3 Setup Master Merchant 3.0</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Whatisrequired">3.3.1 What is required</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#WhattodisablewhenMMisnotneeded">3.3.2 What to disable when MM is not needed</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ImportingolderMasterMerchantData">3.3.3 Importing older Master Merchant Data</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#MMxxDatamodulesneededforimporting">3.3.3.1 MMxxData modules needed for importing</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Whattoexpectafteryouloginforthefirsttime">3.3.4 What to expect after you log in for the first time</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#Troubleshooting">3.4 Troubleshooting</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#DuplicateIndexesDetected">3.4.1 Duplicate Indexes Detected</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#LibGuildStorelua316attempttoindexanilvalue">3.4.2 LibGuildStore.lua:316: attempt to index a nil value</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Luaerrors">3.4.3 Lua errors</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#OneDrive">3.4.4 OneDrive</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#LibHistoireUI">3.5 LibHistoire UI</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ResetLinkedRange">3.5.1 Reset Linked Range</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ClearCache">3.5.2 Clear Cache</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#RequestMode">3.5.3 Request Mode</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#ShoppingList">3.6 Shopping List</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#Bonanza">3.7 Bonanza!</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#BonanzaNameFilter">3.7.1 Bonanza Name Filter</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#BonanzaTypeFilter">3.7.2 Bonanza Type Filter</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#BonanzaUsingBeamMeUp">3.7.3 Bonanza - Using BeamMeUp</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#Outliers">3.8 Outliers</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Controllingskewedprices">3.8.1 Controlling skewed prices</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#MMPricevsTTCvsBonanza">3.9 MM Price vs TTC vs Bonanza</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#EvaluatingtheBonanzaprice">3.9.1 Evaluating the Bonanza price</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#PriceSoldvsPriceListed">3.9.2 Price Sold vs. Price Listed</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ComparisonsbetweenBonanzaTTCandMM">3.9.3 Comparisons between Bonanza, TTC, and MM</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#StatesoftheLibHistoirecache">3.10 States of the LibHistoire cache</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Unlinked">3.10.1 Unlinked</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Linkinginprogress">3.10.2 Linking in progress</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Linkinginprogresswith0eventsleft">3.10.3 Linking in progress, with 0 events left</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Linked">3.10.4 Linked</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#ObtainingGuildHistory">3.11 Obtaining Guild History</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#UnlinkedEventsNotification">3.12 Unlinked Events Notification</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#MasterMerchantWindow">3.13 Master Merchant Window</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#GuildSalesandPersonalSales">3.13.1 Guild Sales and Personal Sales</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ItemReport">3.13.2 Item Report</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#WhatTheColumnsMean">3.13.2.1 What The Columns Mean</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#SellersReport">3.13.3 Seller's Report</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#TopBuyersandSellers">3.13.3.1 Top Buyers and Sellers</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#TopItems">3.13.3.2 Top Items</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#PersonalSalesSellersReport">3.13.3.3 Personal Sales - Seller's Report</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#WhatTheColumnsMean1">3.13.3.4 What The Columns Mean</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#GuildSalesDateFilterRanges">3.13.4 Guild Sales Date Filter Ranges</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#DateRanges">3.13.5 Date Ranges</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#StatisticsWindow">3.14 Statistics Window</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#Settings">3.15 Settings</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#MasterMerchant">3.15.1 Master Merchant</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#MasterMerchantWindowOptions">3.15.1.1 Master Merchant Window Options</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#SalesFormatOptions">3.15.1.2 Sales Format Options</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#TimeFormatOptions">3.15.1.3 Time Format Options</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#AlertOptions">3.15.1.4 Alert Options</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#OnScreenandChatAlert">3.15.1.5 On-Screen and Chat Alert</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#CalculationDisplayOptions">3.15.1.6 Calculation Display Options</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#Timeframes">3.15.1.7 Timeframes</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#GuildAccountfilter">3.15.1.8 Guild & Account filter</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#DealCalculatorOptions">3.15.1.9 Deal Calculator Options</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#Tooltips">3.15.1.10 Tooltips</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#TooltipOptions">3.15.1.11 Tooltip Options</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#OutlierOptions">3.15.1.12 Outlier Options</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#PriceToChatOptions">3.15.1.13 Price To Chat Options</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#InventoryOptions">3.15.1.14 Inventory Options</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#GuildStoreOptions">3.15.1.15 Guild Store Options</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#GuildMasterOptions">3.15.1.16 Guild Master Options</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#MMDebugOptions">3.15.1.17 MM Debug Options</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#LibGuildStore">3.15.2 LibGuildStore</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#SalesManagementOptions">3.15.2.1 Sales Management Options</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#DataManagementOptions">3.15.2.2 Data Management Options</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#LGSDebugOptions">3.15.2.3 LGS Debug Options</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#ImportMMData">3.15.2.4 Import MM Data</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#ImportATTData">3.15.2.5 Import ATT Data</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#ImportATTPurchases">3.15.2.6 Import ATT Purchases</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#RefreshLibHistoire">3.15.2.7 Refresh LibHistoire</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#ImportShoppingListData">3.15.2.8 Import ShoppingList Data</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#ImportPricingData">3.15.2.9 Import Pricing Data</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#ResetData">3.15.2.10 Reset Data</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#Misc">3.16 Misc</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#PopupItemData">3.16.1 Popup Item Data</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#LevelQualitySelectors">3.16.2 Level Quality Selectors</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Erroneoustimestamp">3.16.3 Erroneous timestamp</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Whatisbeingscanned">3.16.4 What is being scanned</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#Afewdaysofsalesfrom109entries">3.16.4.1 A few days of sales from 109 entries</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#4daysofsalesfrom8031entries">3.16.4.2 4 days of sales from 8031 entries</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#SalesWeek">3.16.5 Sales Week</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#Slashcommands">3.17 Slash commands</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#37xSortingWritsbyvouchercount">3.17.1 3.7.x Sorting Writs by voucher count</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ExportSalesReport">3.17.2 Export Sales Report</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ExportSalesActivity">3.17.3 Export Sales Activity</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ExportPersonalSales">3.17.4 Export Personal Sales</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ExportPurchases">3.17.5 Export Purchases</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#GuildHistoryUIOverview">3.2 Guild History UI Overview</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#LibHistoireUI">3.2.1 LibHistoire UI</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#GuildHistoryUI">3.2.2 Guild History UI</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#DataIsAvailable">3.2.3 Data Is Available</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ShowMoreisavailable">3.2.4 Show More is available</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#LibHistoireUI1">3.3 LibHistoire UI</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ResetLinkedRange">3.3.1 Reset Linked Range</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ClearCache">3.3.2 Clear Cache</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#RequestMode">3.3.3 Request Mode</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#StatesoftheLibHistoirecache">3.4 States of the LibHistoire cache</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Unlinked">3.4.1 Unlinked</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Linkinginprogress">3.4.2 Linking in progress</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Linkinginprogresswith0eventsleft">3.4.3 Linking in progress, with 0 events left</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Linked">3.4.4 Linked</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#ObtainingGuildHistory">3.5 Obtaining Guild History</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#UnlinkedEventsNotification">3.6 Unlinked Events Notification</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#SetupMasterMerchant30">3.7 Setup Master Merchant 3.0</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Whatisrequired">3.7.1 What is required</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#WhattodisablewhenMMisnotneeded">3.7.2 What to disable when MM is not needed</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ImportingolderMasterMerchantData">3.7.3 Importing older Master Merchant Data</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#MMxxDatamodulesneededforimporting">3.7.3.1 MMxxData modules needed for importing</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Whattoexpectafteryouloginforthefirsttime">3.7.4 What to expect after you log in for the first time</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#MasterMerchantWindow">3.8 Master Merchant Window</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#GuildSalesandPersonalSales">3.8.1 Guild Sales and Personal Sales</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ItemReport">3.8.2 Item Report</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#WhatTheColumnsMean">3.8.2.1 What The Columns Mean</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#SellersReport">3.8.3 Seller's Report</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#TopBuyersandSellers">3.8.3.1 Top Buyers and Sellers</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#TopItems">3.8.3.2 Top Items</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#PersonalSalesSellersReport">3.8.3.3 Personal Sales - Seller's Report</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#WhatTheColumnsMean2">3.8.3.4 What The Columns Mean</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#GuildSalesDateFilterRanges">3.8.4 Guild Sales Date Filter Ranges</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#DateRanges">3.8.5 Date Ranges</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#StatisticsWindow">3.9 Statistics Window</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#Settings">3.10 Settings</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#MasterMerchant3">3.10.1 Master Merchant</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#MasterMerchantWindowOptions">3.10.1.1 Master Merchant Window Options</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#SalesFormatOptions">3.10.1.2 Sales Format Options</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#TimeFormatOptions">3.10.1.3 Time Format Options</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#AlertOptions">3.10.1.4 Alert Options</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#OnScreenandChatAlert">3.10.1.5 On-Screen and Chat Alert</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#CalculationDisplayOptions">3.10.1.6 Calculation Display Options</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#Timeframes">3.10.1.7 Timeframes</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#GuildAccountfilter">3.10.1.8 Guild & Account filter</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#DealCalculatorOptions">3.10.1.9 Deal Calculator Options</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#Tooltips">3.10.1.10 Tooltips</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#TooltipOptions">3.10.1.11 Tooltip Options</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#OutlierOptions">3.10.1.12 Outlier Options</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#PriceToChatOptions">3.10.1.13 Price To Chat Options</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#InventoryOptions">3.10.1.14 Inventory Options</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#GuildStoreOptions">3.10.1.15 Guild Store Options</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#GuildMasterOptions">3.10.1.16 Guild Master Options</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#MMDebugOptions">3.10.1.17 MM Debug Options</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#LibGuildStore">3.10.2 LibGuildStore</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#SalesManagementOptions">3.10.2.1 Sales Management Options</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#DataManagementOptions">3.10.2.2 Data Management Options</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#LGSDebugOptions">3.10.2.3 LGS Debug Options</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#ImportMMData">3.10.2.4 Import MM Data</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#ImportATTData">3.10.2.5 Import ATT Data</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#ImportATTPurchases">3.10.2.6 Import ATT Purchases</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#RefreshLibHistoire">3.10.2.7 Refresh LibHistoire</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#ImportShoppingListData">3.10.2.8 Import ShoppingList Data</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#ImportPricingData">3.10.2.9 Import Pricing Data</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#ResetData">3.10.2.10 Reset Data</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#ShoppingList">3.11 Shopping List</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#Bonanza">3.12 Bonanza!</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#BonanzaNameFilter">3.12.1 Bonanza Name Filter</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#BonanzaTypeFilter">3.12.2 Bonanza Type Filter</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#BonanzaUsingBeamMeUp">3.12.3 Bonanza - Using BeamMeUp</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#Outliers">3.13 Outliers</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Controllingskewedprices">3.13.1 Controlling skewed prices</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#MMPricevsTTCvsBonanza">3.14 MM Price vs TTC vs Bonanza</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#EvaluatingtheBonanzaprice">3.14.1 Evaluating the Bonanza price</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#PriceSoldvsPriceListed">3.14.2 Price Sold vs. Price Listed</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ComparisonsbetweenBonanzaTTCandMM">3.14.3 Comparisons between Bonanza, TTC, and MM</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#Misc">3.15 Misc</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#PopupItemData">3.15.1 Popup Item Data</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#LevelQualitySelectors">3.15.2 Level Quality Selectors</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Erroneoustimestamp">3.15.3 Erroneous timestamp</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Whatisbeingscanned">3.15.4 What is being scanned</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#Afewdaysofsalesfrom109entries">3.15.4.1 A few days of sales from 109 entries</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#4daysofsalesfrom8031entries">3.15.4.2 4 days of sales from 8031 entries</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#SalesWeek">3.15.5 Sales Week</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#Slashcommands">3.16 Slash commands</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#37xSortingWritsbyvouchercount">3.16.1 3.7.x Sorting Writs by voucher count</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ExportSalesReport">3.16.2 Export Sales Report</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ExportSalesActivity">3.16.3 Export Sales Activity</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ExportPersonalSales">3.16.4 Export Personal Sales</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ExportPurchases">3.16.5 Export Purchases</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#Troubleshooting">3.17 Troubleshooting</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#DuplicateIndexesDetected">3.17.1 Duplicate Indexes Detected</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#LibGuildStorelua316attempttoindexanilvalue">3.17.2 LibGuildStore.lua:316: attempt to index a nil value</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Luaerrors">3.17.3 Lua errors</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#OneDrive">3.17.4 OneDrive</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#TechnicalInformation">3.18 Technical Information</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#BackupLibGuildStoreData">3.18.1 Backup LibGuildStore Data</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#LocatingLibExecutionQueue">3.18.2 Locating LibExecutionQueue</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#UnintentionalZOSBug">3.18.3 Unintentional ZOS Bug</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#VersionHistory">3.19 Version History</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#Depreciated">3.20 Depreciated</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#BackgroundScanning">3.20.1 Background Scanning</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#BackupMasterMerchant2xData">3.20.2 Backup Master Merchant 2.x Data</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#UninstallMasterMerchant2x">3.20.3 Uninstall Master Merchant 2.x</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#AlternateUpgradeMethod">3.20.4 Alternate Upgrade Method</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#OptionalModsForThisProcedure">3.20.5 Optional Mods For This Procedure</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#OptionalDebugSettings">3.20.6 Optional Debug Settings</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#TheProcedure">3.20.7 The Procedure</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#Deprecated">3.20 Deprecated</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#LegacyDataBehaviorfromUpdate41">3.20.1 Legacy Data Behavior from Update 41</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#ImpactonUsersDuringUpdate41">3.20.1.1 Impact on Users During Update 41</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#BrickedGuildTraderStuckHistorySegments">3.20.1.2 Bricked Guild Trader / Stuck History Segments</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#BackgroundScanning">3.20.2 Background Scanning</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#BackupMasterMerchant2xData">3.20.3 Backup Master Merchant 2.x Data</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#UninstallMasterMerchant2x">3.20.4 Uninstall Master Merchant 2.x</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#AlternateUpgradeMethod">3.20.5 Alternate Upgrade Method</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#OptionalModsForThisProcedure">3.20.6 Optional Mods For This Procedure</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#OptionalDebugSettings">3.20.7 Optional Debug Settings</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#TheProcedure">3.20.8 The Procedure</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Authors">3.21 Authors</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Translators">3.22 Translators</a></p>
 <p class="empty">&nbsp;</p>
@@ -180,7 +377,7 @@ title: Master Merchant
 <p class="list-1">&bull;&nbsp; Mark writs on the Guild Store menu you can craft (Writ Worthy required)</p>
 <p class="list-1">&bull;&nbsp; Mark items sold for more then the vendor price</p>
 <h2 id="ForTradingGuilds">3.1.2 - For Trading Guilds:</h2>
-<p class="list-1">&bull;&nbsp; See who your Guild’s top sellers are and what they are selling</p>
+<p class="list-1">&bull;&nbsp; See who your Guild's top sellers are and what they are selling</p>
 <p class="list-1">&bull;&nbsp; See your total Guild Sales and Sales Tax income</p>
 <p class="list-1">&bull;&nbsp; Export Sales Report or Sales Activity</p>
 <h2 id="ForTradeGuildMembers">3.1.3 - For Trade Guild Members:</h2>
@@ -217,123 +414,159 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p class="note"> Craft cost will be affected by your skill in Chemistry, Chef, and Brewer.</p>
 <p class="empty">&nbsp;</p>
-<h1 class="header1" id="MajorChangeswithUpdate41">3.2 - Major Changes with Update 41!</h1>
+<h1 class="header1" id="GuildHistoryUIOverview">3.2 - Guild History UI Overview</h1>
 <p class="empty">&nbsp;</p>
-<p>With Update 41 all of your previously stored LibHistoire sales data will be deleted. You can read more about the changes in <a  href="https://www.esoui.com/forums/showthread.php?t=10724" >this thread</a>.</p>
+<h2 id="LibHistoireUI">3.2.1 - LibHistoire UI</h2>
 <p class="empty">&nbsp;</p>
-<p class="note"> Your Master Merchant sales data <font class="yellow"><B><I>will not be deleted or reset</I></B></font> once U41 is released.</p>
-<p class="empty">&nbsp;</p>
-<h2 class="header2" id="KnownissueswithUpdate41">3.2.1 - Known issues with Update 41</h2>
-<p class="empty">&nbsp;</p>
-<p>The recent incremental patch on April  08, 2024 resolve some issues. <a  href="https://forums.elderscrollsonline.com/en/discussion/655989/pc-mac-patch-notes-v9-3-7" >Patch Notes</a></p>
-<p class="empty">&nbsp;</p>
-<p class="list-1">&bull;&nbsp; Mod authors cannot check duplicate sales between old and new server data</p>
-<p class="list-1">&bull;&nbsp; Guild history categories may become unusable</p>
-<p class="empty">&nbsp;</p>
-<p>With Update 41, mod authors can not cross reference any previous sales data with the current sales data from the server and look for duplicate sales. You may have all green bars but switch characters and any Trader category could become stuck and you won't be able to use the forward arrow key or E Show More to request more data.</p>
-<p class="empty">&nbsp;</p>
-<section class="quote">
-<p class="attr">sirinsidiator</p>
-<p>...there is still one (hopefully) last bug left in the game that "bricks" your history when new events are pushed by the server.</p>
-<p class="empty">&nbsp;</p>
-<p>In case there are no more events between the pushed data and the already cached data, the game currently won't be able to merge the two resulting segments in some cases. You can recognize it when the status bar has a blue (or green) and a red segment that nearly touch and the ingame UI won't show the "Show more" button on the last page.</p>
-</section>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/bricked_trader.jpg" alt="bricked_trader" %}</p>
-<p class="empty">&nbsp;</p>
-<h2 id="Restoreabackup">3.2.2 - Restore a backup</h2>
-<p class="empty">&nbsp;</p>
-<p>Restoring a backup ensures you keep all data in perfect condition and takes minimal effort. Simply check if everything has linked before you log out for the day and if it did, create a new backup of the cache files. Otherwise, restore a previous working version of these files and try again the next day.</p>
-<p class="empty">&nbsp;</p>
-<h2 id="Resetthemanagedrange">3.2.3 - Reset the managed range</h2>
-<p class="empty">&nbsp;</p>
-<p>ZOS has said there are no missing events between the segments that did not merge properly. ZOS has said that any data should get merged automatically when the fix goes live. Not all addons may support this properly, it won't show the whole bar as green any more and you'll have to trust on ZOS' word that it will automatically merge the segments.</p>
-<p class="empty">&nbsp;</p>
-<h2 id="Clearthecache">3.2.4 - Clear the cache</h2>
-<p class="empty">&nbsp;</p>
-<p>Using this option means you will loose all data beyond the server range. Manually requesting the full 30 day range again takes a great deal of time and any sales data already in MM will be treated as a duplicate and ignored.</p>
-<p class="empty">&nbsp;</p>
-<h2 class="header2" id="ThingstoknowaboutUpdate41">3.2.5 - Things to know about Update 41</h2>
-<p class="empty">&nbsp;</p>
-<p>The following sections go into more detail. With update 41 the server database for all guild history was reset and ZOS created a new database on their server. Mod authors can not cross reference any previous sales data with the current sales data from the server and look for duplicate sales.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/dupe_sales_setting.jpg" alt="dupe_sales_setting" %}</p>
-<p class="empty">&nbsp;</p>
-<p class="note"> Changing that will reload the UI because it's not a soft toggle. </p>
-<p class="empty">&nbsp;</p>
-<p>When the setting <font class="ltblue"><B><I>Use historical and recent sales data</I></B></font> is enabled historical and current sales data will be combined but all duplicate data will affect the totals. While users may not mind mixing the data for pricing, your weekly sales totals will reflect an incorrect total unless the option is disabled.</p>
-<p class="empty">&nbsp;</p>
-<p>All the pricing data and guild sales totals are calculated during initialization so you can not toggle between using and not using historical data in addition to the current server data without another full initialization of all data.</p>
-<p class="empty">&nbsp;</p>
-<p>For that reason, unless you feel you must be the library of congress of data I recommend to leave that feature OFF or disabled.</p>
-<p class="empty">&nbsp;</p>
-<h2 id="NewLibHistoireUI">3.2.6 - New LibHistoire UI</h2>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/new_interface_LibHistoire.jpg" alt="new_interface_LibHistoire" %}</p>
+<p><figure class="image-caption">
+<img src="img\new_interface_LibHistoire.jpg" alt="new_interface_LibHistoire"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>There is a new interface for LibHistoire and I will be updating more documentation as time permits. The important difference is the Rescan button has been removed and you have a settings button instead.</p>
 <p class="empty">&nbsp;</p>
-<h2 id="NewVanillaUI">3.2.7 - New Vanilla UI</h2>
+<h2 id="GuildHistoryUI">3.2.2 - Guild History UI</h2>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/new_vanilla_interface.jpg" alt="new_vanilla_interface" %}</p>
+<p><figure class="image-caption">
+<img src="img\new_vanilla_interface.jpg" alt="new_vanilla_interface"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>There is a new interface for Guild History. There are arrows for navigating the various pages of guild history and the Show More option only appears when you are on the last page of data.</p>
 <p class="empty">&nbsp;</p>
-<h2 id="Dataisavailable">3.2.8 - Data is available</h2>
+<h2 id="DataIsAvailable">3.2.3 - Data Is Available</h2>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/data_ready_page1.jpg" alt="data_ready_page1" %}</p>
+<p><figure class="image-caption">
+<img src="img\data_ready_page1.jpg" alt="data_ready_page1"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>If no arrows appear then the data is not ready and this is not a mod error. The server may not have information and ZOS may need to make updates to the game. If reloading the UI does not correct the issue you will have to wait for authors to communicate with ZOS to see if there is a resolution.</p>
 <p class="empty">&nbsp;</p>
-<h2 id="ShowMoreisavailable">3.2.9 - Show More is available</h2>
+<h2 id="ShowMoreisavailable">3.2.4 - Show More is available</h2>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/new_show_more.jpg" alt="new_show_more" %}</p>
+<p><figure class="image-caption">
+<img src="img\new_show_more.jpg" alt="new_show_more"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>To request more data you will need to go to the last page available. Then the E Show More option will appear.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="DetailsaboutUpdate41">3.2.10 - Details about Update 41</h2>
+<h1 class="header1" id="LibHistoireUI1">3.3 - LibHistoire UI</h1>
 <p class="empty">&nbsp;</p>
-<h2 id="PrefaceUnderstandingtheZenimaxDatabaseChanges">3.2.11 - Preface: Understanding the Zenimax Database Changes</h2>
+<p><figure class="image-caption">
+<img src="img\new_interface_LibHistoire.jpg" alt="libhistoire_popout_menu"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<p>Before delving into the details, it's crucial to clarify that the transition from id64 to id53 for sales identifiers is not the main reason behind their reset. Even if the identifier type remained unchanged, the same issue would persist. Zenimax introduced a new database structure for storing guild history data on the server to enhance the efficiency of handling sales. In addition they changed the type of sales identifiers.</p>
+<p>The new interface has all the new categories from guild hsitory.</p>
 <p class="empty">&nbsp;</p>
-<p>I will focus on why this matters to you as a Master Merchant user. If you notice duplicate sales in the interface, rest assured that it's not an error caused by the id64 to id53 transition. This unavoidable situation stems from the changes in how Zenimax stores sales data.</p>
+<p><figure class="image-caption">
+<img src="img\interface_menu_options.jpg" alt="interface_menu_options"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<h2 id="ImportantReminder">3.2.12 - Important Reminder!</h2>
+<p>There are options to lock and unlock the window to move it and then lock its position.</p>
 <p class="empty">&nbsp;</p>
-<p>Because the changes to the Zenimax server's database are significant, it's recommended to have a backup made prior to Update 41 (March 11 2024) to restore if changes are made to Master Merchant functionality after launch. Likewise, if Zenimax makes any changes that would directly impact how the data is obtained from the local binary file stored on each user's hard drive.</p>
+<p><figure class="image-caption">
+<img src="img\libhistoire_popout_menu.jpg" alt="libhistoire_popout_menu"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<p class="note"> For more information review how to <a  href="#BackupLibGuildStoreData" >Backup LibGuildStore Data</a>. </p>
+<p>Each category has a popout menu that will be explained below.</p>
 <p class="empty">&nbsp;</p>
-<h2 id="Introduction">3.2.13 - Introduction</h2>
+<h2 id="ResetLinkedRange">3.3.1 - Reset Linked Range</h2>
 <p class="empty">&nbsp;</p>
-<p>In the upcoming Elder Scrolls Online Update 41, Zenimax is making changes to the Guild History data. The server database for sales data has been updated, and due to that, the unique sales identifiers will not continue from where they left off prior to the update. One significant consequence for users is the inability to check for duplicate sales between the old and new database entries.</p>
+<p>This feature should not be used.  I am having a hard time understanding when to use it.</p>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/dupe_sales_image.jpg" alt="dupe_sales_image" %}</p>
+<p>Here are some reasons not to click it:</p>
 <p class="empty">&nbsp;</p>
-<p>Using the image as an example, without the timestamp (1709606076) and without the unique identifier, the sales would be duplicates because they are all from the same seller, buyer, for the same item, and the same amount.</p>
+<p class="list-1">&bull;&nbsp; You are missing less than 1 day of data</p>
+<p class="list-1">&bull;&nbsp; You are missing 5 days of data</p>
+<p class="list-1">&bull;&nbsp; You have not played for 2 monts, the ZOS chace was set at 30 days, and you cannot obtain data for 2 months because too much time has passed</p>
 <p class="empty">&nbsp;</p>
-<h2 id="Transitionfromid64toid53">3.2.14 - Transition from id64 to id53</h2>
+<p>LibHistoire is smart enough to know what to do in either case. So it is recomended to not use that option.</p>
 <p class="empty">&nbsp;</p>
-<p>In Update 41, Zenimax is implementing significant changes to the Guild History data, introducing a new guild history format and resetting the server's database. Consequently, unique sales identifiers are starting over, and the system will now use the id53 format. This shift is not solely about the transition from id64 to id53; it's part of a broader move toward a more efficient guild history database structure.</p>
+<p>In all cases <a  href="#ObtainingGuildHistory" >Obtaining Guild History</a> from the server is the best option and LibHistoire will process the data.</p>
 <p class="empty">&nbsp;</p>
-<h2 id="AdaptingMasterMerchanttotheChanges">3.2.15 - Adapting Master Merchant to the Changes</h2>
+<h2 id="ClearCache">3.3.2 - Clear Cache</h2>
 <p class="empty">&nbsp;</p>
-<p>With these changes, and because the id53 identifiers have started over, Master Merchant will be separating data using the id64 and id53 identifiers. Master Merchant will be able to check duplicates only when the same type of data is compared, meaning id64 and id64 or id53 and id53 because the Zenimax server database is different.</p>
+<p>This feature will clear the cache stored on your local hard drive. It does not delete any data from the server. Should you want the data from the server again, you would need to manually request it.</p>
 <p class="empty">&nbsp;</p>
-<p>All item averages used for evaluating item pricing and weekly sales totals for Guild Masters will only be accurate when using data from the new Zenimax cache and the id53 identifiers.</p>
+<h2 id="RequestMode">3.3.3 - Request Mode</h2>
 <p class="empty">&nbsp;</p>
-<p>While there will be a toggle to utilize the old sales data, without the ability to properly check for duplicate sales, data using id53 mixed with the older id64 data will mean those totals will not be accurate.</p>
+<p><figure class="image-caption">
+<img src="img\request_mode_menu.jpg" alt="request_mode_menu"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<h2 id="ImpactonMasterMerchantUsers">3.2.16 - Impact on Master Merchant Users</h2>
+<p>Automatic: means data will be requested based on the Addon requesting the data from LibHistoire</p>
+<p>Force Off: means data will not be requested whether or not an Addon uses the data</p>
+<p>Force On: means data will be requested from the server and kept in the binary cache so that a mod can access it</p>
 <p class="empty">&nbsp;</p>
-<p>For the majority, the changes will have minimal impact because the binary cache should already contain data. Users that retain 30 to 90 days of data will not have a significant loss of data, and Guild Masters will be able to accurately track recent weeks for evaluating user contribution in sales.</p>
+<p class="note"> LibHistoire automatically requests data from the server and depending on LibHistoire options and features used the requests may be interupdated.</p>
 <p class="empty">&nbsp;</p>
-<p>However, users archiving extensive sales data, trying to be the library of congress of data, will have inaccurate averages when the id53 and id64 data overlap.</p>
+<h1 class="header1" id="StatesoftheLibHistoirecache">3.4 - States of the LibHistoire cache</h1>
 <p class="empty">&nbsp;</p>
-<p>Additionally, I would like to remind users that maintaining an excessive amount of sales data in the Zenimax binary cache will negatively impact load times during login, even if Master Merchant is disabled.</p>
+<h2 id="Unlinked">3.4.1 - Unlinked</h2>
 <p class="empty">&nbsp;</p>
-<h1 class="header1" id="SetupMasterMerchant30">3.3 - Setup Master Merchant 3.0</h1>
+<p><figure class="image-caption">
+<img src="img\red_text_unlinked.jpg" alt="red_text_unlinked"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>In the Unlinked state you can either wait for the server to grant the requests for offline data that LibHistoire requests, or you can manually request guild history for the time you were offline.</p>
+<p class="empty">&nbsp;</p>
+<h2 id="Linkinginprogress">3.4.2 - Linking in progress</h2>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\yellow_text_linking.jpg" alt="yellow_text_linking"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>Once LibHistoire has what it feels it needs, then it will begin processing the guild history events and attempt to link to the last known event.</p>
+<p class="empty">&nbsp;</p>
+<h2 id="Linkinginprogresswith0eventsleft">3.4.3 - Linking in progress, with 0 events left</h2>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\process_stuck.jpg" alt="process_stuck"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>If you ever see it processing 0 events for a while you will just need to wait for the events to link. If there are external factors involved then nothing will process until that is no longer affecting LibHistoire.</p>
+<p class="empty">&nbsp;</p>
+<h2 id="Linked">3.4.4 - Linked</h2>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\green_text_linked.jpg" alt="green_text_linked"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>Once LibHistoire has linked to its stored events you should see green text. This means that LibHistoire has finished processing the guild history.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> You can still request additional history and ask LibHistoire to check the guild history for any missing sales events using the rescan button.</p>
+<p class="empty">&nbsp;</p>
+<h1 class="header1" id="ObtainingGuildHistory">3.5 - Obtaining Guild History</h1>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\request_daily_data.jpg" alt="request_daily_data"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>To obtain sales data the page number and right arrow (or forward arrow) must be showing. You will need to use the arrow to go to the last page of available data.</p>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\show_more.jpg" alt="show_more"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>Once you have done that the E Show More option will appear. Even if there is no right arrow showing press E to request more data.</p>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\sales_gap_filled.jpg" alt="sales_gap_filled"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>After you have enough guild history to cover the time you have been offline the right arrow will appear. This means you have requested all the missing data. Using the right arrow to go to the end of all the history stored in your binary cache will not request more data from the server. It simply displays the data. You can go all the way to the end if you like but it is not needed.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> If you have not been keeping your data up to date and you have multiple gaps in data the LibHistoire UI will show you and you may need to advance to the next gap and request more data.</p>
+<p class="empty">&nbsp;</p>
+<h1 class="header1" id="UnlinkedEventsNotification">3.6 - Unlinked Events Notification</h1>
+<p class="empty">&nbsp;</p>
+<p>With LibHistoire 1.2.0 there is a new notification when you log off.</p>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\log_off_notification.jpg" alt="log_off_notification"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>You could have any amount of time that has not been linked with your Guild History Events. If you chose to log off that is fine but pay close attention to the notification. Any gap in information will still be there when you log back in and you will have to take additional steps to obtain any missing sales data.</p>
+<p class="empty">&nbsp;</p>
+<h1 class="header1" id="SetupMasterMerchant30">3.7 - Setup Master Merchant 3.0</h1>
 <p class="empty">&nbsp;</p>
 <p>If you are installing Master Merchant for the first time please follow these steps.</p>
 <p class="empty">&nbsp;</p>
@@ -344,7 +577,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>What is described in Obtaining Guild History is how you request  data from the server for use.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="Whatisrequired">3.3.1 - What is required</h2>
+<h2 class="header2" id="Whatisrequired">3.7.1 - What is required</h2>
 <p class="empty">&nbsp;</p>
 <p class="note"> You can still use ATT and MM at the same time if you chose. There is a toggle to disable the notification under <font class="purple">Debug Options</font> under the <a  href="#MMDebugOptions" >MasterMerchat settings</a>.</p>
 <p class="empty">&nbsp;</p>
@@ -363,7 +596,7 @@ title: Master Merchant
 <p class="list-1">&bull;&nbsp; LibItemLink</p>
 <p class="list-1">&bull;&nbsp; LibRecipe</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="WhattodisablewhenMMisnotneeded">3.3.2 - What to disable when MM is not needed</h2>
+<h2 class="header2" id="WhattodisablewhenMMisnotneeded">3.7.2 - What to disable when MM is not needed</h2>
 <p class="empty">&nbsp;</p>
 <p>If you are with a trial group or doing daily writs you may not want MM running in the background to reduce loading times. If you do make sure to disable all of the following.</p>
 <p class="empty">&nbsp;</p>
@@ -375,11 +608,15 @@ title: Master Merchant
 <input type="checkbox" id="spoiler1" />
 <label for="spoiler1">When Deactivating</label>
 <div class="main-content">
-<p>{% include image.html file="img/mm_installed_activated.jpg" alt="mm_installed_activated" %}</p>
-<p>{% include image.html file="img/all_libguildstore_modules.jpg" alt="all_libguildstore_modules" %}</p>
+<p><figure class="image-caption">
+<img src="img\mm_installed_activated.jpg" alt="mm_installed_activated"/>
+</figure></p>
+<p><figure class="image-caption">
+<img src="img\all_libguildstore_modules.jpg" alt="all_libguildstore_modules"/>
+</figure></p>
 </div>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="ImportingolderMasterMerchantData">3.3.3 - Importing older Master Merchant Data</h2>
+<h2 class="header2" id="ImportingolderMasterMerchantData">3.7.3 - Importing older Master Merchant Data</h2>
 <p class="empty">&nbsp;</p>
 <p class="note"> <font class="yellow">Caution</font>, the more data you import the longer MM will need to load.</p>
 <p class="empty">&nbsp;</p>
@@ -389,7 +626,7 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p class="note"> If you are experiencing issues after trying the following steps you can review the section <a  href="#AlternateUpgradeMethod" >Alternate Upgrade Method</a>.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="MMxxDatamodulesneededforimporting">3.3.3.1 - MMxxData modules needed for importing</h3>
+<h3 id="MMxxDatamodulesneededforimporting">3.7.3.1 - MMxxData modules needed for importing</h3>
 <p class="empty">&nbsp;</p>
 <p>The MMxxData (MM00Data, MM01Data, etc.) modules are used for importing data only. After your import your data, these old modules should be deactivated.</p>
 <p class="empty">&nbsp;</p>
@@ -397,353 +634,62 @@ title: Master Merchant
 <input type="checkbox" id="spoiler2" />
 <label for="spoiler2">Disable MM Modules</label>
 <div class="main-content">
-<p>{% include image.html file="img/disable_mm.jpg" alt="disable_mm" %}</p>
+<p><figure class="image-caption">
+<img src="img\disable_mm.jpg" alt="disable_mm"/>
+</figure></p>
 </div>
 <p class="empty">&nbsp;</p>
 <p class="note"> Because of how saved variables work you have to enable the old MMxxData modules to load the data into memory.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="Whattoexpectafteryouloginforthefirsttime">3.3.4 - What to expect after you log in for the first time</h2>
+<h2 class="header2" id="Whattoexpectafteryouloginforthefirsttime">3.7.4 - What to expect after you log in for the first time</h2>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/startup_refresh.jpg" alt="startup_refresh" %}</p>
+<p><figure class="image-caption">
+<img src="img\startup_refresh.jpg" alt="startup_refresh"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>once you log in the LibHistorie Refresh will start. You will know when the refresh has finished when you see, <font class="yellow">LibGuildStore Refresh Finished</font> appear in the chat window. You will need to obtain guild history data from the server.</p>
 <p class="empty">&nbsp;</p>
 <p>Once the initial refresh is finished you can import sales from MM. This is to accommodate people who may have more history in their MM data files then they do in LibHistorie. You can also import from ATT for the same reason. If you have been using ATT and have never used MM then you could have 30 days of data in your ATT data files. After you import your ATT data and do a Ten Day with LibHistorie you will have the most data possible. You can also import purchases from ATT and the old standalone ShoppingList for MM. There will be notifications to disable the old MMxxData modules, the old ShoppingList standalone module, and ATT. There is an option to disable the ATT notification if you prefer to use both MM and ATT at the same time.</p>
 <p class="empty">&nbsp;</p>
-<h1 class="header1" id="Troubleshooting">3.4 - Troubleshooting</h1>
+<h1 class="header1" id="MasterMerchantWindow">3.8 - Master Merchant Window</h1>
 <p class="empty">&nbsp;</p>
-<h2 id="DuplicateIndexesDetected">3.4.1 - Duplicate Indexes Detected</h2>
+<p><figure class="image-caption">
+<img src="img\mm_window.jpg" alt="mm_window"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/duplicate_indexes_detected.jpg" alt="duplicate_indexes_detected" %}</p>
-<p class="empty">&nbsp;</p>
-<p>If this notification appears then you either need to cancel and restore a backup or allow Master Merchant to reset all its internal data files and refresh sales data from LibHistorie.</p>
-<p class="empty">&nbsp;</p>
-<p class="note"> Your LibHistorie cache will not be reset by accepting to reset Master Merchant data files.</p>
-<p class="empty">&nbsp;</p>
-<h2 id="LibGuildStorelua316attempttoindexanilvalue">3.4.2 - LibGuildStore.lua:316: attempt to index a nil value</h2>
-<p class="empty">&nbsp;</p>
-<pre>
-user:/AddOns/MasterMerchant/Libs/LibGuildStore/LibGuildStore.lua:309: attempt to index a nil value
-user:/AddOns/MasterMerchant/Libs/LibGuildStore/LibGuildStore.lua:316: operator < is not supported for nil < number
-</pre>
-<p class="empty">&nbsp;</p>
-<p>If you have the above error then that means you deactivated Master Merchant but not the rest of the required modules. You need to deactivate all of the GSxxData modules and LibGuildStore. This is mentioned in <a  href="#WhattodisablewhenMMisnotneeded" >What to disable when MM is not needed</a></p>
-<p class="empty">&nbsp;</p>
-<p class="note"> If you intend to use Master Merchant and you have the above error then you need to update or activate the required modules for Master Merchant.</p>
-<p class="empty">&nbsp;</p>
-<h2 id="Luaerrors">3.4.3 - Lua errors</h2>
-<p class="empty">&nbsp;</p>
-<p>There are times when the game for some reason will corrupt GS16Data.lua or GS17Data.lua and when that happens ESO will reset the file. Once that happens nothing about Master Merchant will work with the existing data. You won't be able to open the Master Merchant UI to view sales data or if you hover over the dots on the Graph you will have errors similar to what is shown below.</p>
-<p class="empty">&nbsp;</p>
-<pre>
-user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:455: operator .. is not supported for string .. nil
-user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:458: operator .. is not supported for string .. nil
-user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:573: operator .. is not supported for string .. nil
-user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:970: operator .. is not supported for string .. nil
-user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a nil value
-</pre>
-<p class="empty">&nbsp;</p>
-<p>While in game go to the LibGuildStore settings menu and look for the heading <a  href="#ResetData" >Reset LibGuildStore</a>.</p>
-<p class="empty">&nbsp;</p>
-<p>After you click the <font class="ltblue">Reset LibGuildStore Data</font> button the UI will reload and Master Merchant will get information from the LibHistoire cache. After the UI reloads about every minute you will see that Master Merchant is still refreshing data. There will be an approximated time remaining that will go up and down because it's not perfect.</p>
-<p class="empty">&nbsp;</p>
-<p class="note"> Do not log out, do writs, open a guild trader, update LibHistorie data, or do anything else until the refresh is complete. Do nothing except maybe move enough or type in guild chat so you don't go AFK.</p>
-<p class="empty">&nbsp;</p>
-<h2 id="OneDrive">3.4.4 - OneDrive</h2>
-<p class="empty">&nbsp;</p>
-<p>OneDrive is great for many reasons however, for ESO it can create a situation where the GS16Data.lua and GS17Data.lua files are not synced properly. I would think this would affect any of the GSxxData.lua saved variable files because of their size. They may not syncronize quickly with some internet users because of upload and download speeds being limited. To resolve this you need to change settings so that OneDrive will no longer try to backup your Documents folder where all your Addons and SavedVariables file are located.</p>
-<p class="empty">&nbsp;</p>
-<p class="note"> I will admit I do not have Windows 10 or Windows 11 so this is peiced together from helping someone.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/onedrive_cloud_icon.jpg" alt="onedrive_cloud_icon" %}</p>
-<p class="empty">&nbsp;</p>
-<p>First open the OneDrive settings by clicking the Cloud icon for OneDrive.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/manage_backup_button.jpg" alt="manage_backup_button" %}</p>
-<p class="empty">&nbsp;</p>
-<p>Click the Manage Backup button.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/onedrive_folders_to_backup.jpg" alt="onedrive_folders_to_backup" %}</p>
-<p class="empty">&nbsp;</p>
-<p>As shown in the above screen shot all three folders are being monitored by OneDrive. You want to disable the backup for the Documents folder.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/onedrive_documents_folders_disabled.jpg" alt="onedrive_documents_folders_disabled" %}</p>
-<p class="empty">&nbsp;</p>
-<p>Now OneDrive will no longer try to backup the Documents folder.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/onedrive_folders_where_to_backup.jpg" alt="onedrive_folders_where_to_backup" %}</p>
-<p class="empty">&nbsp;</p>
-<p>If prompted, chose <font class="yellow">This Computer Only</font> so that OneDrive will not attempt to backup your Documents folder.</p>
-<p class="empty">&nbsp;</p>
-<p class="note"> You do not have to pay for OneDrive or update to get more space. If you have any issues pausing or stoping OneDrive so that you can change the settings just wait longer until it pauses or stops. It may take a while but it will happen.</p>
-<p class="empty">&nbsp;</p>
-<h1 class="header1" id="LibHistoireUI">3.5 - LibHistoire UI</h1>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/new_interface_LibHistoire.jpg" alt="libhistoire_popout_menu" %}</p>
-<p class="empty">&nbsp;</p>
-<p>The new interface has all the new categories from guild hsitory.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/interface_menu_options.jpg" alt="interface_menu_options" %}</p>
-<p class="empty">&nbsp;</p>
-<p>There are options to lock and unlock the window to move it and then lock its position.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/libhistoire_popout_menu.jpg" alt="libhistoire_popout_menu" %}</p>
-<p class="empty">&nbsp;</p>
-<p>Each category has a popout menu that will be explained below.</p>
-<p class="empty">&nbsp;</p>
-<h2 id="ResetLinkedRange">3.5.1 - Reset Linked Range</h2>
-<p class="empty">&nbsp;</p>
-<p>This feature should not be used.  I am having a hard time understanding when to use it.</p>
-<p class="empty">&nbsp;</p>
-<p>Here are some reasons not to click it:</p>
-<p class="empty">&nbsp;</p>
-<p class="list-1">&bull;&nbsp; You are missing less than 1 day of data</p>
-<p class="list-1">&bull;&nbsp; You are missing 5 days of data</p>
-<p class="list-1">&bull;&nbsp; You have not played for 2 monts, the ZOS chace was set at 30 days, and you cannot obtain data for 2 months because too much time has passed</p>
-<p class="empty">&nbsp;</p>
-<p>LibHistoire is smart enough to know what to do in either case. So it is recomended to not use that option.</p>
-<p class="empty">&nbsp;</p>
-<p>In all cases <a  href="#ObtainingGuildHistory" >Obtaining Guild History</a> from the server is the best option and LibHistoire will process the data.</p>
-<p class="empty">&nbsp;</p>
-<h2 id="ClearCache">3.5.2 - Clear Cache</h2>
-<p class="empty">&nbsp;</p>
-<p>This feature will clear the cache stored on your local hard drive. It does not delete any data from the server. Should you want the data from the server again, you would need to manually request it.</p>
-<p class="empty">&nbsp;</p>
-<h2 id="RequestMode">3.5.3 - Request Mode</h2>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/request_mode_menu.jpg" alt="request_mode_menu" %}</p>
-<p class="empty">&nbsp;</p>
-<p>Automatic: means data will be requested based on the Addon requesting the data from LibHistoire</p>
-<p>Force Off: means data will not be requested whether or not an Addon uses the data</p>
-<p>Force On: means data will be requested from the server and kept in the binary cache so that a mod can access it</p>
-<p class="empty">&nbsp;</p>
-<p class="note"> LibHistoire automatically requests data from the server and depending on LibHistoire options and features used the requests may be interupdated.</p>
-<p class="empty">&nbsp;</p>
-<h1 class="header1" id="ShoppingList">3.6 - Shopping List</h1>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/shopping_list_view.jpg" alt="shopping_list_view" %}</p>
-<p class="empty">&nbsp;</p>
-<p>Adds a new icon allowing you to view purchases you make from guild stores.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image-inline.html max-width="24px" file="img/shopping_list.jpg" alt="shopping_list" %} The <font class="tan">Shopping List</font> icon allows you to select the installed extension and view purchases you have made from guild stores.</p>
-<p class="empty">&nbsp;</p>
-<p class="note"> The by old Shopping List extension by MildFlavour is not longer used and can be disabled after you import your purchases.</p>
-<p class="empty">&nbsp;</p>
-<h1 class="header1" id="Bonanza">3.7 - Bonanza!</h1>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/Bonanza.png" alt="Bonanza" %}</p>
-<p class="empty">&nbsp;</p>
-<p>Shop all of Tamriel with <a  href="https://www.esoui.com/downloads/info2143-BeamMeUp-TeleporterFastTravel.html" >Beam Me Up</a> and Bonanza. Master Merchant is not just for high end traders anymore. If you are shopping for the best deal you can find it in the Bonanza window.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/bonanza_window.jpg" alt="bonanza_window" %}</p>
-<p class="empty">&nbsp;</p>
-<p>With MM 3.7.x the Bonanza {% include image-inline.html max-width="24px" file="img/bonanza_icon.jpg" alt="bonanza_icon" %} icon allows you to view items you have seen at traders as you shop for items to purchase.</p>
-<p class="empty">&nbsp;</p>
-<h2 id="BonanzaNameFilter">3.7.1 - Bonanza Name Filter</h2>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/bonanza_window_filter.jpg" alt="bonanza_window_filter" %}</p>
-<p class="empty">&nbsp;</p>
-<h2 id="BonanzaTypeFilter">3.7.2 - Bonanza Type Filter</h2>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/bonanza_window_filter_type.jpg" alt="bonanza_window_filter_type" %}</p>
-<p class="empty">&nbsp;</p>
-<h2 id="BonanzaUsingBeamMeUp">3.7.3 - Bonanza - Using BeamMeUp</h2>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/bonanza_window_beammeup.jpg" alt="bonanza_window_beammeup" %}</p>
-<p class="empty">&nbsp;</p>
-<p class="note"> If you have BeamMeUp installed you can right click the Location column to travel to the zone the trader is located in with the usual BeamMeUp restrictions. If there are no players in the zone to jump to BeamMeUp will notify you and you may travel to a wayshrine that is not close to the trader.</p>
-<p class="empty">&nbsp;</p>
-<h1 class="header1" id="Outliers">3.8 - Outliers</h1>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/less_then_five_outliers.jpg" alt="less_then_five_outliers" %}</p>
-<p class="empty">&nbsp;</p>
-<p>With only 5 sales the obvious outlier is not ignored.</p>
-<p class="empty">&nbsp;</p>
-<p class="note"> There must be at least 6 sales before Master Merchant can ignore outliers.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/outlier_ignored.jpg" alt="outlier_ignored" %}</p>
-<p class="empty">&nbsp;</p>
-<p>With 8 sales of the same item you can see that the obvious outlier is being ignored.</p>
-<p class="empty">&nbsp;</p>
-<p class="note"> When ignoring outliers with 6 or more sales that does not mean the highest and lowest sale will be ignored. The lowest and highest price may be well within range and reasonable prices. The above example is a good example to show the remaining 7 are well within tolerance of one another.</p>
-<p class="empty">&nbsp;</p>
-<h2 class="header2" id="Controllingskewedprices">3.8.1 - Controlling skewed prices</h2>
-<p class="empty">&nbsp;</p>
-<p class="note"> People will intentionally try to sell items much higher then they are worth. Use the resources available rather then squint at the scatter plot.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/bonanza_skewed_prices.jpg" alt="bonanza_skewed_prices" %}</p>
-<p class="empty">&nbsp;</p>
-<p>While viewing a graph as shown above find out who is skewing the price and add them to the <a  href="#GuildAccountfilter" >Guild & Account filter</a>.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/resolved_skewed_price.jpg" alt="resolved_skewed_price" %}</p>
-<p class="empty">&nbsp;</p>
-<p>Once the seller is added to the <a  href="#GuildAccountfilter" >Guild & Account filter</a> you can see that the graph is much more useful.</p>
-<p class="empty">&nbsp;</p>
-<p class="note"> The absence of the Bonanza price is not what corrected the graph. The Bonanza average changed because the seller of the item listed for 3000g is being ignored. Other listings of the same item for 200g would not have the same drastic affect as the listing for 3000g.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/bonanza_guild_account_filter.jpg" alt="bonanza_guild_account_filter" %}</p>
-<p class="empty">&nbsp;</p>
-<p>For convenience you can add sellers to the Guild & Account filter from the Bonanza menu.</p>
-<p class="empty">&nbsp;</p>
-<h1 class="header1" id="MMPricevsTTCvsBonanza">3.9 - MM Price vs TTC vs Bonanza</h1>
-<p class="empty">&nbsp;</p>
-<p class="note"> There are several examples because I feel Bonanza is new and it may be hard to understand the various ways to use it. I highly suggest reading all of the following sections.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image-inline.html max-width="256px" file="img/example_1_hlaalu.jpg" alt="example_1_hlaalu" %}{% include image-inline.html max-width="256px" file="img/example_2_cuirass.jpg" alt="example_2_cuirass" %}{% include image-inline.html max-width="256px" file="img/example_3_bow.jpg" alt="example_3_bow" %}{% include image-inline.html max-width="256px" file="img/example_4_plating.jpg" alt="example_4_plating" %}</p>
-<p class="empty">&nbsp;</p>
-<p class="list-1">&bull;&nbsp; The MM price is in <font class="yellow">yellow text</font>, and it is the price the item sold for in one of the guilds you are in. It is not a price from other outside sources like other guilds on the server and it is not from TTC.</p>
-<p class="list-1">&bull;&nbsp; The TTC Price is from their own data collected by their EXE and transmitted to their server. They trim outliers using their own method and then make an average of the remaining data.</p>
-<p class="list-1">&bull;&nbsp; The Bonanza Price is in <font class="blue">blue text</font> and it is an average from a 24 hour snapshot of all the listings you have seen of that specific item from the traders you have visited.</p>
-<p class="empty">&nbsp;</p>
-<p>Looking at the first example of the Hlaalu Bookcase you see it sold 1 time out of all the guilds I am in. So there is no way to get a reasonable price for it. Someone listed it 56 days ago for 100K and it sold. That is one of the drawbacks of the MM price. If you do not have many sales from the guilds you are in then the MM price won't be very helpful. Also from the first example you see that the TTC price is about 19K and the Bonanza price is 17K. There are 9 listings from TTC and 1 from another trader. Once you have more data the Bonanza price may change but you can more easily see that 17K to 19K would probably be a more reasonable price then 100K.</p>
-<p class="empty">&nbsp;</p>
-<p>From the second and third examples you will note that the TTC price is useless for these items.  The TTC price can sometimes be very helpful. The bonanza price is also higher then the MM price. This is where the Bonanza window will be needed because you will need to search for the exact item and look at the prices you have found. This is discussed in the section <a  href="#EvaluatingtheBonanzaprice" >Evaluating the Bonanza price</a></p>
-<p class="empty">&nbsp;</p>
-<p>The Bonanza price while similar to TTC is the average of what you have found at the traders you have visited in the last 24 hours. Bonanza itself is intended to be a shopping tool but since the data is there it is displayed on the graph for you to use as another way to evaluate what the item is currently selling for. If you only have 1 to 3 sales you can not compute an average from that I'd suggest 5 or more depending on how popular it is on traders at the time.</p>
-<p class="empty">&nbsp;</p>
-<p>For the last example you will note that the Bonanza price for Chromium Plating is only about 22K above the MM price. With more data it may even fall exactly in line with the MM price. The TTC suggested price is 239Kwhich is 2K different then the Bonanza average. For items that normally do not have a lot of skew to the pricing data this will be common. For items that have more outliers skewing the pricing data you will need to evaluate the TTC and Bonanza prices to get a better idea of what may be a good price to sell the item for.</p>
-<p class="empty">&nbsp;</p>
-<h2 id="EvaluatingtheBonanzaprice">3.9.1 - Evaluating the Bonanza price</h2>
-<p class="empty">&nbsp;</p>
-<p>{% include image-inline.html max-width="256px" file="img/bonanza_tooltip_style_page.jpg" alt="bonanza_tooltip_style_page" %}{% include image-inline.html max-width="512px" file="img/low_end_prices.jpg" alt="low_end_prices" %}{% include image-inline.html max-width="512px" file="img/high_end_prices.jpg" alt="high_end_prices" %}</p>
-<p class="empty">&nbsp;</p>
-<p class="note"> If those are too small, right click the image and show it in a new tab to see the full size.</p>
-<p class="empty">&nbsp;</p>
-<p>Looking at the tooltip TTC shows 74K to 93K, the Bonanza average is 158K, and the MM price is 70K. Then the highest and lowest listing in TTC is 446 to 5M. With TTC you can not view the current prices being used for their suggestion. You can view the Bonanza prices to evaluate what other people are selling the item for. For this example you would open the Bonanza window and search for <font class="tan">style zero cuirass</font>.</p>
-<p class="empty">&nbsp;</p>
-<p>As you see in the middle screenshot the prices range from 50K to 80K. In the last screen shot the highest prices are 1M to 3.9M.  So now you have three prices all in about the same range. 1) 50K to 80K 2) 70K 3) 74 to 93K and all without opening external websites, google docs pages, or spreadsheets. It didn't require two monitors and it took only a few moments.</p>
-<p class="empty">&nbsp;</p>
-<p>It is easy to see that 70K is probably the best average price to sell the style page for. If you want it to see faster because you want it out of your inventory, 50K won't bee too low that someone might flip it and even if they do you still made close to the going rate of 70K.</p>
-<p class="empty">&nbsp;</p>
-<p class="note"> Just because the Bonanza price is not 70K and is showing 158K doesn't mean it is inaccurate. In this example it is being affected by all the prices above 1M. Although you can not see the data you will be able to view your own. For the data used in the screen shots 99 of the prices were above 100K which will affect the average significantly. This is why I recommend you evaluate the price in the manner described.</p>
-<p class="empty">&nbsp;</p>
-<h2 id="PriceSoldvsPriceListed">3.9.2 - Price Sold vs. Price Listed</h2>
-<p class="empty">&nbsp;</p>
-<p>The above items are meant to show items that have an unusual range for the TTC price or Bonanza price because it is the listed price. For items like style pages if there are 124 listings and 99 of them are 100K and above you may wonder if you could make more from selling the item. Maybe and maybe not. This is the difference between what the item sold for which is the MM price and what the item is listed for which it the Bonanza or TTC price. Think of how an author might write a book. They write the book so it is appealing to their audience. So imagine who will be buying your items. Do they have 6M to spend on something and plenty of gold left over? Does your buyer have 6M at all? Have they ever had 6M at one time? Are they willing to spend 6M for the item? It is simple common sense that if someone has 124 items to choose from they will buy the cheapest one. Just because something sold for 5M or 6M 60 days ago when the item was scarce and someone had that much to spend on the item doesn't mean people will pay that price when the item is less scarce.</p>
-<p class="empty">&nbsp;</p>
-<p>The above examples don't represent things like crafting materials where the pricing is more consistent and the MM price is more reliable. With the example of crafting materials that is simple supply and demand. If you want to read an article on it be my guest and you can enjoy such wonderful words as equilibrium and elasticity, knock yourself out. There are a lot of crafting materials on guild stores so there is a large supply and there is a large demand for them. Because there is a consistent need for them people purchase the cheapest listed items and the price remains rather consistent.</p>
-<p class="empty">&nbsp;</p>
-<p>This is not the case for everything. Take your time and use the different prices and tools to evaluate what you are selling, what others are selling it for, and what others are buying it for.</p>
-<p class="empty">&nbsp;</p>
-<h2 id="ComparisonsbetweenBonanzaTTCandMM">3.9.3 - Comparisons between Bonanza, TTC, and MM</h2>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/style_page_thurvokun.png" alt="style_page_thurvokun" %}</p>
-<p class="empty">&nbsp;</p>
-<p>To start with you will have people that list an item for something stupid and it just contaminates the TTC database. They should be prevented from uploading TTC prices from the TTC developers. When you have items with no data or items that people feel should sell for millions of gold then those are harder to evaluate.</p>
-<p class="empty">&nbsp;</p>
-<p>That isn't what I will cover in this section because that kind of data is not usable.</p>
-<p class="empty">&nbsp;</p>
-<p>Look at these examples of the Bonanza price</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/dreugh_wax_bonanza.png" alt="dreugh_wax_bonanza" %}</p>
-<p class="empty">&nbsp;</p>
-<p>Bonanza is within 1K approximately from TTC and the MM average.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/blassed_thistle_bonanza.png" alt="blassed_thistle_bonanza" %}</p>
-<p class="empty">&nbsp;</p>
-<p>Bonanza is 1g away from the TTC average.</p>
-<p class="empty">&nbsp;</p>
-<p>Most sales noobs feel you have to have millions of sales in your database, years and years of stuff, and preserve data like you are the library of congress or something. If you look at both of those screen shots TTC has data points in the thousands. 15,000 for the Dreugh Wax, and 2,800 for the Blessed Thistle. Yet I have the same price for the Blessed Thistle with only a few hundred data points.</p>
-<p class="empty">&nbsp;</p>
-<p>I could write Lua code that anyone could copy and paste into an online Lua compiler that could show you how I can add a variety of numbers and come out with a certain average, say 100. Then I could add together another set of data that has different and more numbers, and still come within approximately 5g of the average I am looking for. A range of 95g - 105g more or less.</p>
-<p class="empty">&nbsp;</p>
-<p>The example would be bias of course because I am demonstrating that if you when you add 100, 99, 90, 95 and so on.. together that you get a specific average. If you load more of the same numbers you will get the same average. I don't care how many times you add 100 + 100 + 100, it will be the same outcome.</p>
-<p class="empty">&nbsp;</p>
-<p>In statistics this is called the <a  href="https://en.wikipedia.org/wiki/Mode_(statistics)" >Mode</a>. So the value that appears most often. Commonly sold materials such as Chromium Grains, Dreugh Wax, Clam Gall, Blessed Thistle and such that the data is fairly consistent. When data is more consistent you don't need thousands of data points to get the proper average.</p>
-<p class="empty">&nbsp;</p>
-<p>Don't make it work. If you visit 3 or 4 cities and search for key items at all traders then you should have enough data to work with. TTC and Bonanza should be close however, it depends on the pricing people use. Some people post the TTC Suggested price and some post the Average price. It depends on the demand of the item and the price.</p>
-<p class="empty">&nbsp;</p>
-<p>The other benefit of Bonanza is that you can view the prices. Which is what I show in my documentation under <a  href="#EvaluatingtheBonanzaprice" >Evaluating the Bonanza price</a>. If you feel the price is not in line with TTC or listings from other traders then look. If other traders list a style page for 50K and that is the most common value then that is the going rate. You can then price your items to be competitive with other guilds.</p>
-<p class="empty">&nbsp;</p>
-<p>So it may be a bit of information overload but without the need for two monitors, viewing the TTC website, viewing google docs, viewing spreadsheets, exporting prices from MM to paste on websites, just use the Master Merchant interface. It is simple and easy to switch views and search for things to compare information without leaving the game to look at outside sources for information.</p>
-<p class="empty">&nbsp;</p>
-<h1 class="header1" id="StatesoftheLibHistoirecache">3.10 - States of the LibHistoire cache</h1>
-<p class="empty">&nbsp;</p>
-<h2 id="Unlinked">3.10.1 - Unlinked</h2>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/red_text_unlinked.jpg" alt="red_text_unlinked" %}</p>
-<p class="empty">&nbsp;</p>
-<p>In the Unlinked state you can either wait for the server to grant the requests for offline data that LibHistoire requests, or you can manually request guild history for the time you were offline.</p>
-<p class="empty">&nbsp;</p>
-<h2 id="Linkinginprogress">3.10.2 - Linking in progress</h2>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/yellow_text_linking.jpg" alt="yellow_text_linking" %}</p>
-<p class="empty">&nbsp;</p>
-<p>Once LibHistoire has what it feels it needs, then it will begin processing the guild history events and attempt to link to the last known event.</p>
-<p class="empty">&nbsp;</p>
-<h2 id="Linkinginprogresswith0eventsleft">3.10.3 - Linking in progress, with 0 events left</h2>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/process_stuck.jpg" alt="process_stuck" %}</p>
-<p class="empty">&nbsp;</p>
-<p>If you ever see it processing 0 events for a while you will just need to wait for the events to link. If there are external factors involved then nothing will process until that is no longer affecting LibHistoire.</p>
-<p class="empty">&nbsp;</p>
-<h2 id="Linked">3.10.4 - Linked</h2>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/green_text_linked.jpg" alt="green_text_linked" %}</p>
-<p class="empty">&nbsp;</p>
-<p>Once LibHistoire has linked to its stored events you should see green text. This means that LibHistoire has finished processing the guild history.</p>
-<p class="empty">&nbsp;</p>
-<p class="note"> You can still request additional history and ask LibHistoire to check the guild history for any missing sales events using the rescan button.</p>
-<p class="empty">&nbsp;</p>
-<h1 class="header1" id="ObtainingGuildHistory">3.11 - Obtaining Guild History</h1>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/request_daily_data.jpg" alt="request_daily_data" %}</p>
-<p class="empty">&nbsp;</p>
-<p>To obtain sales data the page number and right arrow (or forward arrow) must be showing. You will need to use the arrow to go to the last page of available data.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/show_more.jpg" alt="show_more" %}</p>
-<p class="empty">&nbsp;</p>
-<p>Once you have done that the E Show More option will appear. Even if there is no right arrow showing press E to request more data.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/sales_gap_filled.jpg" alt="sales_gap_filled" %}</p>
-<p class="empty">&nbsp;</p>
-<p>After you have enough guild history to cover the time you have been offline the right arrow will appear. This means you have requested all the missing data. Using the right arrow to go to the end of all the history stored in your binary cache will not request more data from the server. It simply displays the data. You can go all the way to the end if you like but it is not needed.</p>
-<p class="empty">&nbsp;</p>
-<p class="note"> If you have not been keeping your data up to date and you have multiple gaps in data the LibHistoire UI will show you and you may need to advance to the next gap and request more data.</p>
-<p class="empty">&nbsp;</p>
-<h1 class="header1" id="UnlinkedEventsNotification">3.12 - Unlinked Events Notification</h1>
-<p class="empty">&nbsp;</p>
-<p>With LibHistoire 1.2.0 there is a new notification when you log off.</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/log_off_notification.jpg" alt="log_off_notification" %}</p>
-<p class="empty">&nbsp;</p>
-<p>You could have any amount of time that has not been linked with your Guild History Events. If you chose to log off that is fine but pay close attention to the notification. Any gap in information will still be there when you log back in and you will have to take additional steps to obtain any missing sales data.</p>
-<p class="empty">&nbsp;</p>
-<h1 class="header1" id="MasterMerchantWindow">3.13 - Master Merchant Window</h1>
-<p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/mm_window.jpg" alt="mm_window" %}</p>
-<p class="empty">&nbsp;</p>
-<p>{% include image-inline.html max-width="158px" file="img/search_box.jpg" alt="search_box" %} Search Box</p>
+<p><img src="img\search_box.jpg" style="max-width: 158px;" alt="search_box"/> Search Box</p>
 <div id="PeopleIcon"></div>
-<p>{% include image-inline.html max-width="24px" file="img/people_icon.jpg" alt="people_icon" %} Cycles through: <font class="tan">Seller</font>, All sales totals by Seller. <font class="tan">Item Sold</font>, Top selling ITEMS. <font class="tan">Buyer</font>, All purchase totals by Buyer.</p>
+<p><img src="img\people_icon.jpg" style="max-width: 24px;" alt="people_icon"/> Cycles through: <font class="tan">Seller</font>, All sales totals by Seller. <font class="tan">Item Sold</font>, Top selling ITEMS. <font class="tan">Buyer</font>, All purchase totals by Buyer.</p>
 <div id="ParchmentPaper"></div>
-<p>{% include image-inline.html max-width="24px" file="img/open_statistics_window.jpg" alt="open_statistics_window" %} Opens the <a  href="#StatisticsWindow" >Statistics Window</a>.</p>
-<p>{% include image-inline.html max-width="24px" file="img/toggle_seller_item.jpg" alt="toggle_seller_item" %} <font class="tan">Seller Info</font> Guild Ranks, <font class="tan">Item Info</font> Your Info or All Info.</p>
-<p>{% include image-inline.html max-width="24px" file="img/sales_icon.jpg" alt="sales_icon" %} <font class="tan">Sales view</font> shows <font class="tan">Personal Sales</font> or <font class="tan">Guild Sales</font>. Use the Seller Info/Guild Ranks toggle to change views from Item Report to Sellers Report.</p>
-<p>{% include image-inline.html max-width="24px" file="img/shopping_list.jpg" alt="shopping_list" %} The <font class="tan">Shopping List</font> icon allows you to view purchases you have made from guild stores.</p>
-<p>{% include image-inline.html max-width="24px" file="img/bonanza_icon.jpg" alt="bonanza_icon" %} The <font class="tan">Bonanza</font> icon allows you view trader listings you have seen at other guild stores.</p>
-<p>{% include image-inline.html max-width="24px" file="img/reports_icon.jpg" alt="reports_icon" %} The <font class="tan">Management</font> view lets you see posted and canceled sales.</p>
-<p>{% include image-inline.html max-width="24px" file="img/mail_icon.jpg" alt="mail_icon" %} Sends mail to the author with an optional donation amount.</p>
-<p>{% include image-inline.html max-width="24px" file="img/money_bag.jpg" alt="money_bag" %} The <font class="tan">Moneybag</font> icon means the purchaser is not a member of that guild.</p>
+<p><img src="img\open_statistics_window.jpg" style="max-width: 24px;" alt="open_statistics_window"/> Opens the <a  href="#StatisticsWindow" >Statistics Window</a>.</p>
+<p><img src="img\toggle_seller_item.jpg" style="max-width: 24px;" alt="toggle_seller_item"/> <font class="tan">Seller Info</font> Guild Ranks, <font class="tan">Item Info</font> Your Info or All Info.</p>
+<p><img src="img\sales_icon.jpg" style="max-width: 24px;" alt="sales_icon"/> <font class="tan">Sales view</font> shows <font class="tan">Personal Sales</font> or <font class="tan">Guild Sales</font>. Use the Seller Info/Guild Ranks toggle to change views from Item Report to Sellers Report.</p>
+<p><img src="img\shopping_list.jpg" style="max-width: 24px;" alt="shopping_list"/> The <font class="tan">Shopping List</font> icon allows you to view purchases you have made from guild stores.</p>
+<p><img src="img\bonanza_icon.jpg" style="max-width: 24px;" alt="bonanza_icon"/> The <font class="tan">Bonanza</font> icon allows you view trader listings you have seen at other guild stores.</p>
+<p><img src="img\reports_icon.jpg" style="max-width: 24px;" alt="reports_icon"/> The <font class="tan">Management</font> view lets you see posted and canceled sales.</p>
+<p><img src="img\mail_icon.jpg" style="max-width: 24px;" alt="mail_icon"/> Sends mail to the author with an optional donation amount.</p>
+<p><img src="img\money_bag.jpg" style="max-width: 24px;" alt="money_bag"/> The <font class="tan">Moneybag</font> icon means the purchaser is not a member of that guild.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"><font class="tan">Item Sold</font> is only available from a Seller's Report.</p>
 <p class="note"> Donations should be voluntary. People that struggle to make 25K gold a week, feel free to just say thanks. I'd rather receive a 50K donation from top sellers making millions a week.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="GuildSalesandPersonalSales">3.13.1 - Guild Sales and Personal Sales</h2>
+<h2 class="header2" id="GuildSalesandPersonalSales">3.8.1 - Guild Sales and Personal Sales</h2>
 <p class="empty">&nbsp;</p>
-<p>{% include image-inline.html max-width="175px" file="img/show_your_info.jpg" alt="show_your_info" %}{% include image-inline.html max-width="175px" file="img/show_all_info.jpg" alt="show_all_info" %}</p>
+<p><img src="img\show_your_info.jpg" style="max-width: 175px;" alt="show_your_info"/><img src="img\show_all_info.jpg" style="max-width: 175px;" alt="show_all_info"/></p>
 <p class="empty">&nbsp;</p>
 <p>First select what information you would like to see. <font class="tan">Show Personal Sales</font> will display info ONLY about You. <font class="tan">Show Guild Sales</font> will display data from all members of all of your guilds.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"> When the button says <font class="tan">Show Guild Sales</font>, that means you are currently viewing <font class="tan">YOUR</font> information and vice-versa. You can toggle back and forth between <font class="tan">Personal Sales</font> and <font class="tan">Guild Sales</font> while viewing any report.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="ItemReport">3.13.2 - Item Report</h2>
+<h2 class="header2" id="ItemReport">3.8.2 - Item Report</h2>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/item_report.jpg" alt="item_report" %}</p>
+<p><figure class="image-caption">
+<img src="img\item_report.jpg" alt="item_report"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>If you have ever opened the Master Merchant window you have probably seen the list of your personal sales. This is an Item Report and if you click the <a  href="#PeopleIcon" >People Icon</a> you will change between the Buyer and the Seller.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="WhatTheColumnsMean">3.13.2.1 - What The Columns Mean</h3>
+<h3 id="WhatTheColumnsMean">3.8.2.1 - What The Columns Mean</h3>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Buyer</font>: The purchaser of the item.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Guild</font>: The guild associated with the sale of the item.</p>
@@ -751,26 +697,32 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="list-1">&bull;&nbsp; <font class="tan">Sale Time</font>: The approximate time the item was sold. The game stores all sales using epoch time so the UI just approximates the sale after the first hour.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Price</font>: The price the item sold for. You can view the individual price by clicking the Show Unit Price button.</p>
 <p class="empty">&nbsp;</p>
-<p>{% include image-inline.html max-width="132px" file="img/show_unit_price.jpg" alt="show_unit_price" %} Toggle between the Unit Price and Total Sale.</p>
+<p><img src="img\show_unit_price.jpg" style="max-width: 132px;" alt="show_unit_price"/> Toggle between the Unit Price and Total Sale.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="SellersReport">3.13.3 - Seller's Report</h2>
+<h2 class="header2" id="SellersReport">3.8.3 - Seller's Report</h2>
 <p class="empty">&nbsp;</p>
-<h3 id="TopBuyersandSellers">3.13.3.1 - Top Buyers and Sellers</h3>
+<h3 id="TopBuyersandSellers">3.8.3.1 - Top Buyers and Sellers</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/sellers_report_people.jpg" alt="sellers_report_people" %}</p>
+<p><figure class="image-caption">
+<img src="img\sellers_report_people.jpg" alt="sellers_report_people"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<h3 id="TopItems">3.13.3.2 - Top Items</h3>
+<h3 id="TopItems">3.8.3.2 - Top Items</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/sellers_report_items.jpg" alt="sellers_report_items" %}</p>
+<p><figure class="image-caption">
+<img src="img\sellers_report_items.jpg" alt="sellers_report_items"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<h3 id="PersonalSalesSellersReport">3.13.3.3 - Personal Sales - Seller's Report</h3>
+<h3 id="PersonalSalesSellersReport">3.8.3.3 - Personal Sales - Seller's Report</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/sellers_report_personal.jpg" alt="sellers_report_personal" %}</p>
+<p><figure class="image-caption">
+<img src="img\sellers_report_personal.jpg" alt="sellers_report_personal"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p class="note"> You can also view a Seller's Report for your personal sales only the items will be <font class="tan">YOUR</font> top selling items.</p>
 <p class="note"> Clicking the People Icon will cycle through Seller, Buyer, and Item Sold.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="WhatTheColumnsMean1">3.13.3.4 - What The Columns Mean</h3>
+<h3 id="WhatTheColumnsMean2">3.8.3.4 - What The Columns Mean</h3>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Rank</font>: The rank of the member or item for the guild listed. For example, if you are viewing a <font class="tan">seller's</font> report and your rank is <font class="tan">7</font>, it means you are the <font class="tan">7th</font> biggest <font class="tan">seller</font> in the guild for the time selected. If you are viewing an <font class="tan">item</font> report for and <font class="yellow">Dreugh Wax</font> is the <font class="tan">1st</font> item in the list, then <font class="yellow">Dreugh Wax</font> is the <font class="tan">biggest seller</font> for the guild showing.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Sales/Purchases</font>: Total Sales or Purchases for that guild or member for the time selected.</p>
@@ -778,9 +730,11 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="list-1">&bull;&nbsp; <font class="tan">Count</font>: The number on the left is the number of <font class="tan">transactions</font>, while the number on the right is the number of <font class="tan">items</font>. For example @TradingDude had <font class="yellow">10 Dreugh Wax</font> <font class="tan">transactions</font> and sold <font class="yellow">100 Dreugh wax</font> <font class="tan">total</font>.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Percent</font>: This shows what percent of total guild sales or purchases each member is responsible for.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="GuildSalesDateFilterRanges">3.13.4 - Guild Sales Date Filter Ranges</h2>
+<h2 class="header2" id="GuildSalesDateFilterRanges">3.8.4 - Guild Sales Date Filter Ranges</h2>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/filter_time_frames.jpg" alt="time_frames" %}</p>
+<p><figure class="image-caption">
+<img src="img\filter_time_frames.jpg" alt="time_frames"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Default</font>: Default uses the amount of days for Default set in <a  href="#CalculationDisplayOptions" >Calculation Display Options</a>. However, if you open the Master Merchant window while holding a Focus key such as SHIFT, CTRL or both, then opening the window will use the amount of days you set for that Focus.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">30 Days</font>: 30 Days.</p>
@@ -788,25 +742,31 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="list-1">&bull;&nbsp; <font class="tan">60-90 Days</font>: 60 to 90 Days.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Custom</font>: Custom uses the amount of days set in <a  href="#MasterMerchantWindowOptions" >Master Merchant Window Options</a></p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="DateRanges">3.13.5 - Date Ranges</h2>
+<h2 class="header2" id="DateRanges">3.8.5 - Date Ranges</h2>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/time_frames.jpg" alt="time_frames" %}</p>
+<p><figure class="image-caption">
+<img src="img\time_frames.jpg" alt="time_frames"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>There are several date ranges you can choose from. <font class="tan">This Week</font>, <font class="tan">Last Week</font> and <font class="tan">Prior Week</font> start from the ZOS trader flip for the current <a  href="#SalesWeek" >Sales Week</a>. However, the last option is customizable under the Master Merchant settings under <a  href="#CalculationDisplayOptions" >Calculation Display Options</a>.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"> Days are calculated from midnight and weeks are calculated from each kiosk flip on Tuesday. For example the option <font class="tan">7 Days</font> would be the last 7 days of sales while <font class="tan">Last Week</font> will be from the previous kiosk flip to the most recent kiosk flip. Both of which will be a Tuesday.</p>
 <p class="empty">&nbsp;</p>
-<h1 class="header1" id="StatisticsWindow">3.14 - Statistics Window</h1>
+<h1 class="header1" id="StatisticsWindow">3.9 - Statistics Window</h1>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/statistics_window.jpg" alt="statistics_window" %}</p>
+<p><figure class="image-caption">
+<img src="img\statistics_window.jpg" alt="statistics_window"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<h1 class="header1" id="Settings">3.15 - Settings</h1>
+<h1 class="header1" id="Settings">3.10 - Settings</h1>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="MasterMerchant">3.15.1 - Master Merchant</h2>
+<h2 class="header2" id="MasterMerchant3">3.10.1 - Master Merchant</h2>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="MasterMerchantWindowOptions">3.15.1.1 - Master Merchant Window Options</h3>
+<h3 class="header3" id="MasterMerchantWindowOptions">3.10.1.1 - Master Merchant Window Options</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/main_wondow_options.jpg" alt="main_wondow_options" %}</p>
+<p><figure class="image-caption">
+<img src="img\main_wondow_options.jpg" alt="main_wondow_options"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Open With Mail</font>: Whether or not to open the Master Merchant Window when you open your mail.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Open With Store</font>: Whether or not to open the Master Merchant Window when you interact with a guild store.</p>
@@ -814,25 +774,31 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="list-1">&bull;&nbsp; <font class="tan">Window Font</font>: The font for the Master Merchant Window. You may have other fonts if you have mods that use LibMediaProvider like one of my other mods <a  href="https://www.esoui.com/downloads/info2558-AdvancedNameplatesGreymoor.html" >Advanced Nameplates</a>.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Custom Filter Timeframe</font>: The amount of days to use for the Custom dropdown for the <a  href="#GuildSalesDateFilterRanges" >Guild Sales Date Filter Ranges</a></p>
 <p class="empty">&nbsp;</p>
-<p class="note"> If you sold a <font class="purple">Crafting Motif 63: Dremora Bows</font> for <font class="yellow">11,000</font> {% include image-inline.html max-width="20px" file="img/currency_gold.png" alt="currency_gold" %} the master merchant window will show what you received in the mail which would be <font class="yellow">10,230</font> {% include image-inline.html max-width="20px" file="img/currency_gold.png" alt="currency_gold" %}.</p>
+<p class="note"> If you sold a <font class="purple">Crafting Motif 63: Dremora Bows</font> for <font class="yellow">11,000</font> <img src="img\currency_gold.png" style="max-width: 20px;" alt="currency_gold"/> the master merchant window will show what you received in the mail which would be <font class="yellow">10,230</font> <img src="img\currency_gold.png" style="max-width: 20px;" alt="currency_gold"/>.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="SalesFormatOptions">3.15.1.2 - Sales Format Options</h3>
+<h3 class="header3" id="SalesFormatOptions">3.10.1.2 - Sales Format Options</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/dupe_sales_setting.jpg" alt="dupe_sales_setting" %}</p>
+<p>Master Merchant provides several ways to view and calculate pricing data based on your current sales history. These options determine how item averages, deal values, sales totals, and other pricing details are processed using the id53 sales data provided by the game's Guild History system.</p>
 <p class="empty">&nbsp;</p>
-<p>When the setting <font class="ltblue"><B><I>Use historical and recent sales data</I></B></font> is enabled historical and current sales data will be combined but all duplicate data will affect the totals. While users may not mind mixing the data for pricing, your weekly sales totals will reflect an incorrect total unless the option is disabled.</p>
+<p><figure class="image-caption">
+<img src="img\dupe_sales_setting.jpg" alt="dupe_sales_setting"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<p>All the pricing data and guild sales totals are calculated during initialization so you can not toggle between using and not using historical data in addition to the current server data without another full initialization of all data.</p>
+<p>Use the Sales Format Options menu to choose how pricing is calculated. Each option controls how Master Merchant evaluates your local sales history when determining averages, trends, and suggested prices.</p>
 <p class="empty">&nbsp;</p>
-<p>For that reason, unless you feel you must be the library of congress of data I recommend to leave that feature OFF or disabled.</p>
+<p class="note"> This option applies to current id53 sales data. If you imported old Master Merchant archives from before Update 41, see <a  href="#LegacyDataBehaviorfromUpdate41" >Legacy Data Behavior from Update 41</a>.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="TimeFormatOptions">3.15.1.3 - Time Format Options</h3>
+<h3 class="header3" id="TimeFormatOptions">3.10.1.3 - Time Format Options</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/time_format_options.jpg" alt="time_format_options" %}</p>
+<p><figure class="image-caption">
+<img src="img\time_format_options.jpg" alt="time_format_options"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="AlertOptions">3.15.1.4 - Alert Options</h3>
+<h3 class="header3" id="AlertOptions">3.10.1.4 - Alert Options</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/alert_options.jpg" alt="alert_options" %}</p>
+<p><figure class="image-caption">
+<img src="img\alert_options.jpg" alt="alert_options"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">On-Screen Alerts</font>: Show On-Screen popup alerts when you receive a sale. See examples below.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Show Alerts in Cyrodiil</font>: Enable or Disable Alerts in Cyrodiil. Useful if you watch for specific PVP alerts and do not want MM Alerts to show up.</p>
@@ -844,48 +810,66 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <p class="note"> <font class="tan">Show Multiple Alerts</font> and <font class="tan">Offline Sales Report</font> may not function as intended with the addition of LibHistoire. However, you will still see notifications of sales as they are received.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="OnScreenandChatAlert">3.15.1.5 - On-Screen and Chat Alert</h3>
+<h3 id="OnScreenandChatAlert">3.10.1.5 - On-Screen and Chat Alert</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/onscreen_alert.jpg" alt="onscreen_alert" %}</p>
-<p>{% include image.html file="img/chat_alert.jpg" alt="chat_alert" %}</p>
+<p><figure class="image-caption">
+<img src="img\onscreen_alert.jpg" alt="onscreen_alert"/>
+</figure></p>
+<p><figure class="image-caption">
+<img src="img\chat_alert.jpg" alt="chat_alert"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="CalculationDisplayOptions">3.15.1.6 - Calculation Display Options</h3>
+<h3 class="header3" id="CalculationDisplayOptions">3.10.1.6 - Calculation Display Options</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/tool_tip_settings.jpg" alt="tool_tip_settings" %}</p>
+<p><figure class="image-caption">
+<img src="img\tool_tip_settings.jpg" alt="tool_tip_settings"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p><font class="red">WARNING</font>: All sales have already been sorted by the Custom Timeframe at startup. See documentation for more information.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"> <font class="tan">Custom Timeframe</font> requires a reload because all of the sales have been placed into all the date ranges as shown in <a  href="#DateRanges" >Date Ranges</a> and therefore changing the value means that all the sales would have to be calculated again. This process is difficult to begin with so to avoid any miscalculations (attempting to clear all sales and stats variables) a reload is required.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="Timeframes">3.15.1.7 - Timeframes</h3>
+<h3 id="Timeframes">3.10.1.7 - Timeframes</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/calc_display_options_timeframe.jpg" alt="tool_tip_settings" %}</p>
+<p><figure class="image-caption">
+<img src="img\calc_display_options_timeframe.jpg" alt="tool_tip_settings"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>For the Custom Timeframe dropdown, Hours, Days, and Weeks are based off of Midnight for the current day. Full Guild Weeks are based off of the current Kiosk Flip.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="GuildAccountfilter">3.15.1.8 - Guild & Account filter</h3>
+<h3 class="header3" id="GuildAccountfilter">3.10.1.8 - Guild & Account filter</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/add_seller_to_filter.jpg" alt="add_seller_to_filter" %}</p>
+<p><figure class="image-caption">
+<img src="img\add_seller_to_filter.jpg" alt="add_seller_to_filter"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>Right click the dots on the graph to add the Seller to the Guild & Account filter.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"> There is a limit of 2000 characters for the filter. You will need to manage it from time to time.</p>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/ags_menu_filter.jpg" alt="ags_menu_filter" %}</p>
+<p><figure class="image-caption">
+<img src="img\ags_menu_filter.jpg" alt="ags_menu_filter"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>You can add the Guild or Seller to the Guild & Account filter from the trader menu with either vanilla or Awesome Guild Store installed.</p>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/filter_from_bonanza.jpg" alt="filter_from_bonanza" %}</p>
+<p><figure class="image-caption">
+<img src="img\filter_from_bonanza.jpg" alt="filter_from_bonanza"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>You can add the Seller to the Guild & Account filter from the Bonanza window.</p>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/vanilla_trader_seller.jpg" alt="vanilla_trader_seller" %}</p>
+<p><figure class="image-caption">
+<img src="img\vanilla_trader_seller.jpg" alt="vanilla_trader_seller"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>The Seller is located on the tooltip if you do not have Awesome Guild Store installed.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="DealCalculatorOptions">3.15.1.9 - Deal Calculator Options</h3>
+<h3 class="header3" id="DealCalculatorOptions">3.10.1.9 - Deal Calculator Options</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/custom_deal_calc.jpg" alt="custom_deal_calc" %}</p>
+<p><figure class="image-caption">
+<img src="img\custom_deal_calc.jpg" alt="custom_deal_calc"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Deal Calculator Type</font>: Choose from MM Average, TTC Average, TTC Suggested, and the Bonanza Price.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Modify TTC Suggested Price by 25 percent</font>: When enabled will add 25 percent to the Suggested Price used for the Deal Calculator and the ToolTip. This is the same value as shown in the TTC Tooltip. See the <font class="tan">Modified Suggested Price</font> spoiler below for an example.</p>
@@ -896,48 +880,79 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <input type="checkbox" id="spoiler3" />
 <label for="spoiler3">Modified Suggested Price</label>
 <div class="main-content">
-<p>{% include image.html file="img/example_ttc_suggested.jpg" alt="example_ttc_suggested" %}</p>
+<p><figure class="image-caption">
+<img src="img\example_ttc_suggested.jpg" alt="example_ttc_suggested"/>
+</figure></p>
 </div>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="Tooltips">3.15.1.10 - Tooltips</h3>
+<h3 class="header3" id="Tooltips">3.10.1.10 - Tooltips</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/tooltips.jpg" alt="tooltips" %}</p>
+<p><figure class="image-caption">
+<img src="img\tooltips.jpg" alt="tooltips"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="TooltipOptions">3.15.1.11 - Tooltip Options</h3>
+<h3 class="header3" id="TooltipOptions">3.10.1.11 - Tooltip Options</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/tooltip_options.jpg" alt="tooltip_options" %}</p>
-<p>{% include image-caption.html file="img/tool_tip_examples.jpg" alt="tool_tip_examples" caption="Tool Tip Examples" %}</p>
+<p><figure class="image-caption">
+<img src="img\tooltip_options.jpg" alt="tooltip_options"/>
+</figure></p>
+<p><figure class="image-caption">
+<img src="img\tool_tip_examples.jpg" alt="tool_tip_examples"/>
+<figcaption>Tool Tip Examples</figcaption>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Level/Quality Selectors</font>: Adds Level and Quality selectors to the tooltip window. You can bring up the window by clicking a link in chat or when you right click an item and choose <a  href="#PopupItemData" >Popup Item Data</a>. See the <a  href="#LevelQualitySelectors" >Level Quality Selectors</a> section for example of the selectors that appear on the tooltip window.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="OutlierOptions">3.15.1.12 - Outlier Options</h3>
+<h3 class="header3" id="OutlierOptions">3.10.1.12 - Outlier Options</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/outlier_options.jpg" alt="outlier_options" %}</p>
+<p><figure class="image-caption">
+<img src="img\outlier_options.jpg" alt="outlier_options"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Trim by percentile only</font>: When enabled you can specify the outer percentile to trim from the sales data without using additional outlier removal methods.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Percentile</font>: Specify the outer percentile 1 to 15 percent.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Ignore Outlier Prices</font>: When enabled MM will use fairly standard methods to remove outliers.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Enable Aggressive Restrictions</font>: When enabled additional restrictions will be used when trimming outliers.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="PriceToChatOptions">3.15.1.13 - Price To Chat Options</h3>
+<h3 class="header3" id="PriceToChatOptions">3.10.1.13 - Price To Chat Options</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/price_to_chat.jpg" alt="price_to_chat" %}</p>
+<p><figure class="image-caption">
+<img src="img\price_to_chat.jpg" alt="price_to_chat"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="InventoryOptions">3.15.1.14 - Inventory Options</h3>
+<h3 class="header3" id="InventoryOptions">3.10.1.14 - Inventory Options</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/inventory_options.jpg" alt="inventory_options" %}</p>
+<p><figure class="image-caption">
+<img src="img\inventory_options.jpg" alt="inventory_options"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Modify TTC Suggested Price by 25 percent</font>: When enabled will add 25 percent to the Suggested Price shown in the inventory. This is the same value as shown in the TTC Tooltip. See the <font class="tan">Modified Suggested Price</font> <a  href="#modifiedsuggestedprice" >spoiler above</a> for an example.</p>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/replace_price.jpg" alt="replace_price" %}</p>
+<p><figure class="image-caption">
+<img src="img\replace_price.jpg" alt="replace_price"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="GuildStoreOptions">3.15.1.15 - Guild Store Options</h3>
+<h3 class="header3" id="GuildStoreOptions">3.10.1.15 - Guild Store Options</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/guild_store_options.jpg" alt="guild_store_options" %}</p>
-<p>{% include image-caption.html file="img/mm_price_calculator.jpg" alt="mm_price_calculator" caption="Price Calculator when not using AGS." %}</p>
-<p>{% include image-caption.html file="img/ags_profit_filter.jpg" alt="ags_profit_filter" caption="AGS Profit filter." %}</p>
-<p>{% include image-caption.html file="img/ags_profit_margin.jpg" alt="ags_profit_margin" caption="Profit margin." %}</p>
-<p>{% include image-caption.html file="img/ags_display_profit.jpg" alt="ags_display_profit" caption="Your Profit." %}</p>
+<p><figure class="image-caption">
+<img src="img\guild_store_options.jpg" alt="guild_store_options"/>
+</figure></p>
+<p><figure class="image-caption">
+<img src="img\mm_price_calculator.jpg" alt="mm_price_calculator"/>
+<figcaption>Price Calculator when not using AGS.</figcaption>
+</figure></p>
+<p><figure class="image-caption">
+<img src="img\ags_profit_filter.jpg" alt="ags_profit_filter"/>
+<figcaption>AGS Profit filter.</figcaption>
+</figure></p>
+<p><figure class="image-caption">
+<img src="img\ags_profit_margin.jpg" alt="ags_profit_margin"/>
+<figcaption>Profit margin.</figcaption>
+</figure></p>
+<p><figure class="image-caption">
+<img src="img\ags_display_profit.jpg" alt="ags_display_profit"/>
+<figcaption>Your Profit.</figcaption>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Show Stack Price Calculator</font>: Adds UI to the guild store if you are not using Awesome Guild Store that aids you in setting the stack price of the item listed</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Save Central Pricing Data</font>: When <font class="yellow">Enabled</font> all pricing data is stored and available to all guilds. When <font class="yellow">Disabled</font> all pricing data is stored separate for each guild.</p>
@@ -947,23 +962,32 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="note"> The Price Calculator will not show up with Awesome Guild Store. The Profit Filter is AGS only. Adding the profit margin or the total profit will be shown with or without AGS.</p>
 <p class="note"> Awesome Guild Store uses its own internal pricing routines and only uses the MM Pricing Data when there is not AGS information. Because of that it may appear that the MM pricing data is malfunctioning when it isn't.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="GuildMasterOptions">3.15.1.16 - Guild Master Options</h3>
+<h3 class="header3" id="GuildMasterOptions">3.10.1.16 - Guild Master Options</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/guild_master_options.jpg" alt="guild_master_options" %}</p>
+<p><figure class="image-caption">
+<img src="img\guild_master_options.jpg" alt="guild_master_options"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="MMDebugOptions">3.15.1.17 - MM Debug Options</h3>
+<h3 class="header3" id="MMDebugOptions">3.10.1.17 - MM Debug Options</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/debug_options.jpg" alt="debug_options" %}</p>
-<p>{% include image-caption.html file="img/extra_debug_text.jpg" alt="extra_debug_text" caption="Example of extra debug text." %}</p>
+<p><figure class="image-caption">
+<img src="img\debug_options.jpg" alt="debug_options"/>
+</figure></p>
+<p><figure class="image-caption">
+<img src="img\extra_debug_text.jpg" alt="extra_debug_text"/>
+<figcaption>Example of extra debug text.</figcaption>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Activate Custom Debug Logging</font>: The Custom Debug information is really not intended for normal use and should be left disabled.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Disable ATT Warning</font>: If you enjoy using both MM and ATT together then please disable the warning that ATT files are active with this toggle.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="LibGuildStore">3.15.2 - LibGuildStore</h2>
+<h2 class="header2" id="LibGuildStore">3.10.2 - LibGuildStore</h2>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="SalesManagementOptions">3.15.2.1 - Sales Management Options</h3>
+<h3 class="header3" id="SalesManagementOptions">3.10.2.1 - Sales Management Options</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/lgs_sales_management.jpg" alt="lgs_sales_management" %}</p>
+<p><figure class="image-caption">
+<img src="img\lgs_sales_management.jpg" alt="lgs_sales_management"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Use Sales History Size Only</font>: This will ignore the minimum and maximum count for sales. If there are 4698 sales of an item with the day range selected for retaining data, then the sales will not be trimmed.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Minimal Indexing</font>: Does not add search words for items. It only adds the player search word for displaying personal sales. Searching in the Master merchant window is still possible but will take extra time.</p>
@@ -972,55 +996,253 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="list-1">&bull;&nbsp; <font class="tan">Max Item Count</font>: The maximum count of sales for a specific item before the days range is considered. If you select 90 days to retain data, and you choose 1000, then the oldest sale once the threshold is reached will be trimmed. Meaning if you have 1001 sales for an item, 1 will be trimmed and 1000 will remain.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Min Sales Interval</font>: When this value is greater then 0 the Min item count and the sales interval (in Days) will be considered first before truncating. If the interval is set to 10 days and the sale is less then 10 days old the sale will be retained the same as a sale below the Min Item Count.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="DataManagementOptions">3.15.2.2 - Data Management Options</h3>
+<h3 class="header3" id="DataManagementOptions">3.10.2.2 - Data Management Options</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/lgs_data_management.jpg" alt="lgs_data_management" %}</p>
+<p><figure class="image-caption">
+<img src="img\lgs_data_management.jpg" alt="lgs_data_management"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="LGSDebugOptions">3.15.2.3 - LGS Debug Options</h3>
+<h3 class="header3" id="LGSDebugOptions">3.10.2.3 - LGS Debug Options</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/lgs_debug_options.jpg" alt="lgs_debug_options" %}</p>
+<p><figure class="image-caption">
+<img src="img\lgs_debug_options.jpg" alt="lgs_debug_options"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="ImportMMData">3.15.2.4 - Import MM Data</h3>
+<h3 class="header3" id="ImportMMData">3.10.2.4 - Import MM Data</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/import_mm_data.jpg" alt="import_mm_data" %}</p>
+<p><figure class="image-caption">
+<img src="img\import_mm_data.jpg" alt="import_mm_data"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="ImportATTData">3.15.2.5 - Import ATT Data</h3>
+<h3 class="header3" id="ImportATTData">3.10.2.5 - Import ATT Data</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/import_att_data.jpg" alt="import_att_data" %}</p>
+<p><figure class="image-caption">
+<img src="img\import_att_data.jpg" alt="import_att_data"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="ImportATTPurchases">3.15.2.6 - Import ATT Purchases</h3>
+<h3 class="header3" id="ImportATTPurchases">3.10.2.6 - Import ATT Purchases</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/import_att_purchaces.jpg" alt="import_att_purchaces" %}</p>
+<p><figure class="image-caption">
+<img src="img\import_att_purchaces.jpg" alt="import_att_purchaces"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="RefreshLibHistoire">3.15.2.7 - Refresh LibHistoire</h3>
+<h3 class="header3" id="RefreshLibHistoire">3.10.2.7 - Refresh LibHistoire</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/refresh_libhistoire.jpg" alt="refresh_libhistoire" %}</p>
+<p><figure class="image-caption">
+<img src="img\refresh_libhistoire.jpg" alt="refresh_libhistoire"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>The Refresh button tells LibHistoire to send all the data from the zos binary cache. The more data in the cache, the longer it will take to transmit.</p>
 <p class="empty">&nbsp;</p>
 <p>The refresh button is only a fail safe mechanism in case a user uses a feature that interupts LibHistoire, preventing it from transmitting data to MM. It should not be clicked every so often or every once and a while. Clicking this does not refresh the Master Merchant window or cause the server to send any Guild History.</p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="ImportShoppingListData">3.15.2.8 - Import ShoppingList Data</h3>
+<h3 class="header3" id="ImportShoppingListData">3.10.2.8 - Import ShoppingList Data</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/import_shoppinglist_list.jpg" alt="import_shoppinglist_list" %}</p>
+<p><figure class="image-caption">
+<img src="img\import_shoppinglist_list.jpg" alt="import_shoppinglist_list"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="ImportPricingData">3.15.2.9 - Import Pricing Data</h3>
+<h3 class="header3" id="ImportPricingData">3.10.2.9 - Import Pricing Data</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/import_pricing_data.jpg" alt="import_pricing_data" %}</p>
+<p><figure class="image-caption">
+<img src="img\import_pricing_data.jpg" alt="import_pricing_data"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="ResetData">3.15.2.10 - Reset Data</h3>
+<h3 class="header3" id="ResetData">3.10.2.10 - Reset Data</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/reset_data.jpg" alt="reset_data" %}</p>
+<p><figure class="image-caption">
+<img src="img\reset_data.jpg" alt="reset_data"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<h1 class="header1" id="Misc">3.16 - Misc</h1>
+<h1 class="header1" id="ShoppingList">3.11 - Shopping List</h1>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="PopupItemData">3.16.1 - Popup Item Data</h2>
+<p><figure class="image-caption">
+<img src="img\shopping_list_view.jpg" alt="shopping_list_view"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/popup_item_data.jpg" alt="popup_item_data" %}</p>
+<p>Adds a new icon allowing you to view purchases you make from guild stores.</p>
+<p class="empty">&nbsp;</p>
+<p><img src="img\shopping_list.jpg" style="max-width: 24px;" alt="shopping_list"/> The <font class="tan">Shopping List</font> icon allows you to select the installed extension and view purchases you have made from guild stores.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> The by old Shopping List extension by MildFlavour is not longer used and can be disabled after you import your purchases.</p>
+<p class="empty">&nbsp;</p>
+<h1 class="header1" id="Bonanza">3.12 - Bonanza!</h1>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\Bonanza.png" alt="Bonanza"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>Shop all of Tamriel with <a  href="https://www.esoui.com/downloads/info2143-BeamMeUp-TeleporterFastTravel.html" >Beam Me Up</a> and Bonanza. Master Merchant is not just for high end traders anymore. If you are shopping for the best deal you can find it in the Bonanza window.</p>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\bonanza_window.jpg" alt="bonanza_window"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>With MM 3.7.x the Bonanza <img src="img\bonanza_icon.jpg" style="max-width: 24px;" alt="bonanza_icon"/> icon allows you to view items you have seen at traders as you shop for items to purchase.</p>
+<p class="empty">&nbsp;</p>
+<h2 id="BonanzaNameFilter">3.12.1 - Bonanza Name Filter</h2>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\bonanza_window_filter.jpg" alt="bonanza_window_filter"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<h2 id="BonanzaTypeFilter">3.12.2 - Bonanza Type Filter</h2>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\bonanza_window_filter_type.jpg" alt="bonanza_window_filter_type"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<h2 id="BonanzaUsingBeamMeUp">3.12.3 - Bonanza - Using BeamMeUp</h2>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\bonanza_window_beammeup.jpg" alt="bonanza_window_beammeup"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p class="note"> If you have BeamMeUp installed you can right click the Location column to travel to the zone the trader is located in with the usual BeamMeUp restrictions. If there are no players in the zone to jump to BeamMeUp will notify you and you may travel to a wayshrine that is not close to the trader.</p>
+<p class="empty">&nbsp;</p>
+<h1 class="header1" id="Outliers">3.13 - Outliers</h1>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\less_then_five_outliers.jpg" alt="less_then_five_outliers"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>With only 5 sales the obvious outlier is not ignored.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> There must be at least 6 sales before Master Merchant can ignore outliers.</p>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\outlier_ignored.jpg" alt="outlier_ignored"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>With 8 sales of the same item you can see that the obvious outlier is being ignored.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> When ignoring outliers with 6 or more sales that does not mean the highest and lowest sale will be ignored. The lowest and highest price may be well within range and reasonable prices. The above example is a good example to show the remaining 7 are well within tolerance of one another.</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="Controllingskewedprices">3.13.1 - Controlling skewed prices</h2>
+<p class="empty">&nbsp;</p>
+<p class="note"> People will intentionally try to sell items much higher then they are worth. Use the resources available rather then squint at the scatter plot.</p>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\bonanza_skewed_prices.jpg" alt="bonanza_skewed_prices"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>While viewing a graph as shown above find out who is skewing the price and add them to the <a  href="#GuildAccountfilter" >Guild & Account filter</a>.</p>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\resolved_skewed_price.jpg" alt="resolved_skewed_price"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>Once the seller is added to the <a  href="#GuildAccountfilter" >Guild & Account filter</a> you can see that the graph is much more useful.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> The absence of the Bonanza price is not what corrected the graph. The Bonanza average changed because the seller of the item listed for 3000g is being ignored. Other listings of the same item for 200g would not have the same drastic affect as the listing for 3000g.</p>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\bonanza_guild_account_filter.jpg" alt="bonanza_guild_account_filter"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>For convenience you can add sellers to the Guild & Account filter from the Bonanza menu.</p>
+<p class="empty">&nbsp;</p>
+<h1 class="header1" id="MMPricevsTTCvsBonanza">3.14 - MM Price vs TTC vs Bonanza</h1>
+<p class="empty">&nbsp;</p>
+<p class="note"> These examples demonstrate how MM, TTC, and Bonanza each calculate prices differently. Since Bonanza is newer, the examples help show how to interpret its values. I recommend looking through all of them before making pricing decisions.</p>
+<p class="empty">&nbsp;</p>
+<p><img src="img\example_1_hlaalu.jpg" style="max-width: 256px;" alt="example_1_hlaalu"/><img src="img\example_2_cuirass.jpg" style="max-width: 256px;" alt="example_2_cuirass"/><img src="img\example_3_bow.jpg" style="max-width: 256px;" alt="example_3_bow"/><img src="img\example_4_plating.jpg" style="max-width: 256px;" alt="example_4_plating"/></p>
+<p class="empty">&nbsp;</p>
+<p class="list-1">&bull;&nbsp; The MM price is shown in <font class="yellow">yellow text</font>. It is based on actual sales recorded in your guild history. It does not use any TTC information.</p>
+<p class="list-1">&bull;&nbsp; The TTC price comes from their client application. They remove outliers using their own method and calculate an average based on the remaining listings.</p>
+<p class="list-1">&bull;&nbsp; The Bonanza price is shown in <font class="blue">blue text</font>. It is based on the listings you personally saw while checking traders. It reflects what you have encountered yourself, not data from other players.</p>
+<p class="empty">&nbsp;</p>
+<p>In the first example with the Hlaalu Bookcase, the Bonanza prices you saw were all in a reasonable range. If most traders offered it around 17K to 19K, that price range is far more reliable than a single inflated listing at 100K.</p>
+<p class="empty">&nbsp;</p>
+<p>The second and third examples show how TTC values can differ from what you actually found. When a TTC average includes a wide range of prices, the Bonanza window becomes useful because it shows the listings you personally verified at traders.</p>
+<p class="empty">&nbsp;</p>
+<p>Bonanza prices may appear to match TTC at times, but they will vary depending on how many traders you visit and how often the item is listed. Some items appear frequently and require only a few trader visits. Others are uncommon and may need more sampling to get an accurate picture.</p>
+<p class="empty">&nbsp;</p>
+<p>You do not need thousands of MM sales to understand a price. Even a few hundred data points for a common item, such as Blessed Thistle, are enough for MM to calculate a stable average.</p>
+<p class="empty">&nbsp;</p>
+<p>The same idea applies to the statistical mean. Repeating the same value many times will still lead to the same average. This is known as the Law of Large Numbers, and it explains why a consistent price will stay consistent even when the sample size is moderate.</p>
+<p class="empty">&nbsp;</p>
+<p>Pricing does not have to be complicated. Visiting a few traders across different cities is usually enough to identify the normal price range for an item. What matters is demand and how frequently the item appears.</p>
+<p class="empty">&nbsp;</p>
+<p>Bonanza has an additional advantage: it shows the listings you actually saw. This helps you choose realistic prices and stay competitive with other guilds without relying on external websites.</p>
+<p class="empty">&nbsp;</p>
+<p>While all this information may seem like a lot at first, each tool provides valuable insight. MM, TTC, and Bonanza together give you a complete understanding of the market without needing to leave the game.</p>
+<p class="empty">&nbsp;</p>
+<h2 id="EvaluatingtheBonanzaprice">3.14.1 - Evaluating the Bonanza price</h2>
+<p class="empty">&nbsp;</p>
+<p><img src="img\bonanza_tooltip_style_page.jpg" style="max-width: 256px;" alt="bonanza_tooltip_style_page"/><img src="img\low_end_prices.jpg" style="max-width: 512px;" alt="low_end_prices"/><img src="img\high_end_prices.jpg" style="max-width: 512px;" alt="high_end_prices"/></p>
+<p class="empty">&nbsp;</p>
+<p class="note"> If these images appear too small, right click and open them in a new tab to view them at full size.</p>
+<p class="empty">&nbsp;</p>
+<p>In the first screenshot, the TTC range shows 74K to 93K, while the Bonanza average reflects what you actually saw while visiting traders. When the TTC range is wide or influenced by extreme listings, Bonanza helps verify what you found during your searches.</p>
+<p class="empty">&nbsp;</p>
+<p>To evaluate Bonanza correctly, search for the item in the game. For example, you can look up <font class="tan">style zero cuirass</font> in the Bonanza window. This allows you to confirm the prices you have personally seen and compare them to the TTC values.</p>
+<p class="empty">&nbsp;</p>
+<p>In the middle image, the listings range from 50K to 125K. By checking several traders, you can quickly see that most listings fall around the middle of that range. It does not require two monitors or outside tools, and it only takes a few minutes to gather reliable results.</p>
+<p class="empty">&nbsp;</p>
+<p>From these listings, it is clear that 70K is a realistic average. If you list your item at 70K, you are matching the prices found at the majority of traders you visited. Even if an occasional outlier exists, you are still pricing close to the true market value.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> If the Bonanza price appears higher than your estimate, such as showing 158K instead of 70K, this does not mean it is incorrect. It simply means your sample of traders included higher listings. Always compare the range of prices you saw and make a judgment based on the most common values.</p>
+<p class="empty">&nbsp;</p>
+<h2 id="PriceSoldvsPriceListed">3.14.2 - Price Sold vs. Price Listed</h2>
+<p class="empty">&nbsp;</p>
+<p>The examples above highlight items with unusually large price ranges. These cases help explain the difference between what an item sells for and what players choose to list it for. Anyone can list an item at any price, but that does not mean the item will actually sell at that amount.</p>
+<p class="empty">&nbsp;</p>
+<p>The Bonanza and TTC prices are both useful, but they are not the same. Bonanza shows the prices you personally saw at traders, while TTC gives an average after removing outliers. Neither of these values tells you the final sale price unless you combine them with your own observations.</p>
+<p class="empty">&nbsp;</p>
+<p>When evaluating an item, think about the intent behind the listings you see. Some players price items very high in the hope that someone will overpay. Others list too low because they want a quick sale. The goal is to find the realistic range where sales actually occur, not the extreme values.</p>
+<p class="empty">&nbsp;</p>
+<p>Bonanza helps with this because it lets you compare multiple listings quickly. If most prices fall within a narrow range, that is usually the true value of the item. The extremes on either end are rarely reliable indicators of what the item will sell for.</p>
+<p class="empty">&nbsp;</p>
+<p>Keep this in mind when deciding how to price your own items. A high listing does not guarantee a high sale, and a low listing does not mean the market value is low. Use the patterns you see across several traders to determine a fair and accurate price.</p>
+<p class="empty">&nbsp;</p>
+<h2 id="ComparisonsbetweenBonanzaTTCandMM">3.14.3 - Comparisons between Bonanza, TTC, and MM</h2>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\style_page_thurvokun.png" alt="style_page_thurvokun"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>Some players will list an item for an extremely high or unrealistic price. These listings do not reflect the true value of the item and can distort the TTC averages. Ideally the TTC developers would filter out these extreme cases more aggressively, but since they appear in the raw data, items with no consistent history or items that people believe should sell for millions are naturally harder to evaluate.</p>
+<p class="empty">&nbsp;</p>
+<p>This section does not focus on those unusable listings. Instead, it looks at situations where TTC, MM, and Bonanza all provide helpful and consistent information.</p>
+<p class="empty">&nbsp;</p>
+<p>Below are two examples of the Bonanza price:</p>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\dreugh_wax_bonanza.png" alt="dreugh_wax_bonanza"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>In this example, the Bonanza value is within about 1K of both TTC and the MM average. This shows how closely all three systems can align for commonly traded materials.</p>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\blassed_thistle_bonanza.png" alt="blassed_thistle_bonanza"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>Here, the Bonanza value is only 1 gold away from the TTC average. Even though TTC has thousands of data points for this material, the value is still consistent with what Bonanza shows from the traders you actually visited.</p>
+<p class="empty">&nbsp;</p>
+<p>A common misconception is that you need years and years of sales data stored in Master Merchant in order to get accurate results. That is not true. In the Dreugh Wax example, TTC shows more than 15,000 data points, and in the Blessed Thistle example, TTC shows around 2,800. Yet MM is able to show the same price for Blessed Thistle using only a few hundred sale records.</p>
+<p class="empty">&nbsp;</p>
+<p>You could demonstrate this with a simple Lua script by adding sets of numbers that average around 100. Even if you mix different values, such as 100, 99, 90, 95, and similar numbers, the average will remain close to the same. No matter how many times you add 100 + 100 + 100, the result does not change.</p>
+<p class="empty">&nbsp;</p>
+<p>In statistics this is related to the Mode, the value that appears most often. For commonly sold materials like Chromium Grains, Dreugh Wax, Clam Gall, Blessed Thistle, and others, the data is consistent enough that thousands of points are not required to determine the true average.</p>
+<p class="empty">&nbsp;</p>
+<p>Pricing should not be difficult. If you visit three or four cities and check the main traders for key items, you will usually gather enough information to see the normal price range. TTC and Bonanza should agree in most cases, depending on how people choose their listing prices. Some players use the TTC Suggested value, others use the Average value, and it depends on demand and current availability.</p>
+<p class="empty">&nbsp;</p>
+<p>Another advantage of Bonanza is that it allows you to view actual listings. As shown earlier in the section <a  href="#EvaluatingtheBonanzaprice" >Evaluating the Bonanza price</a>, you can always verify prices right in the interface. If you see that most traders list a style page for 50K, then 50K is the real going rate. You can then list your item competitively without guessing.</p>
+<p class="empty">&nbsp;</p>
+<p>Overall this may seem like a lot of information, but the point is that you do not need extra monitors, external websites, spreadsheets, google docs, or exporting MM data. The Master Merchant interface itself provides everything you need. Using the information on the tooltip makes it fast and easy to compare MM, TTC, and Bonanza prices without leaving the game.</p>
+<p class="empty">&nbsp;</p>
+<h1 class="header1" id="Misc">3.15 - Misc</h1>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="PopupItemData">3.15.1 - Popup Item Data</h2>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\popup_item_data.jpg" alt="popup_item_data"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>This context menu is from having Master merchant and Awesome Guild Store installed. The menu will vary depending on the mods you have installed.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="LevelQualitySelectors">3.16.2 - Level Quality Selectors</h2>
+<h2 class="header2" id="LevelQualitySelectors">3.15.2 - Level Quality Selectors</h2>
 <p class="empty">&nbsp;</p>
 <p>I will try to update the selector so that there are graphics to click on but for now it is just text.</p>
 <p class="empty">&nbsp;</p>
@@ -1032,42 +1254,54 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <input type="checkbox" id="spoiler4" />
 <label for="spoiler4">Hat of a Mother's Sorrow</label>
 <div class="main-content">
-<p>{% include image.html file="img/ms_legendary.jpg" alt="ms_legendary" %}</p>
+<p><figure class="image-caption">
+<img src="img\ms_legendary.jpg" alt="ms_legendary"/>
+</figure></p>
 </div>
 <p class="empty">&nbsp;</p>
 <p><font class="purple">Hat of a Mother's Sorrow</font></p>
 <input type="checkbox" id="spoiler5" />
 <label for="spoiler5">Hat of a Mother's Sorrow</label>
 <div class="main-content">
-<p>{% include image.html file="img/ms_epic.jpg" alt="ms_epic" %}</p>
+<p><figure class="image-caption">
+<img src="img\ms_epic.jpg" alt="ms_epic"/>
+</figure></p>
 </div>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="Erroneoustimestamp">3.16.3 - Erroneous timestamp</h2>
+<h2 class="header2" id="Erroneoustimestamp">3.15.3 - Erroneous timestamp</h2>
 <p class="empty">&nbsp;</p>
 <p>When you see an erroneous timestamp, LibHistoire will handle this internally. It will not be processed until the timestamp is updated properly by the server.</p>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/1657months.jpg" alt="1657months" %}</p>
-<p>{% include image.html file="img/71582789minutes.jpg" alt="71582789minutes" %}</p>
+<p><figure class="image-caption">
+<img src="img\1657months.jpg" alt="1657months"/>
+</figure></p>
+<p><figure class="image-caption">
+<img src="img\71582789minutes.jpg" alt="71582789minutes"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>LibHistoire will send the sale to MM after it checks that the erroneous timestamp is no longer present.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="Whatisbeingscanned">3.16.4 - What is being scanned</h2>
+<h2 class="header2" id="Whatisbeingscanned">3.15.4 - What is being scanned</h2>
 <p class="empty">&nbsp;</p>
 <p>When LibHistoire is scanning the guild history it is obtaining the sales from all the guild history that you have loaded into memory.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="Afewdaysofsalesfrom109entries">3.16.4.1 - A few days of sales from 109 entries</h3>
+<h3 id="Afewdaysofsalesfrom109entries">3.15.4.1 - A few days of sales from 109 entries</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/shot_history.jpg" alt="shot_history" %}</p>
+<p><figure class="image-caption">
+<img src="img\shot_history.jpg" alt="shot_history"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>LibHistoire simply scan entries from the guild history. With another mod installed called <font class="purple">Shissu's Guild Tools</font> a count of the amount of entries is showing. As shown there are 109 entries which only covers a few minutes of sales.</p>
 <p class="empty">&nbsp;</p>
-<h3 id="4daysofsalesfrom8031entries">3.16.4.2 - 4 days of sales from 8031 entries</h3>
+<h3 id="4daysofsalesfrom8031entries">3.15.4.2 - 4 days of sales from 8031 entries</h3>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/long_list.jpg" alt="shot_history" %}</p>
+<p><figure class="image-caption">
+<img src="img\long_list.jpg" alt="shot_history"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>However, as shown in the above screen shot there are 8031 entries which covers 4 days of sales. If you feel you are missing sales from 7 days ago then you will need more sales showing on the guild history tab.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="SalesWeek">3.16.5 - Sales Week</h2>
+<h2 class="header2" id="SalesWeek">3.15.5 - Sales Week</h2>
 <p class="empty">&nbsp;</p>
 <p>As of  August 11 2020 the kiosk flip is now <a  href="https://forums.elderscrollsonline.com/en/discussion/540142/updates-to-guild-trader-swap-times/p1" >every Tuesday</a>. All sales totals are calculated from the time indicated by ZOS. Refer to the <a  href="#DateRanges" >date ranges</a> section for information on the timeframes.</p>
 <p class="empty">&nbsp;</p>
@@ -1075,9 +1309,9 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <p class="note">On the day of the kiosk flip sales for This Week will only reset after Zenimax transmits the new kiosk flip time. This can occur several hours after the kiosk flip.</p>
 <p class="empty">&nbsp;</p>
-<h1 class="header1" id="Slashcommands">3.17 - Slash commands</h1>
+<h1 class="header1" id="Slashcommands">3.16 - Slash commands</h1>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="37xSortingWritsbyvouchercount">3.17.1 - 3.7.x Sorting Writs by voucher count</h2>
+<h2 class="header2" id="37xSortingWritsbyvouchercount">3.16.1 - 3.7.x Sorting Writs by voucher count</h2>
 <p class="empty">&nbsp;</p>
 <p class="note"> /lgs clean, which is /LGS CLEAN but use lowercase.</p>
 <p class="empty">&nbsp;</p>
@@ -1085,9 +1319,11 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <p class="note"> This only applies if you are upgrading from 3.7.01 or earlier.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="ExportSalesReport">3.17.2 - Export Sales Report</h2>
+<h2 class="header2" id="ExportSalesReport">3.16.2 - Export Sales Report</h2>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/mm_export_screen.jpg" alt="mm_export_screen" %}</p>
+<p><figure class="image-caption">
+<img src="img\mm_export_screen.jpg" alt="mm_export_screen"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>Master Merchant can export a general summary of sales for use with spreadsheets. Full disclosure I am not a spreadsheet guru so I can not help with this feature. To use the export feature choose a guild to work with, then select the time and range like This Week or Last Week. Then use <code>/mm export #</code> to export the guild's information. As an example the screen shot shows a 2 for the 2nd guild in your list, therefore the syntax would be <code>/mm export 2</code>.</p>
 <p class="empty">&nbsp;</p>
@@ -1121,9 +1357,11 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <p class="note"> Some of my GMs have explained if this format changed it would break what they currently use so it will not be altered.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="ExportSalesActivity">3.17.3 - Export Sales Activity</h2>
+<h2 class="header2" id="ExportSalesActivity">3.16.3 - Export Sales Activity</h2>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/export_sales.jpg" alt="export_sales" %}</p>
+<p><figure class="image-caption">
+<img src="img\export_sales.jpg" alt="export_sales"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>You would use <code>/mm sales #</code> to export the sales activity. As an example the screen shot shows a 2 for the 2nd guild in your list, therefore the syntax would be <code>/mm sales 2</code>.</p>
 <p class="empty">&nbsp;</p>
@@ -1139,9 +1377,11 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 },
 </pre>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="ExportPersonalSales">3.17.4 - Export Personal Sales</h2>
+<h2 class="header2" id="ExportPersonalSales">3.16.4 - Export Personal Sales</h2>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/export_personal_sales.jpg" alt="export_sales" %}</p>
+<p><figure class="image-caption">
+<img src="img\export_personal_sales.jpg" alt="export_sales"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>You would use <code>/mm personal #</code> to export your personal sales. As an example the screen shot shows a 2 for the 2nd guild in your list, therefore the syntax would be <code>/mm personal 2</code>.</p>
 <p class="empty">&nbsp;</p>
@@ -1157,9 +1397,11 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 },
 </pre>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="ExportPurchases">3.17.5 - Export Purchases</h2>
+<h2 class="header2" id="ExportPurchases">3.16.5 - Export Purchases</h2>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/export_purchases.jpg" alt="export_purchases" %}</p>
+<p><figure class="image-caption">
+<img src="img\export_purchases.jpg" alt="export_purchases"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>You would use <code>/mm purchases</code> to export your purchases from traders. Only the time dropdown affects the export for purchases.</p>
 <p class="empty">&nbsp;</p>
@@ -1175,11 +1417,92 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 },
 </pre>
 <p class="empty">&nbsp;</p>
+<h1 class="header1" id="Troubleshooting">3.17 - Troubleshooting</h1>
+<p class="empty">&nbsp;</p>
+<h2 id="DuplicateIndexesDetected">3.17.1 - Duplicate Indexes Detected</h2>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\duplicate_indexes_detected.jpg" alt="duplicate_indexes_detected"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>If this notification appears then you either need to cancel and restore a backup or allow Master Merchant to reset all its internal data files and refresh sales data from LibHistorie.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> Your LibHistorie cache will not be reset by accepting to reset Master Merchant data files.</p>
+<p class="empty">&nbsp;</p>
+<h2 id="LibGuildStorelua316attempttoindexanilvalue">3.17.2 - LibGuildStore.lua:316: attempt to index a nil value</h2>
+<p class="empty">&nbsp;</p>
+<pre>
+user:/AddOns/MasterMerchant/Libs/LibGuildStore/LibGuildStore.lua:309: attempt to index a nil value
+user:/AddOns/MasterMerchant/Libs/LibGuildStore/LibGuildStore.lua:316: operator < is not supported for nil < number
+</pre>
+<p class="empty">&nbsp;</p>
+<p>If you have the above error then that means you deactivated Master Merchant but not the rest of the required modules. You need to deactivate all of the GSxxData modules and LibGuildStore. This is mentioned in <a  href="#WhattodisablewhenMMisnotneeded" >What to disable when MM is not needed</a></p>
+<p class="empty">&nbsp;</p>
+<p class="note"> If you intend to use Master Merchant and you have the above error then you need to update or activate the required modules for Master Merchant.</p>
+<p class="empty">&nbsp;</p>
+<h2 id="Luaerrors">3.17.3 - Lua errors</h2>
+<p class="empty">&nbsp;</p>
+<p>There are times when the game for some reason will corrupt GS16Data.lua or GS17Data.lua and when that happens ESO will reset the file. Once that happens nothing about Master Merchant will work with the existing data. You won't be able to open the Master Merchant UI to view sales data or if you hover over the dots on the Graph you will have errors similar to what is shown below.</p>
+<p class="empty">&nbsp;</p>
+<pre>
+user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:455: operator .. is not supported for string .. nil
+user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:458: operator .. is not supported for string .. nil
+user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:573: operator .. is not supported for string .. nil
+user:/AddOns/MasterMerchant/MasterMerchant_UI.lua:970: operator .. is not supported for string .. nil
+user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a nil value
+</pre>
+<p class="empty">&nbsp;</p>
+<p>While in game go to the LibGuildStore settings menu and look for the heading <a  href="#ResetData" >Reset LibGuildStore</a>.</p>
+<p class="empty">&nbsp;</p>
+<p>After you click the <font class="ltblue">Reset LibGuildStore Data</font> button the UI will reload and Master Merchant will get information from the LibHistoire cache. After the UI reloads about every minute you will see that Master Merchant is still refreshing data. There will be an approximated time remaining that will go up and down because it's not perfect.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> Do not log out, do writs, open a guild trader, update LibHistorie data, or do anything else until the refresh is complete. Do nothing except maybe move enough or type in guild chat so you don't go AFK.</p>
+<p class="empty">&nbsp;</p>
+<h2 id="OneDrive">3.17.4 - OneDrive</h2>
+<p class="empty">&nbsp;</p>
+<p>OneDrive is great for many reasons however, for ESO it can create a situation where the GS16Data.lua and GS17Data.lua files are not synced properly. I would think this would affect any of the GSxxData.lua saved variable files because of their size. They may not syncronize quickly with some internet users because of upload and download speeds being limited. To resolve this you need to change settings so that OneDrive will no longer try to backup your Documents folder where all your Addons and SavedVariables file are located.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> I will admit I do not have Windows 10 or Windows 11 so this is peiced together from helping someone.</p>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\onedrive_cloud_icon.jpg" alt="onedrive_cloud_icon"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>First open the OneDrive settings by clicking the Cloud icon for OneDrive.</p>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\manage_backup_button.jpg" alt="manage_backup_button"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>Click the Manage Backup button.</p>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\onedrive_folders_to_backup.jpg" alt="onedrive_folders_to_backup"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>As shown in the above screen shot all three folders are being monitored by OneDrive. You want to disable the backup for the Documents folder.</p>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\onedrive_documents_folders_disabled.jpg" alt="onedrive_documents_folders_disabled"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>Now OneDrive will no longer try to backup the Documents folder.</p>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\onedrive_folders_where_to_backup.jpg" alt="onedrive_folders_where_to_backup"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>If prompted, chose <font class="yellow">This Computer Only</font> so that OneDrive will not attempt to backup your Documents folder.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> You do not have to pay for OneDrive or update to get more space. If you have any issues pausing or stoping OneDrive so that you can change the settings just wait longer until it pauses or stops. It may take a while but it will happen.</p>
+<p class="empty">&nbsp;</p>
 <h1 class="header1" id="TechnicalInformation">3.18 - Technical Information</h1>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="BackupLibGuildStoreData">3.18.1 - Backup LibGuildStore Data</h2>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/lgs_data_backup.jpg" alt="lgs_data_backup" %}</p>
+<p><figure class="image-caption">
+<img src="img\lgs_data_backup.jpg" alt="lgs_data_backup"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>To backup your LibGuildStore data you will need to navigate to the SavedVariables folder. Usually <code>C:\Users\Your User Name\Documents\Elder Scrolls Online\live</code>. The files can be easily found going to MyDocuments in windows first.</p>
 <p class="empty">&nbsp;</p>
@@ -1191,27 +1514,31 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <p>LibExecutionQueue is included with Master Merchant as shown in the zip below.</p>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/leq_included.jpg" alt="leq_included" %}</p>
+<p><figure class="image-caption">
+<img src="img\leq_included.jpg" alt="leq_included"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>LibExecutionQueue is sorted alphabetically by the base game.</p>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/leq_unsorted.jpg" alt="leq_unsorted" %}</p>
+<p><figure class="image-caption">
+<img src="img\leq_unsorted.jpg" alt="leq_unsorted"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>If you have LibVotansAddonList installed then it will look close to the base game.</p>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/leq_votans_sort.jpg" alt="leq_votans_sort" %}</p>
+<p><figure class="image-caption">
+<img src="img\leq_votans_sort.jpg" alt="leq_votans_sort"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="UnintentionalZOSBug">3.18.3 - Unintentional ZOS Bug</h2>
 <p class="empty">&nbsp;</p>
-<p>{% include image_thumbnail.html file="img/savedvarsapostrophe.jpg" alt="savedvarsapostrophe" %}</p>
+<p><img class="thumbnail" src="img\savedvarsapostrophe.jpg" alt="savedvarsapostrophe"/></p>
 <p class="empty">&nbsp;</p>
 <p>Unfortunately from time to time ZOS introduces or reintroduces a bug in the saved vars where the apostrophe is converted to HTML code. Which will mean your sales may or may not display properly. Which is a game bug and you are out of luck until or unless they fix it.</p>
 <p class="empty">&nbsp;</p>
 <p>Since this can occur I highly recommend changing your user name to only contain letters as it will make it easier for you in the long run.</p>
 <p class="empty">&nbsp;</p>
 <p>This also includes creative names that contain things like Æ or æ. As those are not individual letters.</p>
-<p class="empty">&nbsp;</p>
-<p class="empty">&nbsp;</p>
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="VersionHistory">3.19 - Version History</h1>
 <p class="empty">&nbsp;</p>
@@ -1223,9 +1550,38 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <p>This makes me believe that 2.3.1 was really intended to be the proposed 2.2.1 but somehow the upload never went through properly. I am glad Philgo68 uploaded the version as it has helped me understand the code a bit more.</p>
 <p class="empty">&nbsp;</p>
-<h1 class="header1" id="Depreciated">3.20 - Depreciated</h1>
+<h1 class="header1" id="Deprecated">3.20 - Deprecated</h1>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="BackgroundScanning">3.20.1 - Background Scanning</h2>
+<h2 class="header2" id="LegacyDataBehaviorfromUpdate41">3.20.1 - Legacy Data Behavior from Update 41</h2>
+<p class="empty">&nbsp;</p>
+<p>During Update 41 (March 2024), Zenimax reset the Guild History server database and switched from id64 to id53 sales identifiers. Because of this reset, Master Merchant could not deduplicate sales across the boundary between pre-U41 id64 data and the new id53 format.</p>
+<p class="empty">&nbsp;</p>
+<p class="note"> If you still have archived Master Merchant data from before Update 41 (March 2024), be aware that mixed id64/id53 records cannot be deduplicated. This does not affect users who started fresh after Update 41.</p>
+<p class="empty">&nbsp;</p>
+<h3 id="ImpactonUsersDuringUpdate41">3.20.1.1 - Impact on Users During Update 41</h3>
+<p class="empty">&nbsp;</p>
+<p>During the transition to Update 41, most users experienced little to no disruption because their binary cache already contained recent sales data. Players who typically retained only 30 to 90 days of history saw minimal data loss, and Guild Masters were still able to evaluate recent weekly activity without issue.</p>
+<p class="empty">&nbsp;</p>
+<p>However, users with extensive archival data, years of sales or "library of congress"-style collections, experienced inaccurate averages when mixed id64 and id53 records overlapped. Because the identifier formats could not be matched across the Update 41 boundary, Master Merchant was unable to reliably deduplicate these overlapping records.</p>
+<p class="empty">&nbsp;</p>
+<p>This behavior is now legacy and only applies to users who retained significant pre-U41 archived data.</p>
+<p class="empty">&nbsp;</p>
+<h3 id="BrickedGuildTraderStuckHistorySegments">3.20.1.2 - Bricked Guild Trader / Stuck History Segments</h3>
+<p class="empty">&nbsp;</p>
+<p>During Update 41 there was also a bug in the base game where the Guild History could become "bricked" when the server pushed new events that could not be merged with the user's already-cached data. This occurred when the cache contained two segments that were supposed to join, but the server reported them as touching with no events in between. When this happened:</p>
+<p class="empty">&nbsp;</p>
+<p class="list-1">&bull;&nbsp; The history bar showed a blue/green segment nearly touching a red segment.</p>
+<p class="list-1">&bull;&nbsp; "Show More" stopped appearing on the last page.</p>
+<p class="list-1">&bull;&nbsp; The player could not advance the trader history.</p>
+<p class="list-1">&bull;&nbsp; Reloading the UI did not resolve it.</p>
+<p class="empty">&nbsp;</p>
+<p><figure class="image-caption">
+<img src="img\bricked_trader.jpg" alt="bricked_trader"/>
+</figure></p>
+<p class="empty">&nbsp;</p>
+<p>Because this bug came from the base game and not addons, it may still occur if the server pushes guild history segments that cannot be merged with your local cache. If this happens, you can use the <a  href="#ClearCache" >Clear Cache</a> option in the LibHistoire UI to rebuild your local history data. This will clear the affected cache entries and automatically reload the UI.</p>
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="BackgroundScanning">3.20.2 - Background Scanning</h2>
 <p class="empty">&nbsp;</p>
 <p>As of version 3.0.0 there is no <code>/mm missing</code> and no background scan. The background scan would get hung up by repeated attempts to request more sales data from the server. When the server denied the request MM would continue to wait for the request to be approved.</p>
 <p class="empty">&nbsp;</p>
@@ -1235,11 +1591,13 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <p>For reasons like these MM no longer uses a background scan as it attempted to scan from a specific point in time and loop over the guild history events.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="BackupMasterMerchant2xData">3.20.2 - Backup Master Merchant 2.x Data</h2>
+<h2 class="header2" id="BackupMasterMerchant2xData">3.20.3 - Backup Master Merchant 2.x Data</h2>
 <p class="empty">&nbsp;</p>
 <p class="note"> This backup procedure is exclusively intended for version 2.x or for maintaining a historical backup for importing into 3.x.</p>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/mm_data_backup.jpg" alt="mm_data_backup" %}</p>
+<p><figure class="image-caption">
+<img src="img\mm_data_backup.jpg" alt="mm_data_backup"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>To backup your Master Merchant data you will need to navigate to the SavedVariables folder. Usually <code>C:\Users\Your User Name\Documents\Elder Scrolls Online\live</code>. The files can be easily found going to MyDocuments in windows first.</p>
 <p class="empty">&nbsp;</p>
@@ -1247,7 +1605,7 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <p>Once you are in the SavedVariables folders, you will need to copy the 17 MMxxData files named MM00Data.lua to MM16Data.lua as shown in the screen shot. Copy these to a separate folder outside of SavedVariables and do not place them in a subfolder under SavedVariables.</p>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="UninstallMasterMerchant2x">3.20.3 - Uninstall Master Merchant 2.x</h2>
+<h2 class="header2" id="UninstallMasterMerchant2x">3.20.4 - Uninstall Master Merchant 2.x</h2>
 <p class="empty">&nbsp;</p>
 <p class="note"> For historical reference, as of August 2020, it was expected that users would have already updated to version 3.x, rendering this procedure unnecessary.</p>
 <p class="empty">&nbsp;</p>
@@ -1256,31 +1614,44 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <div class="main-content">
 <p>Currently there is some confusion about how to uninstall Master merchant 2.x and install 3.x. First you need to open minion. If you see both versions installed as shown below, uninstall both. The reason you uninstall both is because MM 3.x is a continuation of 2.x. It is the same mod with the same file names and the same folder names. Minion will not understand how to handle this.</p>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/both_mm_installed.jpg" alt="both_mm_installed" %}</p>
+<p><figure class="image-caption">
+<img src="img\both_mm_installed.jpg" alt="both_mm_installed"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>If you manually install your mods, of if you want to know which folders belong to Master merchant, click the spoiler.</p>
 <p class="empty">&nbsp;</p>
 <input type="checkbox" id="spoiler7" />
 <label for="spoiler7">Master Merchant Folders</label>
 <div class="main-content">
-<p>{% include image-caption.html file="img/mm_files_installed.jpg" alt="mm_files_installed" caption="To see a larger image, right click the image and choose View Image." %}</p>
+<p><figure class="image-caption">
+<img src="img\mm_files_installed.jpg" alt="mm_files_installed"/>
+<figcaption>To see a larger image, right click the image and choose View Image.</figcaption>
+</figure></p>
 </div>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/mm_remove_mod.jpg" alt="mm_remove_mod" %}</p>
+<p><figure class="image-caption">
+<img src="img\mm_remove_mod.jpg" alt="mm_remove_mod"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>When using Minion to uninstall Master Merchant right click and choose Uninstall.</p>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/mm_remove_mod_caution.jpg" alt="mm_remove_mod_caution" %}</p>
+<p><figure class="image-caption">
+<img src="img\mm_remove_mod_caution.jpg" alt="mm_remove_mod_caution"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>Do not check that box or it will remove your MM data files! Only click Delete!</p>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/mm_uninstalled.jpg" alt="mm_uninstalled" %}</p>
+<p><figure class="image-caption">
+<img src="img\mm_uninstalled.jpg" alt="mm_uninstalled"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>As you see above, both versions of Master merchant are now uninstalled.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"> You have to close Minion because it will be confused about uninstalling both versions.</p>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/search_for_mm.jpg" alt="search_for_mm" %}</p>
+<p><figure class="image-caption">
+<img src="img\search_for_mm.jpg" alt="search_for_mm"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>Open Minion again and click Find More and search for <code>Master Merchant 3.0</code> as shown above. Make sure the author's name is Sharlikran. Then click the Install button.</p>
 <p class="empty">&nbsp;</p>
@@ -1291,17 +1662,25 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <input type="checkbox" id="spoiler8" />
 <label for="spoiler8">New Libraries</label>
 <div class="main-content">
-<p>{% include image-caption.html file="img/install_LibGuildRoster.jpg" alt="install_LibGuildRoster" caption="To see a larger image, right click the image and choose View Image." %}</p>
+<p><figure class="image-caption">
+<img src="img\install_LibGuildRoster.jpg" alt="install_LibGuildRoster"/>
+<figcaption>To see a larger image, right click the image and choose View Image.</figcaption>
+</figure></p>
 <p class="empty">&nbsp;</p>
-<p>{% include image-caption.html file="img/install_LibHistoire.jpg" alt="install_LibHistoire" caption="To see a larger image, right click the image and choose View Image." %}</p>
+<p><figure class="image-caption">
+<img src="img\install_LibHistoire.jpg" alt="install_LibHistoire"/>
+<figcaption>To see a larger image, right click the image and choose View Image.</figcaption>
+</figure></p>
 </div>
 <p class="empty">&nbsp;</p>
-<p>{% include image.html file="img/one_mm_only.jpg" alt="one_mm_only" %}</p>
+<p><figure class="image-caption">
+<img src="img\one_mm_only.jpg" alt="one_mm_only"/>
+</figure></p>
 <p class="empty">&nbsp;</p>
 <p>After you install Master Merchant 3.0 verify it is the only Master Merchant showing in Minion.</p>
 </div>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="AlternateUpgradeMethod">3.20.4 - Alternate Upgrade Method</h2>
+<h2 class="header2" id="AlternateUpgradeMethod">3.20.5 - Alternate Upgrade Method</h2>
 <p class="empty">&nbsp;</p>
 <p class="note"> Due to Update 41 and LibHistoire 2.x, this procedure is no longer possible.</p>
 <p class="empty">&nbsp;</p>
@@ -1310,18 +1689,18 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <div class="main-content">
 <p>Thanks to Shadowshire for sharing this workaround. While I did alter most of the steps I wanted to preserve his suggestion because it could provide a good alternative to importing LibHistoire data for those experiencing issues.</p>
 <p class="empty">&nbsp;</p>
-<p>This alternate method will primarily use data from the old Master Merchant Data files located in SavedVariables as shown in the depreciated section, <a  href="#BackupMasterMerchantData" >Backup Master Merchant Data</a>.</p>
+<p>This alternate method will primarily use data from the old Master Merchant Data files located in SavedVariables as shown in the deprecated section, <a  href="#BackupMasterMerchantData" >Backup Master Merchant Data</a>.</p>
 <p class="empty">&nbsp;</p>
 <p>It is recommended that only Master Merchant 3.7.x, ShoppingList (older standalone version), the original MMxxData modules, LibGuildStore, all GSxxData modules, and the required library files for Master Merchant are enabled to avoid potential interference while this procedure is performed.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"> It is recommended to store any backup copies of Master Merchant data outside of SavedVariables in its own folder. For example <font class="purple">.\Documents\Elder Scrolls Online\live\Backups\MM_Backup_01</font></p>
 <p class="empty">&nbsp;</p>
-<h2 id="OptionalModsForThisProcedure">3.20.5 - Optional Mods For This Procedure</h2>
+<h2 id="OptionalModsForThisProcedure">3.20.6 - Optional Mods For This Procedure</h2>
 <p class="list-1">&bull;&nbsp; <a  href="https://www.esoui.com/downloads/info1161-CirconiansAddonSelector.html" >Circonians Addon Selector</a></p>
 <p class="empty">&nbsp;</p>
 <p>Circonians Addon Selector will allow you to save your current active mods before performing this procedure.</p>
 <p class="empty">&nbsp;</p>
-<h2 id="OptionalDebugSettings">3.20.6 - Optional Debug Settings</h2>
+<h2 id="OptionalDebugSettings">3.20.7 - Optional Debug Settings</h2>
 <p class="empty">&nbsp;</p>
 <p>The sticky post for Master Merchant 3.0 mentions some slash commands for LibDebugLogger. When these settings are changed this helps provide additional debug information in the event of any errors. Only use these slash commands as a precaution if you have been having issues upgrading.</p>
 <p class="empty">&nbsp;</p>
@@ -1332,7 +1711,7 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <p class="note"> You should see a confirmation of each command in the chat window. For users with chat mods installed check your mods settings. System might be redirected to other tabs such as Zone chat.</p>
 <p class="empty">&nbsp;</p>
-<h2 id="TheProcedure">3.20.7 - The Procedure</h2>
+<h2 id="TheProcedure">3.20.8 - The Procedure</h2>
 <p class="empty">&nbsp;</p>
 <p>During this procedure Master Merchant will check for duplicate sales. Please remember it is recommended that you exit the game before you install any add-on or alter the SavedVariables folder.</p>
 <p class="empty">&nbsp;</p>
@@ -1375,3 +1754,6 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <p>mychaelo, svenpanne, tomkolp, mlsevero, Baertram, jupiter126, Otxics, Jakez</p>
 </div>
+</section>
+</BODY>
+</HTML>

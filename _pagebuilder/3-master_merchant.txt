@@ -261,7 +261,7 @@ If this notification appears then you either need to cancel and restore a backup
 
 {{note: Your LibHistorie cache will not be reset by accepting to reset Master Merchant data files.}}
 
-## LibGuildStore.lua:309: attempt to index a nil value
+## LibGuildStore.lua:316: attempt to index a nil value
 
 <pre>
 user:/AddOns/MasterMerchant/Libs/LibGuildStore/LibGuildStore.lua:309: attempt to index a nil value

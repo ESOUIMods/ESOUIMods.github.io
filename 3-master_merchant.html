@@ -1,249 +1,43 @@
-
-<!DOCTYPE html>
-<HTML>
-<HEAD>
-<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
-<TITLE>Master Merchant</TITLE>
-<STYLE>
-:root {  --sideMenu_OPVAR_TabCount: 2;  --sideMenuBorderStyle: solid; --sideMenuBorderWidth: 0.13; --sideMenuBorderWidthArray: 0 var(--sideMenuBorderWidth) var(--sideMenuBorderWidth) 0; --sideMenuContentPadding: 0.25rem; --sideMenuMaxHeight: 99vh; --sideMenuMaxInnerHeight: calc(var(--sideMenuMaxHeight) - var(--sideMenuBorderWidth)); --sideBaseMenuWidth: 45vw; --sideMenuMaxWidth: calc(var(--sideBaseMenuWidth) - var(--sideMenuTabWidth)); --sideMenuMinHeight: calc(var(--sideMenuTabHeight) * var(--sideMenu_OPVAR_TabCount)); --sideMenuPOSEdge: calc(var(--sideMenuWidth) * (-1)); --sideMenuPOSEdgeNoJS: calc((var(--sideMenuWidth) + var(--sideMenuTabWidth)) * (-1)); --sideMenuTabBorderWidthArray: 0 var(--sideMenuBorderWidth) var(--sideMenuBorderWidth) var(--sideMenuBorderWidth); --sideMenuTabHeight: 2.50rem; --sideMenuTabWidth: 1.25rem; --sideMenuTabPOSEdge: calc(var(--sideMenuTabWidth) * (-1)); --sideMenuTab1POSTop: 0; --sideMenuTab2POSTop: var(--sideMenuTabHeight); --sideMenuTab3POSTop: calc(var(--sideMenuTab2POSTop) + var(--sideMenuTabHeight)); --sideMenuTab4POSTop: calc(var(--sideMenuTab3POSTop) + var(--sideMenuTabHeight)); --sideMenuTab5POSTop: calc(var(--sideMenuTab4POSTop) + var(--sideMenuTabHeight)); --sideMenuTransitionSpeed: 0.3s; --sideMenuWidth: 16rem; --sideMenuZIndex: 1000; --sizeMenuZIndexActive: 1002; --sideMenuZIndexInactive: 1001; --fontSizeBase: 16px; --fontSizeMod: 100; --fontSizeModPreview: 100; --fontSizeScale: calc(var(--fontSizeBase) * var(--fontSizeMod) * 0.01); --fontSizeScalePreview: calc(var(--fontSizeBase) * var(--fontSizeModPreview) * 0.01); --cayman-header-heading: rgb(255, 255, 255); --cayman-header-background: rgb(21, 153, 87); --cayman-header-background-secondary: rgb(21, 87, 153); --cayman-section-headings: rgb(21, 153, 87); --cayman-body-text: rgb(96, 108, 113); --cayman-body-href: rgb(30, 107, 184); --cayman-blockquote-text: rgb(129, 145, 152); --cayman-code-background: rgb(243, 246, 250); --cayman-code-text: rgb(86, 116, 130); --cayman-border: rgb(220, 230, 240); --cayman-table-border-color: rgb(233, 235, 236); --cayman-hr-border: rgb(239, 240, 241); --body-text: rgb(149, 157, 165); --body-background: rgb(36, 41, 46); --code-background: rgb(29, 33, 37); --header1-text: rgb(225, 228, 232); --header2-text: rgb(223, 226, 229); --header3-text: rgb(216, 220, 225); --header4-text: rgb(209, 213, 218); --header5-text: rgb(202, 207, 211); --header6-text: rgb(174, 182, 190); --header-border: rgb(100, 109, 119); --header1-background: rgb(79, 90, 100); --header2-background: rgb(81, 88, 97); --header3-background: rgb(61, 69, 77); --header4-background: rgb(58, 67, 75); --header5-background: rgb(47, 54, 60); --header6-background: rgb(40, 46, 52); --toc-header-text: var(--cayman-header-background); --blockquote-grey: rgb(33, 33, 33); --black-text: rgb(0, 0, 0); --blue-text: rgb(33, 136, 255); --brown-text: rgb(152, 112, 16); --cyan-text: rgb(41, 208, 208); --ltgray-text: rgb(209, 210, 212); --gray-text: rgb(181, 181, 181); --dkgray-text: rgb(87, 87, 87); --green-text: rgb(21, 153, 87); --ltblue-text: rgb(157, 175, 255); --ltgreen-text: rgb(129, 197, 122); --orange-text: rgb(218, 119, 62); --pink-text: rgb(255, 205, 243); --purple-text: rgb(209, 188, 249); --red-text: rgb(207,52,50); --tan-text: rgb(233, 222, 187); --white-text: rgb(255, 255, 255); --yellow-text: rgb(244, 203, 53); --old-red-text: rgb(224, 88, 88); --darkred-text: rgb(214, 24, 0); --ltred-text: rgb(211, 47, 47); }
-
-.page-header {
-  color: var(--white-text);
-  text-align: center;
-  background-color: var(--cayman-header-background);
-  background-image: linear-gradient(
-    120deg,
-    var(--cayman-header-background-secondary),
-    var(--cayman-header-background)
-  );
-  padding: 3rem 4rem;
-}
-
-.clearfix:before, .clearfix:after { content: " ";  display: table; }
-.clearfix:after { clear: both; }
-.clearfix { *zoom: 1; }
-html * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-tr:nth-child(odd) { background: var(--header3-background); }
-tr:nth-child(even) { background: var(--header6-background); }
-tr:hover { background-color: var(--code-background); }
-table.wontwrap td:nth-child(3n+3) { white-space: -moz-pre-wrap !important;  white-space: -webkit-pre-wrap;  white-space: -pre-wrap;  white-space: -o-pre-wrap;  white-space: pre-wrap;  word-wrap: break-word;  white-space: nowrap; }
-@media screen and (min-width: 1900px) { html { font-size: 16px; } }
-@media screen and (min-width: 1580px) and (max-width: 1900px) { html { font-size: 16px; } }
-@media screen and (min-width: 1260px) and (max-width: 1580px) { html { font-size: 16px; } }
-@media screen and (min-width: 780px) and (max-width: 1260px) { html { font-size: 16px; } }
-@media screen and (max-width: 780px) { html { font-size: 16px; } }
-* { box-sizing: border-box; }
-body { margin: 0; padding: 0; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; line-height: 1.5; color: var(--body-text); background: var(--body-background); }
-#skip-to-content { height: 1px; width: 1px; position: absolute; overflow: hidden; top: -10px; }
-#skip-to-content:focus { position: fixed; top: 10px; left: 10px; height: auto; width: auto; background: #e19447; outline: thick solid #e19447; }
-.btn { display: inline-block; margin-bottom: 0.5rem;  color: rgba(255, 255, 255, 0.7); background-color: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); border-style: solid; border-width: 1px; border-radius: 0.3rem; transition: color 0.2s, background-color 0.2s, border-color 0.2s; }
-.btn:hover { color: rgba(255, 255, 255, 0.8); text-decoration: none; background-color: rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.3); }
-.btn + .btn { margin-left: 0.50rem; }
-@media screen and (min-width: 1900px) { .btn { padding: 0.9rem; font-size: 1.3rem; } }
-@media screen and (min-width: 1580px) and (max-width: 1900px) { .btn { padding: 0.9rem; font-size: 1.2rem; } }
-@media screen and (min-width: 1260px) and (max-width: 1580px) { .btn { padding: 0.8rem; font-size: 1.1rem; } }
-@media screen and (min-width: 780px) and (max-width: 1260px) { .btn { padding: 0.7rem; font-size: 1rem; } }
-@media screen and (max-width: 780px) { .btn { display: block; width: 100%; padding: 0.60rem; font-size: 0.9rem; }
-  .btn + .btn { margin-top: 0.5rem; margin-left: 0; } }
-.drkbtn { display: inline-block; margin-bottom: 0.5rem; margin-left: 0.90rem;  color: white; background-color: rgba(23, 130, 130, 0.9); border-color: rgba(23, 130, 130, 0.2); border-style: solid; border-width: 1px; border-radius: 0.3rem; transition: color 0.2s, background-color 0.2s, border-color 0.2s; }
-@media screen and (max-width: 780px) { .drkbtn { margin-left: 0; } }
-.drkbtn:hover { text-decoration: none; color: rgba(255, 255, 255, 0.8); background-color: rgba(34, 195, 195, 0.7); border-color: rgba(255, 255, 255, 0.3); }
-.drkbtn + .drkbtn { margin-left: 0.50rem; }
-@media screen and (min-width: 1900px) { .drkbtn { padding: 0.9rem; font-size: 1.3rem; } }
-@media screen and (min-width: 1580px) and (max-width: 1900px) { .drkbtn { padding: 0.9rem; font-size: 1.2rem; } }
-@media screen and (min-width: 1260px) and (max-width: 1580px) { .drkbtn { padding: 0.8rem; font-size: 1.1rem; } }
-@media screen and (min-width: 780px) and (max-width: 1260px) { .drkbtn { padding: 0.7rem; font-size: 1rem; } }
-@media screen and (max-width: 780px) { .drkbtn { display: block; width: 100%; padding: 0.60rem; font-size: 0.9rem; }
-  .drkbtn + .drkbtn { margin-top: 0.5rem; margin-left: 0; } }
-.project-name { margin-top: 0.5rem; margin-bottom: 0.5rem; }
-@media screen and (min-width: 1900px) { .project-name { font-size: 2.75rem; } }
-@media screen and (min-width: 1580px) and (max-width: 1900px) { .project-name { font-size: 2.75rem; } }
-@media screen and (min-width: 1260px) and (max-width: 1580px) { .project-name { font-size: 2.25rem; } }
-@media screen and (min-width: 780px) and (max-width: 1260px) { .project-name { font-size: 2rem; } }
-@media screen and (max-width: 780px) { .project-name { font-size: 1.75rem; } }
-.project-tagline { margin-top: 0.5rem; margin-bottom: 0.5rem; font-weight: normal; opacity: 0.7; }
-@media screen and (min-width: 1900px) { .project-tagline { font-size: 2rem; } }
-@media screen and (min-width: 1580px) and (max-width: 1900px) { .project-tagline { font-size: 2rem; } }
-@media screen and (min-width: 1260px) and (max-width: 1580px) { .project-tagline { font-size: 1.50rem; } }
-@media screen and (min-width: 780px) and (max-width: 1260px) { .project-tagline { font-size: 1.25rem; } }
-@media screen and (max-width: 780px) { .project-tagline { font-size: 1rem; } }
-.gridhead1 { grid-area: padding1; }
-.gridhead2 { grid-area: image; }
-.gridhead3 { grid-area: header; }
-.gridhead4 { grid-area: padding2; }
-.gridhead5 { grid-area: nav-buttons; }
-.gridhead6 { grid-area: page-buttons; }
-.toc1 { grid-area: lefttoc; }
-.toc2 { grid-area: righttoc; }
-.toc3 { grid-area: modtoc; }
-.toc4 { grid-area: paddingtoc; }
-.toc5 { grid-area: addedtoc; }
-.toc6 { grid-area: padtoc; }
-.grid-header { display: grid; color: var(--cayman-header-heading); background-color: var(--cayman-header-background); background-image: linear-gradient(180deg, #010c14, #03253d, #053e65, #07568e, #096fb6); }
-.grid-header div.gridhead2 { text-align: right; }
-.grid-header div.gridhead3 { text-align: left; }
-.grid-header div.gridhead5 { text-align: center; }
-.grid-header div.gridhead6 { text-align: center; }
-@media screen and (min-width: 1900px) { .grid-header { grid-template-areas: 'padding1 image header padding2' 'nav-buttons nav-buttons nav-buttons nav-buttons' 'page-buttons page-buttons page-buttons page-buttons'; } }
-@media screen and (min-width: 1580px) and (max-width: 1900px) { .grid-header { grid-template-areas: 'padding1 image header padding2' 'nav-buttons nav-buttons nav-buttons nav-buttons' 'page-buttons page-buttons page-buttons page-buttons'; } }
-@media screen and (min-width: 1260px) and (max-width: 1580px) { .grid-header { grid-template-areas: 'padding1 image header padding2' 'nav-buttons nav-buttons nav-buttons nav-buttons' 'page-buttons page-buttons page-buttons page-buttons'; } }
-@media screen and (min-width: 780px) and (max-width: 1260px) { .grid-header { grid-template-areas: 'padding1 image header padding2' 'nav-buttons nav-buttons nav-buttons nav-buttons' 'page-buttons page-buttons page-buttons page-buttons'; } }
-@media screen and (max-width: 780px) { .grid-header { grid-template-areas: 'padding1' 'image' 'header' 'padding2' 'nav-buttons' 'page-buttons'; }
-  .grid-header div.gridhead2 { text-align: center; }
-  .grid-header div.gridhead3 { text-align: center; }
-  .grid-header div.gridhead5 { text-align: center; }
-  .grid-header div.gridhead6 { text-align: center; } }
-.grid-header figure { display: block; margin-left: auto; margin-right: auto; }
-@media screen and (min-width: 1900px) { .grid-header figure { max-width: 50%; } }
-@media screen and (min-width: 1580px) and (max-width: 1900px) { .grid-header figure { max-width: 50%; } }
-@media screen and (min-width: 1260px) and (max-width: 1580px) { .grid-header figure { max-width: 50%; } }
-@media screen and (min-width: 780px) and (max-width: 1260px) { .grid-header figure { max-width: 75%; } }
-@media screen and (max-width: 780px) { .grid-header figure { max-width: 90%; } }
-.grid-toc { display: grid; }
-@media screen and (min-width: 1900px) { .grid-toc { grid-template-areas: 'lefttoc righttoc'; } }
-@media screen and (min-width: 1580px) and (max-width: 1900px) { .grid-toc { grid-template-areas: 'lefttoc righttoc'; } }
-@media screen and (min-width: 1260px) and (max-width: 1580px) { .grid-toc { grid-template-areas: 'lefttoc righttoc'; } }
-@media screen and (min-width: 780px) and (max-width: 1260px) { .grid-toc { grid-template-areas: 'lefttoc righttoc'; } }
-@media screen and (max-width: 780px) { .grid-toc { grid-template-areas: 'lefttoc righttoc'; } }
-.grid-mod-toc { display: grid; }
-@media screen and (min-width: 1900px) { .grid-mod-toc { grid-template-areas: 'modtoc paddingtoc'; } }
-@media screen and (min-width: 1580px) and (max-width: 1900px) { .grid-mod-toc { grid-template-areas: 'modtoc paddingtoc'; } }
-@media screen and (min-width: 1260px) and (max-width: 1580px) { .grid-mod-toc { grid-template-areas: 'modtoc paddingtoc'; } }
-@media screen and (min-width: 780px) and (max-width: 1260px) { .grid-mod-toc { grid-template-areas: 'modtoc paddingtoc'; } }
-@media screen and (max-width: 780px) { .grid-mod-toc { grid-template-areas: 'modtoc paddingtoc'; } }
-.grid-sup-toc { display: grid; }
-@media screen and (min-width: 1900px) { .grid-sup-toc { grid-template-areas: 'addedtoc padtoc'; } }
-@media screen and (min-width: 1580px) and (max-width: 1900px) { .grid-sup-toc { grid-template-areas: 'addedtoc padtoc'; } }
-@media screen and (min-width: 1260px) and (max-width: 1580px) { .grid-sup-toc { grid-template-areas: 'addedtoc padtoc'; } }
-@media screen and (min-width: 780px) and (max-width: 1260px) { .grid-sup-toc { grid-template-areas: 'addedtoc padtoc'; } }
-@media screen and (max-width: 780px) { .grid-sup-toc { grid-template-areas: 'addedtoc padtoc'; } }
-.grid-toc div { background: var(--body-background); }
-@media screen and (min-width: 1900px) { .scriptTable { font: 1.3rem Consolas; } }
-@media screen and (min-width: 1580px) and (max-width: 1900px) { .scriptTable { font: 1.2rem Consolas; } }
-@media screen and (min-width: 1260px) and (max-width: 1580px) { .scriptTable { font: 1.1rem Consolas; } }
-@media screen and (min-width: 780px) and (max-width: 1260px) { .scriptTable { font: 1rem Consolas; } }
-@media screen and (max-width: 780px) { .scriptTable { font: 0.9rem Consolas; } }
-@media screen and (min-width: 1900px) { .scriptHeader { font: 1.5rem Consolas; } }
-@media screen and (min-width: 1580px) and (max-width: 1900px) { .scriptHeader { font: 1.3rem Consolas; } }
-@media screen and (min-width: 1260px) and (max-width: 1580px) { .scriptHeader { font: 1.2rem Consolas; } }
-@media screen and (min-width: 780px) and (max-width: 1260px) { .scriptHeader { font: 1.1rem Consolas; } }
-@media screen and (max-width: 780px) { .scriptHeader { font: 1rem Consolas; } }
-.no-bullet { list-style-type: none; }
-.main-content { word-wrap: break-word; }
-.main-content :first-child { margin-top: 0; }
-@media screen and (min-width: 1900px) { .main-content { padding: 0.25rem; font-size: 1.1rem; } }
-@media screen and (min-width: 1580px) and (max-width: 1900px) { .main-content { padding: 0.25rem; font-size: 1.1rem; } }
-@media screen and (min-width: 1260px) and (max-width: 1580px) { .main-content { padding: 0.25rem; font-size: 1rem; } }
-@media screen and (min-width: 780px) and (max-width: 1260px) { .main-content { padding: 0.25rem; font-size: 0.9rem; } }
-@media screen and (max-width: 780px) { .main-content { padding: 0.25rem; font-size: 0.85rem; } }
-.main-content kbd { background-color: #fafbfc; border: 1px solid #c6cbd1; border-bottom-color: #959da5; border-radius: 3px; box-shadow: inset 0 -1px 0 #959da5; color: #444d56; display: inline-block; font-size: 11px; line-height: 10px; padding: 3px 5px; vertical-align: middle; }
-@media screen and (min-width: 1900px) { .main-content img { max-width: 100%; } }
-@media screen and (min-width: 1580px) and (max-width: 1900px) { .main-content img { max-width: 100%; } }
-@media screen and (min-width: 1260px) and (max-width: 1580px) { .main-content img { max-width: 100%; } }
-@media screen and (min-width: 780px) and (max-width: 1260px) { .main-content img { max-width: 100%; } }
-@media screen and (max-width: 780px) { .main-content img { max-width: 100%; } }
-@media screen and (min-width: 1900px) { .main-content figure.image-caption { max-width: 50%; padding: 10px; } }
-@media screen and (min-width: 1580px) and (max-width: 1900px) { .main-content figure.image-caption { max-width: 50%; padding: 10px; } }
-@media screen and (min-width: 1260px) and (max-width: 1580px) { .main-content figure.image-caption { max-width: 50%; padding: 10px; } }
-@media screen and (min-width: 780px) and (max-width: 1260px) { .main-content figure.image-caption { max-width: 75%; padding: 10px; } }
-@media screen and (max-width: 780px) { .main-content figure.image-caption { max-width: 90%; padding: 10px; } }
-.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { margin: 0.75rem; padding-left: 0.25rem; font-weight: normal; color: var(--toc-header-text); }
-.main-content iframe { margin: 0.38rem 0 0.38rem 0.95rem; }
-.main-content p { margin: 0 0 0 0.95rem; color: var(--body-text); }
-.main-content code { padding: 0.13rem 0.25rem; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 0.9rem; color: var(--purple-text); background-color: var(--code-background); border-radius: 0.3rem; }
-.main-content pre { padding: 0.8rem; margin: 0.25rem 0.75rem 0.25rem 0.75rem; font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace; color: var(--purple-text); word-wrap: normal; background-color: var(--code-background); border: solid 1px var(--cayman-border); border-radius: 0.3rem; white-space: pre-wrap; }
-.main-content pre > code { padding: 0; margin: 0; font-size: 0.9rem; color: var(--purple-text); word-break: normal; background: transparent; border: 0; }
-.main-content .highlight { margin-bottom: 0.75rem; }
-.main-content .highlight pre { margin-bottom: 0; word-break: normal; }
-.main-content .highlight pre, .main-content pre { padding: 0.75rem; overflow: auto; font-size: 0.9rem; line-height: 1.45; border-radius: 0.3rem; -webkit-overflow-scrolling: touch; }
-.main-content pre code, .main-content pre tt { display: inline; max-width: initial; padding: 0; margin: 0; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0; }
-.main-content pre code:before, .main-content pre code:after, .main-content pre tt:before, .main-content pre tt:after { content: normal; }
-.main-content ul, .main-content ol { margin-top: 0; }
-.main-content table { display: block; width: 100%; overflow: auto; word-break: normal; word-break: keep-all; -webkit-overflow-scrolling: touch; }
-.main-content table th { font-weight: bold; background-color: var(--header1-border); }
-.main-content table th, .main-content table td { padding: 0.25rem 0.75rem; border: 0.13rem solid var(--header-border); }
-.main-content dl { padding: 0; }
-.main-content dl dt { padding: 0; margin-top: 0.75rem; font-size: 1rem; font-weight: bold; }
-.main-content dl dd { padding: 0; margin-bottom: 0.75rem; }
-.main-content h1.grhead1 { font-size: 1.40rem; margin: 0.13rem 0 0.13rem 0.9rem; color: var(--toc-header-text); padding: 0 0 0 0; line-height: 24px; }
-.main-content h2.grhead2 { font-size: 1.30rem; margin: 0.13rem 0 0.13rem 1.50rem; color: var(--toc-header-text); padding: 0 0 0 0; line-height: 24px; }
-.main-content h3.grhead3 { font-size: 1.20rem; margin: 0.13rem 0 0.13rem 2.10rem; color: var(--toc-header-text); padding: 0 0 0 0; line-height: 24px; }
-.main-content h4.grhead4 { font-size: 1.10rem; margin: 0.13rem 0 0.13rem 2.75rem; color: var(--toc-header-text); padding: 0 0 0 0; line-height: 24px; }
-.main-content h1.header1 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header1-text); background: var(--header1-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
-.main-content h2.header2 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header2-text); background: var(--header2-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
-.main-content h3.header3 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header3-text); background: var(--header3-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
-.main-content h4.header4 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header4-text); background: var(--header4-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
-.main-content h5.header5 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header5-text); background: var(--header5-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
-.main-content h6.header6 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header6-text); background: var(--header6-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
-.main-content hr { height: 0.13rem; padding: 0; margin: 0.75rem 0; background-color: var(--cayman-hr-border); border: 0; }
-.main-content p.empty { margin-top: 0.1rem; margin-bottom: 0.1rem; }
-.main-content p.note { -moz-border-radius: 6px; -webkit-border-radius: 6px; background-color: var(--code-background); background-image: url(img/note.png); background-position: 9px 0; background-repeat: no-repeat; border: solid 0.13rem var(--header-border); border-radius: 6px; line-height: 18px; overflow: hidden; padding: 15px 60px; margin: 0 1rem; }
-.main-content p.list-1 { margin-left: 0.9rem; }
-.main-content p.list-2 { margin-left: 1.50rem; }
-.main-content p.list-3 { margin-left: 2.10rem; }
-.main-content p.list-4 { margin-left: 2.75rem; }
-.main-content p.list-5 { margin-left: 3.4rem; }
-.main-content p.list-6 { margin-left: 4rem; }
-a { color: var(--blue-text); text-decoration: none; }
-a:hover { text-decoration: underline; }
-font.black, a.black { color: var(--black-text); }
-font.blue, a.blue { color: var(--blue-text); }
-font.brown, a.brown { color: var(--brown-text); }
-font.cyan, a.cyan { color: var(--cyan-text); }
-font.dkgray, a.dkgray { color: var(--dkgray-text); }
-font.gray, a.gray { color: var(--gray-text); }
-font.green, a.green { color: var(--green-text); }
-font.ltblue, a.ltblue { color: var(--ltblue-text); }
-font.ltgray, a.ltgray { color: var(--ltgray-text); }
-font.ltgreen, a.ltgreen { color: var(--ltgreen-text); }
-font.orange, a.orange { color: var(--orange-text); }
-font.pink, a.pink { color: var(--pink-text); }
-font.purple, a.purple { color: var(--purple-text); }
-font.red, a.red { color: var(--red-text); }
-font.tan, a.tan { color: var(--tan-text); }
-font.white, a.white { color: var(--white-text); }
-font.yellow, a.yellow { color: var(--yellow-text); }
-input[id^="spoiler"] { display: none; }
-input[id^="spoiler"] + label { display: inline; margin: 0.85rem; padding: 0.25rem; color: white; background-color: rgba(23, 130, 130, 0.9); border-color: rgba(23, 130, 130, 0.2); text-align: center; font-size: 1.25rem; border-radius: 0.5rem; cursor: pointer; transition: all .6s; }
-input[id^="spoiler"]:checked + label { color: var(--purple-text); background-color: var(--code-background); outline-style: hidden; }
-input[id^="spoiler"] ~ .main-content { height: 0; overflow: auto; opacity: 0; margin: 0 0 0 0.95rem; background-color: var(--code-background); border: 2px; border-style: solid; border-color: rgba(255, 255, 255, 0.8); border-radius: 8px; font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace; transition: all .6s; }
-input[id^="spoiler"]:checked + label + .main-content { height: auto; opacity: 1; }
-section.quote { display: block; justify-content: center; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem; color: rgba(150, 150, 150, 0.8); background-color: rgba(150, 150, 150, 0.08); border-color: rgba(150, 150, 150, 0.2); border-style: solid; border-width: 3px; border-radius: 0.3rem; transition: color 0.2s, background-color 0.2s, border-color 0.2s; box-shadow: 5px 3px 30px black; }
-section.quote p { margin: 0; padding: 0; line-height: 24px; }
-section.quote p.empty { margin: 0; padding: 0; line-height: 24px; }
-section.quote .attr { margin: 0; padding: 0 0 0.1rem 0.5rem; font: normal 400 1.5em/1.5em 'Montserrat', sans-serif; background-color: rgba(150, 150, 150, 0.2); letter-spacing: 0.04em; text-align: left; }
-section.quote .attr:before { content: " - "; }
-section.quote .attr:after { content: " - "; }
-figure.image-caption { position: relative; height: auto; padding: 0.25rem 0 0.25rem 0; margin: 0 0 0 0.75rem; background: var(--body-background); }
-figure.image-caption a { position: relative; font-size: 0.90rem; color: #1e6bb8; background-color: var(--code-background); border-color: var(--header-border); border-style: solid; border-width: 0.13rem; border-radius: 0.3rem; padding: 0.25rem; margin: 0.25rem 0 0.25rem 0; }
-figure.image-caption figcaption { color: var(--header4-text); background-color: var(--code-background); border-color: var(--header-border); border-style: solid; border-width: 0.13rem; border-radius: 0.3rem; position: relative; font-size: 0.90rem; padding: 0.25rem; margin: 0.25rem 0 0.25rem 0; }
-figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0; margin: 0; }
-.tooltip { position: relative; display: block; }
-.tooltip .tooltiptext { display: block; visibility: hidden; width: auto; color: var(--header4-text); background-color: var(--code-background); border-color: var(--header-border); border-style: solid; text-align: center; border-radius: 6px; padding: 0; position: absolute; z-index: 1; left: 0.9rem;  opacity: 0; transition: opacity 1s; }
-.tooltip:hover .tooltiptext { visibility: visible; opacity: 1; }
-</STYLE>
-</HEAD>
-<BODY>
-    <section class="page-header">
-      <h1 class="project-name">Master Merchant</h1>
-      <h2 class="project-tagline">Collection of Wrye Bash history and information</h2>
-    </section>
-<SECTION  class="main-content">
-<DIV>
-<h1 class="header1" id="MasterMerchant">Master Merchant</h1>
+---
+layout: default
+title: Master Merchant
+---
+<h1 class="header1">{{ page.title }}</h1>
+<hr>
+<h1 class="grhead1">Main Table of Contents</h1>
+<div id="tableOfContents" class="grid-toc">
+    <div class="toc1">
+        <h2 class="grhead2"><a href="houses.html">Housing</a></h2>
+    </div>
+    <div class="toc2">
+        <h2 class="grhead2"><a href="1-install_luarocks.html">Installing LuaRocks</a></h2>
+        <h2 class="grhead2"><a href="2-setup_intellij.html">Setup IntelliJ</a></h2>
+    </div>
+</div>
+<h1 class="grhead1">ESOUI Mod Documentation</h1>
+<div id="tableOfContents" class="grid-mod-toc">
+    <div class="toc3">
+        <h2 class="grhead2"><a href="3-master_merchant.html">Master Merchant</a></h2>
+    </div>
+</div>
+<h1 class="grhead1">Localized Suplimental Documentation</h1>
+<div id="tableOfContents" class="grid-sup-toc">
+    <div class="toc5">
+        <h2 class="grhead2"><a href="4-french.html">Informations complementaires : Francais</a></h2>
+    </div>
+</div>
+<p class="empty">&nbsp;</p>
+<div>
+<!-- Needed, sets the top of the page just before the H1 Title -->
 <h1 class="header1" id="UnderConstruction">Under Construction</h1>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\under_construction.jpg" alt="under_construction"/>
-</figure></p>
+<p>{% include image.html file="img/under_construction.jpg" alt="under_construction" %}</p>
 <p class="empty">&nbsp;</p>
 <p>The website is being updated to reflect changes in the images for LibHistoire 2.1.1 and Master Merchant 3.8.x, thus the screenshots, icons, settings menus, and menu descriptions may not mirror those found in-game.</p>
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="Abitoflightreading">A bit of light reading</h1>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\harry_potter_daniel_radcliffe.gif" alt="harry_potter_daniel_radcliffe"/>
-</figure></p>
+<p>{% include image.html file="img/harry_potter_daniel_radcliffe.gif" alt="harry_potter_daniel_radcliffe" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Master Merchant is pretty complex. While I try to keep it somewhat simple, you do need to read carefully as this is not just a bit of light reading.</p>
 <p class="empty">&nbsp;</p>
@@ -287,7 +81,7 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="list-2">&bull;&nbsp; <a href="#DateRanges">3.8.5 Date Ranges</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#StatisticsWindow">3.9 Statistics Window</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Settings">3.10 Settings</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#MasterMerchant3">3.10.1 Master Merchant</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#MasterMerchant">3.10.1 Master Merchant</a></p>
 <p class="list-3">&bull;&nbsp; <a href="#MasterMerchantWindowOptions">3.10.1.1 Master Merchant Window Options</a></p>
 <p class="list-3">&bull;&nbsp; <a href="#SalesFormatOptions">3.10.1.2 Sales Format Options</a></p>
 <p class="list-3">&bull;&nbsp; <a href="#TimeFormatOptions">3.10.1.3 Time Format Options</a></p>
@@ -418,53 +212,39 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h2 id="LibHistoireUI">3.2.1 - LibHistoire UI</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\new_interface_LibHistoire.jpg" alt="new_interface_LibHistoire"/>
-</figure></p>
+<p>{% include image.html file="img/new_interface_LibHistoire.jpg" alt="new_interface_LibHistoire" %}</p>
 <p class="empty">&nbsp;</p>
 <p>There is a new interface for LibHistoire and I will be updating more documentation as time permits. The important difference is the Rescan button has been removed and you have a settings button instead.</p>
 <p class="empty">&nbsp;</p>
 <h2 id="GuildHistoryUI">3.2.2 - Guild History UI</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\new_vanilla_interface.jpg" alt="new_vanilla_interface"/>
-</figure></p>
+<p>{% include image.html file="img/new_vanilla_interface.jpg" alt="new_vanilla_interface" %}</p>
 <p class="empty">&nbsp;</p>
 <p>There is a new interface for Guild History. There are arrows for navigating the various pages of guild history and the Show More option only appears when you are on the last page of data.</p>
 <p class="empty">&nbsp;</p>
 <h2 id="DataIsAvailable">3.2.3 - Data Is Available</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\data_ready_page1.jpg" alt="data_ready_page1"/>
-</figure></p>
+<p>{% include image.html file="img/data_ready_page1.jpg" alt="data_ready_page1" %}</p>
 <p class="empty">&nbsp;</p>
 <p>If no arrows appear then the data is not ready and this is not a mod error. The server may not have information and ZOS may need to make updates to the game. If reloading the UI does not correct the issue you will have to wait for authors to communicate with ZOS to see if there is a resolution.</p>
 <p class="empty">&nbsp;</p>
 <h2 id="ShowMoreisavailable">3.2.4 - Show More is available</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\new_show_more.jpg" alt="new_show_more"/>
-</figure></p>
+<p>{% include image.html file="img/new_show_more.jpg" alt="new_show_more" %}</p>
 <p class="empty">&nbsp;</p>
 <p>To request more data you will need to go to the last page available. Then the E Show More option will appear.</p>
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="LibHistoireUI1">3.3 - LibHistoire UI</h1>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\new_interface_LibHistoire.jpg" alt="libhistoire_popout_menu"/>
-</figure></p>
+<p>{% include image.html file="img/new_interface_LibHistoire.jpg" alt="libhistoire_popout_menu" %}</p>
 <p class="empty">&nbsp;</p>
 <p>The new interface has all the new categories from guild hsitory.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\interface_menu_options.jpg" alt="interface_menu_options"/>
-</figure></p>
+<p>{% include image.html file="img/interface_menu_options.jpg" alt="interface_menu_options" %}</p>
 <p class="empty">&nbsp;</p>
 <p>There are options to lock and unlock the window to move it and then lock its position.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\libhistoire_popout_menu.jpg" alt="libhistoire_popout_menu"/>
-</figure></p>
+<p>{% include image.html file="img/libhistoire_popout_menu.jpg" alt="libhistoire_popout_menu" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Each category has a popout menu that will be explained below.</p>
 <p class="empty">&nbsp;</p>
@@ -488,9 +268,7 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h2 id="RequestMode">3.3.3 - Request Mode</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\request_mode_menu.jpg" alt="request_mode_menu"/>
-</figure></p>
+<p>{% include image.html file="img/request_mode_menu.jpg" alt="request_mode_menu" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Automatic: means data will be requested based on the Addon requesting the data from LibHistoire</p>
 <p>Force Off: means data will not be requested whether or not an Addon uses the data</p>
@@ -502,33 +280,25 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h2 id="Unlinked">3.4.1 - Unlinked</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\red_text_unlinked.jpg" alt="red_text_unlinked"/>
-</figure></p>
+<p>{% include image.html file="img/red_text_unlinked.jpg" alt="red_text_unlinked" %}</p>
 <p class="empty">&nbsp;</p>
 <p>In the Unlinked state you can either wait for the server to grant the requests for offline data that LibHistoire requests, or you can manually request guild history for the time you were offline.</p>
 <p class="empty">&nbsp;</p>
 <h2 id="Linkinginprogress">3.4.2 - Linking in progress</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\yellow_text_linking.jpg" alt="yellow_text_linking"/>
-</figure></p>
+<p>{% include image.html file="img/yellow_text_linking.jpg" alt="yellow_text_linking" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Once LibHistoire has what it feels it needs, then it will begin processing the guild history events and attempt to link to the last known event.</p>
 <p class="empty">&nbsp;</p>
 <h2 id="Linkinginprogresswith0eventsleft">3.4.3 - Linking in progress, with 0 events left</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\process_stuck.jpg" alt="process_stuck"/>
-</figure></p>
+<p>{% include image.html file="img/process_stuck.jpg" alt="process_stuck" %}</p>
 <p class="empty">&nbsp;</p>
 <p>If you ever see it processing 0 events for a while you will just need to wait for the events to link. If there are external factors involved then nothing will process until that is no longer affecting LibHistoire.</p>
 <p class="empty">&nbsp;</p>
 <h2 id="Linked">3.4.4 - Linked</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\green_text_linked.jpg" alt="green_text_linked"/>
-</figure></p>
+<p>{% include image.html file="img/green_text_linked.jpg" alt="green_text_linked" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Once LibHistoire has linked to its stored events you should see green text. This means that LibHistoire has finished processing the guild history.</p>
 <p class="empty">&nbsp;</p>
@@ -536,21 +306,15 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="ObtainingGuildHistory">3.5 - Obtaining Guild History</h1>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\request_daily_data.jpg" alt="request_daily_data"/>
-</figure></p>
+<p>{% include image.html file="img/request_daily_data.jpg" alt="request_daily_data" %}</p>
 <p class="empty">&nbsp;</p>
 <p>To obtain sales data the page number and right arrow (or forward arrow) must be showing. You will need to use the arrow to go to the last page of available data.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\show_more.jpg" alt="show_more"/>
-</figure></p>
+<p>{% include image.html file="img/show_more.jpg" alt="show_more" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Once you have done that the E Show More option will appear. Even if there is no right arrow showing press E to request more data.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\sales_gap_filled.jpg" alt="sales_gap_filled"/>
-</figure></p>
+<p>{% include image.html file="img/sales_gap_filled.jpg" alt="sales_gap_filled" %}</p>
 <p class="empty">&nbsp;</p>
 <p>After you have enough guild history to cover the time you have been offline the right arrow will appear. This means you have requested all the missing data. Using the right arrow to go to the end of all the history stored in your binary cache will not request more data from the server. It simply displays the data. You can go all the way to the end if you like but it is not needed.</p>
 <p class="empty">&nbsp;</p>
@@ -560,9 +324,7 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <p>With LibHistoire 1.2.0 there is a new notification when you log off.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\log_off_notification.jpg" alt="log_off_notification"/>
-</figure></p>
+<p>{% include image.html file="img/log_off_notification.jpg" alt="log_off_notification" %}</p>
 <p class="empty">&nbsp;</p>
 <p>You could have any amount of time that has not been linked with your Guild History Events. If you chose to log off that is fine but pay close attention to the notification. Any gap in information will still be there when you log back in and you will have to take additional steps to obtain any missing sales data.</p>
 <p class="empty">&nbsp;</p>
@@ -608,12 +370,8 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <input type="checkbox" id="spoiler1" />
 <label for="spoiler1">When Deactivating</label>
 <div class="main-content">
-<p><figure class="image-caption">
-<img src="img\mm_installed_activated.jpg" alt="mm_installed_activated"/>
-</figure></p>
-<p><figure class="image-caption">
-<img src="img\all_libguildstore_modules.jpg" alt="all_libguildstore_modules"/>
-</figure></p>
+<p>{% include image.html file="img/mm_installed_activated.jpg" alt="mm_installed_activated" %}</p>
+<p>{% include image.html file="img/all_libguildstore_modules.jpg" alt="all_libguildstore_modules" %}</p>
 </div>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="ImportingolderMasterMerchantData">3.7.3 - Importing older Master Merchant Data</h2>
@@ -634,18 +392,14 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <input type="checkbox" id="spoiler2" />
 <label for="spoiler2">Disable MM Modules</label>
 <div class="main-content">
-<p><figure class="image-caption">
-<img src="img\disable_mm.jpg" alt="disable_mm"/>
-</figure></p>
+<p>{% include image.html file="img/disable_mm.jpg" alt="disable_mm" %}</p>
 </div>
 <p class="empty">&nbsp;</p>
 <p class="note"> Because of how saved variables work you have to enable the old MMxxData modules to load the data into memory.</p>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="Whattoexpectafteryouloginforthefirsttime">3.7.4 - What to expect after you log in for the first time</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\startup_refresh.jpg" alt="startup_refresh"/>
-</figure></p>
+<p>{% include image.html file="img/startup_refresh.jpg" alt="startup_refresh" %}</p>
 <p class="empty">&nbsp;</p>
 <p>once you log in the LibHistorie Refresh will start. You will know when the refresh has finished when you see, <font class="yellow">LibGuildStore Refresh Finished</font> appear in the chat window. You will need to obtain guild history data from the server.</p>
 <p class="empty">&nbsp;</p>
@@ -653,29 +407,27 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="MasterMerchantWindow">3.8 - Master Merchant Window</h1>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\mm_window.jpg" alt="mm_window"/>
-</figure></p>
+<p>{% include image.html file="img/mm_window.jpg" alt="mm_window" %}</p>
 <p class="empty">&nbsp;</p>
-<p><img src="img\search_box.jpg" style="max-width: 158px;" alt="search_box"/> Search Box</p>
+<p>{% include image-inline.html max-width="158px" file="img/search_box.jpg" alt="search_box" %} Search Box</p>
 <div id="PeopleIcon"></div>
-<p><img src="img\people_icon.jpg" style="max-width: 24px;" alt="people_icon"/> Cycles through: <font class="tan">Seller</font>, All sales totals by Seller. <font class="tan">Item Sold</font>, Top selling ITEMS. <font class="tan">Buyer</font>, All purchase totals by Buyer.</p>
+<p>{% include image-inline.html max-width="24px" file="img/people_icon.jpg" alt="people_icon" %} Cycles through: <font class="tan">Seller</font>, All sales totals by Seller. <font class="tan">Item Sold</font>, Top selling ITEMS. <font class="tan">Buyer</font>, All purchase totals by Buyer.</p>
 <div id="ParchmentPaper"></div>
-<p><img src="img\open_statistics_window.jpg" style="max-width: 24px;" alt="open_statistics_window"/> Opens the <a  href="#StatisticsWindow" >Statistics Window</a>.</p>
-<p><img src="img\toggle_seller_item.jpg" style="max-width: 24px;" alt="toggle_seller_item"/> <font class="tan">Seller Info</font> Guild Ranks, <font class="tan">Item Info</font> Your Info or All Info.</p>
-<p><img src="img\sales_icon.jpg" style="max-width: 24px;" alt="sales_icon"/> <font class="tan">Sales view</font> shows <font class="tan">Personal Sales</font> or <font class="tan">Guild Sales</font>. Use the Seller Info/Guild Ranks toggle to change views from Item Report to Sellers Report.</p>
-<p><img src="img\shopping_list.jpg" style="max-width: 24px;" alt="shopping_list"/> The <font class="tan">Shopping List</font> icon allows you to view purchases you have made from guild stores.</p>
-<p><img src="img\bonanza_icon.jpg" style="max-width: 24px;" alt="bonanza_icon"/> The <font class="tan">Bonanza</font> icon allows you view trader listings you have seen at other guild stores.</p>
-<p><img src="img\reports_icon.jpg" style="max-width: 24px;" alt="reports_icon"/> The <font class="tan">Management</font> view lets you see posted and canceled sales.</p>
-<p><img src="img\mail_icon.jpg" style="max-width: 24px;" alt="mail_icon"/> Sends mail to the author with an optional donation amount.</p>
-<p><img src="img\money_bag.jpg" style="max-width: 24px;" alt="money_bag"/> The <font class="tan">Moneybag</font> icon means the purchaser is not a member of that guild.</p>
+<p>{% include image-inline.html max-width="24px" file="img/open_statistics_window.jpg" alt="open_statistics_window" %} Opens the <a  href="#StatisticsWindow" >Statistics Window</a>.</p>
+<p>{% include image-inline.html max-width="24px" file="img/toggle_seller_item.jpg" alt="toggle_seller_item" %} <font class="tan">Seller Info</font> Guild Ranks, <font class="tan">Item Info</font> Your Info or All Info.</p>
+<p>{% include image-inline.html max-width="24px" file="img/sales_icon.jpg" alt="sales_icon" %} <font class="tan">Sales view</font> shows <font class="tan">Personal Sales</font> or <font class="tan">Guild Sales</font>. Use the Seller Info/Guild Ranks toggle to change views from Item Report to Sellers Report.</p>
+<p>{% include image-inline.html max-width="24px" file="img/shopping_list.jpg" alt="shopping_list" %} The <font class="tan">Shopping List</font> icon allows you to view purchases you have made from guild stores.</p>
+<p>{% include image-inline.html max-width="24px" file="img/bonanza_icon.jpg" alt="bonanza_icon" %} The <font class="tan">Bonanza</font> icon allows you view trader listings you have seen at other guild stores.</p>
+<p>{% include image-inline.html max-width="24px" file="img/reports_icon.jpg" alt="reports_icon" %} The <font class="tan">Management</font> view lets you see posted and canceled sales.</p>
+<p>{% include image-inline.html max-width="24px" file="img/mail_icon.jpg" alt="mail_icon" %} Sends mail to the author with an optional donation amount.</p>
+<p>{% include image-inline.html max-width="24px" file="img/money_bag.jpg" alt="money_bag" %} The <font class="tan">Moneybag</font> icon means the purchaser is not a member of that guild.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"><font class="tan">Item Sold</font> is only available from a Seller's Report.</p>
 <p class="note"> Donations should be voluntary. People that struggle to make 25K gold a week, feel free to just say thanks. I'd rather receive a 50K donation from top sellers making millions a week.</p>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="GuildSalesandPersonalSales">3.8.1 - Guild Sales and Personal Sales</h2>
 <p class="empty">&nbsp;</p>
-<p><img src="img\show_your_info.jpg" style="max-width: 175px;" alt="show_your_info"/><img src="img\show_all_info.jpg" style="max-width: 175px;" alt="show_all_info"/></p>
+<p>{% include image-inline.html max-width="175px" file="img/show_your_info.jpg" alt="show_your_info" %}{% include image-inline.html max-width="175px" file="img/show_all_info.jpg" alt="show_all_info" %}</p>
 <p class="empty">&nbsp;</p>
 <p>First select what information you would like to see. <font class="tan">Show Personal Sales</font> will display info ONLY about You. <font class="tan">Show Guild Sales</font> will display data from all members of all of your guilds.</p>
 <p class="empty">&nbsp;</p>
@@ -683,9 +435,7 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="ItemReport">3.8.2 - Item Report</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\item_report.jpg" alt="item_report"/>
-</figure></p>
+<p>{% include image.html file="img/item_report.jpg" alt="item_report" %}</p>
 <p class="empty">&nbsp;</p>
 <p>If you have ever opened the Master Merchant window you have probably seen the list of your personal sales. This is an Item Report and if you click the <a  href="#PeopleIcon" >People Icon</a> you will change between the Buyer and the Seller.</p>
 <p class="empty">&nbsp;</p>
@@ -697,27 +447,21 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="list-1">&bull;&nbsp; <font class="tan">Sale Time</font>: The approximate time the item was sold. The game stores all sales using epoch time so the UI just approximates the sale after the first hour.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Price</font>: The price the item sold for. You can view the individual price by clicking the Show Unit Price button.</p>
 <p class="empty">&nbsp;</p>
-<p><img src="img\show_unit_price.jpg" style="max-width: 132px;" alt="show_unit_price"/> Toggle between the Unit Price and Total Sale.</p>
+<p>{% include image-inline.html max-width="132px" file="img/show_unit_price.jpg" alt="show_unit_price" %} Toggle between the Unit Price and Total Sale.</p>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="SellersReport">3.8.3 - Seller's Report</h2>
 <p class="empty">&nbsp;</p>
 <h3 id="TopBuyersandSellers">3.8.3.1 - Top Buyers and Sellers</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\sellers_report_people.jpg" alt="sellers_report_people"/>
-</figure></p>
+<p>{% include image.html file="img/sellers_report_people.jpg" alt="sellers_report_people" %}</p>
 <p class="empty">&nbsp;</p>
 <h3 id="TopItems">3.8.3.2 - Top Items</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\sellers_report_items.jpg" alt="sellers_report_items"/>
-</figure></p>
+<p>{% include image.html file="img/sellers_report_items.jpg" alt="sellers_report_items" %}</p>
 <p class="empty">&nbsp;</p>
 <h3 id="PersonalSalesSellersReport">3.8.3.3 - Personal Sales - Seller's Report</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\sellers_report_personal.jpg" alt="sellers_report_personal"/>
-</figure></p>
+<p>{% include image.html file="img/sellers_report_personal.jpg" alt="sellers_report_personal" %}</p>
 <p class="empty">&nbsp;</p>
 <p class="note"> You can also view a Seller's Report for your personal sales only the items will be <font class="tan">YOUR</font> top selling items.</p>
 <p class="note"> Clicking the People Icon will cycle through Seller, Buyer, and Item Sold.</p>
@@ -732,9 +476,7 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="GuildSalesDateFilterRanges">3.8.4 - Guild Sales Date Filter Ranges</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\filter_time_frames.jpg" alt="time_frames"/>
-</figure></p>
+<p>{% include image.html file="img/filter_time_frames.jpg" alt="time_frames" %}</p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Default</font>: Default uses the amount of days for Default set in <a  href="#CalculationDisplayOptions" >Calculation Display Options</a>. However, if you open the Master Merchant window while holding a Focus key such as SHIFT, CTRL or both, then opening the window will use the amount of days you set for that Focus.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">30 Days</font>: 30 Days.</p>
@@ -744,9 +486,7 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="DateRanges">3.8.5 - Date Ranges</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\time_frames.jpg" alt="time_frames"/>
-</figure></p>
+<p>{% include image.html file="img/time_frames.jpg" alt="time_frames" %}</p>
 <p class="empty">&nbsp;</p>
 <p>There are several date ranges you can choose from. <font class="tan">This Week</font>, <font class="tan">Last Week</font> and <font class="tan">Prior Week</font> start from the ZOS trader flip for the current <a  href="#SalesWeek" >Sales Week</a>. However, the last option is customizable under the Master Merchant settings under <a  href="#CalculationDisplayOptions" >Calculation Display Options</a>.</p>
 <p class="empty">&nbsp;</p>
@@ -754,19 +494,15 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="StatisticsWindow">3.9 - Statistics Window</h1>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\statistics_window.jpg" alt="statistics_window"/>
-</figure></p>
+<p>{% include image.html file="img/statistics_window.jpg" alt="statistics_window" %}</p>
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="Settings">3.10 - Settings</h1>
 <p class="empty">&nbsp;</p>
-<h2 class="header2" id="MasterMerchant3">3.10.1 - Master Merchant</h2>
+<h2 class="header2" id="MasterMerchant">3.10.1 - Master Merchant</h2>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="MasterMerchantWindowOptions">3.10.1.1 - Master Merchant Window Options</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\main_wondow_options.jpg" alt="main_wondow_options"/>
-</figure></p>
+<p>{% include image.html file="img/main_wondow_options.jpg" alt="main_wondow_options" %}</p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Open With Mail</font>: Whether or not to open the Master Merchant Window when you open your mail.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Open With Store</font>: Whether or not to open the Master Merchant Window when you interact with a guild store.</p>
@@ -774,15 +510,13 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="list-1">&bull;&nbsp; <font class="tan">Window Font</font>: The font for the Master Merchant Window. You may have other fonts if you have mods that use LibMediaProvider like one of my other mods <a  href="https://www.esoui.com/downloads/info2558-AdvancedNameplatesGreymoor.html" >Advanced Nameplates</a>.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Custom Filter Timeframe</font>: The amount of days to use for the Custom dropdown for the <a  href="#GuildSalesDateFilterRanges" >Guild Sales Date Filter Ranges</a></p>
 <p class="empty">&nbsp;</p>
-<p class="note"> If you sold a <font class="purple">Crafting Motif 63: Dremora Bows</font> for <font class="yellow">11,000</font> <img src="img\currency_gold.png" style="max-width: 20px;" alt="currency_gold"/> the master merchant window will show what you received in the mail which would be <font class="yellow">10,230</font> <img src="img\currency_gold.png" style="max-width: 20px;" alt="currency_gold"/>.</p>
+<p class="note"> If you sold a <font class="purple">Crafting Motif 63: Dremora Bows</font> for <font class="yellow">11,000</font> {% include image-inline.html max-width="20px" file="img/currency_gold.png" alt="currency_gold" %} the master merchant window will show what you received in the mail which would be <font class="yellow">10,230</font> {% include image-inline.html max-width="20px" file="img/currency_gold.png" alt="currency_gold" %}.</p>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="SalesFormatOptions">3.10.1.2 - Sales Format Options</h3>
 <p class="empty">&nbsp;</p>
 <p>Master Merchant provides several ways to view and calculate pricing data based on your current sales history. These options determine how item averages, deal values, sales totals, and other pricing details are processed using the id53 sales data provided by the game's Guild History system.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\dupe_sales_setting.jpg" alt="dupe_sales_setting"/>
-</figure></p>
+<p>{% include image.html file="img/dupe_sales_setting.jpg" alt="dupe_sales_setting" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Use the Sales Format Options menu to choose how pricing is calculated. Each option controls how Master Merchant evaluates your local sales history when determining averages, trends, and suggested prices.</p>
 <p class="empty">&nbsp;</p>
@@ -790,15 +524,11 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="TimeFormatOptions">3.10.1.3 - Time Format Options</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\time_format_options.jpg" alt="time_format_options"/>
-</figure></p>
+<p>{% include image.html file="img/time_format_options.jpg" alt="time_format_options" %}</p>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="AlertOptions">3.10.1.4 - Alert Options</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\alert_options.jpg" alt="alert_options"/>
-</figure></p>
+<p>{% include image.html file="img/alert_options.jpg" alt="alert_options" %}</p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">On-Screen Alerts</font>: Show On-Screen popup alerts when you receive a sale. See examples below.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Show Alerts in Cyrodiil</font>: Enable or Disable Alerts in Cyrodiil. Useful if you watch for specific PVP alerts and do not want MM Alerts to show up.</p>
@@ -812,18 +542,12 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h3 id="OnScreenandChatAlert">3.10.1.5 - On-Screen and Chat Alert</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\onscreen_alert.jpg" alt="onscreen_alert"/>
-</figure></p>
-<p><figure class="image-caption">
-<img src="img\chat_alert.jpg" alt="chat_alert"/>
-</figure></p>
+<p>{% include image.html file="img/onscreen_alert.jpg" alt="onscreen_alert" %}</p>
+<p>{% include image.html file="img/chat_alert.jpg" alt="chat_alert" %}</p>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="CalculationDisplayOptions">3.10.1.6 - Calculation Display Options</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\tool_tip_settings.jpg" alt="tool_tip_settings"/>
-</figure></p>
+<p>{% include image.html file="img/tool_tip_settings.jpg" alt="tool_tip_settings" %}</p>
 <p class="empty">&nbsp;</p>
 <p><font class="red">WARNING</font>: All sales have already been sorted by the Custom Timeframe at startup. See documentation for more information.</p>
 <p class="empty">&nbsp;</p>
@@ -831,45 +555,33 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h3 id="Timeframes">3.10.1.7 - Timeframes</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\calc_display_options_timeframe.jpg" alt="tool_tip_settings"/>
-</figure></p>
+<p>{% include image.html file="img/calc_display_options_timeframe.jpg" alt="tool_tip_settings" %}</p>
 <p class="empty">&nbsp;</p>
 <p>For the Custom Timeframe dropdown, Hours, Days, and Weeks are based off of Midnight for the current day. Full Guild Weeks are based off of the current Kiosk Flip.</p>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="GuildAccountfilter">3.10.1.8 - Guild & Account filter</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\add_seller_to_filter.jpg" alt="add_seller_to_filter"/>
-</figure></p>
+<p>{% include image.html file="img/add_seller_to_filter.jpg" alt="add_seller_to_filter" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Right click the dots on the graph to add the Seller to the Guild & Account filter.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"> There is a limit of 2000 characters for the filter. You will need to manage it from time to time.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\ags_menu_filter.jpg" alt="ags_menu_filter"/>
-</figure></p>
+<p>{% include image.html file="img/ags_menu_filter.jpg" alt="ags_menu_filter" %}</p>
 <p class="empty">&nbsp;</p>
 <p>You can add the Guild or Seller to the Guild & Account filter from the trader menu with either vanilla or Awesome Guild Store installed.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\filter_from_bonanza.jpg" alt="filter_from_bonanza"/>
-</figure></p>
+<p>{% include image.html file="img/filter_from_bonanza.jpg" alt="filter_from_bonanza" %}</p>
 <p class="empty">&nbsp;</p>
 <p>You can add the Seller to the Guild & Account filter from the Bonanza window.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\vanilla_trader_seller.jpg" alt="vanilla_trader_seller"/>
-</figure></p>
+<p>{% include image.html file="img/vanilla_trader_seller.jpg" alt="vanilla_trader_seller" %}</p>
 <p class="empty">&nbsp;</p>
 <p>The Seller is located on the tooltip if you do not have Awesome Guild Store installed.</p>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="DealCalculatorOptions">3.10.1.9 - Deal Calculator Options</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\custom_deal_calc.jpg" alt="custom_deal_calc"/>
-</figure></p>
+<p>{% include image.html file="img/custom_deal_calc.jpg" alt="custom_deal_calc" %}</p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Deal Calculator Type</font>: Choose from MM Average, TTC Average, TTC Suggested, and the Bonanza Price.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Modify TTC Suggested Price by 25 percent</font>: When enabled will add 25 percent to the Suggested Price used for the Deal Calculator and the ToolTip. This is the same value as shown in the TTC Tooltip. See the <font class="tan">Modified Suggested Price</font> spoiler below for an example.</p>
@@ -880,34 +592,23 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <input type="checkbox" id="spoiler3" />
 <label for="spoiler3">Modified Suggested Price</label>
 <div class="main-content">
-<p><figure class="image-caption">
-<img src="img\example_ttc_suggested.jpg" alt="example_ttc_suggested"/>
-</figure></p>
+<p>{% include image.html file="img/example_ttc_suggested.jpg" alt="example_ttc_suggested" %}</p>
 </div>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="Tooltips">3.10.1.10 - Tooltips</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\tooltips.jpg" alt="tooltips"/>
-</figure></p>
+<p>{% include image.html file="img/tooltips.jpg" alt="tooltips" %}</p>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="TooltipOptions">3.10.1.11 - Tooltip Options</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\tooltip_options.jpg" alt="tooltip_options"/>
-</figure></p>
-<p><figure class="image-caption">
-<img src="img\tool_tip_examples.jpg" alt="tool_tip_examples"/>
-<figcaption>Tool Tip Examples</figcaption>
-</figure></p>
+<p>{% include image.html file="img/tooltip_options.jpg" alt="tooltip_options" %}</p>
+<p>{% include image-caption.html file="img/tool_tip_examples.jpg" alt="tool_tip_examples" caption="Tool Tip Examples" %}</p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Level/Quality Selectors</font>: Adds Level and Quality selectors to the tooltip window. You can bring up the window by clicking a link in chat or when you right click an item and choose <a  href="#PopupItemData" >Popup Item Data</a>. See the <a  href="#LevelQualitySelectors" >Level Quality Selectors</a> section for example of the selectors that appear on the tooltip window.</p>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="OutlierOptions">3.10.1.12 - Outlier Options</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\outlier_options.jpg" alt="outlier_options"/>
-</figure></p>
+<p>{% include image.html file="img/outlier_options.jpg" alt="outlier_options" %}</p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Trim by percentile only</font>: When enabled you can specify the outer percentile to trim from the sales data without using additional outlier removal methods.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Percentile</font>: Specify the outer percentile 1 to 15 percent.</p>
@@ -916,43 +617,23 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="PriceToChatOptions">3.10.1.13 - Price To Chat Options</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\price_to_chat.jpg" alt="price_to_chat"/>
-</figure></p>
+<p>{% include image.html file="img/price_to_chat.jpg" alt="price_to_chat" %}</p>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="InventoryOptions">3.10.1.14 - Inventory Options</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\inventory_options.jpg" alt="inventory_options"/>
-</figure></p>
+<p>{% include image.html file="img/inventory_options.jpg" alt="inventory_options" %}</p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Modify TTC Suggested Price by 25 percent</font>: When enabled will add 25 percent to the Suggested Price shown in the inventory. This is the same value as shown in the TTC Tooltip. See the <font class="tan">Modified Suggested Price</font> <a  href="#modifiedsuggestedprice" >spoiler above</a> for an example.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\replace_price.jpg" alt="replace_price"/>
-</figure></p>
+<p>{% include image.html file="img/replace_price.jpg" alt="replace_price" %}</p>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="GuildStoreOptions">3.10.1.15 - Guild Store Options</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\guild_store_options.jpg" alt="guild_store_options"/>
-</figure></p>
-<p><figure class="image-caption">
-<img src="img\mm_price_calculator.jpg" alt="mm_price_calculator"/>
-<figcaption>Price Calculator when not using AGS.</figcaption>
-</figure></p>
-<p><figure class="image-caption">
-<img src="img\ags_profit_filter.jpg" alt="ags_profit_filter"/>
-<figcaption>AGS Profit filter.</figcaption>
-</figure></p>
-<p><figure class="image-caption">
-<img src="img\ags_profit_margin.jpg" alt="ags_profit_margin"/>
-<figcaption>Profit margin.</figcaption>
-</figure></p>
-<p><figure class="image-caption">
-<img src="img\ags_display_profit.jpg" alt="ags_display_profit"/>
-<figcaption>Your Profit.</figcaption>
-</figure></p>
+<p>{% include image.html file="img/guild_store_options.jpg" alt="guild_store_options" %}</p>
+<p>{% include image-caption.html file="img/mm_price_calculator.jpg" alt="mm_price_calculator" caption="Price Calculator when not using AGS." %}</p>
+<p>{% include image-caption.html file="img/ags_profit_filter.jpg" alt="ags_profit_filter" caption="AGS Profit filter." %}</p>
+<p>{% include image-caption.html file="img/ags_profit_margin.jpg" alt="ags_profit_margin" caption="Profit margin." %}</p>
+<p>{% include image-caption.html file="img/ags_display_profit.jpg" alt="ags_display_profit" caption="Your Profit." %}</p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Show Stack Price Calculator</font>: Adds UI to the guild store if you are not using Awesome Guild Store that aids you in setting the stack price of the item listed</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Save Central Pricing Data</font>: When <font class="yellow">Enabled</font> all pricing data is stored and available to all guilds. When <font class="yellow">Disabled</font> all pricing data is stored separate for each guild.</p>
@@ -964,19 +645,12 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="GuildMasterOptions">3.10.1.16 - Guild Master Options</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\guild_master_options.jpg" alt="guild_master_options"/>
-</figure></p>
+<p>{% include image.html file="img/guild_master_options.jpg" alt="guild_master_options" %}</p>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="MMDebugOptions">3.10.1.17 - MM Debug Options</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\debug_options.jpg" alt="debug_options"/>
-</figure></p>
-<p><figure class="image-caption">
-<img src="img\extra_debug_text.jpg" alt="extra_debug_text"/>
-<figcaption>Example of extra debug text.</figcaption>
-</figure></p>
+<p>{% include image.html file="img/debug_options.jpg" alt="debug_options" %}</p>
+<p>{% include image-caption.html file="img/extra_debug_text.jpg" alt="extra_debug_text" caption="Example of extra debug text." %}</p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Activate Custom Debug Logging</font>: The Custom Debug information is really not intended for normal use and should be left disabled.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Disable ATT Warning</font>: If you enjoy using both MM and ATT together then please disable the warning that ATT files are active with this toggle.</p>
@@ -985,9 +659,7 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="SalesManagementOptions">3.10.2.1 - Sales Management Options</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\lgs_sales_management.jpg" alt="lgs_sales_management"/>
-</figure></p>
+<p>{% include image.html file="img/lgs_sales_management.jpg" alt="lgs_sales_management" %}</p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Use Sales History Size Only</font>: This will ignore the minimum and maximum count for sales. If there are 4698 sales of an item with the day range selected for retaining data, then the sales will not be trimmed.</p>
 <p class="list-1">&bull;&nbsp; <font class="tan">Minimal Indexing</font>: Does not add search words for items. It only adds the player search word for displaying personal sales. Searching in the Master merchant window is still possible but will take extra time.</p>
@@ -998,39 +670,27 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="DataManagementOptions">3.10.2.2 - Data Management Options</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\lgs_data_management.jpg" alt="lgs_data_management"/>
-</figure></p>
+<p>{% include image.html file="img/lgs_data_management.jpg" alt="lgs_data_management" %}</p>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="LGSDebugOptions">3.10.2.3 - LGS Debug Options</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\lgs_debug_options.jpg" alt="lgs_debug_options"/>
-</figure></p>
+<p>{% include image.html file="img/lgs_debug_options.jpg" alt="lgs_debug_options" %}</p>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="ImportMMData">3.10.2.4 - Import MM Data</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\import_mm_data.jpg" alt="import_mm_data"/>
-</figure></p>
+<p>{% include image.html file="img/import_mm_data.jpg" alt="import_mm_data" %}</p>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="ImportATTData">3.10.2.5 - Import ATT Data</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\import_att_data.jpg" alt="import_att_data"/>
-</figure></p>
+<p>{% include image.html file="img/import_att_data.jpg" alt="import_att_data" %}</p>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="ImportATTPurchases">3.10.2.6 - Import ATT Purchases</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\import_att_purchaces.jpg" alt="import_att_purchaces"/>
-</figure></p>
+<p>{% include image.html file="img/import_att_purchaces.jpg" alt="import_att_purchaces" %}</p>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="RefreshLibHistoire">3.10.2.7 - Refresh LibHistoire</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\refresh_libhistoire.jpg" alt="refresh_libhistoire"/>
-</figure></p>
+<p>{% include image.html file="img/refresh_libhistoire.jpg" alt="refresh_libhistoire" %}</p>
 <p class="empty">&nbsp;</p>
 <p>The Refresh button tells LibHistoire to send all the data from the zos binary cache. The more data in the cache, the longer it will take to transmit.</p>
 <p class="empty">&nbsp;</p>
@@ -1038,81 +698,59 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="ImportShoppingListData">3.10.2.8 - Import ShoppingList Data</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\import_shoppinglist_list.jpg" alt="import_shoppinglist_list"/>
-</figure></p>
+<p>{% include image.html file="img/import_shoppinglist_list.jpg" alt="import_shoppinglist_list" %}</p>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="ImportPricingData">3.10.2.9 - Import Pricing Data</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\import_pricing_data.jpg" alt="import_pricing_data"/>
-</figure></p>
+<p>{% include image.html file="img/import_pricing_data.jpg" alt="import_pricing_data" %}</p>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="ResetData">3.10.2.10 - Reset Data</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\reset_data.jpg" alt="reset_data"/>
-</figure></p>
+<p>{% include image.html file="img/reset_data.jpg" alt="reset_data" %}</p>
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="ShoppingList">3.11 - Shopping List</h1>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\shopping_list_view.jpg" alt="shopping_list_view"/>
-</figure></p>
+<p>{% include image.html file="img/shopping_list_view.jpg" alt="shopping_list_view" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Adds a new icon allowing you to view purchases you make from guild stores.</p>
 <p class="empty">&nbsp;</p>
-<p><img src="img\shopping_list.jpg" style="max-width: 24px;" alt="shopping_list"/> The <font class="tan">Shopping List</font> icon allows you to select the installed extension and view purchases you have made from guild stores.</p>
+<p>{% include image-inline.html max-width="24px" file="img/shopping_list.jpg" alt="shopping_list" %} The <font class="tan">Shopping List</font> icon allows you to select the installed extension and view purchases you have made from guild stores.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"> The by old Shopping List extension by MildFlavour is not longer used and can be disabled after you import your purchases.</p>
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="Bonanza">3.12 - Bonanza!</h1>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\Bonanza.png" alt="Bonanza"/>
-</figure></p>
+<p>{% include image.html file="img/Bonanza.png" alt="Bonanza" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Shop all of Tamriel with <a  href="https://www.esoui.com/downloads/info2143-BeamMeUp-TeleporterFastTravel.html" >Beam Me Up</a> and Bonanza. Master Merchant is not just for high end traders anymore. If you are shopping for the best deal you can find it in the Bonanza window.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\bonanza_window.jpg" alt="bonanza_window"/>
-</figure></p>
+<p>{% include image.html file="img/bonanza_window.jpg" alt="bonanza_window" %}</p>
 <p class="empty">&nbsp;</p>
-<p>With MM 3.7.x the Bonanza <img src="img\bonanza_icon.jpg" style="max-width: 24px;" alt="bonanza_icon"/> icon allows you to view items you have seen at traders as you shop for items to purchase.</p>
+<p>With MM 3.7.x the Bonanza {% include image-inline.html max-width="24px" file="img/bonanza_icon.jpg" alt="bonanza_icon" %} icon allows you to view items you have seen at traders as you shop for items to purchase.</p>
 <p class="empty">&nbsp;</p>
 <h2 id="BonanzaNameFilter">3.12.1 - Bonanza Name Filter</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\bonanza_window_filter.jpg" alt="bonanza_window_filter"/>
-</figure></p>
+<p>{% include image.html file="img/bonanza_window_filter.jpg" alt="bonanza_window_filter" %}</p>
 <p class="empty">&nbsp;</p>
 <h2 id="BonanzaTypeFilter">3.12.2 - Bonanza Type Filter</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\bonanza_window_filter_type.jpg" alt="bonanza_window_filter_type"/>
-</figure></p>
+<p>{% include image.html file="img/bonanza_window_filter_type.jpg" alt="bonanza_window_filter_type" %}</p>
 <p class="empty">&nbsp;</p>
 <h2 id="BonanzaUsingBeamMeUp">3.12.3 - Bonanza - Using BeamMeUp</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\bonanza_window_beammeup.jpg" alt="bonanza_window_beammeup"/>
-</figure></p>
+<p>{% include image.html file="img/bonanza_window_beammeup.jpg" alt="bonanza_window_beammeup" %}</p>
 <p class="empty">&nbsp;</p>
 <p class="note"> If you have BeamMeUp installed you can right click the Location column to travel to the zone the trader is located in with the usual BeamMeUp restrictions. If there are no players in the zone to jump to BeamMeUp will notify you and you may travel to a wayshrine that is not close to the trader.</p>
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="Outliers">3.13 - Outliers</h1>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\less_then_five_outliers.jpg" alt="less_then_five_outliers"/>
-</figure></p>
+<p>{% include image.html file="img/less_then_five_outliers.jpg" alt="less_then_five_outliers" %}</p>
 <p class="empty">&nbsp;</p>
 <p>With only 5 sales the obvious outlier is not ignored.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"> There must be at least 6 sales before Master Merchant can ignore outliers.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\outlier_ignored.jpg" alt="outlier_ignored"/>
-</figure></p>
+<p>{% include image.html file="img/outlier_ignored.jpg" alt="outlier_ignored" %}</p>
 <p class="empty">&nbsp;</p>
 <p>With 8 sales of the same item you can see that the obvious outlier is being ignored.</p>
 <p class="empty">&nbsp;</p>
@@ -1122,23 +760,17 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <p class="note"> People will intentionally try to sell items much higher then they are worth. Use the resources available rather then squint at the scatter plot.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\bonanza_skewed_prices.jpg" alt="bonanza_skewed_prices"/>
-</figure></p>
+<p>{% include image.html file="img/bonanza_skewed_prices.jpg" alt="bonanza_skewed_prices" %}</p>
 <p class="empty">&nbsp;</p>
 <p>While viewing a graph as shown above find out who is skewing the price and add them to the <a  href="#GuildAccountfilter" >Guild & Account filter</a>.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\resolved_skewed_price.jpg" alt="resolved_skewed_price"/>
-</figure></p>
+<p>{% include image.html file="img/resolved_skewed_price.jpg" alt="resolved_skewed_price" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Once the seller is added to the <a  href="#GuildAccountfilter" >Guild & Account filter</a> you can see that the graph is much more useful.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"> The absence of the Bonanza price is not what corrected the graph. The Bonanza average changed because the seller of the item listed for 3000g is being ignored. Other listings of the same item for 200g would not have the same drastic affect as the listing for 3000g.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\bonanza_guild_account_filter.jpg" alt="bonanza_guild_account_filter"/>
-</figure></p>
+<p>{% include image.html file="img/bonanza_guild_account_filter.jpg" alt="bonanza_guild_account_filter" %}</p>
 <p class="empty">&nbsp;</p>
 <p>For convenience you can add sellers to the Guild & Account filter from the Bonanza menu.</p>
 <p class="empty">&nbsp;</p>
@@ -1146,7 +778,7 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <p class="note"> These examples demonstrate how MM, TTC, and Bonanza each calculate prices differently. Since Bonanza is newer, the examples help show how to interpret its values. I recommend looking through all of them before making pricing decisions.</p>
 <p class="empty">&nbsp;</p>
-<p><img src="img\example_1_hlaalu.jpg" style="max-width: 256px;" alt="example_1_hlaalu"/><img src="img\example_2_cuirass.jpg" style="max-width: 256px;" alt="example_2_cuirass"/><img src="img\example_3_bow.jpg" style="max-width: 256px;" alt="example_3_bow"/><img src="img\example_4_plating.jpg" style="max-width: 256px;" alt="example_4_plating"/></p>
+<p>{% include image-inline.html max-width="256px" file="img/example_1_hlaalu.jpg" alt="example_1_hlaalu" %}{% include image-inline.html max-width="256px" file="img/example_2_cuirass.jpg" alt="example_2_cuirass" %}{% include image-inline.html max-width="256px" file="img/example_3_bow.jpg" alt="example_3_bow" %}{% include image-inline.html max-width="256px" file="img/example_4_plating.jpg" alt="example_4_plating" %}</p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; The MM price is shown in <font class="yellow">yellow text</font>. It is based on actual sales recorded in your guild history. It does not use any TTC information.</p>
 <p class="list-1">&bull;&nbsp; The TTC price comes from their client application. They remove outliers using their own method and calculate an average based on the remaining listings.</p>
@@ -1170,7 +802,7 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h2 id="EvaluatingtheBonanzaprice">3.14.1 - Evaluating the Bonanza price</h2>
 <p class="empty">&nbsp;</p>
-<p><img src="img\bonanza_tooltip_style_page.jpg" style="max-width: 256px;" alt="bonanza_tooltip_style_page"/><img src="img\low_end_prices.jpg" style="max-width: 512px;" alt="low_end_prices"/><img src="img\high_end_prices.jpg" style="max-width: 512px;" alt="high_end_prices"/></p>
+<p>{% include image-inline.html max-width="256px" file="img/bonanza_tooltip_style_page.jpg" alt="bonanza_tooltip_style_page" %}{% include image-inline.html max-width="512px" file="img/low_end_prices.jpg" alt="low_end_prices" %}{% include image-inline.html max-width="512px" file="img/high_end_prices.jpg" alt="high_end_prices" %}</p>
 <p class="empty">&nbsp;</p>
 <p class="note"> If these images appear too small, right click and open them in a new tab to view them at full size.</p>
 <p class="empty">&nbsp;</p>
@@ -1198,9 +830,7 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h2 id="ComparisonsbetweenBonanzaTTCandMM">3.14.3 - Comparisons between Bonanza, TTC, and MM</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\style_page_thurvokun.png" alt="style_page_thurvokun"/>
-</figure></p>
+<p>{% include image.html file="img/style_page_thurvokun.png" alt="style_page_thurvokun" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Some players will list an item for an extremely high or unrealistic price. These listings do not reflect the true value of the item and can distort the TTC averages. Ideally the TTC developers would filter out these extreme cases more aggressively, but since they appear in the raw data, items with no consistent history or items that people believe should sell for millions are naturally harder to evaluate.</p>
 <p class="empty">&nbsp;</p>
@@ -1208,15 +838,11 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <p>Below are two examples of the Bonanza price:</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\dreugh_wax_bonanza.png" alt="dreugh_wax_bonanza"/>
-</figure></p>
+<p>{% include image.html file="img/dreugh_wax_bonanza.png" alt="dreugh_wax_bonanza" %}</p>
 <p class="empty">&nbsp;</p>
 <p>In this example, the Bonanza value is within about 1K of both TTC and the MM average. This shows how closely all three systems can align for commonly traded materials.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\blassed_thistle_bonanza.png" alt="blassed_thistle_bonanza"/>
-</figure></p>
+<p>{% include image.html file="img/blassed_thistle_bonanza.png" alt="blassed_thistle_bonanza" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Here, the Bonanza value is only 1 gold away from the TTC average. Even though TTC has thousands of data points for this material, the value is still consistent with what Bonanza shows from the traders you actually visited.</p>
 <p class="empty">&nbsp;</p>
@@ -1236,9 +862,7 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="PopupItemData">3.15.1 - Popup Item Data</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\popup_item_data.jpg" alt="popup_item_data"/>
-</figure></p>
+<p>{% include image.html file="img/popup_item_data.jpg" alt="popup_item_data" %}</p>
 <p class="empty">&nbsp;</p>
 <p>This context menu is from having Master merchant and Awesome Guild Store installed. The menu will vary depending on the mods you have installed.</p>
 <p class="empty">&nbsp;</p>
@@ -1254,30 +878,22 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <input type="checkbox" id="spoiler4" />
 <label for="spoiler4">Hat of a Mother's Sorrow</label>
 <div class="main-content">
-<p><figure class="image-caption">
-<img src="img\ms_legendary.jpg" alt="ms_legendary"/>
-</figure></p>
+<p>{% include image.html file="img/ms_legendary.jpg" alt="ms_legendary" %}</p>
 </div>
 <p class="empty">&nbsp;</p>
 <p><font class="purple">Hat of a Mother's Sorrow</font></p>
 <input type="checkbox" id="spoiler5" />
 <label for="spoiler5">Hat of a Mother's Sorrow</label>
 <div class="main-content">
-<p><figure class="image-caption">
-<img src="img\ms_epic.jpg" alt="ms_epic"/>
-</figure></p>
+<p>{% include image.html file="img/ms_epic.jpg" alt="ms_epic" %}</p>
 </div>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="Erroneoustimestamp">3.15.3 - Erroneous timestamp</h2>
 <p class="empty">&nbsp;</p>
 <p>When you see an erroneous timestamp, LibHistoire will handle this internally. It will not be processed until the timestamp is updated properly by the server.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\1657months.jpg" alt="1657months"/>
-</figure></p>
-<p><figure class="image-caption">
-<img src="img\71582789minutes.jpg" alt="71582789minutes"/>
-</figure></p>
+<p>{% include image.html file="img/1657months.jpg" alt="1657months" %}</p>
+<p>{% include image.html file="img/71582789minutes.jpg" alt="71582789minutes" %}</p>
 <p class="empty">&nbsp;</p>
 <p>LibHistoire will send the sale to MM after it checks that the erroneous timestamp is no longer present.</p>
 <p class="empty">&nbsp;</p>
@@ -1287,17 +903,13 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h3 id="Afewdaysofsalesfrom109entries">3.15.4.1 - A few days of sales from 109 entries</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\shot_history.jpg" alt="shot_history"/>
-</figure></p>
+<p>{% include image.html file="img/shot_history.jpg" alt="shot_history" %}</p>
 <p class="empty">&nbsp;</p>
 <p>LibHistoire simply scan entries from the guild history. With another mod installed called <font class="purple">Shissu's Guild Tools</font> a count of the amount of entries is showing. As shown there are 109 entries which only covers a few minutes of sales.</p>
 <p class="empty">&nbsp;</p>
 <h3 id="4daysofsalesfrom8031entries">3.15.4.2 - 4 days of sales from 8031 entries</h3>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\long_list.jpg" alt="shot_history"/>
-</figure></p>
+<p>{% include image.html file="img/long_list.jpg" alt="shot_history" %}</p>
 <p class="empty">&nbsp;</p>
 <p>However, as shown in the above screen shot there are 8031 entries which covers 4 days of sales. If you feel you are missing sales from 7 days ago then you will need more sales showing on the guild history tab.</p>
 <p class="empty">&nbsp;</p>
@@ -1321,9 +933,7 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="ExportSalesReport">3.16.2 - Export Sales Report</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\mm_export_screen.jpg" alt="mm_export_screen"/>
-</figure></p>
+<p>{% include image.html file="img/mm_export_screen.jpg" alt="mm_export_screen" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Master Merchant can export a general summary of sales for use with spreadsheets. Full disclosure I am not a spreadsheet guru so I can not help with this feature. To use the export feature choose a guild to work with, then select the time and range like This Week or Last Week. Then use <code>/mm export #</code> to export the guild's information. As an example the screen shot shows a 2 for the 2nd guild in your list, therefore the syntax would be <code>/mm export 2</code>.</p>
 <p class="empty">&nbsp;</p>
@@ -1359,9 +969,7 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="ExportSalesActivity">3.16.3 - Export Sales Activity</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\export_sales.jpg" alt="export_sales"/>
-</figure></p>
+<p>{% include image.html file="img/export_sales.jpg" alt="export_sales" %}</p>
 <p class="empty">&nbsp;</p>
 <p>You would use <code>/mm sales #</code> to export the sales activity. As an example the screen shot shows a 2 for the 2nd guild in your list, therefore the syntax would be <code>/mm sales 2</code>.</p>
 <p class="empty">&nbsp;</p>
@@ -1379,9 +987,7 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="ExportPersonalSales">3.16.4 - Export Personal Sales</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\export_personal_sales.jpg" alt="export_sales"/>
-</figure></p>
+<p>{% include image.html file="img/export_personal_sales.jpg" alt="export_sales" %}</p>
 <p class="empty">&nbsp;</p>
 <p>You would use <code>/mm personal #</code> to export your personal sales. As an example the screen shot shows a 2 for the 2nd guild in your list, therefore the syntax would be <code>/mm personal 2</code>.</p>
 <p class="empty">&nbsp;</p>
@@ -1399,9 +1005,7 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="ExportPurchases">3.16.5 - Export Purchases</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\export_purchases.jpg" alt="export_purchases"/>
-</figure></p>
+<p>{% include image.html file="img/export_purchases.jpg" alt="export_purchases" %}</p>
 <p class="empty">&nbsp;</p>
 <p>You would use <code>/mm purchases</code> to export your purchases from traders. Only the time dropdown affects the export for purchases.</p>
 <p class="empty">&nbsp;</p>
@@ -1421,9 +1025,7 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 <p class="empty">&nbsp;</p>
 <h2 id="DuplicateIndexesDetected">3.17.1 - Duplicate Indexes Detected</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\duplicate_indexes_detected.jpg" alt="duplicate_indexes_detected"/>
-</figure></p>
+<p>{% include image.html file="img/duplicate_indexes_detected.jpg" alt="duplicate_indexes_detected" %}</p>
 <p class="empty">&nbsp;</p>
 <p>If this notification appears then you either need to cancel and restore a backup or allow Master Merchant to reset all its internal data files and refresh sales data from LibHistorie.</p>
 <p class="empty">&nbsp;</p>
@@ -1464,33 +1066,23 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <p class="note"> I will admit I do not have Windows 10 or Windows 11 so this is peiced together from helping someone.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\onedrive_cloud_icon.jpg" alt="onedrive_cloud_icon"/>
-</figure></p>
+<p>{% include image.html file="img/onedrive_cloud_icon.jpg" alt="onedrive_cloud_icon" %}</p>
 <p class="empty">&nbsp;</p>
 <p>First open the OneDrive settings by clicking the Cloud icon for OneDrive.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\manage_backup_button.jpg" alt="manage_backup_button"/>
-</figure></p>
+<p>{% include image.html file="img/manage_backup_button.jpg" alt="manage_backup_button" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Click the Manage Backup button.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\onedrive_folders_to_backup.jpg" alt="onedrive_folders_to_backup"/>
-</figure></p>
+<p>{% include image.html file="img/onedrive_folders_to_backup.jpg" alt="onedrive_folders_to_backup" %}</p>
 <p class="empty">&nbsp;</p>
 <p>As shown in the above screen shot all three folders are being monitored by OneDrive. You want to disable the backup for the Documents folder.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\onedrive_documents_folders_disabled.jpg" alt="onedrive_documents_folders_disabled"/>
-</figure></p>
+<p>{% include image.html file="img/onedrive_documents_folders_disabled.jpg" alt="onedrive_documents_folders_disabled" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Now OneDrive will no longer try to backup the Documents folder.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\onedrive_folders_where_to_backup.jpg" alt="onedrive_folders_where_to_backup"/>
-</figure></p>
+<p>{% include image.html file="img/onedrive_folders_where_to_backup.jpg" alt="onedrive_folders_where_to_backup" %}</p>
 <p class="empty">&nbsp;</p>
 <p>If prompted, chose <font class="yellow">This Computer Only</font> so that OneDrive will not attempt to backup your Documents folder.</p>
 <p class="empty">&nbsp;</p>
@@ -1500,9 +1092,7 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="BackupLibGuildStoreData">3.18.1 - Backup LibGuildStore Data</h2>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\lgs_data_backup.jpg" alt="lgs_data_backup"/>
-</figure></p>
+<p>{% include image.html file="img/lgs_data_backup.jpg" alt="lgs_data_backup" %}</p>
 <p class="empty">&nbsp;</p>
 <p>To backup your LibGuildStore data you will need to navigate to the SavedVariables folder. Usually <code>C:\Users\Your User Name\Documents\Elder Scrolls Online\live</code>. The files can be easily found going to MyDocuments in windows first.</p>
 <p class="empty">&nbsp;</p>
@@ -1514,25 +1104,19 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <p>LibExecutionQueue is included with Master Merchant as shown in the zip below.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\leq_included.jpg" alt="leq_included"/>
-</figure></p>
+<p>{% include image.html file="img/leq_included.jpg" alt="leq_included" %}</p>
 <p class="empty">&nbsp;</p>
 <p>LibExecutionQueue is sorted alphabetically by the base game.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\leq_unsorted.jpg" alt="leq_unsorted"/>
-</figure></p>
+<p>{% include image.html file="img/leq_unsorted.jpg" alt="leq_unsorted" %}</p>
 <p class="empty">&nbsp;</p>
 <p>If you have LibVotansAddonList installed then it will look close to the base game.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\leq_votans_sort.jpg" alt="leq_votans_sort"/>
-</figure></p>
+<p>{% include image.html file="img/leq_votans_sort.jpg" alt="leq_votans_sort" %}</p>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="UnintentionalZOSBug">3.18.3 - Unintentional ZOS Bug</h2>
 <p class="empty">&nbsp;</p>
-<p><img class="thumbnail" src="img\savedvarsapostrophe.jpg" alt="savedvarsapostrophe"/></p>
+<p>{% include image_thumbnail.html file="img/savedvarsapostrophe.jpg" alt="savedvarsapostrophe" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Unfortunately from time to time ZOS introduces or reintroduces a bug in the saved vars where the apostrophe is converted to HTML code. Which will mean your sales may or may not display properly. Which is a game bug and you are out of luck until or unless they fix it.</p>
 <p class="empty">&nbsp;</p>
@@ -1575,9 +1159,7 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="list-1">&bull;&nbsp; The player could not advance the trader history.</p>
 <p class="list-1">&bull;&nbsp; Reloading the UI did not resolve it.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\bricked_trader.jpg" alt="bricked_trader"/>
-</figure></p>
+<p>{% include image.html file="img/bricked_trader.jpg" alt="bricked_trader" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Because this bug came from the base game and not addons, it may still occur if the server pushes guild history segments that cannot be merged with your local cache. If this happens, you can use the <a  href="#ClearCache" >Clear Cache</a> option in the LibHistoire UI to rebuild your local history data. This will clear the affected cache entries and automatically reload the UI.</p>
 <p class="empty">&nbsp;</p>
@@ -1595,9 +1177,7 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <p class="note"> This backup procedure is exclusively intended for version 2.x or for maintaining a historical backup for importing into 3.x.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\mm_data_backup.jpg" alt="mm_data_backup"/>
-</figure></p>
+<p>{% include image.html file="img/mm_data_backup.jpg" alt="mm_data_backup" %}</p>
 <p class="empty">&nbsp;</p>
 <p>To backup your Master Merchant data you will need to navigate to the SavedVariables folder. Usually <code>C:\Users\Your User Name\Documents\Elder Scrolls Online\live</code>. The files can be easily found going to MyDocuments in windows first.</p>
 <p class="empty">&nbsp;</p>
@@ -1614,44 +1194,31 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <div class="main-content">
 <p>Currently there is some confusion about how to uninstall Master merchant 2.x and install 3.x. First you need to open minion. If you see both versions installed as shown below, uninstall both. The reason you uninstall both is because MM 3.x is a continuation of 2.x. It is the same mod with the same file names and the same folder names. Minion will not understand how to handle this.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\both_mm_installed.jpg" alt="both_mm_installed"/>
-</figure></p>
+<p>{% include image.html file="img/both_mm_installed.jpg" alt="both_mm_installed" %}</p>
 <p class="empty">&nbsp;</p>
 <p>If you manually install your mods, of if you want to know which folders belong to Master merchant, click the spoiler.</p>
 <p class="empty">&nbsp;</p>
 <input type="checkbox" id="spoiler7" />
 <label for="spoiler7">Master Merchant Folders</label>
 <div class="main-content">
-<p><figure class="image-caption">
-<img src="img\mm_files_installed.jpg" alt="mm_files_installed"/>
-<figcaption>To see a larger image, right click the image and choose View Image.</figcaption>
-</figure></p>
+<p>{% include image-caption.html file="img/mm_files_installed.jpg" alt="mm_files_installed" caption="To see a larger image, right click the image and choose View Image." %}</p>
 </div>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\mm_remove_mod.jpg" alt="mm_remove_mod"/>
-</figure></p>
+<p>{% include image.html file="img/mm_remove_mod.jpg" alt="mm_remove_mod" %}</p>
 <p class="empty">&nbsp;</p>
 <p>When using Minion to uninstall Master Merchant right click and choose Uninstall.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\mm_remove_mod_caution.jpg" alt="mm_remove_mod_caution"/>
-</figure></p>
+<p>{% include image.html file="img/mm_remove_mod_caution.jpg" alt="mm_remove_mod_caution" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Do not check that box or it will remove your MM data files! Only click Delete!</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\mm_uninstalled.jpg" alt="mm_uninstalled"/>
-</figure></p>
+<p>{% include image.html file="img/mm_uninstalled.jpg" alt="mm_uninstalled" %}</p>
 <p class="empty">&nbsp;</p>
 <p>As you see above, both versions of Master merchant are now uninstalled.</p>
 <p class="empty">&nbsp;</p>
 <p class="note"> You have to close Minion because it will be confused about uninstalling both versions.</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\search_for_mm.jpg" alt="search_for_mm"/>
-</figure></p>
+<p>{% include image.html file="img/search_for_mm.jpg" alt="search_for_mm" %}</p>
 <p class="empty">&nbsp;</p>
 <p>Open Minion again and click Find More and search for <code>Master Merchant 3.0</code> as shown above. Make sure the author's name is Sharlikran. Then click the Install button.</p>
 <p class="empty">&nbsp;</p>
@@ -1662,20 +1229,12 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <input type="checkbox" id="spoiler8" />
 <label for="spoiler8">New Libraries</label>
 <div class="main-content">
-<p><figure class="image-caption">
-<img src="img\install_LibGuildRoster.jpg" alt="install_LibGuildRoster"/>
-<figcaption>To see a larger image, right click the image and choose View Image.</figcaption>
-</figure></p>
+<p>{% include image-caption.html file="img/install_LibGuildRoster.jpg" alt="install_LibGuildRoster" caption="To see a larger image, right click the image and choose View Image." %}</p>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\install_LibHistoire.jpg" alt="install_LibHistoire"/>
-<figcaption>To see a larger image, right click the image and choose View Image.</figcaption>
-</figure></p>
+<p>{% include image-caption.html file="img/install_LibHistoire.jpg" alt="install_LibHistoire" caption="To see a larger image, right click the image and choose View Image." %}</p>
 </div>
 <p class="empty">&nbsp;</p>
-<p><figure class="image-caption">
-<img src="img\one_mm_only.jpg" alt="one_mm_only"/>
-</figure></p>
+<p>{% include image.html file="img/one_mm_only.jpg" alt="one_mm_only" %}</p>
 <p class="empty">&nbsp;</p>
 <p>After you install Master Merchant 3.0 verify it is the only Master Merchant showing in Minion.</p>
 </div>
@@ -1754,6 +1313,3 @@ user:/AddOns/MasterMerchant/Libs/LibGuildStore/Data.lua:337: attempt to index a 
 <p class="empty">&nbsp;</p>
 <p>mychaelo, svenpanne, tomkolp, mlsevero, Baertram, jupiter126, Otxics, Jakez</p>
 </div>
-</section>
-</BODY>
-</HTML>

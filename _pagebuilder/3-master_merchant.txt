@@ -217,7 +217,7 @@ What is described in Obtaining Guild History is how you request  data from the s
 
 If you are with a trial group or doing daily writs you may not want MM running in the background to reduce loading times. If you do make sure to disable all of the following.
 
-* Master Merchant 3.7.x
+* Master Merchant 3.8.x
 * LibExecutionQueue
 * LibGuildStore
 * LibGuildStore Data File GS00Data, LibGuildStore Data File GS01Data, etc.

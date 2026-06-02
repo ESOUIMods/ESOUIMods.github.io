@@ -630,6 +630,24 @@ title: Master Merchant
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/price_to_chat.jpg" alt="price_to_chat" %}</p>
 <p class="empty">&nbsp;</p>
+<p>These options control the format and content of the information inserted into chat when using Price To Chat.</p>
+<p class="empty">&nbsp;</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Use Condensed Format</font>: Reduces the amount of information displayed in chat.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Include TTC Pricing Data</font>: Includes TTC pricing information when TTC data is available.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Include Item Count</font>: Includes item counts when applicable.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Omit Bonanza Price if less than 6 listings</font>: Suppresses Bonanza pricing when fewer than six listings are available.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Add cost per voucher for Writs</font>: Includes the estimated cost per voucher for Master Writs.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Average Voucher Cost Type</font>: Determines which pricing source is used when calculating voucher costs.</p>
+<p class="list-1">&bull;&nbsp; <font class="tan">Modify TTC Suggested Price by 25 percent</font>: Applies the TTC suggested price adjustment used elsewhere in MM.</p>
+<p class="empty">&nbsp;</p>
+<p>Example output:</p>
+<p class="empty">&nbsp;</p>
+<pre>
+TTC Price for Tempering Alloy : Suggested : 8,159 ~ 10,198 (6,063 listings/59,339 items) Sale Avg : 8,795.39 (5,042 sales/41,467 items)
+</pre>
+<p class="empty">&nbsp;</p>
+<p class="note"> The actual chat output depends on which pricing sources are enabled and which Price To Chat options are selected.</p>
+<p class="empty">&nbsp;</p>
 <h3 class="header3" id="InventoryOptions">3.9.1.14 - Inventory Options</h3>
 <p class="empty">&nbsp;</p>
 <p>{% include image.html file="img/inventory_options.jpg" alt="inventory_options" %}</p>

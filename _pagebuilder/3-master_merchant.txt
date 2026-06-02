@@ -479,6 +479,24 @@ The Seller is located on the tooltip if you do not have Awesome Guild Store inst
 
 {{image:price_to_chat.jpg | price_to_chat}}
 
+These options control the format and content of the information inserted into chat when using Price To Chat.
+
+* <font class="tan">Use Condensed Format</font>: Reduces the amount of information displayed in chat.
+* <font class="tan">Include TTC Pricing Data</font>: Includes TTC pricing information when TTC data is available.
+* <font class="tan">Include Item Count</font>: Includes item counts when applicable.
+* <font class="tan">Omit Bonanza Price if less than 6 listings</font>: Suppresses Bonanza pricing when fewer than six listings are available.
+* <font class="tan">Add cost per voucher for Writs</font>: Includes the estimated cost per voucher for Master Writs.
+* <font class="tan">Average Voucher Cost Type</font>: Determines which pricing source is used when calculating voucher costs.
+* <font class="tan">Modify TTC Suggested Price by 25 percent</font>: Applies the TTC suggested price adjustment used elsewhere in MM.
+
+Example output:
+
+<pre>
+TTC Price for Tempering Alloy : Suggested : 8,159 ~ 10,198 (6,063 listings/59,339 items) Sale Avg : 8,795.39 (5,042 sales/41,467 items)
+</pre>
+
+{{note: The actual chat output depends on which pricing sources are enabled and which Price To Chat options are selected.}}
+
 === Inventory Options
 
 {{image:inventory_options.jpg | inventory_options}}

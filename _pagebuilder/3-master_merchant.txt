@@ -343,9 +343,20 @@ There are several date ranges you can choose from. <font class="tan">This Week</
 
 {{note: Days are calculated from midnight and weeks are calculated from each kiosk flip on Tuesday. For example the option <font class="tan">7 Days</font> would be the last 7 days of sales while <font class="tan">Last Week</font> will be from the previous kiosk flip to the most recent kiosk flip. Both of which will be a Tuesday.}}
 
-= Statistics Window
+== Statistics Window
 
 {{image:statistics_window.jpg | statistics_window}}
+
+The Statistics Window provides a quick summary of sales activity from the sales history data available to Master Merchant.
+
+* <font class="tan">Guild</font>: Selects the guild used for the statistics. <font class="tan">All guilds</font> combines the guild history available to your account from your current guilds.
+* <font class="tan">Items sold</font>: The number of sales counted for the selected range. This appears to represent sale transactions rather than the total quantity of every item in each stack.
+* <font class="tan">Total gold</font>: The total gold from sales in the selected range.
+* <font class="tan">Gold per day</font>: The average gold per day for the selected range.
+* <font class="tan">Biggest sale</font>: The highest individual sale found in the selected range.
+* <font class="tan">Days</font>: Adjusts the amount of sales history used by the Statistics Window. Moving the slider changes the selected range. The final step appears to use all available data.
+
+{{note: The Statistics Window is old and may need additional review. Some behavior, such as the guild dropdown and the exact meaning of Items sold, should be verified against the current code before relying on this section as a complete technical reference.}}
 
 = Settings
 
